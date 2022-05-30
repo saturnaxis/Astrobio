@@ -1,0 +1,25 @@
+# Table of content
+# Learn more at https://jupyterbook.org/customize/toc.html
+#
+format: jb-book
+root: home
+parts:
+- caption: Preamble
+  chapters:
+  - file: Preamble/who-for
+  - file: Preamble/Python-basics
+  - file: Preamble/Markdown-basics
+  - file: Preamble/HW_template
+- caption: Lecture Notes
+  numbered: true
+  chapters:
+  - file: Chapter_01/Overview_of_Solar_System
+  - file: Chapter_02/Basic_Planetary_Science
+  - file: Chapter_03/Planet_Overview
+  - file: Chapter_04/Life_Requirements
+  - file: Chapter_05/Tree_of_Life
+  - file: Chapter_06/Early_Earth
+  - file: Chapter_07/Hadean_Climate
+  - file: Chapter_08/Gaia_Oxygen
+  - file: Chapter_09/Life_on_Mars
+  - file: Chapter_10/Icy_Worlds
