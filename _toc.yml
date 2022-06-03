@@ -10,15 +10,21 @@ parts:
   - file: Preamble/Python-basics
   - file: Preamble/Markdown-basics
   - file: Preamble/HW_template
-- caption: Lecture Notes
+- caption: Basic Planetary Science
   numbered: true
   chapters:
   - file: Chapter_01/Overview_of_Solar_System
-  - file: Chapter_02/Basic_Planetary_Science
-  - file: Chapter_03/Planet_Overview
+  - file: Chapter_02/Physics_and_Astrophysics
+  - file: Chapter_03/Planetary_Heating_and_Atmospheres
+- caption: Origins of Life
+  numbered: true
+  chapters:
   - file: Chapter_04/Life_Requirements
   - file: Chapter_05/Tree_of_Life
   - file: Chapter_06/Early_Earth
+- caption: Life on Habitable Worlds
+  numbered: true
+  chapters:
   - file: Chapter_07/Hadean_Climate
   - file: Chapter_08/Gaia_Oxygen
   - file: Chapter_09/Life_on_Mars
