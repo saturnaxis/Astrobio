@@ -29,6 +29,8 @@
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mycss.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -49,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="2. Basic Planetary Science" href="../Chapter_02/Basic_Planetary_Science.html" />
@@ -74,6 +78,11 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="../_static/astrobiology.jpg" class="logo" alt="logo">
       
       
       <h1 class="site-logo" id="site-title">ASTR3800 Astrobiology</h1>
@@ -269,6 +278,123 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- Table of contents -->
         <div class="d-none d-md-block col-md-2 bd-toc show noprint">
             
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-brief-history-of-the-planetary-sciences">
+   1.1. A Brief History of the Planetary Sciences
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inventory-of-the-solar-system">
+   1.2. Inventory of the Solar System
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#giant-planets">
+     1.2.1. Giant Planets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#terrestrial-planets">
+     1.2.2. Terrestrial Planets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minor-planets-and-comets">
+     1.2.3. Minor Planets and Comets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#satellite-and-ring-systems">
+     1.2.4. Satellite and Ring Systems
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heliosphere">
+     1.2.5. Heliosphere
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-planet">
+   1.3. What is a Planet?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#planetary-properties">
+   1.4. Planetary Properties
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#orbit">
+     1.4.1. Orbit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mass">
+     1.4.2. Mass
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#size">
+     1.4.3. Size
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rotation">
+     1.4.4. Rotation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shape">
+     1.4.5. Shape
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#temperature">
+     1.4.6. Temperature
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#magnetic-field">
+     1.4.7. Magnetic Field
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#surface-composition">
+     1.4.8. Surface Composition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#surface-structure">
+     1.4.9. Surface Structure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atmosphere">
+     1.4.10. Atmosphere
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interior">
+     1.4.11. Interior
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formation-of-the-solar-system">
+   1.5. Formation of the Solar System
+  </a>
+ </li>
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -281,6 +407,123 @@ const thebe_selector_output = ".output, .cell_output"
                 <div id="print-main-content">
                     <div id="jb-print-toc">
                         
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#a-brief-history-of-the-planetary-sciences">
+   1.1. A Brief History of the Planetary Sciences
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#inventory-of-the-solar-system">
+   1.2. Inventory of the Solar System
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#giant-planets">
+     1.2.1. Giant Planets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#terrestrial-planets">
+     1.2.2. Terrestrial Planets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#minor-planets-and-comets">
+     1.2.3. Minor Planets and Comets
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#satellite-and-ring-systems">
+     1.2.4. Satellite and Ring Systems
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#heliosphere">
+     1.2.5. Heliosphere
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#what-is-a-planet">
+   1.3. What is a Planet?
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#planetary-properties">
+   1.4. Planetary Properties
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#orbit">
+     1.4.1. Orbit
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#mass">
+     1.4.2. Mass
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#size">
+     1.4.3. Size
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rotation">
+     1.4.4. Rotation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#shape">
+     1.4.5. Shape
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#temperature">
+     1.4.6. Temperature
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#magnetic-field">
+     1.4.7. Magnetic Field
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#surface-composition">
+     1.4.8. Surface Composition
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#surface-structure">
+     1.4.9. Surface Structure
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#atmosphere">
+     1.4.10. Atmosphere
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#interior">
+     1.4.11. Interior
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#formation-of-the-solar-system">
+   1.5. Formation of the Solar System
+  </a>
+ </li>
+</ul>
+
+                        </nav>
                     </div>
                 </div>
             </div>
@@ -289,7 +532,328 @@ const thebe_selector_output = ".output, .cell_output"
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="overview-of-the-solar-system">
 <h1><span class="section-number">1. </span>Overview of the Solar System<a class="headerlink" href="#overview-of-the-solar-system" title="Permalink to this headline">¶</a></h1>
-<p>Under Construction</p>
+<div class="section" id="a-brief-history-of-the-planetary-sciences">
+<h2><span class="section-number">1.1. </span>A Brief History of the Planetary Sciences<a class="headerlink" href="#a-brief-history-of-the-planetary-sciences" title="Permalink to this headline">¶</a></h2>
+<p>The history of the planetary sciences begins before it even had a name for it.  Ancient civilizations noticed several ‘stars’ moved quickly in the night sky relative to much more numerous background stars.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Ancient_Greek_astronomy">Greeks</a> called these objects <strong>πλανήτης</strong> (planētēs; wandering stars), or <strong>planets</strong>.  Ancient civilizations (e.g., Chinese, Persian, <a class="reference external" href="https://en.wikipedia.org/wiki/Ancestral_Puebloans">Ancestral Puebloans</a>, Maya) that developed written language and/or drawings attested to their interest in comets, solar eclipses, and other celestial phenomena.  Some migratory birds (and potentially their ancestors the dinosaurs) use the patterns of stars in the night sky to guide their journeys.</p>
+<p>The Renaissance and Enlightenment movements in western Europe (i.e., Copernican-Keplerian-Galilean-Netwonian revolution) resulted in a completely different view for the dimensions and dynamics of the Solar System.  Humanity’s view of the relative sizes and masses of bodies that consititue the Solar System were drastically altered, including the forces that make them orbit one another.</p>
+<div class="figure align-default" id="farside-moon-fig">
+<a class="reference internal image-reference" href="https://svs.gsfc.nasa.gov/vis/a000000/a004100/a004109/luna3_compare.jpg"><img alt="farside of the moon" src="https://svs.gsfc.nasa.gov/vis/a000000/a004100/a004109/luna3_compare.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.1 </span><span class="caption-text">Side by side comparison of the first ever photograph of the lunar far side, from Luna 3, and a visualization of the same view using LRO data. Image credit: <a class="reference external" href="https://svs.gsfc.nasa.gov/4109">NASA</a></span><a class="headerlink" href="#farside-moon-fig" title="Permalink to this image">¶</a></p>
+</div>
+<p>The age of planetary exploration began in 1959 with the Soviet Union’s spacecraft <a class="reference external" href="https://en.wikipedia.org/wiki/Luna_3">Luna 3</a> (see Fig. <a class="reference internal" href="#farside-moon-fig"><span class="std std-numref">1.1</span></a>}) returning the first pictures of the farside of the Moon.  During the cold war, spacecraft visisted all eight known terrestrial and giant planets in the Solar System.  Through spacecraft, scientists have collected data concerning the planets, their rings, and moons.  This age of planetary exploration produced:</p>
+<ul class="simple">
+<li><p>Spacecraft images uncovered details that Earth-based pictures could not resolve.</p></li>
+<li><p>Spectra from across the electromagnetic spectrum (<span class="math notranslate nohighlight">\(\gamma\)</span>-rays to radio) revealed undetected gases and geological features on planets and moons.</p></li>
+<li><p>Radio detectors and magnetometers showed that other planets possessed aurorae and magnetic fields.</p></li>
+<li><p>Unexpected types of structure in Saturn’s rings, and whole new classes of rings (and ring systems) around all four giant planets.</p></li>
+</ul>
+<div class="figure align-default" id="comet-67p-fig">
+<a class="reference internal image-reference" href="https://solarsystem.nasa.gov/system/content_pages/main_images/1297_ESA_Rosetta_NavCam_20150131_Mosaic.jpg"><img alt="Comet 67P" src="https://solarsystem.nasa.gov/system/content_pages/main_images/1297_ESA_Rosetta_NavCam_20150131_Mosaic.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.2 </span><span class="caption-text">Comet 67P/Churyumov-Gerasimenko on Jan. 31, 2015. Image credit: <a class="reference external" href="https://solarsystem.nasa.gov/asteroids-comets-and-meteors/comets/67p-churyumov-gerasimenko/in-depth/">ESA/Rosetta/NAVCAM</a></span><a class="headerlink" href="#comet-67p-fig" title="Permalink to this image">¶</a></p>
+</div>
+<p>Both comets and asteroids have now been explored close up by spacecraft (see Fig. <a class="reference internal" href="#comet-67p-fig"><span class="std std-numref">1.2</span></a>).  Missions have been deployed to study the Sun and its solar wind.  Although the Sun’s gravitational domain extends beyond the most distant planet (Neptune), the vast outer regions of the Solar System are still poorly explored.  Many small bodies are expected to be lurking in this great beyond (and some larger ones too like <a class="reference external" href="https://en.wikipedia.org/wiki/Planet_Nine">Planet 9</a>), but are currently beyond our capacity to detect them.</p>
+<p>Thousands of planets orbiting other stars (i.e., <a class="reference external" href="https://en.wikipedia.org/wiki/Exoplanet">exoplanets</a>) have been discovered by NASA’s <a class="reference external" href="https://en.wikipedia.org/wiki/Kepler_space_telescope">Kepler Space Telescope</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Transiting_Exoplanet_Survey_Satellite">Transiting Exoplanet Survey Satellite</a> (TESS).  As you may expect, we don’t know a lot of detail concerning these exoplanets, but many of the have gross properties (e.g., orbits, masses, radii) that are quite different than any object in the Solar System.  As a result, some of models of planet formation and evolution have been revised.</p>
+<p>Biologists have redrawn the <a class="reference external" href="https://en.wikipedia.org/wiki/Tree_of_life">tree of life</a> in the past few decades due to our more nuanced understanding of the relationships between Earth’s diverse lifeforms.  Some species have been identified to live and thrive in extreme environments that would deadly for humans.  The regions of the planet where life was considered to exist expanded, which also suggested that extreme conditions on other planets and moons in the Solar System might also be capable of sustaining life.</p>
+<p>The planetary sciences as a subfield of astronomy has expanded to become even more interdisciplinary, where knowledge of geophysics, atmospheric science, and biology are required to develop a system-wide understanding of a planet.  The properties of planets are key to astrobiology, and understanding the basics of life is useful to planetary scientists.</p>
+<div class="figure align-default" id="astrobiology-fig">
+<a class="reference internal image-reference" href="https://astrobiology.nasa.gov/uploads/filer_public_thumbnails/filer_public/31/e2/31e2c74f-2a65-4440-8399-b7c425bb9c93/astrobio_strat_plan_cover-part.jpg__1240x510_q85_crop_subsampling-2.jpg"><img alt="astrobiology" src="https://astrobiology.nasa.gov/uploads/filer_public_thumbnails/filer_public/31/e2/31e2c74f-2a65-4440-8399-b7c425bb9c93/astrobio_strat_plan_cover-part.jpg__1240x510_q85_crop_subsampling-2.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.3 </span><span class="caption-text">Image credit: <a class="reference external" href="https://astrobiology.nasa.gov/about/astrobiology-strategy/">NASA</a></span><a class="headerlink" href="#astrobiology-fig" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="inventory-of-the-solar-system">
+<h2><span class="section-number">1.2. </span>Inventory of the Solar System<a class="headerlink" href="#inventory-of-the-solar-system" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>What is the <strong>Solar System</strong>?</p></li>
+</ul>
+<p>For humans, the answer to this question starts from Earth (our home) and then progresses outwards to the things that we can readily identify.  However this could be a <em>biased</em> view as we eventually want to find other worlds that could potentially host life.  A better question is:</p>
+<ul class="simple">
+<li><p>What is seen by an objective observer from a huge distance?</p></li>
+</ul>
+<p>The Solar System is then dominated by a single object, the <strong>Sun</strong>.  The Sun’s energy output (luminosity) is about 400 million times larger than the Solar System’s largest planet (Jupiter).  The Sun also contains nearly all the mass (<span class="math notranslate nohighlight">\(&gt;99.8\%\)</span>).  By these measures, the Solar System is essentially the Sun with some debris orbiting it.</p>
+<p>If we instead measure the Solar System in terms of angular momentum, then most of it lies in the orbital motions of the planets.  Moreover, the Sun is a fundamentally different type of body, where it is a ball of plasma powered by nuclear fusion in its core.  The smaller bodies (i.e., debris) are composed of molecular matter.  This debris is composed of giant planets, terrestrial planets, and a wide range of smaller objects that all encircle the Sun.</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="figure align-default" id="inner-planets-fig">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/c/cc/Solar_system_orrery_inner_planets.gif"><img alt="inner planets" src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Solar_system_orrery_inner_planets.gif" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.4 </span><span class="caption-text">Orrery showing the motions of the inner four planets of our Solar System. Distances are to scale. The circular rings are spaced 0.5 AU apart.  Image credit: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Solar_system_orrery_inner_planets.gif">Wikipedia</a></span><a class="headerlink" href="#inner-planets-fig" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-body docutils">
+<div class="figure align-default" id="outer-planets-fig">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/c/c1/Solar_system_orrery_outer_planets.gif"><img alt="inner planets" src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Solar_system_orrery_outer_planets.gif" style="width: 400px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.5 </span><span class="caption-text">Orrery showing the motions of the outer four planets of our Solar System. Distances are to scale. The circular rings are spaced 4 AU apart.  Image credit: <a class="reference external" href="https://commons.wikimedia.org/wiki/File:Solar_system_orrery_inner_planets.gif">Wikipedia</a></span><a class="headerlink" href="#outer-planets-fig" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Figures <a class="reference internal" href="#inner-planets-fig"><span class="std std-numref">1.4</span></a> and <a class="reference internal" href="#outer-planets-fig"><span class="std std-numref">1.5</span></a> present scaled views of orbits for the inner and outer planets, respectively.  The differences in scale prevent both systems from being displayed in the same figure.  Figure <a class="reference internal" href="#planets-fig"><span class="std std-numref">1.6</span></a> shows the Solar System planets scaled by size, where the terrestrial planets appear almost insignificant next to the much larger Jovian planets, Jupiter and Saturn.</p>
+<div class="figure align-default" id="planets-fig">
+<a class="reference internal image-reference" href="https://solarsystem.nasa.gov/system/resources/detail_files/686_solarsys_scale.jpg"><img alt="solar system planets" src="https://solarsystem.nasa.gov/system/resources/detail_files/686_solarsys_scale.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.6 </span><span class="caption-text">This illustration shows the approximate sizes of the planets relative to each other.   Image credit: <a class="reference external" href="https://solarsystem.nasa.gov/resources/686/solar-system-sizes/">NASA</a></span><a class="headerlink" href="#planets-fig" title="Permalink to this image">¶</a></p>
+</div>
+<div class="section" id="giant-planets">
+<h3><span class="section-number">1.2.1. </span>Giant Planets<a class="headerlink" href="#giant-planets" title="Permalink to this headline">¶</a></h3>
+<p><strong>Jupiter</strong> dominates the planets in the Solar System in terms of both its mass (<span class="math notranslate nohighlight">\(318\ M_\oplus\)</span> [Earth masses] or <span class="math notranslate nohighlight">\(9.54 \times 10^{-4}\ M_\odot\)</span> [Solar masses]) and radius (<span class="math notranslate nohighlight">\(11.2\ R_\oplus\)</span> [Earth radii] or <span class="math notranslate nohighlight">\(0.10\ R_\odot\)</span> [Solar radii]).  Jupiter has two times more mass than the remainder of the Solar System (excluding the Sun).  The first approximation of the Solar System was the Sun + debris, where a second approximation would be the Sun + Jupiter + debris.  The largest (in mass and radius) of the new debris category is <strong>Saturn</strong>, which is about one-third of Jupiter’s mass (<span class="math notranslate nohighlight">\(100\ M_\oplus\)</span>) and nearly equivalent to Jupiter’s radius (<span class="math notranslate nohighlight">\(9.5\ R_\oplus\)</span>). Saturn is compositionally similar to Jupiter, where they are both comprised mostly of molecular hydrogen <span class="math notranslate nohighlight">\((\rm H_2)\)</span> and helium <span class="math notranslate nohighlight">\((\rm He)\)</span>.  Both planets likely possess a heavy ‘core’ of <span class="math notranslate nohighlight">\(\sim 10\ M_\oplus\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Astronomers use the term <em>ices</em> (or <a class="reference external" href="https://en.wikipedia.org/wiki/Interstellar_ice">interstellar ices</a>) to describe molecules or compounds that condense into crystals and are typically suspended within a gas cloud.  Examples of water ice on Earth are snow, sleet, and hail, where astrophysical ices are more similar to snow or sleet.</p>
+</div>
+<p><strong>Uranus</strong> and <strong>Neptune</strong> are the next largest planets, but they are much less massive (<span class="math notranslate nohighlight">\(14\ M_\oplus\)</span> and <span class="math notranslate nohighlight">\(17\ M_\oplus\)</span>, respectively) and physically smaller (<span class="math notranslate nohighlight">\(\sim 4\ R_\oplus\)</span>) than the Jovian planets.  These planets belong to a different class, with most of their masses provided by a combination of three astrophysical <em>ices</em>:</p>
+<ul class="simple">
+<li><p>water <span class="math notranslate nohighlight">\((\rm H_2O)\)</span>,</p></li>
+<li><p>ammonia <span class="math notranslate nohighlight">\((\rm NH_3)\)</span>, and</p></li>
+<li><p>methane <span class="math notranslate nohighlight">\((\rm CH_4)\)</span>,</p></li>
+</ul>
+<p>together with ‘rock’ (high temperature condensates consisting primarily of silicates and metals).  Most of their volume is occupied by relatively low mass <span class="math notranslate nohighlight">\((1-4\ M_\oplus)\)</span> <span class="math notranslate nohighlight">\(\rm H-He\)</span> dominated atmospheres.</p>
+<p>The four largest planets are known collectively as the <strong>giant planets</strong>, where they are subdivided into the <strong>gas giants</strong> (i.e., Jupiter and Saturn) and the <strong>ice giants</strong> (Uranus and Neptune).  All four giant planets possess strong magnetic fields.  The giant planets orbit at progressively farther distances from the Sun: 5.2 AU (Jupiter), 9.5 AU (Saturn), 19.2 AU (Uranus), and 30 AU (Neptune).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>One <strong>astronomical unit</strong> (1 AU) is defined as the semimajor axis of a massless (test) particle whose orbital period around the Sun is one year.</p>
+</div>
+</div>
+<div class="section" id="terrestrial-planets">
+<h3><span class="section-number">1.2.2. </span>Terrestrial Planets<a class="headerlink" href="#terrestrial-planets" title="Permalink to this headline">¶</a></h3>
+<p>The total mass of the remaining <em>debris</em> (in Sun + gas giants + debris) is less than one-fifth of Uranus’ mass and their angular momenta are much smaller too.  The remaining debris consists of solid bodies, that are interesting chemically, geologically, dynamically, and in the case of Earth, biologically.  The two largest <strong>terrestrial</strong> planets are <strong>Earth</strong> and <strong>Venus</strong>.  Venus orbits closer to the Sun (0.72 AU), is less massive <span class="math notranslate nohighlight">\((0.82\ M_\oplus)\)</span>, and is slightly smaller <span class="math notranslate nohighlight">\((0.94\ R_\oplus)\)</span> than the Earth.  Our Solar System contains two other terrestrial planets that are much smaller than the Earth: <strong>Mars</strong> <span class="math notranslate nohighlight">\((0.53\ R_\oplus)\)</span> and <strong>Mercury</strong> <span class="math notranslate nohighlight">\((0.38\ R_\oplus)\)</span>.  These terrestrial worlds are much less massive than the Earth too: Mars <span class="math notranslate nohighlight">\((0.11\ M_\oplus)\)</span> and Mercury <span class="math notranslate nohighlight">\((0.06\ M_\oplus)\)</span>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In planetary science and astronomy, the word <em>terrestrial</em> means Earth-like or otherwise related to the Earth.  Geoscientists and biologists generally use the same word to signify a relationship with land masses.</p>
+</div>
+<p>All four terrestrial planets have atmospheres, where the composition and density varies widely.  Venus’ atmosphere is the thickest, while Mercury’s atmosphere is the most tenuous.  Even though Venus’ atmosphere is massive by terrestrial standards, it is still miniscule compared to the giant planets.  Earth and Mercury have an internally generated magnetic field.  Mars’ magnetic field is extremely weak now, but it may have been stronger earlier in its history.</p>
+</div>
+<div class="section" id="minor-planets-and-comets">
+<h3><span class="section-number">1.2.3. </span>Minor Planets and Comets<a class="headerlink" href="#minor-planets-and-comets" title="Permalink to this headline">¶</a></h3>
+<p>The <strong>Kuiper belt</strong> consists of a thick disk of small bodies beyond the orbit of Neptune.  These bodies are composed of a mixture of ice and rock, where the two largest members are <strong>Eris</strong> and <strong>Pluto</strong>.  These Kuiper belt objects (KBOs) have eccentric orbits, which means that their <strong>heliocentric distance</strong> oscillates over a single orbit.  Eris lies between <span class="math notranslate nohighlight">\(38-97\ \rm AU\)</span>, while Pluto’s distance varies between <span class="math notranslate nohighlight">\(29-50\ \rm AU\)</span>.  The radii of Eris and Pluto are greater than 1000 km <span class="math notranslate nohighlight">\((\sim 0.18\ R_\oplus)\)</span>.  On July 14 2015, the <a class="reference external" href="https://en.wikipedia.org/wiki/New_Horizons">New Horizons</a> space probe characterized <a class="reference external" href="https://en.wikipedia.org/wiki/Atmosphere_of_Pluto">Pluto’s atmosphere</a>, although it was known to have an atmosphere since the 1980s.  Many other KBOs have been cataloged, but the census of these objects is still incomplete.</p>
+<div class="figure align-default" id="minor-planets-fig">
+<a class="reference internal image-reference" href="http://pluto.jhuapl.edu/Pluto/images/WhatWeKnow-Basics-FamilyofPlanets.jpg"><img alt="minor planets" src="http://pluto.jhuapl.edu/Pluto/images/WhatWeKnow-Basics-FamilyofPlanets.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.7 </span><span class="caption-text">This illustration shows the approximate sizes of objects in the Kuiper and Asteroid belts.  Image credit: <a class="reference external" href="http://pluto.jhuapl.edu/Pluto/The-Pluto-System.php">NASA/JHU/APL</a></span><a class="headerlink" href="#minor-planets-fig" title="Permalink to this image">¶</a></p>
+</div>
+<p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Minor_planet">minor planet</a> directly orbits the Sun.  It is neither a planet nor exclusively classified as a comet.  Minor planets include <strong>asteroids</strong> (i.e., near-Earth objects, Mars-crossers, main-belt asteroids, and Jupiter trojans), as well as distant minor planets (centaurs and trans-Neptunian objects). As of June 2021, there are 1,086,655 known objects, divided into 567,132 numbered (secured discoveries) and 519,523 unnumbered minor planets, with only five of those officially recognized as a dwarf planet.</p>
+<p><strong>Comets</strong> are ice-rich objects (i.e., dirty snowballs) that shed mass when subjected to solar heating (inside of Jupiter’s orbit).  Comets may have formed near the giant planet region initially, but were transported and stored in the <strong>Oort Cloud</strong>, Kuiper Belt, or the <strong>scattered disk</strong>.  The Oort cloud is a nearly spherical region that extends to <span class="math notranslate nohighlight">\(\sim 10^4\ \rm AU\)</span>.  Scattered disk objects (SDOs) have moderate to high eccentricity orbits that lie wholly (or at least partially) withing the Kuiper belt.  The total number of comets (larger than 1 km in radius) in the entire Oort cloud is estimated to range from <span class="math notranslate nohighlight">\(\sim 10^{12}-10^{13}\)</span>.  The total number of KBOs of a similar size is estimated to be <span class="math notranslate nohighlight">\(\sim 10^8-10^{10}\)</span>.</p>
+<p>The smallest bodies known to orbit the Sun have been observed collectively, but not yet individually detected, via remote sensing.  Dust grains that together produce the faint band in the planet orbital plane are known as the <strong>zodiacal cloud</strong>.</p>
+</div>
+<div class="section" id="satellite-and-ring-systems">
+<h3><span class="section-number">1.2.4. </span>Satellite and Ring Systems<a class="headerlink" href="#satellite-and-ring-systems" title="Permalink to this headline">¶</a></h3>
+<p>Beyond those bodies orbiting the Sun are some of the most interesting objects in the Solar System, which in turn orbit the planets.  Two of the planetary satellites (Jupiter’s moon Ganymede and Saturn’s moon Titan) are slightly larger than the planet Mercury.  These bodies are half as massive as Mercury, where a large portion of their mass is dominated by ices.  Titan’s atmosphere is about four times denser than Earth’s atmosphere.  Neptune’s moon Triton has an atmosphere that is much less dense, but it has powerful winds that strongly perturb particles ejected from geysers on its surface.  Very tenuous atmospheres have been detected on the Moon (Earth’s satellite), Io (Jupiter’s satellite), and Enceladus (Saturn’s satellite).</p>
+<p><strong>Natural satellites</strong> orbit most of the planets in the Solar System (only Mercury and Venus are without natural satellites).  Even KBOs and asteroids can have natural satellites.  The giant planets have large satellite systems consisting of moons of many sizes and rings.  Most of the smaller moons were discovered from spacecraft flybys.  All major satellites (except Triton) orbit in the direction of the host planet’s rotation (i.e., <strong>prograde</strong>) and close to the planet’s equatorial plane.  Small close-in moons also inhabit low-inclination, low-eccentricity orbits, but small, distant moons can travel around the planet in the direction opposite of the planet’s rotation (i.e., <strong>retrograde</strong>) as well as prograde.  Moreover, such moons are often in highly inclined and eccentric orbits.</p>
+<div class="figure align-default" id="satellites-fig">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Moons_of_solar_system_v7.jpg/1280px-Moons_of_solar_system_v7.jpg"><img alt="satellites" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Moons_of_solar_system_v7.jpg/1280px-Moons_of_solar_system_v7.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.8 </span><span class="caption-text">Selected moons, with Earth to scale. Nineteen moons are large enough to be round, and one, Titan, has a substantial atmosphere.  Image credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/List_of_natural_satellites">natural satellites</a></span><a class="headerlink" href="#satellites-fig" title="Permalink to this image">¶</a></p>
+</div>
+<p>Earth and Pluto each have a satellite that is very massive compared to the host planet.  Our Moon is about 1.67% of Earth’s mass, where Charon is about 10% of Pluto’s mass.  These moons aer suspected to have been produced through giant impacts when the Solar System was much younger.  Two tiny moons (Phobos &amp; Deimos) travel on low-inclination, low-eccentricity orbits around Mars.  Current models suggest that Phobos will eventually (in millions of years) fall towards Mars and disrupt to form a planetary ring.</p>
+<p>The four giant planets all have ring system, which are primarily located within about 2.5 <span class="math notranslate nohighlight">\(R_p\)</span> (planetary radii) from the planet’s center.  The character of each ring system varies greatly, where Saturn’s rings are bright, broad, and full of structure (such as density waves, gaps, and spokes).  Jupiter’s ring is very tenuous and mostly consists of small particles.  Uranus has nine narrow, opaque rings and broad dust regions orbiting in the planet’s equatorial plane.  Neptune has four rings (two narrow and two broad), where the narrow rings have bright segments called <em>ring arcs</em>.</p>
+</div>
+<div class="section" id="heliosphere">
+<h3><span class="section-number">1.2.5. </span>Heliosphere<a class="headerlink" href="#heliosphere" title="Permalink to this headline">¶</a></h3>
+<p>All planetary orbits lie within the region of space containing the Sun’s magnetic fields and ionized gas called the <strong>heliosphere</strong>.  The <strong>solar wind</strong> consists of ionized gas (i.e., <strong>plasma</strong>) that travels outward from the at high speed (<span class="math notranslate nohighlight">\(\sim 400\ {\rm km/s}\)</span>).  The solar wind merges with the <strong>interstellar medium</strong> (ISM) at the boundary of the heliosphere called the <strong>heliopause</strong>.  Three interstellar probes (Voyager 1, Voyager 2, and Pioneer 10) are currently beyond the heliopause.</p>
+<p>The composition of the heliosphere is dominated by protons and electrons from the solar wind, where there are about <span class="math notranslate nohighlight">\(5 \times 10^6\ {\rm protons/m^3}\)</span> that intersect Earth’s orbit at 1 AU.  The density of the solar wind decreases following an inverse square law (<span class="math notranslate nohighlight">\(\rho \propto 1/r^2\)</span>).  The solar wind reaches <span class="math notranslate nohighlight">\(\sim 400\ {\rm km/s}\)</span> near the Sun’s equatorial plane, but its speed increases to <span class="math notranslate nohighlight">\(\sim 800\ {\rm km/s}\)</span> closer to the poles.</p>
+<div class="figure align-default" id="heliosphere-fig">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/4/43/PIA22835-VoyagerProgram%26Heliosphere-Chart-20181210.png"><img alt="heliosphere" src="https://upload.wikimedia.org/wikipedia/commons/4/43/PIA22835-VoyagerProgram%26Heliosphere-Chart-20181210.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.9 </span><span class="caption-text">This illustration shows the position of NASA’s Voyager 1 and Voyager 2 probes, outside of the heliosphere, a protective bubble created by the Sun that extends well past the orbit of Pluto.  Image credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Heliosphere">heliosphere</a></span><a class="headerlink" href="#heliosphere-fig" title="Permalink to this image">¶</a></p>
+</div>
+<p>The local ISM consists of mainly <span class="math notranslate nohighlight">\(\rm H\)</span> and <span class="math notranslate nohighlight">\(\rm He\)</span>, with a density of <span class="math notranslate nohighlight">\(&lt; 1\times 10^5\ {\rm atoms/m^3}\)</span>.  The Sun’s motion relative to its neighboring stars is about <span class="math notranslate nohighlight">\(18\ {\rm km/s}\)</span>, where the heliosphere also moves through the ISM at this speed (i.e., Galilean relativity).  When medium A travels through another (less dense) medium B, the shape of medium A can conform into a teardrop with a tail in the downwind direction.  This happens on Earth for raindrops falling through the atmosphere.  The heliosphere is believed to be shaped in a similar way as it moves through the ISM.  Interstellar ions and electrons generally flow around the heliosphere because they cannot cross the solar magnetic field lines.  Neutral atoms can enter the heliosphere, where the <span class="math notranslate nohighlight">\(\rm H\)</span> and <span class="math notranslate nohighlight">\(\rm He\)</span> atoms from the ISM move in the downstream direction with a speed of <span class="math notranslate nohighlight">\(\sim 15-20\ {\rm km/s}\)</span>.</p>
+<p>The solar wind is slowed at a boundary just interior to the heliopause called its <strong>termination shock</strong>.  The location of this shock moves radially with respect to the Sun in accordance with the 11-year solar activity cycle and variations in the solar wind pressure.  The region between the termination shock and the heliopause is called the <strong>heliosheath</strong>.</p>
+</div>
+</div>
+<div class="section" id="what-is-a-planet">
+<h2><span class="section-number">1.3. </span>What is a Planet?<a class="headerlink" href="#what-is-a-planet" title="Permalink to this headline">¶</a></h2>
+<p>The ancient Greeks referred to all moving objects in the sky as planets, where there were seven such objects (Sun, Moon, Mercury, Venus, Mars, Jupiter, and Saturn).  The Copernican revolution removed the Sun and Moon as planets, but added the Earth.  Uranus and Neptune were discovered in the 18th and 19th centuries, respectively, with the aid of the telescope.</p>
+<p>The next ‘planet’ discovered after Uranus was 1 Ceres (the largest member of the asteroid belt) in 1801.  Shortly after there were several other similar-sized bodies 2 Pallas (in 1802) and 4 Vesta (in 1807) orbiting at nearly the same distance from the Sun.  It became clear that these were not planets in the same sense as the previously discovered planets and were later called asteroids.  Pluto was discovered by Clyde Tombaugh in 1930 and was initially believed to Earth-like in mass and radius.  More observations revealed that is actually much smaller (and less massive) than the Earth and orbits along with many other similar sized objects (i.e., Eris and other KBOs).  In 2006, Pluto was reclassified as a dwarf planet by the International Astronomical Union (IAU).  The IAU made the following resolution for the definition of a planet and dwarf planet:</p>
+<ul class="simple">
+<li><p><strong>planet</strong>: A celestial body that (1) orbits the Sun, (2) has sufficient mass to assume a (nearly round) shape through its self-gravity, and (3) <em>has cleared</em> its orbital neighborhood of similar sized-bodies.</p></li>
+<li><p><strong>dwarf planet</strong>: A celestial body that (1) orbits the Sun, (2) has sufficient mass to assume a (nearly round) shape through its self-gravity, (3) <em>has not cleared</em> its orbital neighborhood of similar sized-bodies, and (4) is not a satellite.</p></li>
+</ul>
+<div align="center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/Z_2gbGXzFbs" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
+</div>
+<p>Detections of other substellar object orbiting other stars have raised a similar question concerning the size limit for planethood.  The current IAU nomenclature for range between a planet and star are:</p>
+<ul class="simple">
+<li><p><strong>Star</strong>: self-sustaining (proton; <span class="math notranslate nohighlight">\(\rm ^{1}_1H\)</span>) fusion is sufficient for thermal pressure to balance gravity.  For solar composition, the minimum mass for an object to be a star is <span class="math notranslate nohighlight">\(\sim 0.075\ M_\odot\)</span> (or <span class="math notranslate nohighlight">\(\sim 79\)</span> Jupiter masses) and is referred to as the <strong>hydrogen burning limit</strong>.</p></li>
+<li><p><strong>Stellar remnant</strong>: no more fusion (i.e., dead star), where the object is no longer supported by thermal pressure.</p></li>
+<li><p><strong>Brown dwarf</strong>: substantial <a class="reference external" href="https://en.wikipedia.org/wiki/Deuterium">deuterium</a> (proton + neutron; <span class="math notranslate nohighlight">\(\rm ^{2}_1H\)</span>) fusion , where more than of the object’s original deuterium inventory is destroyed by fusion.</p></li>
+<li><p><strong>Planet</strong>: negligible fusion, with a precise mass limit depending on the initial composition (<span class="math notranslate nohighlight">\(\lesssim 0.012\ M_\odot\)</span>).  It can orbit one (or more) stars, a stellar remnant, or no stars at all (i.e., rogue planet).</p></li>
+</ul>
+</div>
+<div class="section" id="planetary-properties">
+<h2><span class="section-number">1.4. </span>Planetary Properties<a class="headerlink" href="#planetary-properties" title="Permalink to this headline">¶</a></h2>
+<p>All of our knowledge regarding specific characteristics of Solar System objects is ultimately derived from observations, which can be astronomical measurements from the ground, Earth-orbiting satellites, or from close-up (i.e., <em>in situ</em>) measurements from spacecraft.  With the help of various theories, the observations can be used to constrain planetary properties, such as bulk composition and interior structure.  These are also crucial elements necessary for modeling the formation of the Solar System.</p>
+<div class="section" id="orbit">
+<h3><span class="section-number">1.4.1. </span>Orbit<a class="headerlink" href="#orbit" title="Permalink to this headline">¶</a></h3>
+<p>By 1615 <a class="reference external" href="https://en.wikipedia.org/wiki/Johannes_Kepler">Johannes Kepler</a> deduced three laws of planetary motion from observations:</p>
+<ol class="simple">
+<li><p>All planets move along elliptical paths with the Sun at one focus.</p></li>
+<li><p>A line segment connecting any given planet and the Sun sweeps out area at a constant rate (i.e., equal area in equal time).</p></li>
+<li><p>The square of a planet’s orbital period <span class="math notranslate nohighlight">\(P_{\rm orb}\)</span> is proportional to the cube of its semimajor axis <span class="math notranslate nohighlight">\(a\)</span> (i.e., <span class="math notranslate nohighlight">\(P_{\rm orb}^2 \propto a^3\)</span>).</p></li>
+</ol>
+<p>A Keplerian orbit is uniquely defined by six orbital elements in a coordinate system, where the major axis of the ellipse is parallel to the <span class="math notranslate nohighlight">\(y\)</span>-axis</p>
+<ul class="simple">
+<li><p>semimajor axis <span class="math notranslate nohighlight">\(a\)</span>: half the length of the long (major) axis of the ellipse.</p></li>
+<li><p>eccentricity <span class="math notranslate nohighlight">\(e\)</span>: the fraction by which a focus is displaced distance <span class="math notranslate nohighlight">\(d\)</span> from the center of the ellipse <span class="math notranslate nohighlight">\((e = d/a)\)</span>.</p></li>
+<li><p>inclination <span class="math notranslate nohighlight">\(i\)</span>: an angle that rotates the orbit about the <span class="math notranslate nohighlight">\(x\)</span>-axis.</p></li>
+<li><p>argument of pericenter <span class="math notranslate nohighlight">\(\omega\)</span>: an angle that rotates the orbit about the <span class="math notranslate nohighlight">\(z\)</span>-axis.  It also helps locate the eccentricity vector <span class="math notranslate nohighlight">\(\vec{e}\)</span>.</p></li>
+<li><p>longitude of ascending node <span class="math notranslate nohighlight">\(\Omega\)</span>: an angle that rotates the orbit about the <span class="math notranslate nohighlight">\(z\)</span>-axis. It also helps locate the inclination vector <span class="math notranslate nohighlight">\(\vec{i}\)</span>.</p></li>
+<li><p>true anomaly <span class="math notranslate nohighlight">\(f\)</span>: an angle that begins at the pericenter and rotates <em>along the orbit</em> to locate the planet at a given epoch.</p></li>
+</ul>
+<div class="figure align-default" id="orbit-fig">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Orbit1.svg/800px-Orbit1.svg.png"><img alt="orbit" src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Orbit1.svg/800px-Orbit1.svg.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.10 </span><span class="caption-text">Illustration of a Keplerian orbit, where the reference direction is along the <span class="math notranslate nohighlight">\(y\)</span>-axis.  The true anomaly is denoted by the greek letter <span class="math notranslate nohighlight">\(\nu\)</span>.  Image credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Kepler_orbit">Kepler Orbit</a> by User:Lasunncty.</span><a class="headerlink" href="#orbit-fig" title="Permalink to this image">¶</a></p>
+</div>
+<p>The first two elements (<span class="math notranslate nohighlight">\(a\)</span> and <span class="math notranslate nohighlight">\(e\)</span>) define the shape of the ellipse, where the elements <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(\omega\)</span>, and <span class="math notranslate nohighlight">\(\Omega\)</span> are angles that rotate the ellipse about the respective axes (see Fig. <a class="reference internal" href="#orbit-fig"><span class="std std-numref">1.10</span></a>).  The true anomaly defines where the planet is located along the ellipse, and is sometimes denoted by the greek letter <span class="math notranslate nohighlight">\(\nu\)</span>.  An alternative angle called the longitude of pericenter or <code class="docutils literal notranslate"><span class="pre">varpi</span></code> is simply the sum of the argument of pericenter with the longitude of ascending node for prograde orbits (i.e., <span class="math notranslate nohighlight">\(\varpi = \omega + \Omega\)</span>).  For retrograde orbits, <code class="docutils literal notranslate"><span class="pre">varpi</span></code> is defined as the <em>difference</em> between the respective angles.</p>
+<p>Alternative sets of orbital elements are also possible.  For example, an orbit is fully specified by the planet’s Cartesian location and velocity relative to the Sun at a given time (epoch), which requires six independent scalar quantities, provided the masses of the Sun and the planet are known.</p>
+<p>Kepler’s laws can be derived from Newton’s <a class="reference external" href="https://en.wikipedia.org/wiki/Newton%27s_laws_of_motion">laws of motion</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Newton%27s_law_of_universal_gravitation">gravity</a> that were developed in the 17th century.  In most instances, this is sufficient where corrections (through <a class="reference external" href="https://en.wikipedia.org/wiki/General_relativity">General Relativity</a>) to Newton’s laws are necessary when a planet orbits sufficiently close to the Sun.  Otherwise, planetary orbits can be modeled using classical methods that account for the gravitational perturbations between planets and the gravitational force exerted by the Sun.</p>
+<p>All planets and asteroids revolve around the Sun in the direction of solar rotation.  Their orbital planes generally lie within a few degrees of each other and are close to the solar equator.  For observational convenience, inclinations are usually measured relative to the Earth’s orbital plane (i.e., the <strong>ecliptic plane</strong>).  The Sun’s equatorial planet is tilted by <span class="math notranslate nohighlight">\(7^\circ\)</span> from the ecliptic.  Mercury’s orbit is also tilted <span class="math notranslate nohighlight">\(7^\circ\)</span> from the ecliptic, but it is tilted <span class="math notranslate nohighlight">\(3.4^\circ\)</span> from the Sun’s equatorial plane due to its ascending node and the <a class="reference external" href="https://en.wikipedia.org/wiki/Spherical_law_of_cosines">spherical law of cosines</a>.  The other major planets all lie nearly in the plane of the ecliptic.  Most major satellites also orbit within their host planet’s equatorial plane.  Some comets and satellites orbit opposite to the Sun’s or planet’s rotation (i.e., retrograde).</p>
+</div>
+<div class="section" id="mass">
+<h3><span class="section-number">1.4.2. </span>Mass<a class="headerlink" href="#mass" title="Permalink to this headline">¶</a></h3>
+<p>The mass of an object can be deduced from the gravitational force that it exerts on other bodies through the following:</p>
+<ul class="simple">
+<li><p><strong>Orbits of moons</strong>: The orbital periods of natural satellites and Newton’s generalization of Kepler’s 3rd law can be applied to determine the mass of the host planet <span class="math notranslate nohighlight">\(M_p\)</span>.  The result is actually the sum of the masses between the planet and satellite, but to a first good approximation it represents the planet mass (i.e., <span class="math notranslate nohighlight">\(M_p \approx M_p + M_{\rm sat}\)</span>).  For massive moons (e.g., Earth/Moon or Pluto/Charon), the approximation breaks down and other methods are needed.  The major source of uncertainty in this method lies in measurement errors in the semimajor axis, where timing errors are negligible.</p></li>
+<li><p><strong>Gravitational perturbations</strong>: The gravity of planetary neighbors is sometimes sufficient to allow for a mass measurement.  The accuracy for this method is not as high because of the large distances involved.  The timing differences on the observed body has been used to discover and confirm a host of exoplanets.  Additionally, Neptune was discovered using variations in the motion of Uranus.</p></li>
+<li><p><strong>Spacecraft tracking</strong>: The motions of planets and moons can be identified through the Doppler shift in a radio signal, which correlates to the mass of each body very precisely.  The long time baselines from <strong>orbiter</strong> missions allow much higher accuracy than for <strong>flyby</strong> missions.  Some of the outer planet moons were measured by flyby measurements with the <em>Voyager</em> tracking data.</p></li>
+<li><p><strong>Spiral density waves</strong>: The masses of Saturn’s inner moons can be derived from the amplitude of spiral density waves resonantly excited within Saturn’s rings.</p></li>
+<li><p><strong>Nongravitational forces</strong>: The masses of some objects can be crudely estimated by the asymmetric escape of gas and dust, where this affects the observed orbit.</p></li>
+</ul>
+<p>The gravity field of a non-spherically symmetric mass distribution differs from a point source of identical mass.  Such deviations can be used to estimate the degree of central mass concentration in rotating bodies, if the rotation period is well known.  This effect is most pronounced for points close to the rotating body.  One can make use of spacecraft tracking data and the orbits of moons/rings to determine the precise gravity field.</p>
+<div class="figure align-default" id="planet-sizes-fig">
+<a class="reference internal image-reference" href="../_images/planets-5.jpg"><img alt="planet sizes" src="../_images/planets-5.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.11 </span><span class="caption-text">Rendering of the Solar System planets (and Pluto) scaled by size using a computer program called Pov-Ray.  Image credit: Dan Bruton:<a class="reference external" href="http://www.midnightkite.com/index.aspx?URL=PlanetRendering">midnightkite.com</a>.</span><a class="headerlink" href="#planet-sizes-fig" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="size">
+<span id="size-sect"></span><h3><span class="section-number">1.4.3. </span>Size<a class="headerlink" href="#size" title="Permalink to this headline">¶</a></h3>
+<p>Bodies in the Solar System occur in a broad range of shapes and sizes.  The planets are nearly round (see Fig. <a class="reference internal" href="#planet-sizes-fig"><span class="std std-numref">1.11</span></a>), but asteroids and comets come in a wider variety of shapes (e.g., potato and dog-bone).  The size of an object can be measured in various ways:</p>
+<ul class="simple">
+<li><p><strong>Angular size and Distance</strong>: The diameter of a body <span class="math notranslate nohighlight">\(d_b\)</span> is the product of its angular size <span class="math notranslate nohighlight">\(\theta\)</span> (in radians) with its distance <span class="math notranslate nohighlight">\(d_o\)</span> from the observer (i.e., <span class="math notranslate nohighlight">\(d_b \approx d_o\theta\)</span>).  Solar System distances are simple to estimate from orbits (via parallax).  The limited resolution from ground-based observations results in large uncertainties in angular size.  For bodies below this resolution limit, it is better to measure the size at close distances by interplanetary spacecraft.</p></li>
+<li><p><strong>Occultation</strong>:  The diameter of a body can be deduced by observing a background star that is being blocked (i.e., occulted) by the body in the foreground.  The angular velocity <span class="math notranslate nohighlight">\(\dot{\theta}\)</span> of the star relative to the body can be calculated using orbital data (after accounting for observational effects of Earth’s orbit and rotation).  An estimate for the distance across a body (i.e., a chord) can be determined by measuring the duration of the occultation <span class="math notranslate nohighlight">\(\Delta t_{occ}\)</span>, and then multiplying by the angular velocity and distance (i.e., <span class="math notranslate nohighlight">\(d_b \approx \dot{\theta} \Delta t_{occ} d_o\)</span>).  Three well-separated chords are sufficient for a spherical planet, but many chords are needed if the body is irregularly shaped.  This technique is useful for small bodies and requires an intense amount of planning to obtain enough chords.</p></li>
+<li><p><strong>Radar</strong>: Similar to mapping the ocean floor or identifying aircraft, the echoes of a wave can be used to determine radii and shapes.  The signal strength of radar drops as <span class="math notranslate nohighlight">\(1/r^4\)</span> because it falls as <span class="math notranslate nohighlight">\(1/r^2\)</span> on the outgoing trip and <span class="math notranslate nohighlight">\(1/r^2\)</span> again on the return trip.  This limits this technique to relatively nearby objects, such as solid planets, asteroids, and cometary nuclei.</p></li>
+<li><p><strong>Lander and Orbiter</strong>: An excellent way to measure the radius is through the use of a lander and orbiter using triangulation.  This method works well for terrestrial planets and satellites with substantial atmospheres (e.g., Titan).</p></li>
+<li><p><strong>Photometric Observations</strong>:  The reflection of light (i.e., albedo) at visible and infrared (IR) wavelengths can be used to measure the size.  The resulting lightcurve from these observations can be numerically modeled to determine its shape.  Variations of this method have been used to measure the sizes for 1000s of exoplanets.</p></li>
+</ul>
+<p>The mean density <span class="math notranslate nohighlight">\(\rho\)</span> of an object can be trivially determined after both the mass and size are measured (i.e., <span class="math notranslate nohighlight">\(\rho = \text{mass}/\text{volume}\)</span>).  The density of an object gives a rough idea of its composition, although compression at high pressures must also be taken into account or the possibility of significant voids.  The low density <span class="math notranslate nohighlight">\(\sim 0.6-1.7\ {\rm g/cm^3}\)</span> of the four giant planets implies material with low mean molecular weight.  Terrestrial planet densities <span class="math notranslate nohighlight">\((\sim 3-5.5\ {\rm g/cm^3})\)</span> imply rocky material including silicates and some metal.  Most of the medium-large satellites orbiting giant planets have low densities <span class="math notranslate nohighlight">\((1-2\ {\rm g/cm^3})\)</span>, which implies a combination of high density rock with low density ice; recall the density of water is <span class="math notranslate nohighlight">\(1\ {\rm g/cm^3}\)</span> and water ice is <span class="math notranslate nohighlight">\(0.917\ {\rm g/cm^3}\)</span>.  Comets have densities nearly equal to water ice.</p>
+<p>The escape velocity can be determined using the mass and size of an object.  The escape velocity and temperature can be used to estimate a planetary body’s ability to retain an atmosphere.  Both of these effects are related to measuring a planet’s gravity.</p>
+</div>
+<div class="section" id="rotation">
+<h3><span class="section-number">1.4.4. </span>Rotation<a class="headerlink" href="#rotation" title="Permalink to this headline">¶</a></h3>
+<p>Rotation is a vector quantity (having a magnitude and direction) that is related to the spin angular momentum.  The <strong>obliquity</strong> (or <strong>axial tilt</strong>) of a planetar body is the angle between its spin and orbital angular momentum (see Fig. <a class="reference internal" href="#planet-rotation-fig"><span class="std std-numref">1.12</span></a>).  A body with an obliquity <span class="math notranslate nohighlight">\(&lt;90^\circ\)</span> is defined to have a <strong>prograde</strong> rotation (i.e., the spin and orbit are along the same direction), where as a <strong>retrograde</strong> body has an obliquity <span class="math notranslate nohighlight">\(&gt;90^\circ\)</span>.  <em>Note that these terms are not to be confused with prograde or retrograde orbits.</em></p>
+<div class="figure align-default" id="planet-rotation-fig">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/6/61/AxialTiltObliquity.png"><img alt="planet rotation" src="https://upload.wikimedia.org/wikipedia/commons/6/61/AxialTiltObliquity.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.12 </span><span class="caption-text">Description of relations between Axial tilt (or Obliquity), rotation axis, plane of orbit, celestial equator and ecliptic. Earth is shown as viewed from the Sun; the orbit direction is counter-clockwise (to the left).  Image credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Axial_tilt">Axial Tilt</a> by Dennis Nilsson.</span><a class="headerlink" href="#planet-rotation-fig" title="Permalink to this image">¶</a></p>
+</div>
+<p>The rotation of an object can be determine using various techniques:</p>
+<ul class="simple">
+<li><p><strong>Surface Markings</strong>:  The most straightforward method to determine a body’s rotation axis and period is to observe how markings on the surface move around with the disk.  Such markings can include uniquely sized or shaped impact craters; persistent cloud formations; or starspots (i.e., magnetic field interactions with a plasma).  Not all planets have such features (e.g., Venus).  If atmospheric features are used, winds may cause the deduced period to vary with latitude, altitude, and time.</p></li>
+<li><p><strong>Magnetic Fields</strong>:  Bodies with sufficient magnetic fields trap charged particles within their magnetospheres.  These charged particles are accelerated by electromagnetic forces and emit radio waves.  The radio signals have a periodicity that is equal to the rotation of the planet.  For planets <em>without</em> solid surfaces, the magnetic field period is viewed as more fundamental than the periods measured with clout features.</p></li>
+<li><p><strong>Photometric Observations</strong>:  The brightness variations of an object is measured as a <strong>lightcurve</strong> (i.e., total disk brightness as a function of time).  The variations can be the result of differences in albedo or projected area (for irregularly shaped bodies).  Most asteroids have double-peaked lightcurves, indicating that the variations are due to the shape.</p></li>
+<li><p><strong>Doppler Shifts</strong>:  The measured Doppler shift across the disk can give a rotation period and a crude estimate of the rotation axis, if the body’s radius is known.  This can be done passively in visible light, or actively using radar.</p></li>
+</ul>
+<p>The rotation periods of most objects orbiting the Sun range from <span class="math notranslate nohighlight">\(3\)</span> hours to a few days.  Mercury and Venus form exceptions with periods of 59 and 243 days, respectively, and are partially explained by the slowing effect of solar tides.  Most Solar System planets (6 out of 8) rotate in a prograde sense with a respective obliquity that is <span class="math notranslate nohighlight">\(\leq  30^\circ\)</span>.  Venus and Uranus rotate in a retrograde direction with an obliquity of <span class="math notranslate nohighlight">\(177^\circ\)</span> and <span class="math notranslate nohighlight">\(98^\circ\)</span>, respectively.  Most planetary satellites rotate synchronously with their orbital periods (i.e., <span class="math notranslate nohighlight">\(P_{\rm orb} \approx P_{\rm rot}\)</span>) as a result of planet-induced tides.</p>
+</div>
+<div class="section" id="shape">
+<h3><span class="section-number">1.4.5. </span>Shape<a class="headerlink" href="#shape" title="Permalink to this headline">¶</a></h3>
+<p>Many different forces together determine the shape of a body.  Self-gravity tends to produce bodies of a spherical shape, which is a consequence of a minimum for gravitational potential energy.  Material strength maintains shape irregularities, which are produced by accretion, impacts, or internal geological processes.  Bodies with mean radii larger than <span class="math notranslate nohighlight">\(\sim 200\ {\rm km}\)</span> are fairly round, and smaller objects may be quite oddly shaped.  Figure <a class="reference internal" href="#planet-shape-fig"><span class="std std-numref">1.13</span></a> shows the nonspherical shape of Mars’ moon Phobos through a solar eclipse caught by the Perseverance rover.</p>
+<div class="figure align-default" id="planet-shape-fig">
+<a class="reference internal image-reference" href="https://photojournal.jpl.nasa.gov/archive/PIA25179.gif"><img alt="planet shape" src="https://photojournal.jpl.nasa.gov/archive/PIA25179.gif" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.13 </span><span class="caption-text">NASA’s Perseverance Mars rover used its Mastcam-Z camera system to shoot video of Phobos, one of Mars’ two moons, eclipsing the Sun. It’s the most zoomed-in, highest-frame-rate observation of a Phobos solar eclipse ever taken from the Martian surface.  Image credit: <a class="reference external" href="https://www.jpl.nasa.gov/images/pia25179-perseverances-mastcam-z-captures-a-phobos-solar-eclipse">NASA/JPL-Caltech/ASU/MSSS/SSI</a>.</span><a class="headerlink" href="#planet-shape-fig" title="Permalink to this image">¶</a></p>
+</div>
+<p>A relationship exists between a body’s rotation and its oblateness (i.e., flatness). The rotation introduces a centrifugal psuedo-force that causes the planet to bulge out at the equator and flatten at the poles.  A perfectly fluid planet would be shaped as an <a class="reference external" href="https://en.wikipedia.org/wiki/Spheroid">oblate spheroid</a>.  Polar flattening is greatest for planets that have a low density and rapid rotation.  In the case of Saturn, the flattening parameter <span class="math notranslate nohighlight">\(\epsilon\)</span> is calculated using the equatorial <span class="math notranslate nohighlight">\(R_{\rm eq}\)</span> and polar <span class="math notranslate nohighlight">\(R_{\rm pol}\)</span> radii as</p>
+<div class="math notranslate nohighlight">
+\[ \epsilon \equiv \frac{ R_{\rm eq}- R_{\rm pol}}{ R_{\rm eq}} \sim 0.1. \]</div>
+<p>The shape of an object can be determined from:</p>
+<ul class="simple">
+<li><p><strong>Direct Imaging</strong>: Photographic images taken from the ground or spacecraft with an appropriate plate scale.</p></li>
+<li><p><strong>Chord Lengths</strong>: Stellar occultation experiments can provide the estimates of the chord lengths (see Sect. <a class="reference internal" href="#size-sect"><span class="std std-numref">1.4.3</span></a>).</p></li>
+<li><p><strong>Radar Echoes</strong>: Reflections and/or diffraction of radio waves can provide vertices necessary for a shape model.</p></li>
+<li><p><strong>Lightcurves</strong>: Several lightcurves obtained from different viewing angles are required for accurate measurements.  It is similar to Radar echoes, but in at visible or IR
+wavelengths.</p></li>
+<li><p><strong>Central Flash</strong>: When the center of a body with an atmosphere passes in front of an occulted star, the central flash results from the focusing of light rays refracted by the atmosphere and can only be seen under fortuitous observing circumstances.</p></li>
+</ul>
+</div>
+<div class="section" id="temperature">
+<h3><span class="section-number">1.4.6. </span>Temperature<a class="headerlink" href="#temperature" title="Permalink to this headline">¶</a></h3>
+<p>The equilibrium temperature of a planet can be estimated from the energy balance between the incoming solar radiation (i.e., insolation) and the outgoing long-wave radiation back into space.  Internal heat sources provide a significant contribution to the energy balance of many planets.  Daily (diurnal), latitudinal, and seasonal effects can induce temperature variations.  The <strong>greenhouse effect</strong> raises the surface temperature on som planets far above the equilibrium temperature, where the atmosphere behaves like a thermal ‘blanket’ that is more transparent to visible radiation and prevents the escape of longer-wavelength infrared (IR) radiation.</p>
+<div class="figure align-default" id="earth-ebm-fig">
+<a class="reference internal image-reference" href="https://www.nasa.gov/sites/default/files/thumbnails/image/ceres-poster-011-v2.jpg"><img alt="Earth energy budget" src="https://www.nasa.gov/sites/default/files/thumbnails/image/ceres-poster-011-v2.jpg" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.14 </span><span class="caption-text">Earth’s energy budget describes the balance between the radiant energy that reaches Earth from the sun and the energy that flows from Earth back out to space.  Image Credit: <a class="reference external" href="https://www.nasa.gov/feature/langley/what-is-earth-s-energy-budget-five-questions-with-a-guy-who-knows">NASA</a>.</span><a class="headerlink" href="#earth-ebm-fig" title="Permalink to this image">¶</a></p>
+</div>
+<p>The thermal IR spectrum of a body’s emitted radiation is also a good indicator of the temperature of its surface or cloud tops.  Most solid and liquid planetary material can be characterized as a nearly perfect blackbody with an emission peak in the near- to mid-IR wavelengths.  However, the analysis of emitted radiation sometimes gives different temperatures at differing wavelengths.  This could be due to combination of temperatures at different locations on the surface, such as pole-to-equator differences, albedo variations, or volcanic hot spots (e.g., the surface of Io).  The opacity of an atmosphere varies with wavelength, which allows us to remotely probe different altitudes in a planetary atmosphere (e.g., giant planets).</p>
+</div>
+<div class="section" id="magnetic-field">
+<h3><span class="section-number">1.4.7. </span>Magnetic Field<a class="headerlink" href="#magnetic-field" title="Permalink to this headline">¶</a></h3>
+<p>Magnetic fields are created by moving charges (i.e., currents).  Currents through a solid medium decay quickly due to friction and/or heat, unless the medium is a superconductor.  Internally generated magnetic fields must be produced by a (poorly understood) <a class="reference external" href="https://en.wikipedia.org/wiki/Dynamo_theory">dynamo</a> process, which can only operate in a fluid region of a planet or be caused by <strong>remnant ferromagnetism</strong> (i.e., charges within a solid that are locked in an aligned configuration).  Remnant ferromagnetism is not favored because it would require the planet to have been caught in a nearly constant (in direction) magnetic field during its early evolution when the bulk of its iron cooled through its <a class="reference external" href="https://en.wikipedia.org/wiki/Curie_temperature">Curie temperature</a>.  Magnetic fields may also be induced through the interaction between the solar wind and conducting regions within the planet or its ionosphere.</p>
+<div class="figure align-default" id="earth-dynamo-fig">
+<a class="reference internal image-reference" href="../_images/mearthbar.png"><img alt="Earth dyanamo" src="../_images/mearthbar.png" style="width: 600px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1.15 </span><span class="caption-text">The north pole of a compass needle is a magnetic north pole. It is attracted to the geographic North Pole, which is a magnetic south pole (opposite magnetic poles attract).  Image Credit: <a class="reference external" href="http://hyperphysics.phy-astr.gsu.edu/hbase/magnetic/MagEarth.html">Hyperphysics</a>.</span><a class="headerlink" href="#earth-dynamo-fig" title="Permalink to this image">¶</a></p>
+</div>
+<p><em>In situ</em> magnetometers or radiation produced by accelerating charges (e.g., radio emissions) can be used as a respective direct or indirect detection of magnetic fields.  The presence of localized <a class="reference external" href="https://en.wikipedia.org/wiki/Aurora">aurorae</a> is also indicative of a magnetic field.  The magnetic field of a planet can be approximated by a dipole (bar magnet) with perturbations to account for their irregularities.</p>
+<ul class="simple">
+<li><p>All four giant planets, Earth, Mercury, and Jupiter’s moon Ganymede have magnetic fields generated in their interiors.</p></li>
+<li><p>Venus and comets have magnetic fields induced by their interaction with the solar wind.</p></li>
+<li><p>Mars and the Moon have localized crustal magnetic fields.</p></li>
+<li><p>Perturbations in Jupiter’s magnetic field near Europa and Callisto are indicative of salty oceans in their interiors.</p></li>
+<li><p>Geyser activity on Enceladus perturbs Saturn’s magnetic field.</p></li>
+</ul>
+</div>
+<div class="section" id="surface-composition">
+<h3><span class="section-number">1.4.8. </span>Surface Composition<a class="headerlink" href="#surface-composition" title="Permalink to this headline">¶</a></h3>
+<p>The composition of a body’s surface can be derived from:</p>
+<ul class="simple">
+<li><p><strong>Spectral Reflectance Data</strong>: The absorption or emission spectra from a material gives clues to its composition.  Various materials are heated on the surface and emit their radiation to be observed by orbiters (e.g., <a class="reference external" href="https://mars.nasa.gov/maven/">MAVEN</a>).  Such spectra may be observed from Earth, but certain wavelengths (e.g., UV) can only be observed from space.</p></li>
+<li><p><strong>X-ray or <span class="math notranslate nohighlight">\(\gamma\)</span>-ray Fluorescence</strong>: Measurements conducted from a spacecraft (orbiter or flyby), where specific materials are emitting a short-wavelengths.</p></li>
+<li><p><strong>Chemical Analysis of Surface Samples</strong>: Samples can be brought to Earth by natural process (i.e., meteorites) or spacecraft to be analyzed.  <em>In situ</em> measurements can be performed although they usually provide less detail.  Other forms of <em>in situ</em> analysis include mass spectroscopy, electrical conductivity, and thermal conductivity.</p></li>
+</ul>
+<p>The compositions of the planets, asteroids, and satellites show a general dependence on heliocentric distance, where objects closer to the Sun have the largest concentrations of dense materials (i.e., <a class="reference external" href="https://en.wikipedia.org/wiki/Refraction_(metallurgy)">refractory</a> materials with a high melting and boiling temperature) and the smallest concentration of <a class="reference external" href="https://en.wikipedia.org/wiki/Volatiles">volatile</a> materials (e.g., ices) that have a lower melting and boiling temperatures.</p>
+</div>
+<div class="section" id="surface-structure">
+<h3><span class="section-number">1.4.9. </span>Surface Structure<a class="headerlink" href="#surface-structure" title="Permalink to this headline">¶</a></h3>
+<p>The surface structure varies greatly between planets.  There are various ways to determine a planet’s surface structure:</p>
+<ul class="simple">
+<li><p><strong>Direct Imaging</strong>: Images taken either passively in the visible-radio wavelengths or actively using radar imaging techniques to detect large scale structures.  It is best to have imaging available at multiple illumination angles to separate tilt-angle (slope) effects from albedo differences.</p></li>
+<li><p><strong>Reflectivity Variations</strong>:  Structure on small scales (e.g., grains) can be deduced from radar echo brightness and reflectivity variations with <strong>phase angle</strong> (i.e., the angle between the Sun and the observer as seen from the body).  The brightness of a body with a size much larger than the wavelength of the observations generally increases slowly with decreasing phase angle.  For very small phase angles, this increase can be much more rapid and is known as the <strong>opposition effect</strong>.</p></li>
+</ul>
+</div>
+<div class="section" id="atmosphere">
+<h3><span class="section-number">1.4.10. </span>Atmosphere<a class="headerlink" href="#atmosphere" title="Permalink to this headline">¶</a></h3>
+<p>Most of the major planets (and Titan) are surrounded by significant atmospheres.  The giant planets are basically huge fluid balls, where their atmospheres are dominated by <span class="math notranslate nohighlight">\(\rm H_2\)</span> and <span class="math notranslate nohighlight">\(He\)</span>.  Venus and Mars are (currently) dominated by atmospheres primarily composed of <span class="math notranslate nohighlight">\(\rm CO_2\)</span>, where the Venusian clouds are so thick that the surface is completely opaque for visible wavelengths.  Earth’s atmosphere mainly consists of nitrogen <span class="math notranslate nohighlight">\(\rm N_2\)</span> (<span class="math notranslate nohighlight">\(78\%\)</span>) and oxygen <span class="math notranslate nohighlight">\(\rm O_2\)</span> <span class="math notranslate nohighlight">\((21\%)\)</span>, where the remaining <span class="math notranslate nohighlight">\(1\%\)</span> is composed of a wide range of trace gases.  The Martian atmosphere is in stark contrast to Venus, where its transparency has allowed for intense study for over a century.</p>
+<p>Saturn’s satellite Titan has a dense nitrogen-rich atmosphere that intriguingly contains many kinds of organic molecules that are considered the building blocks of life (as we know it).  Pluto and Neptune’s moon Triton each have a tenuous atmosphere dominated by <span class="math notranslate nohighlight">\(N_2\)</span>.  Jupiter’s volcanically active moon Io has a thin atmosphere composed of sulfur dioxide <span class="math notranslate nohighlight">\(\rm SO_2\)</span>.  Mercury and the Moon have an extremely tenuous atmosphere (<span class="math notranslate nohighlight">\(\leq 10^{-12}\)</span> bar).  Mercury’s atmosphere contains atomic oxygen <span class="math notranslate nohighlight">\(\rm O\)</span>, sodium <span class="math notranslate nohighlight">\(\rm Na\)</span>, and helium <span class="math notranslate nohighlight">\(\rm He\)</span>, where the Moon’s atmosphere is composed of argon <span class="math notranslate nohighlight">\(\rm Ar\)</span> and <span class="math notranslate nohighlight">\(\rm He\)</span>.</p>
+<p>The structure (i.e., temperature-pressure profile) and composition can be determined from</p>
+<ul class="simple">
+<li><p>spectral reflectance data at visible wavelengths,</p></li>
+<li><p>thermal spectra and photometry (in the IR and radio),</p></li>
+<li><p>stellar occultation profiles,</p></li>
+<li><p><em>in situ</em> mass spectrometers, and</p></li>
+<li><p>attenuation of radio signals sent back to Earth by atmospheric/surface probes.</p></li>
+</ul>
+</div>
+<div class="section" id="interior">
+<h3><span class="section-number">1.4.11. </span>Interior<a class="headerlink" href="#interior" title="Permalink to this headline">¶</a></h3>
+<p>Planetary interiors are not directly accessible for observation, but one can derive information on a planet’s bulk composition and its interior structure.  The <strong>bulk composition</strong> is deduce from a variety of direct and indirect constraints.  The most fundamental are based on the mass and size of a planet.  Jupiter and Saturn are composed primarily of hydrogen because all other elements are too dense to fit the constraints (e.g., size, mass, temperature, pressure) or known material properties that are derived from laboratory studies and quantum mechanical calculations.</p>
+<p>Planets that are primarily composed of denser materials (than hydrogen) have compositions best estimated using models that include</p>
+<ul class="simple">
+<li><p>mass,</p></li>
+<li><p>radius,</p></li>
+<li><p>surface and atmospheric composition,</p></li>
+<li><p>heliocentric distance, and</p></li>
+<li><p>reasonable assumptions of <a class="reference external" href="https://en.wikipedia.org/wiki/Cosmogony">cosmogonic</a> abundances.</p></li>
+</ul>
+<p>A planet’s <strong>internal structure</strong> can be derived (to some extent) from its gravitational field and rotation rate.  From these parameters, the degree of mass concentration can be estimated.  The gravitational field can be measured from spacecraft tracking or from the orbits of satellites/rings.  Seismology provides more detailed information on the internal structure of a planet.  The velocities and attenuation of seismic waves depend on the density, rigidity, composition, and temperature of the interior.  Reflection and refraction off internal boundaries provide information on layering.  The free oscillation periods of gaseous planets (e.g., <a class="reference external" href="https://en.wiktionary.org/wiki/kronoseismology">kronoseismology</a>) and stars (e.g., <a class="reference external" href="https://en.wikipedia.org/wiki/Helioseismology">helioseismology</a>) provides important information regarding the respective interiors.</p>
+<p>The response of moons that are subject to significant time-dependent tidal deformations depends on their internal structure.  Repeated observations can reveal the presence of a subsurface ocean.  Measurements of the gravity field with altitude could show the extent of lateral inhomogeneities under the surface of icy moons and infer the presence of volcanic sources and tectonic structures that could melt the ice.  Conducting fluid regions within a planetary interior are believed to be responsible for substantial magnetic fields.  Centered dipole fields are probably produced in or near the core of the planet, whereas highly irregular offset fields are likely produced closer to the planet’s surface.</p>
+</div>
+</div>
+<div class="section" id="formation-of-the-solar-system">
+<h2><span class="section-number">1.5. </span>Formation of the Solar System<a class="headerlink" href="#formation-of-the-solar-system" title="Permalink to this headline">¶</a></h2>
+</div>
 </div>
 
     <script type="text/x-thebe-config">
