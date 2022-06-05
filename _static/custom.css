@@ -13,3 +13,9 @@ div.orange {
 div.orange p.admonition-title {
     background-color: var(--background-color);
 }
+
+hr {
+  height:4px;
+  border-width:0;
+  background-color:#DA1A32;
+}

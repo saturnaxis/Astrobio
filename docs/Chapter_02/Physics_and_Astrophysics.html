@@ -51,6 +51,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="3. Planetary Heating and Atmospheres" href="../Chapter_03/Planetary_Heating_and_Atmospheres.html" />
@@ -171,7 +173,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Early Life and Habitable Worlds
+  Life on Habitable Worlds
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -301,23 +303,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-two-body-problem">
-     2.1.1. The Two-Body Problem
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kepler-s-laws-of-planetary-motion">
-     2.1.2. Kepler’s Laws of Planetary Motion
+     2.1.1. Kepler’s Laws of Planetary Motion
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#newton-s-laws-of-motion-and-gravity">
-     2.1.3. Newton’s Laws of Motion and Gravity
+     2.1.2. Newton’s Laws of Motion and Gravity
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#bound-and-unbound-orbits">
-     2.1.4. Bound and Unbound Orbits
+     2.1.3. Bound and Unbound Orbits
     </a>
    </li>
   </ul>
@@ -414,23 +411,18 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#the-two-body-problem">
-     2.1.1. The Two-Body Problem
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#kepler-s-laws-of-planetary-motion">
-     2.1.2. Kepler’s Laws of Planetary Motion
+     2.1.1. Kepler’s Laws of Planetary Motion
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#newton-s-laws-of-motion-and-gravity">
-     2.1.3. Newton’s Laws of Motion and Gravity
+     2.1.2. Newton’s Laws of Motion and Gravity
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#bound-and-unbound-orbits">
-     2.1.4. Bound and Unbound Orbits
+     2.1.3. Bound and Unbound Orbits
     </a>
    </li>
   </ul>
@@ -514,17 +506,322 @@ const thebe_selector_output = ".output, .cell_output"
 <h1><span class="section-number">2. </span>Physics and Astrophysics<a class="headerlink" href="#physics-and-astrophysics" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="orbital-dynamics">
 <h2><span class="section-number">2.1. </span>Orbital Dynamics<a class="headerlink" href="#orbital-dynamics" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="the-two-body-problem">
-<h3><span class="section-number">2.1.1. </span>The Two-Body Problem<a class="headerlink" href="#the-two-body-problem" title="Permalink to this headline">¶</a></h3>
+<p>Dynamical studies of planetary bodies characterize their orbital motion, rotation (including changes in obliquity), and deformation resulting from tidal distortions.  Dynamics is the oldest discipline in the planetary sciences.</p>
+<ul class="simple">
+<li><p>Gravitational interactions determine how the a planet’s distance from the Sun varies over time and thus how much solar radiation the planet receives.</p></li>
+<li><p>Rotation rates determine the length of the day.</p></li>
+<li><p>Obliquity influences the temperature differences between the pole and equator, as well as seasonal variations.</p></li>
+<li><p>Tidal heating (from tidal distortions) produces extensive volcanism on bodies such as Jupiter’s moon Io.</p></li>
+</ul>
+<p>The study of planetary motions dates back to antiquity through observational studies and kinematic modeling.  Modern planetary dynamics begins (in earnest) during the 17th century with Johannes Kepler and <a class="reference external" href="https://en.wikipedia.org/wiki/Tycho_Brahe">Tycho Brahe</a>.  Brahe had taken the finest planetary observations in all of Europe, and after his death, Kepler used his results in an extensive mathematical analysis.  Later, Isaac Newton provided a firm basis for dynamical studies using universal physical laws (i.e., applicable on Earth and in the heavens).</p>
+<p>in 1687, Newton showed that the relative motion of two spherically symmetric bodies resulting from their mutual gravitational attraction is described by simple conic sections:</p>
+<ul class="simple">
+<li><p>ellipses for bound orbits and parabolas;</p></li>
+<li><p>hyperbolas for unbound trajectories.</p></li>
+</ul>
+<p>Albert Einstein’s theories of relativity (Special and General) fundamentally modified the underlying theories of motion and gravity, but the relativistic corrections to planetary motions is generally quite small.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>All bodies in the Universe are subject ot the gravitational attraction of <em>all</em> other bodies.  However, the trajectory of one body is well approximated by considering just the gravitational force exerted on it by a <em>single</em> other body.</p>
 </div>
 <div class="section" id="kepler-s-laws-of-planetary-motion">
-<h3><span class="section-number">2.1.2. </span>Kepler’s Laws of Planetary Motion<a class="headerlink" href="#kepler-s-laws-of-planetary-motion" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.1. </span>Kepler’s Laws of Planetary Motion<a class="headerlink" href="#kepler-s-laws-of-planetary-motion" title="Permalink to this headline">¶</a></h3>
+<p>By careful analysis of the observed orbits of planets, Kepler deduced his three laws of planetary motion:</p>
+<ol>
+<li><p><em>All planets move along elliptical paths with the Sun at one focus.</em>  The shape of an ellipse is characterized by two parameters: the <strong>semimajor axis</strong> <span class="math notranslate nohighlight">\(a\)</span> (i.e., the average of the minimum and maximum heliocentric distances), and the <strong>eccentricity</strong> (i.e., the fraction by which the focus is displaced from the center).  Locating a point on an ellipse is accomplished through the <strong>true anomaly</strong> <span class="math notranslate nohighlight">\(f\)</span> that is the angle between the planet’s <strong>perihelion</strong> (closest approach to the Sun) and its instantaneous position.</p>
+<div class="figure align-default" id="orbit-ellipse" style="width: 600px">
+<div class="cell_output docutils container">
+<img alt="../_images/Physics_and_Astrophysics_1_0.png" src="../_images/Physics_and_Astrophysics_1_0.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 2.1 </span><span class="caption-text">Elliptical orbit <span class="math notranslate nohighlight">\((e=0.5)\)</span> with the Sun (yellow dot) at one focus, and the planet is 15 days <span class="math notranslate nohighlight">\((f=47.4^\circ)\)</span> past past perihelion (cyan dot).  The major axis (red line) connects the aphelion (blue dot) to the perihelion, where the semimajor axis <span class="math notranslate nohighlight">\((a=1\ \rm AU)\)</span> connects to the center (black dot) of the ellipse.  The minor axis (magenta line) is perpendicular to the major axis, where the semiminor axis <span class="math notranslate nohighlight">\((b=0.866\ \rm AU)\)</span> is its respective half-length.</span><a class="headerlink" href="#orbit-ellipse" title="Permalink to this image">¶</a></p>
+</div>
+<p>The <strong>heliocentric distance</strong> <span class="math notranslate nohighlight">\(r\)</span> of a planet (i.e., its instantaneous distance from the Sun) can be determined using the semimajor axis, eccentricity, and true anomaly, by:  <br> <br></p>
+<div class="math notranslate nohighlight" id="equation-distance">
+<span class="eqno">(2.1)<a class="headerlink" href="#equation-distance" title="Permalink to this equation">¶</a></span>\[r = \frac{a\left(1-e^2 \right)}{1 + e \cos f}.\]</div>
+<p>The eccentricity can be defined by the <em>semiminor</em> axis <span class="math notranslate nohighlight">\(b\)</span>, which is half of the minor axis of an ellipse that lies perpendicular to the major axis.  Mathematically, this is given as, <br> <br></p>
+<div class="amsmath math notranslate nohighlight">
+\[\begin{align*} e \equiv \sqrt{1- \left( \frac{b}{a} \right)^2 }. \end{align*}\]</div>
+</li>
+<li><p><em>A line connecting any given planet and the Sun sweeps out an area <span class="math notranslate nohighlight">\(\mathcal{A}\)</span> at a constant rate.</em>  Mathematically, this is given as, <br> <br></p>
+<div class="math notranslate nohighlight" id="equation-constant-area">
+<span class="eqno">(2.2)<a class="headerlink" href="#equation-constant-area" title="Permalink to this equation">¶</a></span>\[\frac{d \mathcal{A}}{dt} = \text{constant}.\]</div>
+<div class="figure align-default" id="area-ellipse" style="width: 600px">
+<div class="cell_output docutils container">
+<img alt="../_images/Physics_and_Astrophysics_2_0.png" src="../_images/Physics_and_Astrophysics_2_0.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 2.2 </span><span class="caption-text">Elliptical orbit (from Fig. <a class="reference internal" href="#orbit-ellipse"><span class="std std-numref">2.1</span></a>), where the time interval between points is about 30.44 days.  Kepler’s second law states that each area (white or black) is equivalent for an equal time interval.</span><a class="headerlink" href="#area-ellipse" title="Permalink to this image">¶</a></p>
+</div>
+</li>
+<li><p><em>The square of a planet’s orbital period <span class="math notranslate nohighlight">\(P\)</span> about the Sun (in <strong>years</strong>) is equal to the cube of its semimajor axis <span class="math notranslate nohighlight">\(a\)</span> (in <strong>AU</strong>)</em>, or <br> <br></p>
+<div class="math notranslate nohighlight" id="equation-harmonic-law">
+<span class="eqno">(2.3)<a class="headerlink" href="#equation-harmonic-law" title="Permalink to this equation">¶</a></span>\[P^2 = a^3.\]</div>
+</li>
+</ol>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Code to create Fig 2.1</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
+
+<span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">})</span>
+<span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;mathtext.fontset&#39;</span><span class="p">:</span> <span class="s1">&#39;cm&#39;</span><span class="p">})</span>
+
+<span class="k">def</span> <span class="nf">grav</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
+    <span class="c1">#derivative function for the two body problem in astrocentric coordinates</span>
+    <span class="c1">#state function x = {x,y,z,vx,vy,vz}</span>
+    <span class="n">xp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">xp</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span> <span class="c1">#{vx,vy,vz}</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">])))</span> <span class="c1">#calculate the separation vector r</span>
+    <span class="n">xp</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span> <span class="o">=</span> <span class="o">-</span><span class="n">G</span><span class="o">*</span><span class="n">M_star</span><span class="o">*</span><span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span><span class="o">/</span><span class="n">r</span><span class="o">**</span><span class="mi">3</span>
+    <span class="k">return</span> <span class="n">xp</span>
+
+<span class="k">def</span> <span class="nf">Orb2Cart</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">omg</span><span class="p">,</span><span class="n">f</span><span class="p">):</span>
+    <span class="c1">#Calculate the Cartesian state given orbital elements (a,e,omega,f)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">e</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">e</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">M_star</span><span class="o">/</span><span class="n">a</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#mean motion n</span>
+    <span class="n">rdot</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">e</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.</span><span class="o">-</span><span class="n">e</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">rfdot</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">e</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">f</span><span class="p">))</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.</span><span class="o">-</span><span class="n">e</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">omg_f</span> <span class="o">=</span> <span class="n">omg</span> <span class="o">+</span> <span class="n">f</span> 
+
+    <span class="n">temp</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">omg_f</span><span class="p">),</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">omg_f</span><span class="p">),</span> <span class="mf">0.</span><span class="p">]</span>
+    <span class="n">temp</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">rdot</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">omg_f</span><span class="p">)</span> <span class="o">-</span> <span class="n">rfdot</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">omg_f</span><span class="p">),</span><span class="n">rdot</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">omg_f</span><span class="p">)</span> <span class="o">+</span> <span class="n">rfdot</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">omg_f</span><span class="p">),</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">temp</span>
+    
+
+<span class="n">G</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span> <span class="c1">#Constant for Universal Gravitation (units: AU, yr, M_sun)</span>
+<span class="n">M_star</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#Solar mass</span>
+<span class="n">a</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">omg</span><span class="p">,</span><span class="n">f</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">x_o</span> <span class="o">=</span> <span class="n">Orb2Cart</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">omg</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+<span class="n">r_p</span><span class="p">,</span> <span class="n">r_a</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">e</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">t_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.</span><span class="p">,</span><span class="mf">1.</span><span class="o">/</span><span class="mf">365.25</span><span class="p">)</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">grav</span><span class="p">,</span> <span class="n">x_o</span><span class="p">,</span> <span class="n">t_rng</span><span class="p">)</span>
+
+<span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;medium&#39;</span>
+<span class="n">lw</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="n">r_a</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;r-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="n">r_p</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="s1">&#39;r-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="n">b</span><span class="p">],</span><span class="s1">&#39;m-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="o">-</span><span class="mf">0.5</span><span class="p">],[</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="n">b</span><span class="p">],</span><span class="s1">&#39;m-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">0.65</span><span class="p">,</span><span class="mf">0.4</span><span class="p">,</span><span class="s1">&#39;$b$&#39;</span><span class="p">,</span><span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.56</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.56</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;&lt;-&gt;&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="o">-</span><span class="mf">0.15</span><span class="p">,</span><span class="s1">&#39;$a$&#39;</span><span class="p">,</span><span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="n">r_a</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.06</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.06</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;&lt;-&gt;&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="o">-</span><span class="mf">0.25</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="s1">&#39;$ea$&#39;</span><span class="p">,</span><span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">annotate</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">),</span> <span class="n">xytext</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mf">0.06</span><span class="p">),</span> <span class="n">arrowprops</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span><span class="n">arrowstyle</span><span class="o">=</span><span class="s1">&#39;&lt;-&gt;&#39;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;k.&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sol</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">sol</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r_p</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;c.&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">r_a</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;b.&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">sol</span><span class="p">[</span><span class="mi">15</span><span class="p">,</span><span class="mi">0</span><span class="p">]],[</span><span class="mi">0</span><span class="p">,</span><span class="n">sol</span><span class="p">[</span><span class="mi">15</span><span class="p">,</span><span class="mi">1</span><span class="p">]],</span><span class="s1">&#39;k--&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sol</span><span class="p">[</span><span class="mi">15</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">sol</span><span class="p">[</span><span class="mi">15</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;r.&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;y.&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.15</span><span class="p">,</span><span class="mf">0.25</span><span class="p">,</span><span class="s1">&#39;$r$&#39;</span><span class="p">,</span><span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="mi">50</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.22</span><span class="p">,</span><span class="mf">0.06</span><span class="p">,</span><span class="s1">&#39;$f$&#39;</span><span class="p">,</span><span class="n">horizontalalignment</span><span class="o">=</span><span class="s1">&#39;center&#39;</span><span class="p">,</span><span class="n">rotation</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="s1">&#39;small&#39;</span><span class="p">)</span>
+
+<span class="n">arc_r</span> <span class="o">=</span> <span class="mf">0.15</span>
+<span class="n">ang_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">radians</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">45</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
+<span class="n">arc_x</span><span class="p">,</span> <span class="n">arc_y</span> <span class="o">=</span> <span class="n">arc_r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">ang_rng</span><span class="p">),</span> <span class="n">arc_r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">ang_rng</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">arc_x</span><span class="p">,</span><span class="n">arc_y</span><span class="p">,</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="c1">#ax.set_xticks(np.arange(-1.5,1.5,0.5))</span>
+<span class="c1">#ax.set_yticks(np.arange(-1,1.1,0.5))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;orbit_fig&quot;</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Physics_and_Astrophysics_1_1.png" src="../_images/Physics_and_Astrophysics_1_1.png" />
+</div>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Code to create Fig 2.2</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib.patches</span> <span class="kn">import</span> <span class="n">Polygon</span>
+<span class="kn">from</span> <span class="nn">scipy.integrate</span> <span class="kn">import</span> <span class="n">odeint</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
+
+<span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">})</span>
+<span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;mathtext.fontset&#39;</span><span class="p">:</span> <span class="s1">&#39;cm&#39;</span><span class="p">})</span>
+
+<span class="k">def</span> <span class="nf">grav</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">):</span>
+    <span class="c1">#derivative function for the two body problem in astrocentric coordinates</span>
+    <span class="c1">#state function x = {x,y,z,vx,vy,vz}</span>
+    <span class="n">xp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">xp</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">x</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span> <span class="c1">#{vx,vy,vz}</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">])))</span> <span class="c1">#calculate the separation vector r</span>
+    <span class="n">xp</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span> <span class="o">=</span> <span class="o">-</span><span class="n">G</span><span class="o">*</span><span class="n">M_star</span><span class="o">*</span><span class="n">x</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span><span class="o">/</span><span class="n">r</span><span class="o">**</span><span class="mi">3</span>
+    <span class="k">return</span> <span class="n">xp</span>
+
+<span class="k">def</span> <span class="nf">Orb2Cart</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">omg</span><span class="p">,</span><span class="n">f</span><span class="p">):</span>
+    <span class="c1">#Calculate the Cartesian state given orbital elements (a,e,omega,f)</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">e</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">e</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+    <span class="n">n</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">G</span><span class="o">*</span><span class="n">M_star</span><span class="o">/</span><span class="n">a</span><span class="o">**</span><span class="mi">3</span><span class="p">)</span> <span class="c1">#mean motion n</span>
+    <span class="n">rdot</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="n">e</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">f</span><span class="p">)</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.</span><span class="o">-</span><span class="n">e</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">rfdot</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">a</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="n">e</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">f</span><span class="p">))</span><span class="o">/</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mf">1.</span><span class="o">-</span><span class="n">e</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="n">omg_f</span> <span class="o">=</span> <span class="n">omg</span> <span class="o">+</span> <span class="n">f</span> 
+
+    <span class="n">temp</span><span class="p">[:</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">omg_f</span><span class="p">),</span> <span class="n">r</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">omg_f</span><span class="p">),</span> <span class="mf">0.</span><span class="p">]</span>
+    <span class="n">temp</span><span class="p">[</span><span class="mi">3</span><span class="p">:]</span> <span class="o">=</span> <span class="p">[</span><span class="n">rdot</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">omg_f</span><span class="p">)</span> <span class="o">-</span> <span class="n">rfdot</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">omg_f</span><span class="p">),</span><span class="n">rdot</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">omg_f</span><span class="p">)</span> <span class="o">+</span> <span class="n">rfdot</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">omg_f</span><span class="p">),</span><span class="mi">0</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">temp</span>
+
+<span class="k">def</span> <span class="nf">get_ellipse</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">cnt</span><span class="p">):</span>
+    <span class="n">xy</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">12</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+    <span class="n">xy</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">x2</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="mi">1</span><span class="o">-</span><span class="p">((</span><span class="n">xy</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span><span class="mi">0</span><span class="p">]</span><span class="o">+</span><span class="mf">0.5</span><span class="p">)</span><span class="o">/</span><span class="n">a</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">b</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">cnt</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
+        <span class="n">y</span> <span class="o">*=</span> <span class="o">-</span><span class="mi">1</span>
+    <span class="n">xy</span><span class="p">[</span><span class="mi">1</span><span class="p">:,</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">y</span>
+    <span class="k">return</span> <span class="n">xy</span>
+
+<span class="n">G</span> <span class="o">=</span> <span class="mi">4</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span> <span class="c1">#Constant for Universal Gravitation (units: AU, yr, M_sun)</span>
+<span class="n">M_star</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1">#Solar mass</span>
+<span class="n">a</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">omg</span><span class="p">,</span><span class="n">f</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span><span class="mf">0.5</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span>
+<span class="n">x_o</span> <span class="o">=</span> <span class="n">Orb2Cart</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">omg</span><span class="p">,</span><span class="n">f</span><span class="p">)</span>
+<span class="n">r_p</span><span class="p">,</span> <span class="n">r_a</span> <span class="o">=</span> <span class="mf">0.5</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.5</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">a</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">e</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">t_step</span> <span class="o">=</span> <span class="mf">1.</span><span class="o">/</span><span class="mf">360.</span>
+<span class="n">t_rng</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mf">1.</span><span class="o">+</span><span class="n">t_step</span><span class="p">,</span><span class="n">t_step</span><span class="p">)</span>
+<span class="n">sol</span> <span class="o">=</span> <span class="n">odeint</span><span class="p">(</span><span class="n">grav</span><span class="p">,</span> <span class="n">x_o</span><span class="p">,</span> <span class="n">t_rng</span><span class="p">)</span>
+
+<span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;medium&#39;</span>
+<span class="n">lw</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">col</span> <span class="o">=</span> <span class="p">(</span><span class="mi">218</span><span class="o">/</span><span class="mf">256.</span><span class="p">,</span> <span class="mi">26</span><span class="o">/</span><span class="mf">256.</span><span class="p">,</span> <span class="mi">50</span><span class="o">/</span><span class="mf">256.</span><span class="p">)</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="s1">&#39;y.&#39;</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">sol</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">sol</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="s1">&#39;k-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="n">lw</span><span class="p">)</span>
+<span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="n">i_rng</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">sol</span><span class="p">)</span><span class="o">/</span><span class="n">n</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="n">i_rng</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">cnt</span> <span class="o">%</span> <span class="mi">2</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;k&#39;</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span>
+    <span class="n">i_1</span><span class="p">,</span><span class="n">i_2</span> <span class="o">=</span> <span class="n">n</span><span class="o">*</span><span class="n">i</span><span class="p">,</span><span class="n">n</span><span class="o">*</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">i_2</span> <span class="o">&gt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">sol</span><span class="p">):</span>
+        <span class="n">i_2</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">x_1</span><span class="p">,</span><span class="n">x_2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="n">i_1</span><span class="p">,</span><span class="mi">0</span><span class="p">],</span><span class="n">sol</span><span class="p">[</span><span class="n">i_2</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">y_1</span><span class="p">,</span><span class="n">y_2</span> <span class="o">=</span> <span class="n">sol</span><span class="p">[</span><span class="n">i_1</span><span class="p">,</span><span class="mi">1</span><span class="p">],</span><span class="n">sol</span><span class="p">[</span><span class="n">i_2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">verts</span> <span class="o">=</span> <span class="n">get_ellipse</span><span class="p">(</span><span class="n">x_2</span><span class="p">,</span><span class="n">x_1</span><span class="p">,</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">cnt</span><span class="p">)</span>
+
+    <span class="n">p1</span> <span class="o">=</span> <span class="n">Polygon</span><span class="p">(</span><span class="n">verts</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">color</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">add_artist</span><span class="p">(</span><span class="n">p1</span><span class="p">)</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x_1</span><span class="p">,</span><span class="n">y_1</span><span class="p">,</span><span class="s1">&#39;.&#39;</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="n">col</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+
+    <span class="n">cnt</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_aspect</span><span class="p">(</span><span class="s1">&#39;equal&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;area_fig&quot;</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Physics_and_Astrophysics_2_1.png" src="../_images/Physics_and_Astrophysics_2_1.png" />
+</div>
+</div>
 </div>
 <div class="section" id="newton-s-laws-of-motion-and-gravity">
-<h3><span class="section-number">2.1.3. </span>Newton’s Laws of Motion and Gravity<a class="headerlink" href="#newton-s-laws-of-motion-and-gravity" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.2. </span>Newton’s Laws of Motion and Gravity<a class="headerlink" href="#newton-s-laws-of-motion-and-gravity" title="Permalink to this headline">¶</a></h3>
+<p>Isaac Newton developed the first <em>physical</em> model that explained the motion of objects using a single unified theory.  Newton’s theory includes three laws of motion and one law of universal gravitation.</p>
+<ul>
+<li><p><strong>Newton’s first law</strong>: <em>A body remains at rest or in uniform motion unless a force is exerted upon it.</em>  It is also called the law of inertia and is a restatement of Galileo Galilei’s work from the first half of 17th century.</p></li>
+<li><p><strong>Newton’s second law</strong>: <em>When a body is acted upon by a force, the time rate of change of its momentum equals the force.</em>  Consider a body of mass <span class="math notranslate nohighlight">\(m_1\)</span> that is located using a position vector <span class="math notranslate nohighlight">\(\vec{r}_1\)</span>.  The body has an instantaneous velocity <span class="math notranslate nohighlight">\(\vec{v}_1 \equiv d\vec{r}_1/dt\)</span>, where its momentum <span class="math notranslate nohighlight">\(\vec{p}_1\)</span> represents the product of the mass and velocity (i.e., <span class="math notranslate nohighlight">\(\vec{p}_1 = m_1\vec{v}_1\)</span>).  The acceleration produced by a net force <span class="math notranslate nohighlight">\(\vec{F}_1\)</span> is <br> <br></p>
+<div class="math notranslate nohighlight" id="equation-newtons-2nd">
+<span class="eqno">(2.4)<a class="headerlink" href="#equation-newtons-2nd" title="Permalink to this equation">¶</a></span>\[\vec{F}_1 = \frac{d(m_1\vec{v}_1)}{dt} = m_1 \frac{d\vec{v}_1}{dt}.\]</div>
+</li>
+<li><p><strong>Newton’s third law</strong>: **If a body <span class="math notranslate nohighlight">\(1\)</span> that exerts a force on another body <span class="math notranslate nohighlight">\(2\)</span>, there is a force of equal magnitude and opposite direction exerted by body <span class="math notranslate nohighlight">\(2\)</span> onto body <span class="math notranslate nohighlight">\(1\)</span>.  Mathematically, this is given as <br> <br></p>
+<div class="math notranslate nohighlight" id="equation-newtons-3rd">
+<span class="eqno">(2.5)<a class="headerlink" href="#equation-newtons-3rd" title="Permalink to this equation">¶</a></span>\[\vec{F}_{12} = -\vec{F}_{21},\]</div>
+<p>where the subscript <span class="math notranslate nohighlight">\(12\)</span> denotes the force exerted by body <span class="math notranslate nohighlight">\(1\)</span> on body <span class="math notranslate nohighlight">\(2\)</span> and vice versa for <span class="math notranslate nohighlight">\(21\)</span>.</p>
+</li>
+<li><p><strong>Newton’s universal law of gravity</strong>: <em>Every body in the universe exerts an attractive force on every other body that is directly proportional to the product of their masses and the inverse square of the distance between them.</em>  Consider two masses <span class="math notranslate nohighlight">\(m_1\)</span> and <span class="math notranslate nohighlight">\(m_2\)</span>, the gravitational force between the bodies is given as <br> <br></p>
+<div class="math notranslate nohighlight" id="equation-newtons-gravity">
+<span class="eqno">(2.6)<a class="headerlink" href="#equation-newtons-gravity" title="Permalink to this equation">¶</a></span>\[\vec{F}_{12} = -\frac{Gm_1m_2}{r^3}\vec{r}_{12} = -\frac{Gm_1m_2}{r^2}\hat{r}_{12}.\]</div>
+<p>The gravitational force depends on the relative separation of the bodies through the vector difference <span class="math notranslate nohighlight">\(\vec{r}_{12} = \vec{r}_1 - \vec{r}_2\)</span>, where the unit vector <br> <br></p>
+<div class="math notranslate nohighlight">
+\[ \hat{r}_{12} \equiv \frac{\vec{r}_{12}}{|\vec{r}_{12}|}. \]</div>
+<p>It additionally depends on the universal gravitational constant <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</li>
+</ul>
+<p>Kepler deduced his laws of planetary motion from careful observation, but they were subsequently shown to be derivable from Newton’s laws of motion together with the universal law of gravity.</p>
 </div>
 <div class="section" id="bound-and-unbound-orbits">
-<h3><span class="section-number">2.1.4. </span>Bound and Unbound Orbits<a class="headerlink" href="#bound-and-unbound-orbits" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">2.1.3. </span>Bound and Unbound Orbits<a class="headerlink" href="#bound-and-unbound-orbits" title="Permalink to this headline">¶</a></h3>
+<p>For a pair of bodies to travel on a circular orbit about their mutual center of mass <span class="math notranslate nohighlight">\(M_{com}\)</span>, they must be pulled towards one another enough to balance inertia.  Gravity must balance the centrifugal <em>pseudoforce</em> that arises if the problem is viewed as a steady state in a reference frame that is rotating with the angular velocity <span class="math notranslate nohighlight">\(n\)</span> of the two bodies.  This angular velocity is also called the <em>mean motion</em> and is represented as</p>
+<div class="math notranslate nohighlight">
+\[ n \equiv \frac{2\pi}{P} = \sqrt{\frac{GM_{com}}{a^3}}. \]</div>
+<p>The <strong>centripetal force</strong> necessary to keep an object of mass <span class="math notranslate nohighlight">\(m\)</span> in a circular orbit of radius <span class="math notranslate nohighlight">\(r\)</span> with a speed <span class="math notranslate nohighlight">\(v_c\)</span> is</p>
+<div class="math notranslate nohighlight" id="equation-centripetal">
+<span class="eqno">(2.7)<a class="headerlink" href="#equation-centripetal" title="Permalink to this equation">¶</a></span>\[\vec{F}_c = mn^2\vec{r} = \frac{mv_c^2}{r}\hat{r}.\]</div>
+<p>The speed <span class="math notranslate nohighlight">\(v_c\)</span> of a circular orbit can be found by equating the centripetal force to the gravitational force exerted by the central body with a mass <span class="math notranslate nohighlight">\(M\)</span>.  This results in</p>
+<div class="math notranslate nohighlight" id="equation-circular-vel">
+<span class="eqno">(2.8)<a class="headerlink" href="#equation-circular-vel" title="Permalink to this equation">¶</a></span>\[v_c = \sqrt{\frac{GM}{r}}.\]</div>
+<p>The total energy <span class="math notranslate nohighlight">\(E\)</span> of the system is a conserved quantity, which means that it is equal to the sum of the kinetic energy <span class="math notranslate nohighlight">\((K = mv^2/2)\)</span> and the potential energy <span class="math notranslate nohighlight">\(U = -GMm/r\)</span>.  For circular orbits <span class="math notranslate nohighlight">\(r=a\)</span>, which gives</p>
+<div class="math notranslate nohighlight" id="equation-grav-tot-energy">
+<span class="eqno">(2.9)<a class="headerlink" href="#equation-grav-tot-energy" title="Permalink to this equation">¶</a></span>\[\begin{split}E &amp;= \frac{1}{2}mv^2 - \frac{GMm}{r}, \\
+&amp;= \frac{GMm}{2a} - \frac{GMm}{a} = -\frac{GMm}{2a}.\end{split}\]</div>
+<p>If <span class="math notranslate nohighlight">\(E&lt;0\)</span>, then the magnitude of the potential energy is larger than the kinetic energy of the mass.  The system is <strong>bound</strong> because the mass <span class="math notranslate nohighlight">\(m\)</span> lacks a sufficient amount of kinetic energy to escape.  The mass <span class="math notranslate nohighlight">\(m\)</span> orbits the central mass <span class="math notranslate nohighlight">\(M\)</span> on an elliptical path.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The equation for the total energy is degenerate regarding elliptical or circular orbits.  Notice that our expression in Eqn. <a class="reference internal" href="#equation-grav-tot-energy">(2.9)</a> does not depend on eccentricity at all.</p>
+</div>
+<p>The velocity along an elliptical orbit <span class="math notranslate nohighlight">\(v_{ell}\)</span> can be derived from Eqn. <a class="reference internal" href="#equation-grav-tot-energy">(2.9)</a> to get</p>
+<div class="math notranslate nohighlight" id="equation-elliptical-vel">
+<span class="eqno">(2.10)<a class="headerlink" href="#equation-elliptical-vel" title="Permalink to this equation">¶</a></span>\[v_{ell} = \sqrt{GM\left(\frac{2}{r}-\frac{1}{a}\right)},\]</div>
+<p>which is known as the <a class="reference external" href="https://en.wikipedia.org/wiki/Vis-viva_equation">vis viva equation</a>.</p>
+<p>If <span class="math notranslate nohighlight">\(E&gt;0\)</span>, the mass <span class="math notranslate nohighlight">\(m\)</span> can escape because its kinetic energy is now larger than the magnitude of the potential energy.  The system is <strong>unbound</strong>, and the orbit is described mathematically as a hyperbola.  If the kinetic energy exactly equals the magnitude of the potential energy (i.e., <span class="math notranslate nohighlight">\(K = |U|\)</span>), then <span class="math notranslate nohighlight">\(E=0\)</span> and the the orbit is a parabola.</p>
+<p>Using the condition for a parabolic orbit <span class="math notranslate nohighlight">\(E=0\)</span>, we can determine the <strong>escape velocity</strong> at any separation, or</p>
+<div class="math notranslate nohighlight" id="equation-escape-speed">
+<span class="eqno">(2.11)<a class="headerlink" href="#equation-escape-speed" title="Permalink to this equation">¶</a></span>\[v_{esc} = \sqrt{\frac{2GM}{r}} = \sqrt{2}v_c.\]</div>
+<p>The orbit in the two body problem is an ellipse, parabola, or hyperbola, which depends on whether the total energy is negative, zero, or positive, respectively.  Geometrically, these curves are known as <a class="reference external" href="https://en.wikipedia.org/wiki/Conic_section">conic sections</a> and are illustrated in Fig. <a class="reference internal" href="#conic-sections"><span class="std std-numref">2.3</span></a>.</p>
+<div class="figure align-default" id="conic-sections">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/1/11/Conic_Sections.svg"><img alt="conic sections" src="https://upload.wikimedia.org/wikipedia/commons/1/11/Conic_Sections.svg" width="400px" /></a>
+<p class="caption"><span class="caption-number">Fig. 2.3 </span><span class="caption-text">The black boundaries of the colored regions are conic sections. Image credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Conic_section">conic sections</a> by user:Magister_Mathematicae.</span><a class="headerlink" href="#conic-sections" title="Permalink to this image">¶</a></p>
+</div>
+<p>Equation <a class="reference internal" href="#equation-distance">(2.1)</a> can be generalized to include unbound orbits to get</p>
+<div class="math notranslate nohighlight" id="equation-general-distance">
+<span class="eqno">(2.12)<a class="headerlink" href="#equation-general-distance" title="Permalink to this equation">¶</a></span>\[r = \frac{\zeta}{1+e\cos f},\]</div>
+<p>which depends on the <strong>generalized eccentricity</strong> <span class="math notranslate nohighlight">\(e\)</span> and a constant <span class="math notranslate nohighlight">\(\zeta\)</span>.  The true anomaly <span class="math notranslate nohighlight">\(f\)</span> and distance <span class="math notranslate nohighlight">\(r\)</span> carry the same meaning as in Eqn. <a class="reference internal" href="#equation-distance">(2.1)</a>.  The constant <span class="math notranslate nohighlight">\(\zeta\)</span> is defined as:</p>
+<div class="math notranslate nohighlight" id="equation-general-ecc">
+<span class="eqno">(2.13)<a class="headerlink" href="#equation-general-ecc" title="Permalink to this equation">¶</a></span>\[\begin{split}\zeta = 
+\begin{cases}
+    a\left(1-e^2\right), \qquad &amp; (e&lt;1) \\[5pt]
+    2q, \qquad &amp; (e = 1) \\[5pt]
+    q(1+e). \qquad &amp; (e&gt;1) 
+\end{cases}\end{split}\]</div>
+<p>The <strong>pericentric separation</strong> <span class="math notranslate nohighlight">\(q\)</span> is the distance of closest approach.  For all orbits the three orientation angles <span class="math notranslate nohighlight">\(i\)</span>, <span class="math notranslate nohighlight">\(\omega\)</span>, and <span class="math notranslate nohighlight">\(\Omega\)</span> carry the same definitions as in the elliptical case.</p>
+<p>The energy of an orbit is uniquely specified by its semimajor axis <span class="math notranslate nohighlight">\(a\)</span>, but the magnitude of the angular momentum <span class="math notranslate nohighlight">\(|\vec{L}|\)</span> depends on both the semimajor axis and eccentricity, by</p>
+<div class="math notranslate nohighlight" id="equation-ang-momentum">
+<span class="eqno">(2.14)<a class="headerlink" href="#equation-ang-momentum" title="Permalink to this equation">¶</a></span>\[|\vec{L}| = m\sqrt{GMa(1-e^2)}.\]</div>
+<p>For a given semimajor axis, a circular orbit contains the maximum amount of angular momentum.  This occurs because when <span class="math notranslate nohighlight">\(r=a\)</span> for an eccentric orbit, the magnitude of the velocity is the same as an equivalent circular orbit (via conservation of energy), but not all of the velocity is directed perpendicular to the line connecting the two bodies.</p>
 </div>
 </div>
 <div class="section" id="thermodynamics">
