@@ -129,7 +129,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
-  Lecture Notes
+  Basic Planetary Science
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -139,15 +139,22 @@ const thebe_selector_output = ".output, .cell_output"
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_02/Basic_Planetary_Science.html">
-   2. Basic Planetary Science
+  <a class="reference internal" href="../Chapter_02/Physics_and_Astrophysics.html">
+   2. Physics and Astrophysics
   </a>
  </li>
  <li class="toctree-l1">
-  <a class="reference internal" href="../Chapter_03/Planet_Overview.html">
-   3. Planet Overview
+  <a class="reference internal" href="../Chapter_03/Planetary_Heating_and_Atmospheres.html">
+   3. Planetary Heating and Atmospheres
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Origins of Life
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Chapter_04/Life_Requirements.html">
    4. Life and its Requirements
@@ -163,6 +170,13 @@ const thebe_selector_output = ".output, .cell_output"
    6. Early Earth
   </a>
  </li>
+</ul>
+<p aria-level="2" class="caption" role="heading">
+ <span class="caption-text">
+  Life on Habitable Worlds
+ </span>
+</p>
+<ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Chapter_07/Hadean_Climate.html">
    7. Hadean &amp; Archean Climate
@@ -1080,7 +1094,8 @@ A conditional is anything that can be evaluated as either <strong>True</strong> 
 <p>Note that = is an assignment (i.e., store something to a variable), where == is a conditional (i.e., are two objects congruent).  <em>This is one of the most common bugs in Python programs, where an = is missed.</em>  There are also the boolean operators <strong>and</strong>, <strong>or</strong>, <strong>in</strong> and <strong>not</strong>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Name = input(&quot;What is your name?&quot;)</span>
+<span class="n">Name</span> <span class="o">=</span> <span class="s2">&quot;John&quot;</span>
 <span class="n">Cast</span> <span class="o">=</span> <span class="n">Pythons</span>
 <span class="k">if</span> <span class="n">Name</span> <span class="ow">in</span> <span class="n">Cast</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Yes, &quot;</span><span class="p">,</span><span class="n">Name</span><span class="p">,</span><span class="s2">&quot; is a member of Monty Python&quot;</span><span class="p">)</span>
@@ -1090,32 +1105,7 @@ A conditional is anything that can be evaluated as either <strong>True</strong> 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="nn">Input In [28],</span> in <span class="ni">&lt;cell line: 1&gt;</span><span class="nt">()</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">Name</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What is your name?&quot;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">Cast</span> <span class="o">=</span> <span class="n">Pythons</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="k">if</span> <span class="n">Name</span> <span class="ow">in</span> <span class="n">Cast</span><span class="p">:</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py:1072,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1065</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
-<span class="g g-Whitespace">   </span><span class="mi">1066</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1067</span><span class="sd"> Raises</span>
-<span class="g g-Whitespace">   </span><span class="mi">1068</span><span class="sd"> ------</span>
-<span class="g g-Whitespace">   </span><span class="mi">1069</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1070</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1071</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1072</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1073</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1074</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1075</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1076</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1077</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1078</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1079</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1080</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>No, you&#39;re an impostor!
 </pre></div>
 </div>
 </div>
@@ -1162,7 +1152,8 @@ A conditional is anything that can be evaluated as either <strong>True</strong> 
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Create a Python program to determine whether a number is prime.  \</span>
 <span class="c1"># DISCLAIMER: This is not the most efficient way</span>
 
-<span class="n">Number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What integer do you want to check?&quot;</span><span class="p">))</span> <span class="c1">#need to make sure input is an integer</span>
+<span class="c1">#Number = int(input(&quot;What integer do you want to check?&quot;)) #need to make sure input is an integer</span>
+<span class="n">Number</span> <span class="o">=</span> <span class="mi">13</span>
 
 <span class="n">divisor</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">#Use this to set floor on numbers to check</span>
 <span class="c1">#Main loop to test each number</span>
@@ -1181,34 +1172,7 @@ A conditional is anything that can be evaluated as either <strong>True</strong> 
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="nn">Input In [29],</span> in <span class="ni">&lt;cell line: 4&gt;</span><span class="nt">()</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#Create a Python program to determine whether a number is prime.  \</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="c1"># DISCLAIMER: This is not the most efficient way</span>
-<span class="ne">----&gt; </span><span class="mi">4</span> <span class="n">Number</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;What integer do you want to check?&quot;</span><span class="p">))</span> <span class="c1">#need to make sure input is an integer</span>
-<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">divisor</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1">#Use this to set floor on numbers to check</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="c1">#Main loop to test each number</span>
-
-<span class="nn">File ~/anaconda3/lib/python3.9/site-packages/ipykernel/kernelbase.py:1072,</span> in <span class="ni">Kernel.raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1065</span> <span class="sd">&quot;&quot;&quot;Forward raw_input to frontends</span>
-<span class="g g-Whitespace">   </span><span class="mi">1066</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">1067</span><span class="sd"> Raises</span>
-<span class="g g-Whitespace">   </span><span class="mi">1068</span><span class="sd"> ------</span>
-<span class="g g-Whitespace">   </span><span class="mi">1069</span><span class="sd"> StdinNotImplementedError if active frontend doesn&#39;t support stdin.</span>
-<span class="g g-Whitespace">   </span><span class="mi">1070</span><span class="sd"> &quot;&quot;&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1071</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">_allow_stdin</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">1072</span>     <span class="k">raise</span> <span class="n">StdinNotImplementedError</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1073</span>         <span class="s2">&quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">   </span><span class="mi">1074</span>     <span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">1075</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_input_request</span><span class="p">(</span>
-<span class="g g-Whitespace">   </span><span class="mi">1076</span>     <span class="nb">str</span><span class="p">(</span><span class="n">prompt</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1077</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_parent_ident</span><span class="p">[</span><span class="s2">&quot;shell&quot;</span><span class="p">],</span>
-<span class="g g-Whitespace">   </span><span class="mi">1078</span>     <span class="bp">self</span><span class="o">.</span><span class="n">get_parent</span><span class="p">(</span><span class="s2">&quot;shell&quot;</span><span class="p">),</span>
-<span class="g g-Whitespace">   </span><span class="mi">1079</span>     <span class="n">password</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-<span class="g g-Whitespace">   </span><span class="mi">1080</span> <span class="p">)</span>
-
-<span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13  is a prime number
 </pre></div>
 </div>
 </div>

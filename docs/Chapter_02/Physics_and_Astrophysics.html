@@ -427,6 +427,11 @@ const thebe_selector_output = ".output, .cell_output"
    </strong>
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-tables">
+   2.8. Reference Tables
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -575,6 +580,11 @@ const thebe_selector_output = ".output, .cell_output"
    <strong>
     Homework
    </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-tables">
+   2.8. Reference Tables
   </a>
  </li>
 </ul>
@@ -1131,7 +1141,7 @@ M_\star^4, \qquad &amp;(0.43 \leq M_\star \leq 2 M_\odot) \\[5pt]
 <p>Figure <a class="reference internal" href="#hr-hipparcos"><span class="std std-numref">2.5</span></a> shows that although stellar luminosities vary by many orders of magnitude, they follow similar processes as a class of objects.  Stars supported against gravitational collapse by thermal pressure that is maintained by fusion reactions in their interiors, even though the only range in mass by <span class="math notranslate nohighlight">\(\sim 3\)</span> orders of magnitude.</p>
 <div class="figure align-default" id="hr-hipparcos" style="width: 600px">
 <div class="cell_output docutils container">
-<img alt="../_images/Physics_and_Astrophysics_9_2.png" src="../_images/Physics_and_Astrophysics_9_2.png" />
+<img alt="../_images/Physics_and_Astrophysics_9_1.png" src="../_images/Physics_and_Astrophysics_9_1.png" />
 </div>
 <p class="caption"><span class="caption-number">Fig. 2.5 </span><span class="caption-text">Hertzsprung-Russell (H-R) diagram for nearby, single stars using the Hipparcos catalog (<a class="reference external" href="http://balbuceosastropy.blogspot.com/2014/03/construction-of-hertzsprung-russell.html">Eduardo Martin Calleja</a>).  The red points mark stars visible with the naked eye that are within 250 light years of the Solar System.  The cyan point marks the position of the Sun within the H-R diagram.</span><a class="headerlink" href="#hr-hipparcos" title="Permalink to this image">¶</a></p>
 </div>
@@ -1205,7 +1215,7 @@ M_\star^4, \qquad &amp;(0.43 \leq M_\star \leq 2 M_\odot) \\[5pt]
 <span class="n">L_rng</span> <span class="o">=</span> <span class="p">[</span><span class="mf">0.001</span><span class="p">,</span><span class="mf">0.01</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">10</span><span class="p">,</span><span class="mi">100</span><span class="p">,</span><span class="mi">1000</span><span class="p">,</span><span class="mi">10000</span><span class="p">,</span><span class="mi">100000</span><span class="p">]</span>
 <span class="n">L_ticks</span> <span class="o">=</span> <span class="n">L2AbsMag</span><span class="p">(</span><span class="n">L_rng</span><span class="p">)</span>
 <span class="n">Ltick_lbls</span> <span class="o">=</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">L_rng</span><span class="p">]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">Ltick_lbls</span><span class="p">)</span>
+
 <span class="n">ax_Lum</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">L_ticks</span><span class="p">)</span>
 <span class="n">ax_Lum</span><span class="o">.</span><span class="n">set_yticklabels</span><span class="p">(</span><span class="n">Ltick_lbls</span><span class="p">)</span>
 
@@ -1240,16 +1250,13 @@ M_\star^4, \qquad &amp;(0.43 \leq M_\star \leq 2 M_\odot) \\[5pt]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;0.001&#39;, &#39;0.01&#39;, &#39;0.1&#39;, &#39;1&#39;, &#39;10&#39;, &#39;100&#39;, &#39;1000&#39;, &#39;10000&#39;, &#39;100000&#39;]
-</pre></div>
-</div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/saturnaxis/anaconda3/lib/python3.9/site-packages/matplotlib/ticker.py:2788: RuntimeWarning: invalid value encountered in log10
   majorstep_no_exponent = 10 ** (np.log10(majorstep) % 1)
 /home/saturnaxis/anaconda3/lib/python3.9/site-packages/matplotlib/ticker.py:2788: RuntimeWarning: invalid value encountered in double_scalars
   majorstep_no_exponent = 10 ** (np.log10(majorstep) % 1)
 </pre></div>
 </div>
-<img alt="../_images/Physics_and_Astrophysics_9_3.png" src="../_images/Physics_and_Astrophysics_9_3.png" />
+<img alt="../_images/Physics_and_Astrophysics_9_2.png" src="../_images/Physics_and_Astrophysics_9_2.png" />
 </div>
 </div>
 <p>Figure <a class="reference internal" href="#solar-evolution"><span class="std std-numref">2.6</span></a> shows the Sun’s evolutionary track in the temperature-luminosity plane as it ages.  A star’s luminosity grows slowly during the star’s main sequence phase because fusion increases the mean particle mass in the core and a greater temperature is required to maintain hydrostatic equilibrium.  When the supply of hydrogen can no longer sustain the fusion reaction, the core shrinks.</p>
@@ -1265,8 +1272,8 @@ M_\star^4, \qquad &amp;(0.43 \leq M_\star \leq 2 M_\odot) \\[5pt]
 <div class="section" id="stellar-size">
 <h3><span class="section-number">2.4.3. </span>Stellar Size<a class="headerlink" href="#stellar-size" title="Permalink to this headline">¶</a></h3>
 <p>Nuclear reactions maintain the temperature in the cores of low-mass stars close to <span class="math notranslate nohighlight">\(T_{\rm nuc} \approx 3 \times 10^6\ {\rm K}\)</span> because the fusion rate is roughly proportional to <span class="math notranslate nohighlight">\(T^{10}\)</span> (near <span class="math notranslate nohighlight">\(T= T_{\rm nuc}\)</span>).  The virial theorem (Eqn. <a class="reference internal" href="#equation-virial-theorem">(2.26)</a>) can be used to show the radii of such stars must be roughly proportional to mass.  The virial theorem is applicable because most of the energy outside the core resides balancing in pressure and gravity.  In equilibrium, the thermal energy and the gravitational potential energy are in balance:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a8ed10bc-36a2-4d1f-9467-82bcfedf4044">
-<span class="eqno">(2.28)<a class="headerlink" href="#equation-a8ed10bc-36a2-4d1f-9467-82bcfedf4044" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-11f3cf31-47c8-48b1-afaa-b2e5cb73da2a">
+<span class="eqno">(2.28)<a class="headerlink" href="#equation-11f3cf31-47c8-48b1-afaa-b2e5cb73da2a" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \frac{GM_\star^2}{R_\star} &amp;\sim \frac{M_\star kT_{\rm nuc}}{m_u}, \\[5pt]
 M_\star &amp;\approx \frac{R_\star kT_{\rm nuc}}{Gm_u}, \\[5pt]
 M_\star &amp;\propto R_\star.
@@ -1284,14 +1291,14 @@ R &amp;\propto M^{-1/3}.\end{split}\]</div>
 <div class="section" id="sizes-and-densities-of-massive-planets">
 <h2><span class="section-number">2.5. </span>Sizes and Densities of Massive Planets<a class="headerlink" href="#sizes-and-densities-of-massive-planets" title="Permalink to this headline">¶</a></h2>
 <p>For bodies of planetary mass, the pressure from the electromagnetic repulsion of electrons (i.e., <strong>Coulomb pressure</strong>) plays a larger role relative to the (quantum) degeneracy pressure.  Coulomb pressure is characterized by constant density, which implies that the radius scales as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0fab75b6-598a-4fa7-ad29-3b2e340c17b9">
-<span class="eqno">(2.30)<a class="headerlink" href="#equation-0fab75b6-598a-4fa7-ad29-3b2e340c17b9" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6478ae83-794f-4ee1-8995-72b41aeae65a">
+<span class="eqno">(2.30)<a class="headerlink" href="#equation-6478ae83-794f-4ee1-8995-72b41aeae65a" title="Permalink to this equation">¶</a></span>\[\begin{align}
 R \propto M^{1/3}.
 \end{align}\]</div>
 <p>The combination of Coulomb and degeneracy pressure results in Jupiter-like radii for all cool brown dwarfs, giant planets (of solar composition), and the very lowest mass stars.  The largest size cool planet are expected to have <span class="math notranslate nohighlight">\(M_p \approx 4\ M_{\rm Jup}\)</span>.</p>
 <p>Fluid bodies can be described through an equation of state, such as a <strong>polytrope</strong> of the form:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-757bab39-1990-47eb-a6b9-d4b6824c4d4e">
-<span class="eqno">(2.31)<a class="headerlink" href="#equation-757bab39-1990-47eb-a6b9-d4b6824c4d4e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e78f6537-0d30-4b2d-8265-90555a9956f9">
+<span class="eqno">(2.31)<a class="headerlink" href="#equation-e78f6537-0d30-4b2d-8265-90555a9956f9" title="Permalink to this equation">¶</a></span>\[\begin{align}
 P = K\rho^{(n+1)/n},
 \end{align}\]</div>
 <p>which depends on the <strong>polytropic constant</strong> <span class="math notranslate nohighlight">\(K\)</span> and the <strong>polytropic index</strong> <span class="math notranslate nohighlight">\(n\)</span> (see here for <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#polytropic-models-and-the-lane-emden-equation">more details</a>).</p>
@@ -1303,19 +1310,19 @@ P = K\rho^{(n+1)/n},
 R &amp;= \left(\frac{6K}{G}\right)^{1/4}.
 \end{align*}\]</div>
 <p>When more mass that is added to this body, the material gets compressed such that its radius does not change.  With <span class="math notranslate nohighlight">\(n=1\)</span>, the hydrodynamic equations can be solved analytically, where the results are in good agreement with calculations based on more detailed pressure-density relations.  Integration of the hydrostatic equilibrium (Eqn. <a class="reference internal" href="#equation-gen-hydro-eq">(2.24)</a>) leads to the following density profile:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-54695abd-e538-4666-8bc4-322e8c518fc3">
-<span class="eqno">(2.32)<a class="headerlink" href="#equation-54695abd-e538-4666-8bc4-322e8c518fc3" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6bf8a122-f916-4f3d-be02-16281427c09f">
+<span class="eqno">(2.32)<a class="headerlink" href="#equation-6bf8a122-f916-4f3d-be02-16281427c09f" title="Permalink to this equation">¶</a></span>\[\begin{align}
 \rho = \rho_c \left(\frac{\sin\ C_Kr}{C_Kr}\right),
 \end{align}\]</div>
 <p>with the density at the center fo the body <span class="math notranslate nohighlight">\(\rho_c\)</span> and</p>
-<div class="amsmath math notranslate nohighlight" id="equation-febed96c-d4be-43b7-9442-f4e73072c5ae">
-<span class="eqno">(2.33)<a class="headerlink" href="#equation-febed96c-d4be-43b7-9442-f4e73072c5ae" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-39902dde-4b46-47c4-ab7c-ecd9d4a5d8b8">
+<span class="eqno">(2.33)<a class="headerlink" href="#equation-39902dde-4b46-47c4-ab7c-ecd9d4a5d8b8" title="Permalink to this equation">¶</a></span>\[\begin{align}
 C_K = \sqrt{\frac{2\pi G}{K}}.
 \end{align}\]</div>
 <p>The radius <span class="math notranslate nohighlight">\(R\)</span> of the body is defined by the surface (<span class="math notranslate nohighlight">\(\rho = 0\)</span>), which implies the non-trivial solution <span class="math notranslate nohighlight">\(\sin\ C_KR = 0\)</span>, or <span class="math notranslate nohighlight">\(R= \pi/C_K\)</span>.  Given a polytropic constant <span class="math notranslate nohighlight">\(K = 2.7 \times 10^5\ {\rm m^5/kg/s^2}\)</span> (obtained from a more precise equation of state), we find that the planet’s radius <span class="math notranslate nohighlight">\(R = 7.97\times 10^4\ {\rm km}\)</span>.  The radius of this hydrogen sphere is slightly larger than Jupiter’s mean radius (<span class="math notranslate nohighlight">\(R_{\rm Jup} = 6.99 \times 10^4\ {\rm km}\)</span>), and significantly larger than Saturn’s mean radius (<span class="math notranslate nohighlight">\(R_{\rm Sat} = 0.833\ R_{\rm Jup}\)</span>).  This suggest that the Solar System’s two largest planets are composed primarily (but not entirely) of hydrogen.</p>
 <p>Using experimental data at low pressure and theoretical models at very high pressure, it can be shown that the maximum radius for cold self-gravitating spheres is approximately</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d465e290-36b8-4c45-86da-217aa295a950">
-<span class="eqno">(2.34)<a class="headerlink" href="#equation-d465e290-36b8-4c45-86da-217aa295a950" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b6c8491a-4f12-46fb-8963-d923e8f860ec">
+<span class="eqno">(2.34)<a class="headerlink" href="#equation-b6c8491a-4f12-46fb-8963-d923e8f860ec" title="Permalink to this equation">¶</a></span>\[\begin{align}
 R_{\rm max} \approx \frac{Z \times 10^5}{\mu m_u \sqrt{Z^{2/3}+0.51}}\ {\rm km}, 
 \end{align}\]</div>
 <p>using the atomic number <span class="math notranslate nohighlight">\(Z\)</span> and the atomic mass <span class="math notranslate nohighlight">\(\mu m_u\)</span> based on the planet’s composition.  This equation results in <span class="math notranslate nohighlight">\(R_{\rm max} \approx 82,600\ {\rm km}\)</span> for a cool pure hydrogen planet and <span class="math notranslate nohighlight">\(R_{\rm max} \approx 35,000\ {\rm km}\)</span> for pure helium.</p>
@@ -1334,9 +1341,59 @@ R_{\rm max} \approx \frac{Z \times 10^5}{\mu m_u \sqrt{Z^{2/3}+0.51}}\ {\rm km},
 <p class="caption"><span class="caption-number">Fig. 2.8 </span><span class="caption-text">The repulsive Coulomb potential is a barrier against charged particles entering the attractive nuclear potential.  The strong nuclear potential is only effective over short distances (<span class="math notranslate nohighlight">\(10^{-15}\ {\rm m} = 1\ {\rm fm}\)</span>).</span><a class="headerlink" href="#nuclear-potential" title="Permalink to this image">¶</a></p>
 </div>
 <p>The formation of atomic nuclei is called <strong>nucleosynthesis</strong>, which primarily occurs in stellar environments.  Models of nucleosynthesis yield clues about the history of the material that was eventually incorporated into our Solar System by using observational data from meteorites and other bodies.  Two important environments for nucleosynthesis are the very early Universe (i.e., primordial) and the interiors of stars.  Other environments are responsible for some isotopes, such as <strong>spallation</strong> and radioactive decay.  Spallation is the collision between high-energy nuclei (from a supernova explosion) with the ambient interstellar hydrogen, which causes the splintering of portions of the heavy nuclei.</p>
-<div class="figure align-default" id="elemental-abundance-ss">
-<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/7/70/SolarSystemAbundances.jpg"><img alt="Solar System abundances" src="https://upload.wikimedia.org/wikipedia/commons/7/70/SolarSystemAbundances.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Estimated abundances of the chemical elements in the Solar System by atomic number <span class="math notranslate nohighlight">\(Z\)</span>. Hydrogen <span class="math notranslate nohighlight">\((\rm H)\)</span> and helium <span class="math notranslate nohighlight">\((\rm He)\)</span> are the most abundant from the Big Bang. The next three elements (lithium <span class="math notranslate nohighlight">\((\rm Li), beryllium \)</span>(\rm Be), and boron $(\rm B)) are rare because they are poorly synthesized in the Big Bang and also in stars.  Image Credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Oddo%E2%80%93Harkins_rule">Oddo-Harkins Rule</a>; Data taken from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2003ApJ...591.1220L/abstract">Lodders (2003)</a>.</span><a class="headerlink" href="#elemental-abundance-ss" title="Permalink to this image">¶</a></p>
+<div class="figure align-default" id="solar-system-abundances" style="width: 800px">
+<div class="cell_output docutils container">
+<img alt="../_images/Physics_and_Astrophysics_14_0.png" src="../_images/Physics_and_Astrophysics_14_0.png" />
+</div>
+<p class="caption"><span class="caption-number">Fig. 2.9 </span><span class="caption-text">Estimated abundances of the chemical elements in the Solar System by atomic number <span class="math notranslate nohighlight">\(Z\)</span>. Hydrogen <span class="math notranslate nohighlight">\((\rm H)\)</span> and helium <span class="math notranslate nohighlight">\((\rm He)\)</span> are the most abundant from the Big Bang. The next three elements (lithium <span class="math notranslate nohighlight">\((\rm Li)\)</span>, beryllium <span class="math notranslate nohighlight">\((\rm Be)\)</span>, and boron <span class="math notranslate nohighlight">\((\rm B)\)</span>) are rare because they are poorly synthesized in the Big Bang and also in stars.  See Table <a class="reference internal" href="#element-abund-ss"><span class="std std-numref">2.1</span></a> for values and elemental names as a function of <span class="math notranslate nohighlight">\(Z\)</span>.</span><a class="headerlink" href="#solar-system-abundances" title="Permalink to this image">¶</a></p>
+</div>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Using data from  Lodders, K. 2020, Solar Elemental Abundances, in The Oxford Research Encyclopedia of Planetary Science, Oxford University Press</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rcParams</span>
+<span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
+
+<span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;font.size&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">})</span>
+<span class="n">rcParams</span><span class="o">.</span><span class="n">update</span><span class="p">({</span><span class="s1">&#39;mathtext.fontset&#39;</span><span class="p">:</span> <span class="s1">&#39;cm&#39;</span><span class="p">})</span>
+
+<span class="n">data_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s2">&quot;Solar_System_Abundances_Lodders_Table_8.csv&quot;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">comments</span><span class="o">=</span><span class="s1">&#39;#&#39;</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">data_el</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="s2">&quot;Solar_System_Abundances_Lodders_Table_8.csv&quot;</span><span class="p">,</span><span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;,&#39;</span><span class="p">,</span><span class="n">comments</span><span class="o">=</span><span class="s1">&#39;#&#39;</span><span class="p">,</span><span class="n">usecols</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">),</span><span class="n">dtype</span><span class="o">=</span><span class="s1">&#39;U8&#39;</span><span class="p">)</span>
+
+<span class="c1">#remove rows with nan</span>
+<span class="n">data_val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">delete</span><span class="p">(</span><span class="n">data_val</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">42</span><span class="p">,</span><span class="mi">60</span><span class="p">]),</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1">#set uncertainty for H to one; log_10 1 = 0</span>
+<span class="n">data_val</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="n">fs</span> <span class="o">=</span> <span class="s1">&#39;large&#39;</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="mi">4</span><span class="p">),</span><span class="n">dpi</span><span class="o">=</span><span class="mi">150</span><span class="p">)</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">add_subplot</span><span class="p">(</span><span class="mi">111</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">data_val</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">log10</span><span class="p">(</span><span class="n">data_val</span><span class="p">[:,</span><span class="mi">1</span><span class="p">]),</span><span class="s1">&#39;k.-&#39;</span><span class="p">,</span><span class="n">lw</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span><span class="n">ms</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+<span class="c1">#ax.errorbar(data_val[:,0],np.log10(data_val[:,1]),np.log10(data_val[:,2]),fmt=&#39;o&#39;,color=&#39;k&#39;,ms=5,capsize=10)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;Atomic Number $Z$&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;$\log_</span><span class="si">{10}</span><span class="s2">$(Abundance)&quot;</span><span class="p">,</span><span class="n">fontsize</span><span class="o">=</span><span class="n">fs</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">95</span><span class="p">)</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">set_yticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="o">-</span><span class="mi">4</span><span class="p">,</span><span class="mi">14</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_xticks</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">95</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">ax</span><span class="o">.</span><span class="n">minorticks_on</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;major&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;out&#39;</span><span class="p">,</span><span class="n">length</span> <span class="o">=</span> <span class="mf">6.0</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">tick_params</span><span class="p">(</span><span class="n">which</span><span class="o">=</span><span class="s1">&#39;minor&#39;</span><span class="p">,</span><span class="n">axis</span><span class="o">=</span><span class="s1">&#39;both&#39;</span><span class="p">,</span> <span class="n">direction</span><span class="o">=</span><span class="s1">&#39;out&#39;</span><span class="p">,</span><span class="n">length</span> <span class="o">=</span> <span class="mf">3.0</span><span class="p">,</span> <span class="n">width</span> <span class="o">=</span> <span class="mf">1.0</span><span class="p">)</span>
+
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;SS_abundance_fig&quot;</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">);</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/Physics_and_Astrophysics_14_1.png" src="../_images/Physics_and_Astrophysics_14_1.png" />
+</div>
 </div>
 <div class="section" id="primordial-nucleosynthesis">
 <h3><span class="section-number">2.6.1. </span>Primordial Nucleosynthesis<a class="headerlink" href="#primordial-nucleosynthesis" title="Permalink to this headline">¶</a></h3>
@@ -1346,8 +1403,8 @@ R_{\rm max} \approx \frac{Z \times 10^5}{\mu m_u \sqrt{Z^{2/3}+0.51}}\ {\rm km},
 <p>Although the term <em>big bang</em> is ubiquitous today to describe the best evidence for the beginning of the Universe.  It was originally coined by <a class="reference external" href="https://www.popsci.com/big-bang-term-origin-fred-hoyle/">Fred Hoyle</a> as insult for a new theories in the 1950s that challenged the <em>steady-state</em> theory of the Universe.</p>
 </div>
 <p>The very young Universe was filled with mostly protons <span class="math notranslate nohighlight">\(p^+\)</span> (i.e., hydrogen nuclei) and neutrons <span class="math notranslate nohighlight">\(n\)</span>.  Free neutrons are unstable, where a neutron will decay via the reaction:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4aee5d65-d60b-44c4-84c0-5f811d0a73c8">
-<span class="eqno">(2.35)<a class="headerlink" href="#equation-4aee5d65-d60b-44c4-84c0-5f811d0a73c8" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0e34f02d-2a52-472c-b287-3cf1ca0b20ec">
+<span class="eqno">(2.35)<a class="headerlink" href="#equation-0e34f02d-2a52-472c-b287-3cf1ca0b20ec" title="Permalink to this equation">¶</a></span>\[\begin{align}
 n \rightarrow p^+ + e^- + \overline{\nu}_e,
 \end{align}\]</div>
 <p>into a proton, electron <span class="math notranslate nohighlight">\(e^-\)</span> and an (electron) antinuetrino <span class="math notranslate nohighlight">\(\overline{\nu}_e\)</span>.  This process is characterized statistically by the time required for half of a sample to decay, or its <strong>half-life</strong> <span class="math notranslate nohighlight">\(\tau_{1/2}\)</span>.  The half-life <span class="math notranslate nohighlight">\(\tau_{1/2}\)</span> of a free neutron is only 10.3 minutes.</p>
@@ -1371,8 +1428,8 @@ n \rightarrow p^+ + e^- + \overline{\nu}_e,
 <div class="section" id="element-production-during-nuclear-fusion">
 <h4><span class="section-number">2.6.2.1. </span>Element Production During Nuclear Fusion<a class="headerlink" href="#element-production-during-nuclear-fusion" title="Permalink to this headline">¶</a></h4>
 <p>In main sequence stars <span class="math notranslate nohighlight">\((M_\star \lesssim 1\ M_\odot)\)</span>, the primary reaction sequence is the proton-proton chain (or <strong>pp-chain</strong>).  The principal branch of the pp-chain occurs in three steps:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b6d85154-18ed-4cc6-bbfd-ffa6b33edc16">
-<span class="eqno">(2.36)<a class="headerlink" href="#equation-b6d85154-18ed-4cc6-bbfd-ffa6b33edc16" title="Permalink to this equation">¶</a></span>\[\begin{align}\
+<div class="amsmath math notranslate nohighlight" id="equation-c92063d7-0956-462d-b29a-bb373d44c060">
+<span class="eqno">(2.36)<a class="headerlink" href="#equation-c92063d7-0956-462d-b29a-bb373d44c060" title="Permalink to this equation">¶</a></span>\[\begin{align}\
 {^1_1{\rm H}} + {^1_1{\rm H}} &amp;\rightarrow {^2_1{\rm He}} + e^+ + \nu_e, \qquad &amp;\text{(reaction Ia)} \\[5pt]
 {^2_1{\rm H}} + {^1_1{\rm H}} &amp;\rightarrow {^3_2{\rm He}} + \gamma, \qquad &amp;\text{(reaction Ib)} \\[5pt]
 {^3_2{\rm He}} + {^3_2{\rm He}} &amp;\rightarrow {^4_2{\rm He}} + 2\ {^1_1{\rm H}} + 2\gamma, \qquad &amp;\text{(reaction Ic)} 
@@ -1387,15 +1444,15 @@ allowfullscreen></iframe>
 </div>
 <p>At temperatures close to the Sun’s core (<span class="math notranslate nohighlight">\(T \approx 15 \times 10^6\ {\rm K}\)</span>), the fusion rate is roughly proportional to <span class="math notranslate nohighlight">\(T^4\)</span>, which isn’t as sensitive to temperature changes as the <span class="math notranslate nohighlight">\(T^{10}\)</span> dependence near <span class="math notranslate nohighlight">\(T_{\rm nuc}\)</span> and the solar cor still varies steeply with temperature.  The steep temperature dependence implies that fusion acts as an effective thermostat.  It also implies that more massive main sequence stars only require a slightly higher core temperature to generate a substantially higher luminosity.</p>
 <p>In main sequence stars <span class="math notranslate nohighlight">\((M_\star &gt; M_\odot)\)</span>, the core temperature is somewhat higher, which allows for the <strong>CNO cycle</strong> to dominate.  The pp-chain is capable of producing <span class="math notranslate nohighlight">\(^4_2{\rm He}\)</span>, but the CNO cycle needs carbon to start the reaction.  No nuclide with atomic mass 5 or 8 is stable, so to produce carbon from helium requires two fusions in <em>immediate</em> succession:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-450569d2-50f9-4709-864a-f65ebf5a4289">
-<span class="eqno">(2.37)<a class="headerlink" href="#equation-450569d2-50f9-4709-864a-f65ebf5a4289" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-00886998-dff3-4ad8-832b-a57fac2f5021">
+<span class="eqno">(2.37)<a class="headerlink" href="#equation-00886998-dff3-4ad8-832b-a57fac2f5021" title="Permalink to this equation">¶</a></span>\[\begin{align}
 {^{4}_2{\rm He}} + {^{4}_2{\rm He}} &amp;\leftrightarrow {^{8}_4{\rm Be}},\\[5pt]
 {^{8}_4{\rm Be}} + {^{4}_2{\rm He}} &amp;\rightarrow {^{12}_6{\rm C}} + \gamma.
 \end{align}\]</div>
 <p>This is called the <strong>triple alpha process</strong> and it requires much higher densities than the pp-chain and CNO cycle.  The half-life of the beryllium-8 is only <span class="math notranslate nohighlight">\(2\times 10^{-16}\ {\rm s}\)</span>, which is why it has the double arrow for its reaction and justifies the immediate succession.  It also explains why such high densities are required.</p>
 <p>The CNO cycle has two branches, where the first branch is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-19fafda2-bc33-4251-bcd0-e37c625e09d0">
-<span class="eqno">(2.38)<a class="headerlink" href="#equation-19fafda2-bc33-4251-bcd0-e37c625e09d0" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d40a8373-0b01-476b-9449-e287eb4fd05c">
+<span class="eqno">(2.38)<a class="headerlink" href="#equation-d40a8373-0b01-476b-9449-e287eb4fd05c" title="Permalink to this equation">¶</a></span>\[\begin{align}
 {^{12}_6{\rm C}} + {^{1}_1{\rm H}} &amp;\rightarrow {^{13}_7{\rm N}} + \gamma, \\[5pt]
 {^{13}_7{\rm N}} &amp;\rightarrow {^{13}_6{\rm C}} + e^+ + \nu_e, \\[5pt]
 {^{13}_6{\rm C}} +{^{1}_1{\rm H}} &amp;\rightarrow {^{14}_7{\rm N}} + \gamma, \\[5pt]
@@ -1414,21 +1471,21 @@ allowfullscreen></iframe>
 <p>Helium fusion occurs when a sufficiently massive star <span class="math notranslate nohighlight">\((M_\star \gtrsim 0.25\ M_\odot)\)</span> has exhausted the available supply of hydrogen in its core.  The thermostat that maintains hydrostatic equilibrium during the star’s main sequence phase is no longer active.  But, hydrogen fusion can occur in a shell surrounding the hydrogen-depleted core.  The total stellar energy production greatly exceeds that during the star’s main sequence phase, which causes the star’s outer layers to expand (due to increased thermal pressure) and cool.  At this stage, the star becomes a <strong>red giant</strong>.</p>
 <p>Nuclear growth beyond carbon does not require two reactions in immediate succession (i.e., the triple alpha process), and thus could occur in a lower density environment.  However, the increased Coulomb barrier implies that an even higher temperature (and larger stellar masses) are required
 .  Growth can occur by successive addition of alpha particles:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-04e65b0f-8916-4691-a489-815b2611c5bd">
-<span class="eqno">(2.39)<a class="headerlink" href="#equation-04e65b0f-8916-4691-a489-815b2611c5bd" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-85b47673-d9d8-4225-9f66-64ee273f2161">
+<span class="eqno">(2.39)<a class="headerlink" href="#equation-85b47673-d9d8-4225-9f66-64ee273f2161" title="Permalink to this equation">¶</a></span>\[\begin{align}
 {^{12}_6{\rm C}} + {^{4}_2{\rm He}} &amp;\rightarrow {^{16}_8{\rm O}} + \gamma, \\[5pt]
 {^{16}_8{\rm O}} + {^{4}_2{\rm He}} &amp;\rightarrow {^{20}_{20}{\rm Ne}} + \gamma, \\[5pt]
 {^{20}_{10}{\rm Ne}} + {^{4}_2{\rm He}} &amp;\rightarrow {^{24}_{12}{\rm Mg}} + \gamma, 
 \end{align}\]</div>
 <p>or at somewhat higher temperatures by reactions such as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6b701ee1-1780-47f4-aea3-069f9b41f450">
-<span class="eqno">(2.40)<a class="headerlink" href="#equation-6b701ee1-1780-47f4-aea3-069f9b41f450" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e538378b-21e0-4f5d-bc98-9615f65773ec">
+<span class="eqno">(2.40)<a class="headerlink" href="#equation-e538378b-21e0-4f5d-bc98-9615f65773ec" title="Permalink to this equation">¶</a></span>\[\begin{align}
 {^{12}_6{\rm C}} + {^{12}_6{\rm C}} &amp;\rightarrow {^{24}_{12}{\rm Mg}} + \gamma.
 \end{align}\]</div>
-<p>The most stable nucleus is iron-56 <span class="math notranslate nohighlight">\((^{56}_{23}{\rm Fe})\)</span>, where fusion up to <span class="math notranslate nohighlight">\(\sim 23\)</span> protons and neutrons can release energy.  Fusion of alpha particles (helium-4 nuclei) into heavier nuclei requires higher temperatures.  Nuclei composed of <span class="math notranslate nohighlight">\(3-20\)</span> alpha particles are quite stable and easy to produce, which makes them relatively abundant.  Heavy elements with even atomic numbers tend to be more abundant than odd-numbered elements (see Fig. <a class="reference internal" href="#elemental-abundance-ss"><span class="std std-numref">2.9</span></a>).  The proton and neutron numbers of all stable nuclides are shown in Fig. <a class="reference internal" href="#stable-nuclides"><span class="std std-numref">2.10</span></a>.</p>
+<p>The most stable nucleus is iron-56 <span class="math notranslate nohighlight">\((^{56}_{23}{\rm Fe})\)</span>, where fusion up to <span class="math notranslate nohighlight">\(\sim 23\)</span> protons and neutrons can release energy.  Fusion of alpha particles (helium-4 nuclei) into heavier nuclei requires higher temperatures.  Nuclei composed of <span class="math notranslate nohighlight">\(3-20\)</span> alpha particles are quite stable and easy to produce, which makes them relatively abundant.  Heavy elements with even atomic numbers tend to be more abundant than odd-numbered elements (see Fig. <a class="reference internal" href="#solar-system-abundances"><span class="std std-numref">2.9</span></a>).  The proton and neutron numbers of all stable nuclides are shown in Fig. <a class="reference internal" href="#stable-nuclides"><span class="std std-numref">2.10</span></a>.</p>
 <div class="figure align-default" id="stable-nuclides" style="width: 600px">
 <div class="cell_output docutils container">
-<img alt="../_images/Physics_and_Astrophysics_14_0.png" src="../_images/Physics_and_Astrophysics_14_0.png" />
+<img alt="../_images/Physics_and_Astrophysics_16_0.png" src="../_images/Physics_and_Astrophysics_16_0.png" />
 </div>
 <p class="caption"><span class="caption-number">Fig. 2.10 </span><span class="caption-text">Distribution of stable nuclei, plotted as atomic number versus number of neutrons.  Adapted from script on <a class="reference external" href="https://scipython.com/blog/plotting-nuclide-halflives/">scipython.com</a>; data taken from the <a class="reference external" href="https://wwwndc.jaea.go.jp/NuC/index_J.html">Japan Atomic Energy Agency</a>.</span><a class="headerlink" href="#stable-nuclides" title="Permalink to this image">¶</a></p>
 </div>
@@ -1499,7 +1556,7 @@ allowfullscreen></iframe>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/Physics_and_Astrophysics_14_1.png" src="../_images/Physics_and_Astrophysics_14_1.png" />
+<img alt="../_images/Physics_and_Astrophysics_16_1.png" src="../_images/Physics_and_Astrophysics_16_1.png" />
 </div>
 </div>
 </div>
@@ -1534,8 +1591,8 @@ allowfullscreen></iframe>
 \end{align*}\]</div>
 <p>where they differ in types of charge (electron or positron) and lepton number (electron <a class="reference external" href="https://en.wikipedia.org/wiki/Neutrino">neutrino</a> or antineutrino) conservation.</p>
 <p>When a nucleus undergoes <a class="reference external" href="https://en.wikipedia.org/wiki/Alpha_decay"><span class="math notranslate nohighlight">\(\alpha\)</span> decay</a>, its atomic number decreases by two and its atomic mass decreases by four (i.e., it releases a helium-4 nucleus).  An example of <span class="math notranslate nohighlight">\(\alpha\)</span> decay is the transformation of uranium to thorium by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-df0c884d-8a9f-475e-aebf-7ee7ba071b1b">
-<span class="eqno">(2.41)<a class="headerlink" href="#equation-df0c884d-8a9f-475e-aebf-7ee7ba071b1b" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-42aa6bb8-e9ae-4352-855d-eaf98a7b85d0">
+<span class="eqno">(2.41)<a class="headerlink" href="#equation-42aa6bb8-e9ae-4352-855d-eaf98a7b85d0" title="Permalink to this equation">¶</a></span>\[\begin{align}
 {^{238}_{92}{\rm U}} \rightarrow {^{234}_{90}{\rm Th}} + {^{4}_2{\rm He}} + 2\gamma.
 \end{align}\]</div>
 <p>Some heavy nuclei decay via <strong>spontaneous fission</strong>, which produces at least two nuclei more massive than helium.  Spontaneous fission is an alternative decay mode for uranium-238 (and of plutonium-244) leading to xenon and lighter byproducts.</p>
@@ -1555,6 +1612,515 @@ allowfullscreen></iframe>
 </div>
 <div class="section" id="homework">
 <h2><span class="section-number">2.7. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h2>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<p>Use the equation of hydrostatic equilibrium to estimate the pressure at the center of the Moon, Earth and Jupiter.</p>
+<p><strong>(a)</strong> Take the simplest approach, approximating the planet to consist of one slab of material with thickness <span class="math notranslate nohighlight">\(R\)</span>, the planetary radius. Assume the gravity <span class="math notranslate nohighlight">\(g_p(r) = g_p(R)\)</span> and use the mean density <span class="math notranslate nohighlight">\(\rho(r) = \rho\)</span>.</p>
+<p><strong>(b)</strong> Assume the density of each planet to be constant throughout its interior and derive an expression for the pressure in a planet’s interior
+as a function of distance r from the center. <em>Hint: You should get Eqn. <a class="reference internal" href="#equation-central-press">(2.25)</a>.</em></p>
+<p><strong>(c)</strong>  Although the pressure obtained in (a) and (b) is not quite right, it will give you a fair estimate of its magnitude. Compare your answer with the more sophisticated estimates given in Table <a class="reference internal" href="#planet-prop-table"><span class="std std-numref">2.2</span></a> and comment on your results.</p>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<p>Table <a class="reference internal" href="#element-abund-ss"><span class="std std-numref">2.1</span></a> gives the relative cosmic abundances of the elements. Use the plot of binding energy per nucleon (Fig. <a class="reference internal" href="#nuclear-binding-energy"><span class="std std-numref">2.7</span></a>) plus the astrophysics of nucleosynthesis to briefly explain the reasons that:</p>
+<p><strong>(a)</strong> <span class="math notranslate nohighlight">\(\rm H\)</span> is the most abundant element, and <span class="math notranslate nohighlight">\(\rm He\)</span> is the second most abundant element.</p>
+<p><strong>(b)</strong> <span class="math notranslate nohighlight">\(\rm C\)</span> and <span class="math notranslate nohighlight">\(\rm O\)</span> are far more abundant than are <span class="math notranslate nohighlight">\(\rm Li\)</span>, <span class="math notranslate nohighlight">\(\rm Be\)</span> and <span class="math notranslate nohighlight">\(\rm B\)</span>.</p>
+<p><strong>(c)</strong> <span class="math notranslate nohighlight">\(\rm Fe\)</span> is more abundant (by mass) than any other element heavier than <span class="math notranslate nohighlight">\(\rm O\)</span>.</p>
+<p><strong>(d)</strong> Elemental abundances drop precipitously with increasing atomic number above 26 (the atomic number of iron).</p>
+<p><strong>(e)</strong> Apart from <span class="math notranslate nohighlight">\(\rm H\)</span>, elements with odd atomic number are generally less abundant than neighboring elements of even atomic numbers.</p>
+</div>
+</div>
+<div class="section" id="reference-tables">
+<h2><span class="section-number">2.8. </span>Reference Tables<a class="headerlink" href="#reference-tables" title="Permalink to this headline">¶</a></h2>
+<table class="table" id="element-abund-ss">
+<caption><span class="caption-number">Table 2.1 </span><span class="caption-text">Elemental Abundances. Data taken from Table 8 of <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/2019arXiv191200844L/abstract">Lodders (2020)</a> from present epoch.</span><a class="headerlink" href="#element-abund-ss" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><span class="math notranslate nohighlight">\(Z\)</span></p></th>
+<th class="head"><p>Element</p></th>
+<th class="head"><p>Solar System <br> <span class="math notranslate nohighlight">\((\text{atoms}/10^6\ {\rm Si})\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(Z\)</span></p></th>
+<th class="head"><p>Element</p></th>
+<th class="head"><p>Solar System <br> <span class="math notranslate nohighlight">\((\text{atoms}/10^6\ {\rm Si})\)</span></p></th>
+<th class="head"><p><span class="math notranslate nohighlight">\(\sigma\)</span></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>1</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm H\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3.09 \times 10^{10}\)</span></p></td>
+<td><p>n/a</p></td>
+<td><p>44</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ru\)</span></p></td>
+<td><p>1.81</p></td>
+<td><p>0.02</p></td>
+</tr>
+<tr class="row-odd"><td><p>2</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm He\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.59 \times 10^{9}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.20 \times 10^{8}\)</span></p></td>
+<td><p>45</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Rh\)</span></p></td>
+<td><p>0.338</p></td>
+<td><p>0.015</p></td>
+</tr>
+<tr class="row-even"><td><p>3</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Li\)</span></p></td>
+<td><p>56.9</p></td>
+<td><p>3.4</p></td>
+<td><p>46</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Pd\)</span></p></td>
+<td><p>1.38</p></td>
+<td><p>0.07</p></td>
+</tr>
+<tr class="row-odd"><td><p>4</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Be\)</span></p></td>
+<td><p>0.637</p></td>
+<td><p>0.044</p></td>
+<td><p>47</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ag\)</span></p></td>
+<td><p>0.497</p></td>
+<td><p>0.022</p></td>
+</tr>
+<tr class="row-even"><td><p>5</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm B\)</span></p></td>
+<td><p>18</p></td>
+<td><p>1.3</p></td>
+<td><p>48</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Cd\)</span></p></td>
+<td><p>1.58</p></td>
+<td><p>0.06</p></td>
+</tr>
+<tr class="row-odd"><td><p>6</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm C\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(9.12 \times 10^{6}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.80 \times 10^{5}\)</span></p></td>
+<td><p>49</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm In\)</span></p></td>
+<td><p>0.179</p></td>
+<td><p>0.008</p></td>
+</tr>
+<tr class="row-even"><td><p>7</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm N\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.19 \times 10^{6}\)</span></p></td>
+<td><p>9700</p></td>
+<td><p>50</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Sn\)</span></p></td>
+<td><p>3.59</p></td>
+<td><p>0.22</p></td>
+</tr>
+<tr class="row-odd"><td><p>8</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm O\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.66 \times 10^{7}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.30 \times 10^{5}\)</span></p></td>
+<td><p>51</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Sb\)</span></p></td>
+<td><p>0.359</p></td>
+<td><p>0.045</p></td>
+</tr>
+<tr class="row-even"><td><p>9</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm F\)</span></p></td>
+<td><p>1270</p></td>
+<td><p>275</p></td>
+<td><p>52</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Te\)</span></p></td>
+<td><p>4.72</p></td>
+<td><p>0.23</p></td>
+</tr>
+<tr class="row-odd"><td><p>10</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ne\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.37 \times 10^{6}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.13 \times 10^{6}\)</span></p></td>
+<td><p>53</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm I\)</span></p></td>
+<td><p>1.59</p></td>
+<td><p>0.64</p></td>
+</tr>
+<tr class="row-even"><td><p>11</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Na\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(5.78 \times 10^{4}\)</span></p></td>
+<td><p>4700</p></td>
+<td><p>54</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Xe\)</span></p></td>
+<td><p>5.5</p></td>
+<td><p>1.11</p></td>
+</tr>
+<tr class="row-odd"><td><p>12</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Mg\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.03 \times 10^{6}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.40 \times 10^{4}\)</span></p></td>
+<td><p>55</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Cs\)</span></p></td>
+<td><p>0.368</p></td>
+<td><p>0.043</p></td>
+</tr>
+<tr class="row-even"><td><p>13</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Al\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(8.18 \times 10^{4}\)</span></p></td>
+<td><p>6110</p></td>
+<td><p>56</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ba\)</span></p></td>
+<td><p>4.55</p></td>
+<td><p>0.27</p></td>
+</tr>
+<tr class="row-odd"><td><p>14</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Si\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.00 \times 10^{6}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3.40 \times 10^{4}\)</span></p></td>
+<td><p>57</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm La\)</span></p></td>
+<td><p>0.459</p></td>
+<td><p>0.024</p></td>
+</tr>
+<tr class="row-even"><td><p>15</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm P\)</span></p></td>
+<td><p>8260</p></td>
+<td><p>530</p></td>
+<td><p>58</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ce\)</span></p></td>
+<td><p>1.16</p></td>
+<td><p>0.05</p></td>
+</tr>
+<tr class="row-odd"><td><p>16</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm S\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.37 \times 10^{5}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.60 \times 10^{4}\)</span></p></td>
+<td><p>59</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Pr\)</span></p></td>
+<td><p>0.175</p></td>
+<td><p>0.012</p></td>
+</tr>
+<tr class="row-even"><td><p>17</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Cl\)</span></p></td>
+<td><p>5290</p></td>
+<td><p>810</p></td>
+<td><p>60</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Nd\)</span></p></td>
+<td><p>0.865</p></td>
+<td><p>0.022</p></td>
+</tr>
+<tr class="row-odd"><td><p>18</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ar\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(9.77 \times 10^{4}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(2.53 \times 10^{4}\)</span></p></td>
+<td><p>62</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Sm\)</span></p></td>
+<td><p>0.271</p></td>
+<td><p>0.012</p></td>
+</tr>
+<tr class="row-even"><td><p>19</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm K\)</span></p></td>
+<td><p>3606</p></td>
+<td><p>190</p></td>
+<td><p>63</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Eu\)</span></p></td>
+<td><p>0.1</p></td>
+<td><p>0.005</p></td>
+</tr>
+<tr class="row-odd"><td><p>20</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ca\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(5.72 \times 10^{4}\)</span></p></td>
+<td><p>4500</p></td>
+<td><p>64</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Gd\)</span></p></td>
+<td><p>0.346</p></td>
+<td><p>0.013</p></td>
+</tr>
+<tr class="row-even"><td><p>21</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Sc\)</span></p></td>
+<td><p>33.7</p></td>
+<td><p>2.2</p></td>
+<td><p>65</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Tb\)</span></p></td>
+<td><p>0.0625</p></td>
+<td><p>0.0025</p></td>
+</tr>
+<tr class="row-odd"><td><p>22</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ti\)</span></p></td>
+<td><p>2459</p></td>
+<td><p>150</p></td>
+<td><p>66</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Dy\)</span></p></td>
+<td><p>0.407</p></td>
+<td><p>0.016</p></td>
+</tr>
+<tr class="row-even"><td><p>23</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm V\)</span></p></td>
+<td><p>275</p></td>
+<td><p>18</p></td>
+<td><p>67</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ho\)</span></p></td>
+<td><p>0.0891</p></td>
+<td><p>0.0035</p></td>
+</tr>
+<tr class="row-odd"><td><p>24</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Cr\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(1.31 \times 10^{4}\)</span></p></td>
+<td><p>460</p></td>
+<td><p>68</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Er\)</span></p></td>
+<td><p>0.256</p></td>
+<td><p>0.009</p></td>
+</tr>
+<tr class="row-even"><td><p>25</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Mn\)</span></p></td>
+<td><p>9090</p></td>
+<td><p>620</p></td>
+<td><p>69</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Tm\)</span></p></td>
+<td><p>0.0403</p></td>
+<td><p>0.0014</p></td>
+</tr>
+<tr class="row-odd"><td><p>26</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Fe\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(8.72 \times 10^{5}\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(3.80 \times 10^{4}\)</span></p></td>
+<td><p>70</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Yb\)</span></p></td>
+<td><p>0.252</p></td>
+<td><p>0.009</p></td>
+</tr>
+<tr class="row-even"><td><p>27</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Co\)</span></p></td>
+<td><p>2260</p></td>
+<td><p>100</p></td>
+<td><p>71</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Lu\)</span></p></td>
+<td><p>0.038</p></td>
+<td><p>0.0018</p></td>
+</tr>
+<tr class="row-odd"><td><p>28</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ni\)</span></p></td>
+<td><p><span class="math notranslate nohighlight">\(4.87 \times 10^{4}\)</span></p></td>
+<td><p>2940</p></td>
+<td><p>72</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Hf\)</span></p></td>
+<td><p>0.155</p></td>
+<td><p>0.011</p></td>
+</tr>
+<tr class="row-even"><td><p>29</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Cu\)</span></p></td>
+<td><p>535</p></td>
+<td><p>50</p></td>
+<td><p>73</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ta\)</span></p></td>
+<td><p>0.0215</p></td>
+<td><p>0.001</p></td>
+</tr>
+<tr class="row-odd"><td><p>30</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Zn\)</span></p></td>
+<td><p>1260</p></td>
+<td><p>180</p></td>
+<td><p>74</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm W\)</span></p></td>
+<td><p>0.144</p></td>
+<td><p>0.013</p></td>
+</tr>
+<tr class="row-even"><td><p>31</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ga\)</span></p></td>
+<td><p>36.2</p></td>
+<td><p>1.8</p></td>
+<td><p>75</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Re\)</span></p></td>
+<td><p>0.0521</p></td>
+<td><p>0.0042</p></td>
+</tr>
+<tr class="row-odd"><td><p>32</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ge\)</span></p></td>
+<td><p>120</p></td>
+<td><p>7</p></td>
+<td><p>76</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Os\)</span></p></td>
+<td><p>0.655</p></td>
+<td><p>0.04</p></td>
+</tr>
+<tr class="row-even"><td><p>33</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm As\)</span></p></td>
+<td><p>6.07</p></td>
+<td><p>0.5</p></td>
+<td><p>77</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Ir\)</span></p></td>
+<td><p>0.633</p></td>
+<td><p>0.029</p></td>
+</tr>
+<tr class="row-odd"><td><p>34</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Se\)</span></p></td>
+<td><p>67.6</p></td>
+<td><p>5</p></td>
+<td><p>78</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Pt\)</span></p></td>
+<td><p>1.24</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td><p>35</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Br\)</span></p></td>
+<td><p>12.3</p></td>
+<td><p>2.9</p></td>
+<td><p>79</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Au\)</span></p></td>
+<td><p>0.195</p></td>
+<td><p>0.016</p></td>
+</tr>
+<tr class="row-odd"><td><p>36</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Kr\)</span></p></td>
+<td><p>51.3</p></td>
+<td><p>10.4</p></td>
+<td><p>80</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Hg\)</span></p></td>
+<td><p>0.376</p></td>
+<td><p>0.156</p></td>
+</tr>
+<tr class="row-even"><td><p>37</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Rb\)</span></p></td>
+<td><p>7.04</p></td>
+<td><p>0.46</p></td>
+<td><p>81</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Tl\)</span></p></td>
+<td><p>0.179</p></td>
+<td><p>0.015</p></td>
+</tr>
+<tr class="row-odd"><td><p>38</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Sr\)</span></p></td>
+<td><p>23.4</p></td>
+<td><p>1.3</p></td>
+<td><p>82</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Pb\)</span></p></td>
+<td><p>3.33</p></td>
+<td><p>0.2</p></td>
+</tr>
+<tr class="row-even"><td><p>39</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Y\)</span></p></td>
+<td><p>4.35</p></td>
+<td><p>0.24</p></td>
+<td><p>83</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Bi\)</span></p></td>
+<td><p>0.141</p></td>
+<td><p>0.01</p></td>
+</tr>
+<tr class="row-odd"><td><p>40</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Zr\)</span></p></td>
+<td><p>10.9</p></td>
+<td><p>1</p></td>
+<td><p>90</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Th\)</span></p></td>
+<td><p>0.0336</p></td>
+<td><p>0.0017</p></td>
+</tr>
+<tr class="row-even"><td><p>41</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Nb\)</span></p></td>
+<td><p>0.78</p></td>
+<td><p>0.07</p></td>
+<td><p>92</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm U\)</span></p></td>
+<td><p>0.00897</p></td>
+<td><p>0.00064</p></td>
+</tr>
+<tr class="row-odd"><td><p>42</p></td>
+<td><p><span class="math notranslate nohighlight">\(\rm Mo\)</span></p></td>
+<td><p>2.6</p></td>
+<td><p>0.26</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table class="table" id="planet-prop-table">
+<caption><span class="caption-number">Table 2.2 </span><span class="caption-text">Densities and Central Properties of the Planets and the Moon. Data taken from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1984plin.book.....H/abstract">Hubbard (1984)</a>, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1995pcss.book.....L/abstract">Lewis (1995)</a>, <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1999Sci...286...72G/abstract">Guillot (1999)</a>, and <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1995geph.conf....1Y/abstract">Yoder (1995)</a>.</span><a class="headerlink" href="#planet-prop-table" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+<col style="width: 17%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Planet</p></th>
+<th class="head"><p>Equatorial Radius <br> (<span class="math notranslate nohighlight">\(\rm km\)</span>)</p></th>
+<th class="head"><p>Density <br> (<span class="math notranslate nohighlight">\(\rm kg/m^3\)</span>)</p></th>
+<th class="head"><p>Uncompressed Density <br> (<span class="math notranslate nohighlight">\(\rm kg/m^3\)</span>)</p></th>
+<th class="head"><p>Central Pressure <br> (<span class="math notranslate nohighlight">\(\rm Mbar\)</span>)</p></th>
+<th class="head"><p>Central Temperature <br>  (<span class="math notranslate nohighlight">\(\rm K\)</span>)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Mercury</p></td>
+<td><p>2440</p></td>
+<td><p>5427</p></td>
+<td><p>5300</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>0.4</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>2000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Venus</p></td>
+<td><p>6052</p></td>
+<td><p>5204</p></td>
+<td><p>4300</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>3</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>5000</p></td>
+</tr>
+<tr class="row-even"><td><p>Earth</p></td>
+<td><p>6378</p></td>
+<td><p>5515</p></td>
+<td><p>4400</p></td>
+<td><p>3.6</p></td>
+<td><p>6000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Moon</p></td>
+<td><p>1738</p></td>
+<td><p>3340</p></td>
+<td><p>3300</p></td>
+<td><p>0.045</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>1800</p></td>
+</tr>
+<tr class="row-even"><td><p>Mars</p></td>
+<td><p>3396</p></td>
+<td><p>3933</p></td>
+<td><p>3740</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>0.4</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>2000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Jupiter</p></td>
+<td><p>71,492</p></td>
+<td><p>1326</p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>80</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>20,000</p></td>
+</tr>
+<tr class="row-even"><td><p>Saturn</p></td>
+<td><p>60,268</p></td>
+<td><p>687</p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>50</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>10,000</p></td>
+</tr>
+<tr class="row-odd"><td><p>Uranus</p></td>
+<td><p>25,559</p></td>
+<td><p>1318</p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>20</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>7000</p></td>
+</tr>
+<tr class="row-even"><td><p>Jupiter</p></td>
+<td><p>24,766</p></td>
+<td><p>1638</p></td>
+<td></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>20</p></td>
+<td><p><span class="math notranslate nohighlight">\(\sim\)</span>7,000</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 
