@@ -19,3 +19,11 @@ hr {
   border-width:0;
   background-color:#DA1A32;
 }
+
+hr2 {
+  height:4px;
+  width:100px; 
+  margin: auto;
+  border-width:0;
+  background-color:#DA1A32;
+}
