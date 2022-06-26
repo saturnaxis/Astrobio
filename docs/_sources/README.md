@@ -1,7 +1,5 @@
 # ASTR3800: Astrobiology
-Lecture notes for ASTR 3800 Astrobiology at [Valdosta State University](https://www.valdosta.edu/phy/).  This course is designed using material from [Fundamental Planetary Science](https://www.google.com/books/edition/Fundamental_Planetary_Science/caltAAAAQBAJ?hl=en), [Earth: Evolution of a Habitable World](https://www.google.com/books/edition/Earth/PNQgAwAAQBAJ?hl=en&gbpv=0) and [Planets and Life: The Emerging Science of Astrobiology](https://www.google.com/books/edition/Planets_and_Life/6oybBQAAQBAJ?hl=en&gbpv=0), where it will include summaries of the course material and code implementation/exercises.  
-
-%The course is divided into three sections (Introduction; Quantum Mechanics; and Applications of Modern Physics) that will cover 4 chapters for each section from the textbook. 
+Lecture notes for ASTR 3800 Astrobiology at [Valdosta State University](https://www.valdosta.edu/phy/).  This course is designed using material from [Fundamental Planetary Science](https://www.google.com/books/edition/Fundamental_Planetary_Science/caltAAAAQBAJ?hl=en), [Earth: Evolution of a Habitable World](https://www.google.com/books/edition/Earth/PNQgAwAAQBAJ?hl=en&gbpv=0) and [Planets and Life: The Emerging Science of Astrobiology](https://www.google.com/books/edition/Planets_and_Life/6oybBQAAQBAJ?hl=en&gbpv=0), where it will include summaries of the course material and code implementation/exercises.  The course is divided into three sections (Basic Planetary Science; Origins of Life; and Life on Habitable Worlds). 
 
 
 This work is licensed under a
