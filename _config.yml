@@ -65,7 +65,7 @@ html:
   use_issues_button         : false  # Whether to add an "open an issue" button
   extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
   #extra_footer              : "This page was created by <a href="http://www.atmos.albany.edu/facstaff/brose">Brian E. J. Rose</a> using <a href="https://jupyterbook.org">Jupyter Book</a>."  # Will be displayed underneath the footer.
-  google_analytics_id       : ""  # A GA id that can be used to track book views.
+  google_analytics_id       : "G-R2DLNF0W0H"  # A GA id that can be used to track book views.
   home_page_in_navbar       : true  # Whether to include your home page in the left Navigation Bar
   baseurl                   : "" #"https://saturnaxis.github.io/ModernPhysics/"  # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
   comments:
