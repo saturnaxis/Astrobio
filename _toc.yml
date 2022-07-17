@@ -29,3 +29,6 @@ parts:
   - file: Chapter_08/Gaia_Oxygen
   - file: Chapter_09/Life_on_Mars
   - file: Chapter_10/Icy_Worlds
+- caption: Appendix
+  chapters:
+  - file: Appendix/Student_Summaries
