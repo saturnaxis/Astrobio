@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>6. Early Earth &#8212; ASTR3800 Astrobiology</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,12 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,21 +29,25 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mycss.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -74,7 +75,21 @@ const thebe_selector_output = ".output, .cell_output"
                 </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -83,9 +98,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -103,14 +119,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../home.html">
-   ASTR3800: Astrobiology
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    ASTR3800: Astrobiology
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preamble
  </span>
@@ -222,103 +239,177 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Chapter_06/Early_Earth.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/saturnaxis/Astrobio"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/Astrobio/blob/main/Chapter_06/Early_Earth.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://colab.research.google.com/github/saturnaxis/Astrobio/blob/main/Chapter_06/Early_Earth.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/saturnaxis/Astrobio"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Chapter_06/Early_Earth.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#evolution-of-metabolism-and-early-microbial-communities">
    6.1. Evolution of Metabolism and Early Microbial Communities
@@ -431,8 +522,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#water-desicaction-and-life-in-non-aqueous-solvents">
-     6.2.2. Water, Desicaction, and Life in Non-aqueous Solvents
+    <a class="reference internal nav-link" href="#water-desiccation-and-life-in-non-aqueous-solvents">
+     6.2.2. Water, Desiccation, and Life in Non-aqueous Solvents
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -446,8 +537,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extremophiles-hyrdothermal-vents-and-earth-s-earliest-microbes">
-     6.2.5. Extremophiles, Hyrdothermal Vents, and Earth’s Earliest Microbes
+    <a class="reference internal nav-link" href="#extremophiles-hydrothermal-vents-and-earth-s-earliest-microbes">
+     6.2.5. Extremophiles, Hydrothermal Vents, and Earth’s Earliest Microbes
     </a>
    </li>
   </ul>
@@ -530,12 +621,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Early Earth</h1>
@@ -660,8 +750,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#water-desicaction-and-life-in-non-aqueous-solvents">
-     6.2.2. Water, Desicaction, and Life in Non-aqueous Solvents
+    <a class="reference internal nav-link" href="#water-desiccation-and-life-in-non-aqueous-solvents">
+     6.2.2. Water, Desiccation, and Life in Non-aqueous Solvents
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -675,8 +765,8 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#extremophiles-hyrdothermal-vents-and-earth-s-earliest-microbes">
-     6.2.5. Extremophiles, Hyrdothermal Vents, and Earth’s Earliest Microbes
+    <a class="reference internal nav-link" href="#extremophiles-hydrothermal-vents-and-earth-s-earliest-microbes">
+     6.2.5. Extremophiles, Hydrothermal Vents, and Earth’s Earliest Microbes
     </a>
    </li>
   </ul>
@@ -763,13 +853,14 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="early-earth">
-<h1><span class="section-number">6. </span>Early Earth<a class="headerlink" href="#early-earth" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">6. </span>Early Earth<a class="headerlink" href="#early-earth" title="Permalink to this headline">#</a></h1>
 <div class="section" id="evolution-of-metabolism-and-early-microbial-communities">
-<h2><span class="section-number">6.1. </span>Evolution of Metabolism and Early Microbial Communities<a class="headerlink" href="#evolution-of-metabolism-and-early-microbial-communities" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.1. </span>Evolution of Metabolism and Early Microbial Communities<a class="headerlink" href="#evolution-of-metabolism-and-early-microbial-communities" title="Permalink to this headline">#</a></h2>
 <p>The process of metabolism is a hallmark of all living organisms.  <em><a class="reference external" href="https://en.wikipedia.org/wiki/Catabolism">Catabolic</a> reactions generate energy for the organism while <a class="reference external" href="https://en.wikipedia.org/wiki/Anabolism">anabolic</a> reactions are used for the synthesis of cell material.</em>  Metabolic pathways in today’s living organisms have been evolving for more than <span class="math notranslate nohighlight">\(3.5\ {\rm Gyr}\)</span>.  The evolution of metabolism cannot be separated from the origin life because it was necessary for even the earliest organisms.  Contemporary metabolic pathways are presumed to be much more elaborate and sophisticated that those first evolved.  Metabolism today ranges from</p>
 <ul class="simple">
 <li><p>the use of various inorganic chemicals (e.g., hydrogen or sulfur for energy),</p></li>
@@ -778,13 +869,13 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p>It is presently impossible for us to know which pathways originated first and how they evolved.  Understanding how metabolism evolved on the early Earth is of considerable importance.  Microorganisms resembling today’s Bacteria and Archaea were most likely the first organisms, and the evolution of their metabolism is the most relevant.  Identifying the early evolution of metabolism in these organisms enables us to distinguish specific metabolic types from the later innovations.</p>
 <div class="section" id="the-setting-conditions-on-early-earth">
-<h3><span class="section-number">6.1.1. </span>The Setting: Conditions on Early Earth<a class="headerlink" href="#the-setting-conditions-on-early-earth" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.1. </span>The Setting: Conditions on Early Earth<a class="headerlink" href="#the-setting-conditions-on-early-earth" title="Permalink to this headline">#</a></h3>
 <p>On the early Earth, there were <em>physical</em> and <em>chemical</em> conditions that influenced the evolution of metabolic processes.</p>
 <p>One factor that influenced physical conditions was instability in the environment (e.g., large changes in available sunlight, water, or temperature).An impact of an asteroid (<span class="math notranslate nohighlight">\(R{\sim}50\ {\rm km}\)</span>; see Fig. <a class="reference internal" href="../Chapter_05/Tree_of_Life.html#impact-frustration-fig"><span class="std std-numref">5.16</span></a>) can sterilize all surface life on our planet and evaporate a global ocean that is <span class="math notranslate nohighlight">\(3\ {\rm km}\)</span> deep.  Only microbial ife at a depth of several <span class="math notranslate nohighlight">\({\rm km}\)</span> could then survive.  Cosmic events affected early life in major and largely unknown ways that may have lead to the extinction of many species and redirection of the evolution of Earth’s biota.  It is possible that catastrophic events during the early history of Earth may have also affected the evolution of metabolism.</p>
 <p>Chemical conditions on early Earth were marked by a relative dearth (absence) of nutrients that make life so rich today.  A steady supply of certain nutrients was available, which may have influenced the emergence of specific metabolic pathways.  Organic and other volatile materials are synthesized in space and became incorporated into the Earth through impacts by large bodies.  These impacts may have disrupted evolution, but also provided nutrients for life.  In addition, the abiotic synthesis of organic molecules occurred on Earth.  Acetic acid (<span class="math notranslate nohighlight">\(\rm CH_3COOH\)</span>) synthesis has been shown to occur under primordial conditions.</p>
 <p>Although on the early Earth organic materials were less abundant than today, we may reasonably assume that they were present in sufficient quantities and varieties for life to originate and evolve.  Organic materials alone would not likely have been sufficient to sustain life.  Other nutrients were necessary for organisms to utilize electron donors and acceptors to generate metabolic energy needed for life (see Table <a class="reference internal" href="#nutrient-table"><span class="std std-numref">6.1</span></a>).  The first metabolisms that arose were carried out <em>anaerobically</em> due to the lack of free oxygen.</p>
 <table class="table" id="nutrient-table">
-<caption><span class="caption-number">Table 6.1 </span><span class="caption-text">Building blocks of life and replenishable  sources of energy on early Earth.</span><a class="headerlink" href="#nutrient-table" title="Permalink to this table">¶</a></caption>
+<caption><span class="caption-number">Table 6.1 </span><span class="caption-text">Building blocks of life and replenishable  sources of energy on early Earth.</span><a class="headerlink" href="#nutrient-table" title="Permalink to this table">#</a></caption>
 <colgroup>
 <col style="width: 50%" />
 <col style="width: 50%" />
@@ -829,13 +920,13 @@ const thebe_selector_output = ".output, .cell_output"
 </table>
 </div>
 <div class="section" id="evidence-for-the-nature-of-early-metabolisms">
-<h3><span class="section-number">6.1.2. </span>Evidence for the Nature of Early Metabolisms<a class="headerlink" href="#evidence-for-the-nature-of-early-metabolisms" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.2. </span>Evidence for the Nature of Early Metabolisms<a class="headerlink" href="#evidence-for-the-nature-of-early-metabolisms" title="Permalink to this headline">#</a></h3>
 <p>A few categories of more direct evidence can elucidate the nature and timing of early metabolisms.  This evidence comes from three primary sources: <strong>biomarkers</strong>, <strong>the geochemical record</strong>, and <strong>phylogenetic evidence</strong>.</p>
 <p>Unique biomarkers have been useful for understanding early metabolisms.  Fro example, <a class="reference external" href="https://en.wikipedia.org/wiki/Hopanoids">hopanoids</a> are found only in cell membranes of the bacterial group <em>cyanobacteria</em>, which carryout oxygen-producing photosynthesis.  The presence of hopanoids has been used to date the evolution of these organisms to about <span class="math notranslate nohighlight">\(2.5\ {\rm Ga}\)</span>.  This date agrees well with the geochemical record for oxygen production on Earth and supports the view that the first oxygenic photosynthetic organisms were cyanobacteria.</p>
 <p>The geochemical record has been useful in establishing evidence for certain types of metabolic activity.  Strong evidence indicates that carbon dioxide fixation was an early metabolic event on Earth, which is called <em>primary production</em>.  This is when environmental <span class="math notranslate nohighlight">\({\rm CO_2}\)</span> is taken up and the carbon is incorporated into organic matter.  Carbon dioxide fixing organisms cause isotopic fractionation.  As a result in the Isua deposits in Greenland (that date to <span class="math notranslate nohighlight">\(3.5\ {\rm Ga}\)</span>), deposited organic carbon has a lighter isotopic signature than carbonate.</p>
 <p>Although this is excellent evidence that primary production occurred on early Earth, there is no definitive evidence about the nature of the earliest primary producing organisms.  Were they using chemical energy (chemosynthetic) or light energy (photosynthetic), and which organisms were responsible for this process?  The anaerobic methane oxidizing microbes are known to produce the lightest organic carbon, which may explain the existence of lighter organic carbon isotopes in certain layers of the Isua sediments.</p>
 <p>Phylogenetic analysis is another useful approach for identifying which bacterial groups were involved in early metabolism.  By knowing which group of organisms evolved first, it is possible to hypothesize which metabolic activities arose first.  The deepest branches of the RNA Tree of Life are of thermophilic Archaea and Bacteria, implying that these are the earliest ancestors of any organisms still alive today.  However, two issues are important:</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>discernible detail regarding the major groups of microorganisms is in adequate, so there remains a question about which organisms might have been the earliest; and</p></li>
 <li><p>horizontal gene transfer, which involves the exchange of genes among different lineages.</p></li>
 </ol>
@@ -843,19 +934,19 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Some of the genes responsible for carrying out methanogenesis (methane production) have also been found in bacteria that are methane consumers.  Methanogens are found in the domain Archaea, whereas methane consumers are found in the domain Bacteria.  This sort of horizontal gene transfer makes it very difficult to trace the evolution of metabolic functions and other characteristics of organisms.</p>
 </div>
 <div class="section" id="contemporary-metabolisms">
-<h3><span class="section-number">6.1.3. </span>Contemporary Metabolisms<a class="headerlink" href="#contemporary-metabolisms" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.3. </span>Contemporary Metabolisms<a class="headerlink" href="#contemporary-metabolisms" title="Permalink to this headline">#</a></h3>
 <p>The evolution of life has changed the Earth, even as the Earth has provided the habitats for life.  For example the volution of oxygenic photosynthesis gave rise to oxygen on Earth and enabled the later evolution of aerobic metabolism.  To understand the evolution of metabolism, we study the essential metabolic features of present-day organisms.</p>
 <div class="section" id="anabolism">
-<h4><span class="section-number">6.1.3.1. </span>Anabolism<a class="headerlink" href="#anabolism" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.3.1. </span>Anabolism<a class="headerlink" href="#anabolism" title="Permalink to this headline">#</a></h4>
 <p>One of the two major parts of metabolism is <em>anabolism</em> (i.e., constructive metabolism or biosynthesis), which is responsible for the building of new cell material for growth and reproduction.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Heterotroph">heterotrophs</a> synthesize cell material from organic molecules that are present in their environment.  In contrast, the <a class="reference external" href="https://en.wikipedia.org/wiki/Autotroph">autotrophs</a> make organic molecules from carbon dioxide in a process called carbon dioxide fixation.  The autotrophs are important because they are the <em>primary producers</em> that ultimately provide the entire biosphere with organic material.</p>
 <p>The most advanced pathway for carbon dioxide fixation is the <a class="reference external" href="https://en.wikipedia.org/wiki/Calvin_cycle">Calvin-Benson</a> cycle used by plants and some bacteria as part of photosynthesis.  Other pathways include the acetyl coenzyme A, reverse tricarboxylic acid, and hydroxypropionate pathways.</p>
 </div>
 <div class="section" id="catabolism">
-<h4><span class="section-number">6.1.3.2. </span>Catabolism<a class="headerlink" href="#catabolism" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.3.2. </span>Catabolism<a class="headerlink" href="#catabolism" title="Permalink to this headline">#</a></h4>
 <p>The chemical reactions that constitute metabolism must be thermodynamically feasible.  Anabolic reactions require energy to create order, and thus organism must also have <em>catabolic</em> pathways (i.e., destructive metabolism) to generate energy needed for anabolism.  Catabolic pathways are remarkably diverse, where some organism “burn” organic food using oxygen (i.e., aerobic organotropy).  Before oxygen, organisms “breathed” substances such as carbon dioxide, sulfate, iron, and other substances.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Lithotroph">lithotrophs</a> “eat” hydrogen, sulfur, ammonia, and other unlikely-seeming foods.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Phototroph">phototrophs</a> harvest the energy of light.</p>
 </div>
 <div class="section" id="oxidation-reduction-and-electron-flow">
-<h4><span class="section-number">6.1.3.3. </span>Oxidation, reduction, and electron flow<a class="headerlink" href="#oxidation-reduction-and-electron-flow" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.3.3. </span>Oxidation, reduction, and electron flow<a class="headerlink" href="#oxidation-reduction-and-electron-flow" title="Permalink to this headline">#</a></h4>
 <p>Catabolism follows the principles of oxidation and reduction.  These principles are best illustrating using a form of catabolism called <em>respiration</em>.  For respirers, oxidation corresponds to “eating” as reduction is to “breathing.”  Between the two types of reactions, electrons flow and the work done using catabolic energy is analogous to the work done by electrons flowing between the terminals of a battery. The only requirement is that the reaction has the potential to release energy, which condition is realized if the substance oxidized has a more negative electrical potential than the substance reduced.</p>
 <ul class="simple">
 <li><p>To generate energy the organism oxidizes (or “eats”) the <em>electron donor</em>, while it reduces (or “breathes”) the <em>electron receptor</em>.</p></li>
@@ -863,16 +954,16 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Respirers range from methanogens and acetogens, which utilize carbon dioxide and produce methane and acetic acid as waste products, to aerobes (which use oxygen and produce water).  The electron acceptor has also been a major constraint in the evolution of catabolism because electron acceptors (e.g., oxygen) became abundant relatively late.</p>
 </div>
 <div class="section" id="respiration-photosynthesis-and-fermentation">
-<h4><span class="section-number">6.1.3.4. </span>Respiration, photosynthesis, and fermentation<a class="headerlink" href="#respiration-photosynthesis-and-fermentation" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.3.4. </span>Respiration, photosynthesis, and fermentation<a class="headerlink" href="#respiration-photosynthesis-and-fermentation" title="Permalink to this headline">#</a></h4>
 <p>The three forms of catabolism are <strong>respiration</strong>, <strong>photosynthesis</strong>, and <strong>fermentation</strong>, which are distinguished largely by their patterns of electron flow.  Respiration is the most straightforward because separate substances in the environment (i.e., <em>substrate</em>) are used by organism as electron donor and acceptor.  In photosynthesis and fermentation, electrons still flow from a donor to an acceptor, but the pattern is less intuitive.</p>
 <p><em>Photosynthesizers</em> take advantage of the key property of chlorophyll, which functions well as an electron acceptor and an effective electron donor (if energized by light).  As a result, electrons flow from and to chlorophyll in a cyclic pattern, doing work in the process.  Superimposed on this chlorophyll-driven cyclic electron flow, electrons from an electron-donating substrate are used to reduce carbon dioxide in carbon dioxide fixation.  <em>Fermenters</em> have a pattern, where an electron-donating substrate is oxidized and the electron acceptor is an internal metabolic intermediate rather than a substrate.</p>
 </div>
 <div class="section" id="atp-and-the-proton-motive-force">
-<h4><span class="section-number">6.1.3.5. </span>ATP and the proton-motive force<a class="headerlink" href="#atp-and-the-proton-motive-force" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.3.5. </span>ATP and the proton-motive force<a class="headerlink" href="#atp-and-the-proton-motive-force" title="Permalink to this headline">#</a></h4>
 <p>Catabolism consists of metabolic pathways that involve oxidation and reduction.  <em>How is the energy actually stored and transferred?</em>  Adenosine triphosphate (<a class="reference external" href="https://en.wikipedia.org/wiki/Adenosine_triphosphate">ATP</a>) is the energy currency of biology, ATP contains <a class="reference external" href="https://en.wikipedia.org/wiki/High-energy_phosphate">phosphoanhydride</a> bonds that yield energy upon hydrolysis (i.e., breakdown through combination of water).  Certain other compounds have energy-rich bonds too, including adenosine diphosphate (<a class="reference external" href="https://en.wikipedia.org/wiki/Adenosine_diphosphate">ADP</a>), pyrophospate (<a class="reference external" href="https://en.wikipedia.org/wiki/Pyrophosphate">PP</a>), and other metabolic intermediates.  ATP predominates in present-day organisms.</p>
 <p>The formation of ATP and the hydrolysis of ATP provide the energy link between catabolism and anabolism, where the former generates ATP and the latter uses ATP.  The mechanism of ATP generation is usually simplest in the case of <em>fermentation</em>, where ATP is directly generated by reactions that are part of a metabolic intermediate containing an energy-rich phosphoanhydride bond that transfers its phosphate to ADT and forming ATP.</p>
 <p>For <em>respiration</em> and <em>photosynthesis</em>, ATP is generated in a two-stage process in which the cell membrane plays an essential role.  Just as a membrane is necessary to separate the contents of a cell, so is a membrane necessary for energy generation and storage.  The principle is akin to charge separation.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The flow of electrons through a membrane-bound electron transport chain crates a potential between the interior and exterior of the cell.</p></li>
 <li><p>Protons move across the potential due to the electromotive force and gradient in pH (proton concentration).  This movement of protons is called the proton-motive force within biology.</p></li>
 <li><p>The energy supplied by the proton-motive force is then used to make ATP, via a membrane-bound enzyme called ATP synthase that couples the synthesis of ATP to the import of protons.</p></li>
@@ -887,19 +978,19 @@ allowfullscreen></iframe>
 </div>
 </div>
 <div class="section" id="energy-yields-of-catabolism">
-<h4><span class="section-number">6.1.3.6. </span>Energy yields of catabolism<a class="headerlink" href="#energy-yields-of-catabolism" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.3.6. </span>Energy yields of catabolism<a class="headerlink" href="#energy-yields-of-catabolism" title="Permalink to this headline">#</a></h4>
 <p>All catabolic mechanisms lead to the generation of ATP.  <em>But which forms of catabolism generate the most ATP and are the most advantageous for the organism?</em>  A quantity used by chemists to evaluate the energy yield of a reaction is the change in <a class="reference external" href="https://en.wikipedia.org/wiki/Gibbs_free_energy">Gibbs free energy</a> (<span class="math notranslate nohighlight">\(\Delta G\)</span>) expressed in kilojoules (<span class="math notranslate nohighlight">\(\rm kJ\)</span>).</p>
 <p>A large negative <span class="math notranslate nohighlight">\(\Delta G\)</span> indicates a high yield of energy, while a positive <span class="math notranslate nohighlight">\(\Delta G\)</span> signifies that energy is consumed.  Hence, all catabolic pathways must have a negative <span class="math notranslate nohighlight">\(\Delta G\)</span>, where the more negative the better.  <strong>The <span class="math notranslate nohighlight">\(\Delta G\)</span> depends on the relative electrical potential of the electron donors and acceptors.</strong></p>
 <p>Aerobic respiration (ATP yield <span class="math notranslate nohighlight">\(=38\)</span>) using glucose (<span class="math notranslate nohighlight">\({\rm C_6H_{12}O_6}\)</span>) as an electron donor and oxygen as an electron acceptor is one of the most effective in producing ATP:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-76fdde6c-3df9-48f9-99ad-8ed9be7f43fb">
-<span class="eqno">(6.1)<a class="headerlink" href="#equation-76fdde6c-3df9-48f9-99ad-8ed9be7f43fb" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-abd38ab4-4afc-49f2-bbd1-3288defebdd1">
+<span class="eqno">(6.1)<a class="headerlink" href="#equation-abd38ab4-4afc-49f2-bbd1-3288defebdd1" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\rm C_6H_{12}O_6} + 6{\rm O_2} \rightarrow 6{\rm CO_2} + 6{\rm H_2O}; \qquad \Delta G = -2870\ {\rm kJ}.
 \end{align}\]</div>
 <p>Aerobic respiration produces a large negative <span class="math notranslate nohighlight">\(\Delta G\)</span> because the oxidation of glucose occurs at a very negative redox potential, while the reduction of oxygen occurs at a very positive redox potential.  Organisms that carry out aerobic respiration can grow fast, which includes highly evolved forms such as animals.</p>
 <p>Photosynthesis is effective through the light-driven electron flow via chlorophyll and appreciated when one realizes that <a class="reference external" href="https://openstax.org/books/biology-2e/pages/6-1-energy-and-metabolism">oxygenic photosynthesis</a> is the reverse of aerobic respiration.  Since the reverse of an energy-yielding process is an energy-requiring one, the use of light via chlorophyll must be very effective.  Like animals, plants are also highly evolved and successful.</p>
 <p>Other forms of respiration (e.g., methanogenesis or sulfate reduction) yield less energy:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c79d655f-fe15-4145-9323-6b69f332f63f">
-<span class="eqno">(6.2)<a class="headerlink" href="#equation-c79d655f-fe15-4145-9323-6b69f332f63f" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-62ab3c51-901e-4f00-9366-5aedca04c2f7">
+<span class="eqno">(6.2)<a class="headerlink" href="#equation-62ab3c51-901e-4f00-9366-5aedca04c2f7" title="Permalink to this equation">#</a></span>\[\begin{align}
 4{\rm H_2} + {\rm CO_2} &amp;\rightarrow {\rm CH_4} + 2{\rm H_2O}; \qquad \Delta G = -131\ {\rm kJ}, \quad \mathbf{(methanogenesis)} \\
 4{\rm H_2} + {\rm SO_4^{2-}} + {\rm H^+} &amp;\rightarrow {\rm HS^-} + 4{\rm H_2O}; \qquad \Delta G = -152\ {\rm kJ}. \quad \mathbf{(sulfate\ reduction)}
 \end{align}\]</div>
@@ -908,16 +999,16 @@ allowfullscreen></iframe>
 </div>
 </div>
 <div class="section" id="early-metabolic-mechanisms">
-<h3><span class="section-number">6.1.4. </span>Early Metabolic Mechanisms<a class="headerlink" href="#early-metabolic-mechanisms" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.4. </span>Early Metabolic Mechanisms<a class="headerlink" href="#early-metabolic-mechanisms" title="Permalink to this headline">#</a></h3>
 <p>Metabolism today is complex and diverse.  One of our tenets is that life, and metabolism, began simpler and more uniform.  The continuity of evolution means that all contemporary metabolism evolved from these modes beginnings.  Our other tenet is the early life had to make do with the nutrients that were available.</p>
 <p><a class="reference external" href="https://saturnaxis.github.io/Astrobio/Chapter_05/Tree_of_Life.html#the-oparin-haldane-hypothesis">Oparin</a> originally hypothesized that the first metabolisms were not photosynthetic, where organisms obtained organic carbon from their surroundings rather than synthesizing it photosynthetically from carbon dioxide (i.e., heterotrophic).  Photosynthetic organisms are much more complex than heterotrophic organisms because they need pathways to carryout out photosynthesis and corban dioxide fixation.  This is in addition to the anabolic pathways for synthesis of amino acids and other cell materials.  In contrast, heterotrophic metabolism requires relatively few enzymes to produce cell material from organic precursors.</p>
 <p>A simple type of catabolism is the <a class="reference external" href="https://en.wikipedia.org/wiki/Stickland_fermentation">Stickland reaction</a> that occurs in certain bacteria and involves the fermentation of amino acid pairs.  In this reaction, only two amino acids are needed and very few enzymes are required for catabolism and generation of ATP.  It is interesting to note that alanine and glycine in examples of the Stickland reaction are very stable and commonly found in carbonaceous chondrite meteorites.  Therefore, these substrates may have been available for metabolism early on.</p>
 <p>The hypothesis that heterotrophic metabolism arose first ignores the importance of primary production (i.e., the production of organic material either by chemosynthesis or photosynthesis).  Heterotrophic organisms <em>require</em> preformed organic material.  Although organic substrates may have been abundant on early Earth, within a short time they would have been depleted by any heterotrophic organisms.  Some process in which organic material is produced biologically on Earth is of fundamental importance in early metabolism.  The most important question concerning early metabolism becomes: <em>What were the most likely metabolism(s) of the initial primary producers?</em></p>
 </div>
 <div class="section" id="evolution-of-methanogenesis-and-acetogensis">
-<h3><span class="section-number">6.1.5. </span>Evolution of Methanogenesis and Acetogensis<a class="headerlink" href="#evolution-of-methanogenesis-and-acetogensis" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.5. </span>Evolution of Methanogenesis and Acetogensis<a class="headerlink" href="#evolution-of-methanogenesis-and-acetogensis" title="Permalink to this headline">#</a></h3>
 <div class="section" id="today-and-on-the-early-earth">
-<h4><span class="section-number">6.1.5.1. </span>Today and on the early Earth<a class="headerlink" href="#today-and-on-the-early-earth" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.5.1. </span>Today and on the early Earth<a class="headerlink" href="#today-and-on-the-early-earth" title="Permalink to this headline">#</a></h4>
 <p>Methanogens and acetogens partly share analogous metabolic pathways, although not phylogenetically related.  Methanogens and acetogens are both anaerobes that specialize in metabolism using one-carbon intermediates.  Hydrogen is a common electron donor and carbon dioxide a common electron acceptor.  Methane and acetic acid are the respective catabolic products.  Both organisms fix carbon dioxide by the acetyl coenzyme A (<span class="math notranslate nohighlight">\(\mathbf{\rm CoA}\)</span>) pathway.  Today methanogens and acetogens play essential roles in anaerobic ecosystems and live in a variety of habitats ranging from hydrothermal vents, pond sediments, and animal digestive tracts.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -932,53 +1023,53 @@ allowfullscreen></iframe>
 <p>These environments that are poor in organic material but potentially rich in mineral nutrients could resemble ecosystems that dominate on the early Earth or that may exist on other planetary bodies.</p>
 </div>
 <div class="section" id="metabolic-simplicity-and-the-acetyl-coa-pathway">
-<h4><span class="section-number">6.1.5.2. </span>Metabolic simplicity and the acetyl CoA pathway<a class="headerlink" href="#metabolic-simplicity-and-the-acetyl-coa-pathway" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.5.2. </span>Metabolic simplicity and the acetyl CoA pathway<a class="headerlink" href="#metabolic-simplicity-and-the-acetyl-coa-pathway" title="Permalink to this headline">#</a></h4>
 <p>It is reasonable to assume that the earliest organisms were also the simplest.  Frequent bombardment of the early Earth might have limited the time available for complexity ot evolve.  From this standpoint, methanogenesis and acetogenesis are appealing as the earliest metabolisms.  In its simplest form, the metabolisms of methanogens and acetogens each consist of three essential pathways.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>reduction of carbon dioxide to a methyl (<span class="math notranslate nohighlight">\(\rm CH_3\)</span>) group,</p></li>
 <li><p>the acetyl coenzyme A (<span class="math notranslate nohighlight">\(\rm CoA\)</span>) pathway that uses the methyl group to form <span class="math notranslate nohighlight">\(\rm CH_3CO-CoA\)</span>, and</p></li>
 <li><p>a single energy-yielding step.</p></li>
 </ol>
 <div class="figure align-default" id="acetyl-coa-fig">
 <a class="reference internal image-reference" href="https://journals.asm.org/cms/10.1128/AEM.02473-10/asset/f59a0c76-2182-4ca9-97cb-0c9444146201/assets/graphic/zam9991018620004.jpeg"><img alt="https://journals.asm.org/cms/10.1128/AEM.02473-10/asset/f59a0c76-2182-4ca9-97cb-0c9444146201/assets/graphic/zam9991018620004.jpeg" src="https://journals.asm.org/cms/10.1128/AEM.02473-10/asset/f59a0c76-2182-4ca9-97cb-0c9444146201/assets/graphic/zam9991018620004.jpeg" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">The reductive acetyl-CoA (Wood-Ljungdahl) pathway. The upper part (red) shows the variant of the pathway functioning in acetogens, and the lower part (blue) depicts the pathway in methanogens. Image Credit: <a class="reference external" href="https://journals.asm.org/doi/10.1128/AEM.02473-10#F4">Berg (2011)</a>.</span><a class="headerlink" href="#acetyl-coa-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6.1 </span><span class="caption-text">The reductive acetyl-CoA (Wood-Ljungdahl) pathway. The upper part (red) shows the variant of the pathway functioning in acetogens, and the lower part (blue) depicts the pathway in methanogens. Image Credit: <a class="reference external" href="https://journals.asm.org/doi/10.1128/AEM.02473-10#F4">Berg (2011)</a>.</span><a class="headerlink" href="#acetyl-coa-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>Methanogens reduce additional methyl groups to methane, while acetogens convert some of their acetyl <span class="math notranslate nohighlight">\(\rm CoA\)</span> to acetic acid and gain an ATP in the process.  The acetyl <span class="math notranslate nohighlight">\(\rm CoA\)</span> pathway may have been the crux of an ancient autotrophic mode of life.  Other pathways of carbon dioxide fixation are more complex, involving various numbers of multi-carbon intermediates.  Because of its simplicity the acetyl <span class="math notranslate nohighlight">\(\rm CoA\)</span> pathway may have been the easiest to evolve.</p>
 </div>
 <div class="section" id="a-prebiotic-precursor-for-acetyl-coa-pathway">
-<h4><span class="section-number">6.1.5.3. </span>A prebiotic precursor for acetyl COA pathway<a class="headerlink" href="#a-prebiotic-precursor-for-acetyl-coa-pathway" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.5.3. </span>A prebiotic precursor for acetyl COA pathway<a class="headerlink" href="#a-prebiotic-precursor-for-acetyl-coa-pathway" title="Permalink to this headline">#</a></h4>
 <p>Further support for the ancient nature of the acetyl <span class="math notranslate nohighlight">\(\rm CoA\)</span> pathway comes from evidence that the crucial reaction could have occurred prebiotically.  <a class="reference external" href="https://en.wikipedia.org/wiki/G%C3%BCnter_W%C3%A4chtersh%C3%A4user">Günther Wächtershäuser</a> proposed the theory that metabolism evolved from prebiotic chemistry, where he has shown in the laboratory that under primordial conditions a methyl group can react with carbon monoxide to yield an acetyl group (<a class="reference external" href="https://www.science.org/doi/10.1126/science.276.5310.245">Huber and Wächtershäuser (1997)</a>).</p>
 <p>Particularly interesting was the observation that the reaction required nickel sulfide and iron sulfide as catalysts.  The enzyme that catalyzes the reaction in present-day organisms also contains a nick-iron-sulfur center.  A core step in the metabolism of methanogens  and acetogens may have derived from a prebiotic chemical reaction.  Wächtershäuser has suggested that the combined presence of methyl mercaptan (<span class="math notranslate nohighlight">\(\rm CH_3SH\)</span>), iron sulfide, and nickel sulfide could constitute important components of a “marker” for primitive habitats on Earth and Mars.</p>
 </div>
 <div class="section" id="hydrogen-oxidation-and-the-proton-motive-force">
-<h4><span class="section-number">6.1.5.4. </span>Hydrogen oxidation and the proton-motive force<a class="headerlink" href="#hydrogen-oxidation-and-the-proton-motive-force" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.1.5.4. </span>Hydrogen oxidation and the proton-motive force<a class="headerlink" href="#hydrogen-oxidation-and-the-proton-motive-force" title="Permalink to this headline">#</a></h4>
 <p>Another significant feature of the methanogenic and acetogenic metabolism is the use of <span class="math notranslate nohighlight">\(\rm H_2\)</span> as the catabolic electron donor.  The electron transport chain of many organism is a complex multi-component assembly that moves proteins from inside to the outside of cells as electrons flow from one electron carrier to another.  These complex electron chains are characteristic of organotrophs and phototrophs, as well as aerobic lithotrophs that oxidize inorganic compounds other than hydrogen.</p>
 <p>The use of hydrogen offers the possibility of a simpler mechanism of a simpler mechanism in which a proton-motive force is generated without the transport of protons.  The products of hydrogen oxidation are simply protons and electrons.  If the oxidation of hydrogen occurs on the outside of the cell membrane, then protons can accumulate there.  A simple electron carrier that spans the membrane can then deliver electrons to the inside.  The electrons can then be used on the inside in a proton-consuming reaction to reduce carbon dioxide to methane or acetic acid.  The result is a proton-motive force.</p>
 <p>This simple mechanism requiring only an extracellular hydrogen-oxidizing enzyme (hydrogenase) and a membrane-bound electron carrier (e.g., iron-sulfur protein) has not yet actually been demonstrated in the methanogens or acetogens.  But neither is it excluded as a primordial mechanism or as one that operates today.</p>
 </div>
 </div>
 <div class="section" id="evolution-of-photosynthesis">
-<h3><span class="section-number">6.1.6. </span>Evolution of Photosynthesis<a class="headerlink" href="#evolution-of-photosynthesis" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.6. </span>Evolution of Photosynthesis<a class="headerlink" href="#evolution-of-photosynthesis" title="Permalink to this headline">#</a></h3>
 <p>The evolution of photosynthesis greatly enhanced the capability of the planet to carry out primary production.  organisms have evolved to make efficient use of light energy, which has always been available and abundant on the surface fo the planet.  Although the evolution of photosynthesis most likely followed the evolution of simpler primary production mechanisms, when it evolved it had a major impact on all life.</p>
 <p>Photosynthesis has been found in Bacteria and Eukarya.  A remarkable variety of photosynthetic bacterial groups exists.  Within the Bacteria, five of the major phyla contain photosynthetic members: Protobacteria, Fimicutes, Chorobi, Choroflexi, and Cyanobacteria.  <a class="reference external" href="https://en.wikipedia.org/wiki/C._B._van_Niel">C.B. van Niel</a> proposed (in 1941) the following general reaction for photosynthesis:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-84ab7305-ae3f-4787-8ad7-3e1fd48daacf">
-<span class="eqno">(6.3)<a class="headerlink" href="#equation-84ab7305-ae3f-4787-8ad7-3e1fd48daacf" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b9b0f366-2d9d-4e62-b1fc-fc63b4b5bb74">
+<span class="eqno">(6.3)<a class="headerlink" href="#equation-b9b0f366-2d9d-4e62-b1fc-fc63b4b5bb74" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\rm CO_2} + 2{\rm H_2A} + \text{light} \rightarrow {\rm (CH_2O)} + {\rm H_2O} + 2{\rm A},
 \end{align}\]</div>
 <p>where <span class="math notranslate nohighlight">\({\rm H_2A}\)</span> can stand for <span class="math notranslate nohighlight">\({\rm H_2S}\)</span>, <span class="math notranslate nohighlight">\({\rm H_2}\)</span>, <span class="math notranslate nohighlight">\({\rm H_2O}\)</span>, an organic compound, or even ferrous iron (<span class="math notranslate nohighlight">\(\rm Fe^{2+}\)</span>). <span class="math notranslate nohighlight">\({\rm (CH_2O)}\)</span> represents an organic product of the photosynthesis.</p>
 <p>Many of the photosynthetic bacteria are restricted to anoxic habitats and ues <span class="math notranslate nohighlight">\({\rm H_2S}\)</span> as a source of electrons.  Thus the reaction for these bacteria is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5e90bebe-c213-4211-9809-4d0cc527f26a">
-<span class="eqno">(6.4)<a class="headerlink" href="#equation-5e90bebe-c213-4211-9809-4d0cc527f26a" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0ed9c352-30e3-4bac-9edc-453784179aff">
+<span class="eqno">(6.4)<a class="headerlink" href="#equation-0ed9c352-30e3-4bac-9edc-453784179aff" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\rm CO_2} + 2{\rm H_2S} + \text{light} \rightarrow {\rm (CH_2O)} + {\rm H_2O} + 2{\rm S}.
 \end{align}\]</div>
 <p>These phototrophs can often further oxidize the elemental sulfur to produce sulfate anaerobically during photosynthesis:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5f29d245-354d-49bb-9b57-ea45a48af7ca">
-<span class="eqno">(6.5)<a class="headerlink" href="#equation-5f29d245-354d-49bb-9b57-ea45a48af7ca" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a5142f42-61a8-4f6d-b9cc-181a90d95777">
+<span class="eqno">(6.5)<a class="headerlink" href="#equation-a5142f42-61a8-4f6d-b9cc-181a90d95777" title="Permalink to this equation">#</a></span>\[\begin{align}
 3{\rm CO_2} + 2{\rm S} + 5{\rm H_2O} + \text{light} \rightarrow 3{\rm (CH_2O)} + {\rm H_2SO_4}.
 \end{align}\]</div>
 <p>Cyanobacteria are best known as the first organisms to use water to carry out <em>oxygenic</em> photosynthesis, in which oxygen is produced:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8d3077b6-c9dc-49ea-8495-c8d474291444">
-<span class="eqno">(6.6)<a class="headerlink" href="#equation-8d3077b6-c9dc-49ea-8495-c8d474291444" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c1ed852b-1120-4dd8-b693-79a56339a126">
+<span class="eqno">(6.6)<a class="headerlink" href="#equation-c1ed852b-1120-4dd8-b693-79a56339a126" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\rm CO_2} + {\rm H_2O} + \text{light} \rightarrow {\rm (CH_2O)} + {\rm O_2}.
 \end{align}\]</div>
 <p>Note that the <span class="math notranslate nohighlight">\({\rm O_2}\)</span> comes from the water and not the carbon dioxide.  For this reason, oxygenic photosynthesis is called the “water splitting” reaction.  Apart from cyanobacteria, all photosynthetic bacteria carry out photosynthesis anaerobically and oxygen is <em>not</em> produced.  This anaerobic process is referred to as <em>anoxygenic</em> photosynthesis.</p>
@@ -988,71 +1079,71 @@ allowfullscreen></iframe>
 <p>The innovation of oxygenic photosynthesis began a remarkable evolutionary progression, culminating in the development of complex animal and planet species.  The development of an oxygen-rich atmosphere prepared the biosphere for the emergence of higher life forms.  Only by burning reduced carbon with oxygen (via an electron transport chain) could sufficient energy be released to fuel large multicellular organisms.  The resultant atmospheric oxygen produced an ozone layer in the statosphere that is strongly absorbent of UV radiation.  When the ozone layer became significant, this opened up land to colonization by planets and animals (due to lower UV radiation) who no longer needed water for protection.</p>
 </div>
 <div class="section" id="aerobic-metabolism">
-<h3><span class="section-number">6.1.7. </span>Aerobic Metabolism<a class="headerlink" href="#aerobic-metabolism" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.7. </span>Aerobic Metabolism<a class="headerlink" href="#aerobic-metabolism" title="Permalink to this headline">#</a></h3>
 <p>Aerobic metabolism is the culmination of metabolic evolution on Earth.  This was made possible due to the superior energy yield from using oxygen as an electron acceptor.  The microbial world expanded along with multicellular organisms.  New kinds of chemolithotrophs: oxidizers of nitrogen, sulfur, and iron compounds evolved and have become an important part of today’s nutrient cycles.  The innovations in the electron transport chain that came with photosynthesis allowed aerobes to take advantage of this new source of energy.  Indeed, many of the same components of the electron transport chain that evolved for photosynthesis are used in aerobic respiration.</p>
 </div>
 <div class="section" id="earth-s-earliest-communities">
-<h3><span class="section-number">6.1.8. </span>Earth’s Earliest Communities<a class="headerlink" href="#earth-s-earliest-communities" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.1.8. </span>Earth’s Earliest Communities<a class="headerlink" href="#earth-s-earliest-communities" title="Permalink to this headline">#</a></h3>
 </div>
 </div>
 <div class="section" id="limits-of-carbon-life-on-earth">
-<h2><span class="section-number">6.2. </span>Limits of Carbon Life on Earth<a class="headerlink" href="#limits-of-carbon-life-on-earth" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.2. </span>Limits of Carbon Life on Earth<a class="headerlink" href="#limits-of-carbon-life-on-earth" title="Permalink to this headline">#</a></h2>
 <div class="section" id="extremophiles-and-the-limits-of-life">
-<h3><span class="section-number">6.2.1. </span>Extremophiles and the Limits of Life<a class="headerlink" href="#extremophiles-and-the-limits-of-life" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.1. </span>Extremophiles and the Limits of Life<a class="headerlink" href="#extremophiles-and-the-limits-of-life" title="Permalink to this headline">#</a></h3>
 </div>
-<div class="section" id="water-desicaction-and-life-in-non-aqueous-solvents">
-<h3><span class="section-number">6.2.2. </span>Water, Desicaction, and Life in Non-aqueous Solvents<a class="headerlink" href="#water-desicaction-and-life-in-non-aqueous-solvents" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="water-desiccation-and-life-in-non-aqueous-solvents">
+<h3><span class="section-number">6.2.2. </span>Water, Desiccation, and Life in Non-aqueous Solvents<a class="headerlink" href="#water-desiccation-and-life-in-non-aqueous-solvents" title="Permalink to this headline">#</a></h3>
 </div>
 <div class="section" id="temperature-extremes">
-<h3><span class="section-number">6.2.3. </span>Temperature Extremes<a class="headerlink" href="#temperature-extremes" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.3. </span>Temperature Extremes<a class="headerlink" href="#temperature-extremes" title="Permalink to this headline">#</a></h3>
 </div>
 <div class="section" id="survival-while-traveling-through-space">
-<h3><span class="section-number">6.2.4. </span>Survival While Traveling through Space<a class="headerlink" href="#survival-while-traveling-through-space" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.2.4. </span>Survival While Traveling through Space<a class="headerlink" href="#survival-while-traveling-through-space" title="Permalink to this headline">#</a></h3>
 </div>
-<div class="section" id="extremophiles-hyrdothermal-vents-and-earth-s-earliest-microbes">
-<h3><span class="section-number">6.2.5. </span>Extremophiles, Hyrdothermal Vents, and Earth’s Earliest Microbes<a class="headerlink" href="#extremophiles-hyrdothermal-vents-and-earth-s-earliest-microbes" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="extremophiles-hydrothermal-vents-and-earth-s-earliest-microbes">
+<h3><span class="section-number">6.2.5. </span>Extremophiles, Hydrothermal Vents, and Earth’s Earliest Microbes<a class="headerlink" href="#extremophiles-hydrothermal-vents-and-earth-s-earliest-microbes" title="Permalink to this headline">#</a></h3>
 </div>
 </div>
 <div class="section" id="the-evolution-and-diversification-of-life">
-<h2><span class="section-number">6.3. </span>The Evolution and Diversification of Life<a class="headerlink" href="#the-evolution-and-diversification-of-life" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.3. </span>The Evolution and Diversification of Life<a class="headerlink" href="#the-evolution-and-diversification-of-life" title="Permalink to this headline">#</a></h2>
 <div class="section" id="the-proterozoic">
-<h3><span class="section-number">6.3.1. </span>The Proterozoic<a class="headerlink" href="#the-proterozoic" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.1. </span>The Proterozoic<a class="headerlink" href="#the-proterozoic" title="Permalink to this headline">#</a></h3>
 </div>
 <div class="section" id="the-phanerozoic">
-<h3><span class="section-number">6.3.2. </span>The Phanerozoic<a class="headerlink" href="#the-phanerozoic" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.3.2. </span>The Phanerozoic<a class="headerlink" href="#the-phanerozoic" title="Permalink to this headline">#</a></h3>
 </div>
 </div>
 <div class="section" id="mass-extinctions">
-<h2><span class="section-number">6.4. </span>Mass Extinctions<a class="headerlink" href="#mass-extinctions" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">6.4. </span>Mass Extinctions<a class="headerlink" href="#mass-extinctions" title="Permalink to this headline">#</a></h2>
 <div class="section" id="brief-history">
-<h3><span class="section-number">6.4.1. </span>Brief History<a class="headerlink" href="#brief-history" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.1. </span>Brief History<a class="headerlink" href="#brief-history" title="Permalink to this headline">#</a></h3>
 </div>
 <div class="section" id="studying-mass-extinctions">
-<h3><span class="section-number">6.4.2. </span>Studying Mass Extinctions<a class="headerlink" href="#studying-mass-extinctions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.2. </span>Studying Mass Extinctions<a class="headerlink" href="#studying-mass-extinctions" title="Permalink to this headline">#</a></h3>
 </div>
 <div class="section" id="earth-s-mass-extinctions">
-<h3><span class="section-number">6.4.3. </span>Earth’s Mass Extinctions<a class="headerlink" href="#earth-s-mass-extinctions" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.3. </span>Earth’s Mass Extinctions<a class="headerlink" href="#earth-s-mass-extinctions" title="Permalink to this headline">#</a></h3>
 <div class="section" id="causes">
-<h4><span class="section-number">6.4.3.1. </span>Causes<a class="headerlink" href="#causes" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.4.3.1. </span>Causes<a class="headerlink" href="#causes" title="Permalink to this headline">#</a></h4>
 </div>
 <div class="section" id="impacts">
-<h4><span class="section-number">6.4.3.2. </span>Impacts<a class="headerlink" href="#impacts" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.4.3.2. </span>Impacts<a class="headerlink" href="#impacts" title="Permalink to this headline">#</a></h4>
 </div>
 <div class="section" id="frequency">
-<h4><span class="section-number">6.4.3.3. </span>Frequency<a class="headerlink" href="#frequency" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.4.3.3. </span>Frequency<a class="headerlink" href="#frequency" title="Permalink to this headline">#</a></h4>
 </div>
 <div class="section" id="longer-term-effects">
-<h4><span class="section-number">6.4.3.4. </span>Longer-term Effects<a class="headerlink" href="#longer-term-effects" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.4.3.4. </span>Longer-term Effects<a class="headerlink" href="#longer-term-effects" title="Permalink to this headline">#</a></h4>
 </div>
 <div class="section" id="severity">
-<h4><span class="section-number">6.4.3.5. </span>Severity<a class="headerlink" href="#severity" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">6.4.3.5. </span>Severity<a class="headerlink" href="#severity" title="Permalink to this headline">#</a></h4>
 </div>
 </div>
 <div class="section" id="extinction-risk-through-time">
-<h3><span class="section-number">6.4.4. </span>Extinction Risk through Time<a class="headerlink" href="#extinction-risk-through-time" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.4. </span>Extinction Risk through Time<a class="headerlink" href="#extinction-risk-through-time" title="Permalink to this headline">#</a></h3>
 </div>
 <div class="section" id="two-case-histories">
-<h3><span class="section-number">6.4.5. </span>Two Case Histories<a class="headerlink" href="#two-case-histories" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">6.4.5. </span>Two Case Histories<a class="headerlink" href="#two-case-histories" title="Permalink to this headline">#</a></h3>
 </div>
 </div>
 </div>
@@ -1079,9 +1170,11 @@ allowfullscreen></iframe>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../Chapter_05/Tree_of_Life.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1097,24 +1190,28 @@ allowfullscreen></iframe>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Billy Quarles<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Billy Quarles<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>

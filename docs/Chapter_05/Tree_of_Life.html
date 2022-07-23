@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>5. Origins of Life &#8212; ASTR3800 Astrobiology</title>
     
-  <link href="../_static/css/theme.css" rel="stylesheet">
-  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -18,12 +19,8 @@
   <link rel="preload" as="font" type="font/woff2" crossorigin
     href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
 
-    
-      
-
-    
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=5115cc725059bd94278eecd172e13a965bf8f5a9" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,21 +29,25 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mycss.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.b7bb847fb20b106c3d81b95245e65545.min.css" />
     
-  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
 
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/togglebutton.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=9c920249402e914e316237a7dbc6769907cce411"></script>
     <script src="../_static/tabs.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
-    <script src="../_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script src="../_static/design-tabs.js"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
 const thebe_selector = ".thebe,.cell"
 const thebe_selector_input = "pre"
@@ -74,7 +75,21 @@ const thebe_selector_output = ".output, .cell_output"
                 </script>
 
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay overlay-navbar" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<!-- Checkboxes to toggle the in-page toc -->
+<input type="checkbox" class="sidebar-toggle" name="__page-toc" id="__page-toc" aria-label="Toggle in-page Table of Contents">
+<label class="overlay overlay-pagetoc" for="__page-toc">
+    <div class="visually-hidden">Toggle in-page Table of Contents</div>
+</label>
+<!-- Headers at the top -->
+<div class="announcement header-item noprint"></div>
+<div class="header header-item noprint"></div>
+
     
     <div class="container-fluid" id="banner"></div>
 
@@ -83,9 +98,10 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="container-xl">
       <div class="row">
           
-<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
-    
-        <div class="navbar-brand-box">
+<!-- Sidebar -->
+<div class="bd-sidebar noprint" id="site-navigation">
+    <div class="bd-sidebar__content">
+        <div class="bd-sidebar__top"><div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
       
         <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
@@ -103,14 +119,15 @@ const thebe_selector_output = ".output, .cell_output"
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <ul class="nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="../home.html">
-   ASTR3800: Astrobiology
-  </a>
- </li>
-</ul>
-<p aria-level="2" class="caption" role="heading">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../home.html">
+                    ASTR3800: Astrobiology
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Preamble
  </span>
@@ -222,103 +239,177 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 
     </div>
-</nav> <!-- To handle the deprecated key -->
-
-<div class="navbar_extra_footer">
-  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
-</div>
-
-</div>
-
-
-          
-
-
-          
-<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
-    
-    <div class="topbar container-xl fixed-top">
-    <div class="topbar-contents row">
-        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
-        <div class="col pl-md-4 topbar-main">
+</nav></div>
+        <div class="bd-sidebar__bottom">
+             <!-- To handle the deprecated key -->
             
-            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
-                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
-                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
-                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
-                <i class="fas fa-bars"></i>
-                <i class="fas fa-arrow-left"></i>
-                <i class="fas fa-arrow-up"></i>
-            </button>
-            
-            
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
-            class="fas fa-download"></i></button>
-
-    <div class="dropdown-buttons">
-        <!-- ipynb file if we had a myst markdown file -->
-        
-        <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../_sources/Chapter_05/Tree_of_Life.ipynb"><button type="button"
-                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.ipynb</button></a>
-        <!-- Download PDF via print -->
-        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
-                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
-    </div>
-</div>
-
-            <!-- Source interaction buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
-    <div class="dropdown-buttons sourcebuttons">
-        <a class="repository-button"
-            href="https://github.com/saturnaxis/Astrobio"><button type="button" class="btn btn-secondary topbarbtn"
-                data-toggle="tooltip" data-placement="left" title="Source repository"><i
-                    class="fab fa-github"></i>repository</button></a>
-        
-        
-    </div>
-</div>
-
-            <!-- Full screen (wrap in <a> to have style consistency -->
-
-<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
-        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
-        title="Fullscreen mode"><i
-            class="fas fa-expand"></i></button></a>
-
-            <!-- Launch buttons -->
-
-<div class="dropdown-buttons-trigger">
-    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
-        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
-    <div class="dropdown-buttons">
-        
-        
-        
-        <a class="colab-button" href="https://colab.research.google.com/github/saturnaxis/Astrobio/blob/main/Chapter_05/Tree_of_Life.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
-                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
-                    src="../_static/images/logo_colab.png"
-                    alt="Interact on Colab">Colab</button></a>
-        
-        
-    </div>
-</div>
-
-        </div>
-
-        <!-- Table of contents -->
-        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
-            
-            <div class="tocsection onthispage pt-5 pb-3">
-                <i class="fas fa-list"></i> Contents
+            <div class="navbar_extra_footer">
+            Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
             </div>
-            <nav id="bd-toc-nav" aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
+            
+        </div>
+    </div>
+    <div id="rtd-footer-container"></div>
+</div>
+
+
+          
+
+
+          
+<!-- A tiny helper pixel to detect if we've scrolled -->
+<div class="sbt-scroll-pixel-helper"></div>
+<!-- Main content -->
+<div class="col py-0 content-container">
+    
+    <div class="header-article row sticky-top noprint">
+        
+
+
+
+<div class="col py-1 d-flex header-article-main">
+    <div class="header-article__left">
+        
+        <label for="__navigation"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="right"
+title="Toggle navigation"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-bars"></i>
+  </span>
+
+</label>
+
+        
+    </div>
+    <div class="header-article__right">
+<div class="menu-dropdown menu-dropdown-launch-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Launch interactive content">
+      <i class="fas fa-rocket"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://colab.research.google.com/github/saturnaxis/Astrobio/blob/main/Chapter_05/Tree_of_Life.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Colab"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_colab.png">
+  </span>
+<span class="headerbtn__text-container">Colab</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<button onclick="toggleFullScreen()"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="bottom"
+title="Fullscreen mode"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+<a href="https://github.com/saturnaxis/Astrobio"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="bottom"
+title="Source repository"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+
+</a>
+
+<div class="menu-dropdown menu-dropdown-download-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Download this page">
+      <i class="fas fa-download"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="../_sources/Chapter_05/Tree_of_Life.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Download source file"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="headerbtn__text-container">.ipynb</span>
+</a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="printPdf(this)"
+  class="headerbtn"
+  data-toggle="tooltip"
+data-placement="left"
+title="Print to PDF"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="headerbtn__text-container">.pdf</span>
+</button>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
+<label for="__page-toc"
+  class="headerbtn headerbtn-page-toc"
+  
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-list"></i>
+  </span>
+
+</label>
+
+    </div>
+</div>
+
+<!-- Table of contents -->
+<div class="col-md-3 bd-toc show noprint">
+    <div class="tocsection onthispage pt-5 pb-3">
+        <i class="fas fa-list"></i> Contents
+    </div>
+    <nav id="bd-toc-nav" aria-label="Page">
+        <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#the-crucial-issues">
    5.1. The Crucial Issues
@@ -581,12 +672,11 @@ const thebe_selector_output = ".output, .cell_output"
  </li>
 </ul>
 
-            </nav>
-        </div>
-    </div>
+    </nav>
 </div>
-    <div id="main-content" class="row">
-        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+    </div>
+    <div class="article row">
+        <div class="col pl-md-3 pl-lg-5 content-container">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
                 <h1>Origins of Life</h1>
@@ -865,24 +955,25 @@ const thebe_selector_output = ".output, .cell_output"
                     </div>
                 </div>
             </div>
-            
+            <main id="main-content" role="main">
+                
               <div>
                 
   <div class="tex2jax_ignore mathjax_ignore section" id="origins-of-life">
-<h1><span class="section-number">5. </span>Origins of Life<a class="headerlink" href="#origins-of-life" title="Permalink to this headline">¶</a></h1>
+<h1><span class="section-number">5. </span>Origins of Life<a class="headerlink" href="#origins-of-life" title="Permalink to this headline">#</a></h1>
 <div class="section" id="the-crucial-issues">
-<h2><span class="section-number">5.1. </span>The Crucial Issues<a class="headerlink" href="#the-crucial-issues" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.1. </span>The Crucial Issues<a class="headerlink" href="#the-crucial-issues" title="Permalink to this headline">#</a></h2>
 <div class="section" id="why-is-this-question-important">
-<h3><span class="section-number">5.1.1. </span>Why is This Question Important?<a class="headerlink" href="#why-is-this-question-important" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.1. </span>Why is This Question Important?<a class="headerlink" href="#why-is-this-question-important" title="Permalink to this headline">#</a></h3>
 <p>Our current sample for life in the universe is limited to on or near the surface of our home planet.  Therefore, one of our first questions considers how life first took root here, and whether things that we would consider alive exist elsewhere.  The fossil record on Earth appears to extent to about 3.5 Gyr ago and isotopic evidence suggests the presence of life several hundred million years before that.  However, no hard evidence exists concerning the mechanism by which life first began on Earth.</p>
 <p>Every human culture has developed an answer to this question and considered its importance in defining our place in the cosmos.  in the absence of firm evidence, the door has been left open to a variety of answers from science, mythology, and religion.  Each of these modes approaches our place in the Universe in a different way and with a different purpose.  These points of view can be broadly separated into three groups: Biblical-Creationist, Improbable Event, and Cosmic Evolution.</p>
 <div class="section" id="group-i-biblical-creationist">
-<h4><span class="section-number">5.1.1.1. </span>Group I: Biblical-Creationist<a class="headerlink" href="#group-i-biblical-creationist" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.1.1. </span>Group I: Biblical-Creationist<a class="headerlink" href="#group-i-biblical-creationist" title="Permalink to this headline">#</a></h4>
 <p>In the Biblical-Creationist view, life began directly through the actions of a Creator <em>using supernatural means</em>.  This view is accepted by a large fraction of our population, although it is not testable and hence, non-scientific.  A modified version of this theory is <em>Intelligent Design</em>, which states that life on Earth arose through the actions of an intelligent being and does not identify the creator or specify the means that were used to create life.  This solves the problem of what delivered the initial spark, where there is disagreement concerning how much involvement the intelligent being has with the seeds of life are planted.</p>
 <p>If we presume that creation is generated supernaturally, then we leave the realm for which science can answer questions and our tools are no longer effective for separating fact from fiction.  <a class="reference external" href="https://en.wikipedia.org/wiki/Francis_Crick">Francis Crick</a> has suggested that life began on Earth when intelligent beings from a far-off planet delivered it (intentionally or not) by releasing bacteria from a spaceship (i.e., directed panspermia; <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/0019103573901103?via%3Dihub">Crick &amp; Orgel (1973)</a>).  This explanation is not very satisfying because it merely shifts the problem from the beginnings of life on Earth to the beginnings of life in the Universe, which is a much more untenable issue to investigate.</p>
 </div>
 <div class="section" id="group-ii-improbable-event">
-<h4><span class="section-number">5.1.1.2. </span>Group II: Improbable Event<a class="headerlink" href="#group-ii-improbable-event" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.1.2. </span>Group II: Improbable Event<a class="headerlink" href="#group-ii-improbable-event" title="Permalink to this headline">#</a></h4>
 <p>Another point of view is that life began through natural causes, but the events that lead to this process were extremely improbable.  From this premise, it follows that life anywhere (beyond this planet) may be rare and the remainder of the Universe may be barren.  Consider the following:</p>
 <blockquote class="epigraph">
 <div><p>One has only to contemplate the magnitude of this task to concede that spontaneous generation is impossible, Yet we are here - as a result, I believe, of spontaneous generation.</p>
@@ -896,7 +987,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p>This inevitably leads to odds that makes the overall process seem near miraculous.  With some good fortune, such an event (i.e., combination of the correct compounds for life) might have occurred within the history of the Universe, and given rise to us.  A consequence of this theory would be that separate origins of life would very rare in the Universe.  Panspermia would still be a possibility, but any life that we encountered elsewhere would then be related to our own.  Astrobiology would represent a simple extension of Earth biology.</p>
 </div>
 <div class="section" id="group-iii-cosmic-evolution">
-<h4><span class="section-number">5.1.1.3. </span>Group III: Cosmic Evolution<a class="headerlink" href="#group-iii-cosmic-evolution" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.1.3. </span>Group III: Cosmic Evolution<a class="headerlink" href="#group-iii-cosmic-evolution" title="Permalink to this headline">#</a></h4>
 <p>In this viewpoint, life began through the inevitable consequences from the laws of nature.  There exists a principle of self-organization that has guided the development of the Universe from the Big Bang to the present.  Life is common in the Universe.  It will arise whenever a prerequisite set of materials interacts with a suitable energy source.  Life’s origin is not liked to the improbable formation of a particular functioning large biomolecule, and it requires a much simpler set of ingredients:</p>
 <ul class="simple">
 <li><p>a suitable source of free energy,</p></li>
@@ -907,9 +998,9 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 </div>
 <div class="section" id="historical-background">
-<h3><span class="section-number">5.1.2. </span>Historical Background<a class="headerlink" href="#historical-background" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.2. </span>Historical Background<a class="headerlink" href="#historical-background" title="Permalink to this headline">#</a></h3>
 <div class="section" id="spontaneous-generation">
-<h4><span class="section-number">5.1.2.1. </span>Spontaneous Generation<a class="headerlink" href="#spontaneous-generation" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.2.1. </span>Spontaneous Generation<a class="headerlink" href="#spontaneous-generation" title="Permalink to this headline">#</a></h4>
 <p>For millennia, the consensus favored <em>spontaneous generation</em>, where life may arise quickly by chance from non-living matter and independent of the action of parents.  Aristotle and his followers claimed that fireflies emerged from morning dew from their many observations in which they suddenly appeared.  Many kinds of small animals seemed to arise from the mud at the bottom of ponds and streams.  The 17th century philosopher René Descartes suggested that the process was driven by heat agitating the subtle and dense particles of putrefying matter.</p>
 <p>Through careful experimental tests to these speculative ideas, scientists found negative results for a whole array of lower lifeforms.  By the mid-19th century, the spontaneous generation question had contracted to the realm of microorganisms.</p>
 <blockquote class="epigraph">
@@ -925,9 +1016,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p>A scientific (rather than theologic) view need to push the origin back to an earlier era when conditions on the Earth were very different, and when timespans greater than a few days could be invoked.  It was recognized that the generation of a fully equipped modern functioning cell might not be necessary to get life going.  Some simpler system which utilized only a portion of a cell might suffice.</p>
 </div>
 <div class="section" id="the-oparin-haldane-hypothesis">
-<h4><span class="section-number">5.1.2.2. </span>The Oparin-Haldane Hypothesis<a class="headerlink" href="#the-oparin-haldane-hypothesis" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.2.2. </span>The Oparin-Haldane Hypothesis<a class="headerlink" href="#the-oparin-haldane-hypothesis" title="Permalink to this headline">#</a></h4>
 <p>This theory proposed separately by <a class="reference external" href="https://en.wikipedia.org/wiki/Alexander_Oparin">Alexander Oparin</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/J._B._S._Haldane">J.B.S. Haldane</a> stated that life arose slowly on the early Earth in a “prebiotic soup” of chemicals that covered the planet through a series of steps.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>The early Earth had an oxygen-free atmosphere, but contained ammonia, hydrogen gas, water, and methane (i.e., reduced carbon bound to hydrogen).</p></li>
 <li><p>This atmosphere was exposed to a variety of energy sources: solar radiation, meteorite and comet infall, volcanic eruptions, lightning, and others, which led to the formation of organic compounds.</p></li>
 <li><p>These substances “must have accumulated until the primitive oceans reached the consistency of hot dilute soup” as stated by Haldane.  <a class="reference external" href="https://en.wikipedia.org/wiki/Harold_Urey">Harold Urey</a> suggested that the soup components, “would remain for long periods of time in the primitive oceans. … This would provide a very favorable situation for the origin of life.”</p></li>
@@ -946,30 +1037,30 @@ allowfullscreen></iframe>
 <p>The experiment did confirm one tenet of the hypothesis: that an atmosphere of methane, hydrogen, and ammonia, when exposed to certain types of energy, would afford a mixture of organic compounds.  It revealed nothing about the processes that produce a living organism from such a mixture.  As our understanding of the complexity of life has increased, that problem has become more difficult over the next 50+ years.</p>
 </div>
 <div class="section" id="even-the-simplest-forms-of-life-are-complex">
-<h4><span class="section-number">5.1.2.3. </span>Even the Simplest Forms of Life are Complex<a class="headerlink" href="#even-the-simplest-forms-of-life-are-complex" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.2.3. </span>Even the Simplest Forms of Life are Complex<a class="headerlink" href="#even-the-simplest-forms-of-life-are-complex" title="Permalink to this headline">#</a></h4>
 <p>In the mid-19th century, a common scientific idea was that hte building material of life was a pulpy, gel-like, structureless material called <a class="reference external" href="https://en.wikipedia.org/wiki/Protoplasm">protoplasm</a>.  In 1857, <a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_Henry_Huxley">Thomas Huxley</a> dredged a “transparent, gelatinous matter” from the sea bottom and concluded it was protoplasm.  If the construction of life was relatively simple, then it would be not surprising if life could be prepared from simple broths of nutrients.  After 150 years of careful study, a very different picture emerged.  A bacterium is far more complex than the most intricate machine constructed by humans.</p>
 </div>
 </div>
 <div class="section" id="the-architecture-of-life">
-<h3><span class="section-number">5.1.3. </span>The Architecture of Life<a class="headerlink" href="#the-architecture-of-life" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.3. </span>The Architecture of Life<a class="headerlink" href="#the-architecture-of-life" title="Permalink to this headline">#</a></h3>
 <div class="figure align-default" id="complexity-life-fig">
 <a class="reference internal image-reference" href="https://openstax.org/apps/archive/20220509.174553/resources/07b21776858173731d2afd4b07d25300ca673a9c"><img alt="complexity scale" src="https://openstax.org/apps/archive/20220509.174553/resources/07b21776858173731d2afd4b07d25300ca673a9c" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">The complexity of life on a logarithmic scale, where lipids and proteins are <span class="math notranslate nohighlight">\({\sim}10-100\times\)</span> larger than an atom.  Most living things are larger than <span class="math notranslate nohighlight">\(1\ {\rm \mu m}\)</span>.  Image Credit: Openstax:<a class="reference external" href="https://openstax.org/books/biology-2e/pages/4-2-prokaryotic-cells">Biology</a>.</span><a class="headerlink" href="#complexity-life-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.1 </span><span class="caption-text">The complexity of life on a logarithmic scale, where lipids and proteins are <span class="math notranslate nohighlight">\({\sim}10-100\times\)</span> larger than an atom.  Most living things are larger than <span class="math notranslate nohighlight">\(1\ {\rm \mu m}\)</span>.  Image Credit: Openstax:<a class="reference external" href="https://openstax.org/books/biology-2e/pages/4-2-prokaryotic-cells">Biology</a>.</span><a class="headerlink" href="#complexity-life-fig" title="Permalink to this image">#</a></p>
 </div>
 <div class="section" id="eukaryotic-cells-have-complex-internal-structure">
-<h4><span class="section-number">5.1.3.1. </span>Eukaryotic Cells have Complex Internal Structure<a class="headerlink" href="#eukaryotic-cells-have-complex-internal-structure" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.3.1. </span>Eukaryotic Cells have Complex Internal Structure<a class="headerlink" href="#eukaryotic-cells-have-complex-internal-structure" title="Permalink to this headline">#</a></h4>
 <p>The complexity of life life is shown over many orders of magnitude in Figure <a class="reference internal" href="#complexity-life-fig"><span class="std std-numref">5.1</span></a>.  A number of distinct features exist at the human level (e.g., limbs, eyes, nose, etc.), where magnification to the organ or tissue level <span class="math notranslate nohighlight">\((100\ {\rm \mu m}-1\ {\rm mm})\)</span> produces some simplification and the cellular level <span class="math notranslate nohighlight">\((10-100\ {\rm \mu m})\)</span> has a wealth of complex structures (e.g., <a class="reference external" href="https://en.wikipedia.org/wiki/Organelle">organelles</a>).  The <a class="reference external" href="https://en.wikipedia.org/wiki/Mitochondrion">mitochondrion</a> is an organelle with intricate detail in its construction (see Fig.  <a class="reference internal" href="#mitochondria-fig"><span class="std std-numref">5.2</span></a>).  At the molecular level, individual proteins emerge and chemical analysis shows that the protein is a chain molecule whose links are amino acids.  A set of twenty related amino acids is used in Earth biology to construct all proteins.  To get a protein with a particular shape and function, it is necessary to connect (encode) the amino acids in a specific order.</p>
 <div class="figure align-default" id="mitochondria-fig">
 <a class="reference internal image-reference" href="https://openstax.org/apps/archive/20220509.174553/resources/00abe6130e466e45f70e9e3b98dca42bdcd1409a"><img alt="mitochondria" src="https://openstax.org/apps/archive/20220509.174553/resources/00abe6130e466e45f70e9e3b98dca42bdcd1409a" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">This electron micrograph shows a mitochondrion through an electron microscope. Image Credit: Openstax:<a class="reference external" href="https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells">Biology</a>.</span><a class="headerlink" href="#mitochondria-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.2 </span><span class="caption-text">This electron micrograph shows a mitochondrion through an electron microscope. Image Credit: Openstax:<a class="reference external" href="https://openstax.org/books/biology-2e/pages/4-3-eukaryotic-cells">Biology</a>.</span><a class="headerlink" href="#mitochondria-fig" title="Permalink to this image">#</a></p>
 </div>
 </div>
 <div class="section" id="bacterial-prokaryotic-cells-are-simpler">
-<h4><span class="section-number">5.1.3.2. </span>Bacterial (Prokaryotic) Cells are Simpler<a class="headerlink" href="#bacterial-prokaryotic-cells-are-simpler" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.3.2. </span>Bacterial (Prokaryotic) Cells are Simpler<a class="headerlink" href="#bacterial-prokaryotic-cells-are-simpler" title="Permalink to this headline">#</a></h4>
 <p>For most of Earth’s history, single-celled organisms were the <em>only</em> form of life.  In seeking an origin for life, the appearance of these forms must be explained.  In a superficial examination, a bacterial cell reveals fewer details than a eukaryotic cell, but a deeper inspection (at higher magnification) reveals many complexities.  Bacterial cells are crafted of large molecules, where many are used in the construction of a eukaryotic cell (e.g., large molecules are proteins and nucleic acids).</p>
 <div class="figure align-default" id="bacterial-fig">
 <a class="reference internal image-reference" href="https://openstax.org/apps/archive/20220509.174553/resources/50163f8ff80f335574f41bfc10cc49a1e87cf9df"><img alt="bacterial cell" src="https://openstax.org/apps/archive/20220509.174553/resources/50163f8ff80f335574f41bfc10cc49a1e87cf9df" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">The features of a typical prokaryotic cell. Flagella, capsules, and pili are not found in all prokaryotes. Image Credit: Openstax:<a class="reference external" href="https://openstax.org/books/biology-2e/pages/22-2-structure-of-prokaryotes-bacteria-and-archaea">Biology</a>.</span><a class="headerlink" href="#bacterial-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.3 </span><span class="caption-text">The features of a typical prokaryotic cell. Flagella, capsules, and pili are not found in all prokaryotes. Image Credit: Openstax:<a class="reference external" href="https://openstax.org/books/biology-2e/pages/22-2-structure-of-prokaryotes-bacteria-and-archaea">Biology</a>.</span><a class="headerlink" href="#bacterial-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>Individual units called <a class="reference external" href="https://en.wikipedia.org/wiki/Nucleotide">nucleotides</a> are strung together in a linear array to construct long chains, where each nucleotide consists of a sugar (deoxyribose in DNA and ribose in RNA), a phosphate group, and a base.  Only four different nucleotide units are combined to construct a nucleic acid.  But what nucleic acids lack in variety, they make up for in size.  In the case of DNA (<em>deoxyribonucleic acid</em>), several million nucleotides are linked huge circle to form the bacterial chromosome.  RNA (<em>ribonucleic acid</em>) does not attain such lengths, but appears in a greater variety of cellular contexts than DNA, and performs many more functions.  Other macromolecules that serve as recognition elements in cellular contacts (signaling), energy storage, and structural materials for the membrane of the cell, which include the</p>
 <ul class="simple">
@@ -979,7 +1070,7 @@ allowfullscreen></iframe>
 </ul>
 </div>
 <div class="section" id="organized-at-the-molecular-level-proteins-nucleic-acids-and-lipids">
-<h4><span class="section-number">5.1.3.3. </span>Organized at the Molecular Level: Proteins, Nucleic Acids, and Lipids<a class="headerlink" href="#organized-at-the-molecular-level-proteins-nucleic-acids-and-lipids" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.3.3. </span>Organized at the Molecular Level: Proteins, Nucleic Acids, and Lipids<a class="headerlink" href="#organized-at-the-molecular-level-proteins-nucleic-acids-and-lipids" title="Permalink to this headline">#</a></h4>
 <p>Historically, biologists used a “top-down” approach to understand life, where anatomical studies of larger (macro-sized) creatures first drew their interest.  Chemists worked in a “bottom-up” fashion and studied the molecular components of life before attempting to explore the larger structures.  Chemically, a bacterial cell is primarily composed of water (70% by weight), which serves as a <a class="reference external" href="https://en.wikipedia.org/wiki/Solvent">solvent</a>.  Hundreds of organic molecules are present, but they comprise only a few percent of the cell (by weight).</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1026,15 +1117,15 @@ allowfullscreen></iframe>
 <p><strong>Lipids</strong> form a boundary, separating the contents of the cell from the external world.   This function prevents the contents of a cell from being dispersed into the broader environment.  This boundary must not be impermeable, where selective admission of nutrients is necessary for metabolic processes, waste needs to be removed, and undesired substances can be ejected.  The process for basic membrane construction is far less rigorous and information-rich than those for proteins and nucleic acids.</p>
 <div class="figure align-default" id="lipid-fig">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Phospholipids_aqueous_solution_structures.svg/833px-Phospholipids_aqueous_solution_structures.svg.png"><img alt="lipids" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Phospholipids_aqueous_solution_structures.svg/833px-Phospholipids_aqueous_solution_structures.svg.png" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Cross section of the different structures that phospholipids can take in a aqueous solution. The circles are the hydrophilic heads and the wavy lines are the fatty acyl side chains. Image Credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Lipid_bilayer">lipid bilayer</a>.</span><a class="headerlink" href="#lipid-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.4 </span><span class="caption-text">Cross section of the different structures that phospholipids can take in a aqueous solution. The circles are the hydrophilic heads and the wavy lines are the fatty acyl side chains. Image Credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Lipid_bilayer">lipid bilayer</a>.</span><a class="headerlink" href="#lipid-fig" title="Permalink to this image">#</a></p>
 </div>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Amphiphile">Amphiphiles</a> contain both hydrophilic (water-loving) and hydrophobic (water-shunning) parts.  When amphiphiles are placed in water, they arrange themselves to that the hydrophilic parts are exposed to the water and the hydrophobic parts cluster inside.  One arrangement is a <a class="reference external" href="https://en.wikipedia.org/wiki/Micelle">micelle</a>, which is a sphere with the hydrophilic groups on the surface and the hydrophobic ones within.  Another is a <a class="reference external" href="https://en.wikipedia.org/wiki/Lipid_bilayer">bilayer</a>, with two aligned layers of amphiphiles arranged in a tail-to-tail structure that resembles a membrane.  A bilayer can also curve to produce a curved structure that resembles a membrane of a cell.  Biological cellular membranes are modified by embedded protein, which control the access of small molecules into the cell.</p>
 </div>
 </div>
 <div class="section" id="central-ideas-about-the-origin-of-life">
-<h3><span class="section-number">5.1.4. </span>Central Ideas About the Origin of Life<a class="headerlink" href="#central-ideas-about-the-origin-of-life" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.4. </span>Central Ideas About the Origin of Life<a class="headerlink" href="#central-ideas-about-the-origin-of-life" title="Permalink to this headline">#</a></h3>
 <div class="section" id="thermodynamics-and-probability">
-<h4><span class="section-number">5.1.4.1. </span>Thermodynamics and Probability<a class="headerlink" href="#thermodynamics-and-probability" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.4.1. </span>Thermodynamics and Probability<a class="headerlink" href="#thermodynamics-and-probability" title="Permalink to this headline">#</a></h4>
 <p>The <a class="reference external" href="https://saturnaxis.github.io/Astrobio/Chapter_02/Physics_and_Astrophysics.html#laws-of-thermodynamics">second law of thermodynamics</a> specifies that spontaneous processes in a closed system are characterized by the conversion of order to disorder.  The entropy of the system (measure of disorder) must increase, but entropy is also associated with probability (i.e., a probability of possible states).  The formation of an organized system from disorder is not forbidden, but highly improbable.  Living systems “pay” for their existence by creating more disorder elsewhere in the system.  For example, they may convert nutrients to simpler chemicals, but the process causes a release of heat to the general environment and increases the disorder of that environment.  <a class="reference external" href="https://en.wikipedia.org/wiki/There_ain%27t_no_such_thing_as_a_free_lunch"><em>There’s no such thing as a free lunch.</em></a></p>
 <p>The spontaneous generation of a living bacterium from small molecules would be near-miraculous due to its interior complexity.  The odds that component atoms within a hot gas could self-assemble into a bacterium are more than astronomical (<span class="math notranslate nohighlight">\(1\ \text{in } 10^{10^{11}}\)</span>; <a class="reference external" href="https://www.google.com/books/edition/_/6xE3AAAAIAAJ?hl=en&amp;sa=X&amp;ved=2ahUKEwiZ7Nvwvez4AhVMEGIAHcFZBFcQ7_IDegQIDxAE">Morowitz 1968</a>).  Matters might improve by thousands of orders of magnitude if we started with an appropriate mixture of small molecular species, but the overall prospect would still be hopeless.  To reduce the improbability, scientists have suggested that life began with only a very limited subset of the components of a bacterial cell.  The hart of the origin-of-life problem lies in finding the way in which the initial functioning system was formed from disorganized chemical mixtures produced by the normal processes of abiotic chemistry.</p>
 <div align="center">
@@ -1046,14 +1137,14 @@ allowfullscreen></iframe>
 </div>
 </div>
 <div class="section" id="separate-problems-origin-of-life-vs-origin-of-organics">
-<h4><span class="section-number">5.1.4.2. </span>Separate Problems: Origin of Life vs. Origin of Organics<a class="headerlink" href="#separate-problems-origin-of-life-vs-origin-of-organics" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.4.2. </span>Separate Problems: Origin of Life vs. Origin of Organics<a class="headerlink" href="#separate-problems-origin-of-life-vs-origin-of-organics" title="Permalink to this headline">#</a></h4>
 <p>In the early 19th century, many chemist felt that the distinction life and non-life lay in the very chemicals used to construct them.  Living system contained carbon and the chemicals in them were called “organic,” while substances considered to be inorganic (with some exceptions) had no carbon.  This distinction was erased in 1828, when <a class="reference external" href="https://en.wikipedia.org/wiki/Friedrich_W%C3%B6hler">Friedrich Wöhler</a> prepared urea from another substance that was classified as organic.</p>
 <p>We now recognize that mixtures of simple organic chemicals are produced in many location off this planet (e.g., carbonaceous chondrites, interstellar dust clouds, cometary tails, and the atmosphere of Titan). The most informative studies have been performed on meteorites, where they represent the products of authentic abiotic processes, and are amenable to detailed analyses in Earth-based laboratories.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Murchison_meteorite">Murchison meteorite</a> has been subjected to extensive analysis.</p>
 <p>The contents of the meteorite are quite complex, where the bulk of the carbon present is in the form of insoluble macromolecules and soluble organic compounds comprise 10-20%.  The most predominant chemical class is organic sulfonic acids, followed by polar aromatic hydrocarbons, and carboxylic acids.  Amino acids occur at levels between <span class="math notranslate nohighlight">\(10-100\)</span> ppm (1-2 orders of magnitudes lower than the aforementioned compounds), and the base components of nucleic acis at about 1 ppm.  Sugars and phosphate esters of all kinds are absent.  More than 70 amino acids have been detected in the Murchison meteorite, but only eight of the twenty needed for Earth-life were among them.</p>
 <p>If we presume that life on Earth began amidst a chaotic chemical mixture, we must look for a pathway by which the smaller components could organize themselves.  Another question arises: <em>How did the components of that mixture come to be present on the early Earth?</em></p>
 </div>
 <div class="section" id="possibilities-for-reduced-organics">
-<h4><span class="section-number">5.1.4.3. </span>Possibilities for Reduced Organics<a class="headerlink" href="#possibilities-for-reduced-organics" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.4.3. </span>Possibilities for Reduced Organics<a class="headerlink" href="#possibilities-for-reduced-organics" title="Permalink to this headline">#</a></h4>
 <p>Underlying the Miller-Urey experiment was the assumption that the primitive atmosphere of the Earth was derived from solar nebula, and was therefore rich in hydrogen.  This explains the atmospheres of the outer Solar System planets, which have reducing atmospheres consisting of molecular hydrogen <span class="math notranslate nohighlight">\(\rm H_2\)</span> but not <span class="math notranslate nohighlight">\(\rm H_2O\)</span>.  Subjecting an atmosphere rich in molecular hydrogen to energy from various sources was expected to give rise to a global “prebiotic soup.”</p>
 <p>However, the current consensus suggests that any primary atmosphere of hydrogen was lost quickly and replaced by a <a class="reference external" href="https://saturnaxis.github.io/Astrobio/Chapter_03/Planetary_Heating_and_Atmospheres.html#history-of-secondary-atmospheres">secondary atmosphere</a> due to outgassing from the planet.  While a prebiotic atmosphere for the early Earth may still be favored by some prebiotic chemists, the weight of the geochemical opinion favors and early (at least by the time life arose) atmosphere dominated by heavier gases.  This is in accord with current observations of volcanic emissions.</p>
 <p>Some organics could be supplied through infall of comets and meteorites, but the total quantity from these sources are expected to be small compared to the total volume required for global life.  It is not necessary to supply the entire globe with organics to furnish raw materials for the origin of life.  Some very specialized and favorable local environments may have been sufficient for the purpose, which was a view expressed by Darwin in 1871.</p>
@@ -1063,16 +1154,16 @@ allowfullscreen></iframe>
 </div>
 </div>
 <div class="section" id="replicator-first-theories">
-<h3><span class="section-number">5.1.5. </span>Replicator-first Theories<a class="headerlink" href="#replicator-first-theories" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.5. </span>Replicator-first Theories<a class="headerlink" href="#replicator-first-theories" title="Permalink to this headline">#</a></h3>
 <p>The discovery of the structure of DNA showed how hereditary material was stored, where the replicator DNA was at the center of our understanding of life.  The beauty of the double helix, which demonstrated how both reproduction and information storage could be carried out at the molecular level, convinced many in the field that nucleic acids were at the center of life.</p>
 <div class="section" id="advantages-of-the-replicator-theory">
-<h4><span class="section-number">5.1.5.1. </span>Advantages of the Replicator Theory<a class="headerlink" href="#advantages-of-the-replicator-theory" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.5.1. </span>Advantages of the Replicator Theory<a class="headerlink" href="#advantages-of-the-replicator-theory" title="Permalink to this headline">#</a></h4>
 <p>Darwin’s theory of natural selection provided a path for the evolution of simple cells to humans.  It could be extended so that a replicator could also evolve by natural selection, but in an environment where molecules reproduced, mutated, and survived according to their ability to further reproduce in the environment.  To explain the origin of life, one only had to account for the origin of the first replicator.</p>
 <p>Considerable support for finding the first replicator was provided by using the RNA of a virus called <span class="math notranslate nohighlight">\(\rm Q\beta\)</span> in experiments by <a class="reference external" href="https://en.wikipedia.org/wiki/Sol_Spiegelman">Sol Spiegelman</a> and his group in the 1960s and 1980s.  <span class="math notranslate nohighlight">\(\rm Q\beta\)</span> uses RNA rather than DNA as its genetic material, with replication carried out in a manner described by Watson and Crick.  In the presence of the appropriate polymerase enzyme and the four necessary building blocks (nucleoside triphosphates), the RNA can be replicated in a test tube.  The synthesized RNA can act as a template for producing more RNA, as long as the supplies of building blocks holds up.  Spiegelman’s group was able to  follow this process for a time equivalent of over 70 RNA “generations.”</p>
 <p>In one thought-provoking experiment, Spiegelman’s group added a drug that bound to certain sites on the RNA, which greatly slowed the copying rate.  After several generations the favored binding place of the drug had been destroyed by three mutations in the product RNA.  The product RNA had replicated more rapidly than other competing variations of the RNA, and its descendents soon became an overwhelming majority of the colony.  This process represented Darwinian evolution at the molecular level.</p>
 </div>
 <div class="section" id="a-problem-with-a-solution">
-<h4><span class="section-number">5.1.5.2. </span>A Problem with a Solution<a class="headerlink" href="#a-problem-with-a-solution" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.5.2. </span>A Problem with a Solution<a class="headerlink" href="#a-problem-with-a-solution" title="Permalink to this headline">#</a></h4>
 <p><strong>Problem</strong>: <em>A naked replicator could carry information, but could not carry out tasks today performed by proteins.</em>  The RNA replicator concept could not be extended immediately to the origin of life because a protein enzyme was needed for the copying to take place.  <a class="reference external" href="https://en.wikipedia.org/wiki/Leslie_Orgel">Leslie Orgel</a> described this paradox as “the chicken or the egg” problem.  A nucleic acid could be copied, and evolve through mutation, but could not by itself carry out the necessary catalytic functions.  Nucleic acids and protein both appear necessary for the conduct of life, but it is difficult to account for the appearance of either substance on the early Earth.  The abiotic formation of both together seemed out of the question.</p>
 <p><strong>Solution</strong>: <em>Life began with an “RNA World.”</em> <a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_Cech">Thomas Cech</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Sidney_Altman">Sidney Altman</a> showed that RNA molecules could carry out some of the functions of proteins.  The term <em>RNA World</em> was applied to describe the vision of <a class="reference external" href="https://en.wikipedia.org/wiki/Walter_Gilbert">Walter Gilbert</a>, where RNA alone performed all the key functions of life before proteins arrived on the scene.  The elegant way in which catalytic RNA appeared to solve the “chicken and egg” paradox led many to the conviction that RNA World existed in the earliest days of life on Earth.  Over several decades, biochemists developed techniques to demonstrate the ability of RNA to perform the actions of proteins.  However, this solution says little about the origin of life on Earth due to the absence of chemists and high-tech labs on the early Earth, and the extreme improbability of the abiotic synthesis of even a single functioning RNA molecule under realistic natural conditions.</p>
 <div align="center">
@@ -1084,7 +1175,7 @@ allowfullscreen></iframe>
 </div>
 </div>
 <div class="section" id="just-a-problem">
-<h4><span class="section-number">5.1.5.3. </span>Just a Problem<a class="headerlink" href="#just-a-problem" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.1.5.3. </span>Just a Problem<a class="headerlink" href="#just-a-problem" title="Permalink to this headline">#</a></h4>
 <p><strong>Problem</strong>: <em>RNA is too complicated to form spontaneously.</em>  Gilbert’s seminal paper described RNA molecules catalyzing their own assembly from a “nucleotide soup.”  It was widely presumed that nucleotides were readily available on the early Earth.  However, this assumption has not been supported by evidence.  There are significant difficulties in synthesizing RNA by considering the likely abiotic availability of <em>adenosine</em>.  This substance has not been detected in any quantity within a Miller-Urey type experiment or a meteorite.  To get the necessary adenosine, it has been suggested that the base <a class="reference external" href="https://en.wikipedia.org/wiki/Adenine">adenine</a> and the sugar ribose were formed separately, brought together, and combined.  <em>How likely are these events?</em></p>
 <p><strong>Ribose formation</strong>: The sugar ribose is the essential backbone component of RNA, where a reaction with formaldehyde has been generally cited as a plausible source of ribose on the early Earth.  However, the ribose soon decomposes.  The half-life for decomposition is around 73 minutes in an environment at <span class="math notranslate nohighlight">\(100\ {\rm ^\circ C}\)</span> at a pH of 7, and 44 years at <span class="math notranslate nohighlight">\(0\ {\rm ^\circ C}\)</span>.  Ribose yields can be improved by adding specific minerals, careful control of experimental conditions, and by the input of pure reagents.  But, each such specification escalates the improbability that such conditions could naturally occur.</p>
 <p><strong>Adenine formation</strong>: Adenine can be prepared as long as the concentration of <span class="math notranslate nohighlight">\(\rm HCN\)</span> remains sufficiently high (<span class="math notranslate nohighlight">\(0.1\)</span> Molarity (<span class="math notranslate nohighlight">\(\rm M\)</span>)).  One estimate for a maximum plausible <span class="math notranslate nohighlight">\(\rm HCN\)</span> concentration in a prebiotic ocean of Earth has been <span class="math notranslate nohighlight">\(4\times 10^{-5}\ {\rm M}\)</span>.  A remedy proposed for this situation was that the adenine was produced in lakes that froze seasonally, which concentrated the <span class="math notranslate nohighlight">\(\rm HCN\)</span>.  However, there are several other necessary ingredients (e.g., ammonia), and the introduction of formaldehyde that tended to consume the <span class="math notranslate nohighlight">\(\rm HCN\)</span>.</p>
@@ -1092,17 +1183,17 @@ allowfullscreen></iframe>
 </div>
 </div>
 <div class="section" id="pre-rna-world">
-<h3><span class="section-number">5.1.6. </span>Pre-RNA World<a class="headerlink" href="#pre-rna-world" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.6. </span>Pre-RNA World<a class="headerlink" href="#pre-rna-world" title="Permalink to this headline">#</a></h3>
 <p>A number of scientists felt that the formation of the first replicator was coincident with the origin of life sought an alternative because they were unhappy with the prebiotic synthesis of RNA.  The task of the pre-RNA World advocates was to identify another polymeric substance that possessed the catalytic and self-replication abilities of RNA, while begin a more plausible product of abiotic synthesis.  Ideally this substance would form a stable double helix with an RNA strand to provide a mechanism for heritability (i.e., information transfer) during the course of evolution.</p>
 <p>Two candidate structures were synthesized as part of a comprehensive effort to prepare analogs of DNA and RNA. One extensively investigated example was p-RNA (pyranosyl-RNA), which retained the sugar ribose, but replaced the five membered ring in RNA with a six-membered (pyranosyl) ring (see Fig. <a class="reference internal" href="#rna-fig"><span class="std std-numref">5.5</span></a>).  Since free ribose in solution prefers a six-membered ring, the prospects for the abiotic synthesis of p-RNA would appear marginally better than RNA.  Another candidate RNA precursor is TNA (threose nucleic acid), which contains only four carbons, and may be more accessible to abiotic synthesis than ribose (see <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3331698/">Robertson &amp; Joyce (2012)</a> for more details).  A TNA strand will cross-pair with both RNA and DNA.  Despite these advantages, there are problems with sugar instability and other difficulties that apply to the abiotic synthesis of any sugar-based replicator.</p>
 <div class="figure align-default" id="rna-fig">
 <a class="reference internal image-reference" href="https://www.ncbi.nlm.nih.gov/books/NBK26876/bin/ch6f93.jpg"><img alt="RNA" src="https://www.ncbi.nlm.nih.gov/books/NBK26876/bin/ch6f93.jpg" style="width: 450px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.5 </span><span class="caption-text">Like RNA, both p-RNA and PNA can form double helices through complementary base-pairing, and each could therefore in principle serve as a template for its own synthesis. Image Credit: <a class="reference external" href="https://www.ncbi.nlm.nih.gov/books/NBK26876/">Alberts et al. (2002)</a>.</span><a class="headerlink" href="#rna-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.5 </span><span class="caption-text">Like RNA, both p-RNA and PNA can form double helices through complementary base-pairing, and each could therefore in principle serve as a template for its own synthesis. Image Credit: <a class="reference external" href="https://www.ncbi.nlm.nih.gov/books/NBK26876/">Alberts et al. (2002)</a>.</span><a class="headerlink" href="#rna-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>A third example of an RNA precursor is PNA (peptidyl nucleic acid), which escapes the complications of carbohydrate (sugar) chemistry.  The structure contains two alternating units and has no chiral center.  PNA can form stable double helices with itself, and it can cross-pair with RNA and DNA.  The evidence supporting PNA includes the traces of the fundamental repeating unit of the backbone were formed in a Miller-Urey spark discharge experiment, but at <span class="math notranslate nohighlight">\(&lt;0.01\%\)</span> of the glycine.  It seems unlikely that the amount of PNA backbone component on the early Earth would approach that of its much simpler constituent, glycine.</p>
 </div>
 <div class="section" id="metabolism-first-theories">
-<h3><span class="section-number">5.1.7. </span>Metabolism-first Theories<a class="headerlink" href="#metabolism-first-theories" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.1.7. </span>Metabolism-first Theories<a class="headerlink" href="#metabolism-first-theories" title="Permalink to this headline">#</a></h3>
 <p>If replicator theories are set aside as extremely improbable (not impossible) scenarios for the origin of life, then a surprising conclusion emerges: in the beginning, life functioned without proteins, nucleic acids, and other macromolecules that dominate the activities of present cells.  Small molecules carried out the processes of catalysis, information storage, and reproduction using energy-driven cycles of chemical reactions.  In metabolism-first theories, a number of alternatives are presented for how the small molecules carry out basic life processes.</p>
 <p><strong>Information is stored in the mixture</strong>: A list storing all the information like DNA may be unnecessary.  A set of molecules within a primitive cellular compartment on the early Earth would carry their own heredity.  An informational system of this type has been called a “compositional genome” <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC18166/">(Segré, Ben-Eli, &amp; Lancet 2000)</a>.</p>
 <p><strong>Reproduction is carried out by splitting the compartment</strong>: In the absence of a list, a primitive replicator-free cell could reproduce by collecting a duplicate set of its contents from the environment, and then splitting in two.  Improved ingredients could also be collected from the environment, which would be the equivalent of a mutation.</p>
@@ -1121,16 +1212,16 @@ allowfullscreen></iframe>
 </div></div>
 </div>
 <div class="section" id="the-earliest-records-of-life-on-earth">
-<h2><span class="section-number">5.2. </span>The Earliest Records of Life on Earth<a class="headerlink" href="#the-earliest-records-of-life-on-earth" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.2. </span>The Earliest Records of Life on Earth<a class="headerlink" href="#the-earliest-records-of-life-on-earth" title="Permalink to this headline">#</a></h2>
 <div class="section" id="problems-with-the-record">
-<h3><span class="section-number">5.2.1. </span>Problems with the Record<a class="headerlink" href="#problems-with-the-record" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.1. </span>Problems with the Record<a class="headerlink" href="#problems-with-the-record" title="Permalink to this headline">#</a></h3>
 <p>Astrobiology has only a single successful experiment in planetary life to investigate, Earth life.  The history of terrestrial life must act as the archetype for astrobiological models of the appearance and radiation of life anywhere in the Universe, albeit an ever more contingent and unique one.  It could be argued that all habitable planets experienced similar environmental constraints and pathways of physical and chemical development.  Then, the process of biological initiation elsewhere should be broadly reminiscent of Earth-like life.  If so, astrobiology is saved from the challenges of examining things far away, but is instead faced with the difficulties of examining events here long ago (i.e., trading deep space for deep time).  Figure <a class="reference internal" href="#geologic-timescales-fig"><span class="std std-numref">5.6</span></a> illustrates the two versions of geologic timeline along with some events from geologic history.</p>
 <div class="figure align-default" id="geologic-timescales-fig">
 <a class="reference internal image-reference" href="../_images/Geologic_Timescales.png"><img alt="Geologic Timescales" src="../_images/Geologic_Timescales.png" style="width: 700px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.6 </span><span class="caption-text">(A) The current Precambrian time scale from the International Commission on Stratigraphy, based on <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/0301926886900318">Plumb and James (1986)</a> and <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/0301926886900318">Plumb (1991)</a> (and including the 2014/15 revision of the base of the Cryogenian Period to c. 720 Ma); (B) a proposed revised Precambrian time scale using geologic events <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/B9780444594259000160">(Van Kranendonk et al., 2012)</a>. Image Credit: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/B9780128243602000164">Strachan et al. (2020)</a>.</span><a class="headerlink" href="#geologic-timescales-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.6 </span><span class="caption-text">(A) The current Precambrian time scale from the International Commission on Stratigraphy, based on <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/0301926886900318">Plumb and James (1986)</a> and <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/0301926886900318">Plumb (1991)</a> (and including the 2014/15 revision of the base of the Cryogenian Period to c. 720 Ma); (B) a proposed revised Precambrian time scale using geologic events <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/B9780444594259000160">(Van Kranendonk et al., 2012)</a>. Image Credit: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/B9780128243602000164">Strachan et al. (2020)</a>.</span><a class="headerlink" href="#geologic-timescales-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>The origin and early evolutionary history of terrestrial life is poorly known, in addition to poor constraints on the environmental conditions of the early Earth.  There are several reasons for this.</p>
-<ol>
+<ol class="arabic">
 <li><p><strong>Ancient rocks are rare</strong>: Almost all potential information about the first half of Earth’s history is contained in geological materials.  Such rocks have been mostly hidden or destroyed by geological processes (e.g., erosion, burial, or subduction).  Some rocks from the early Earth were ejected into space by catastrophic meteorite impacts, of which there were plenty during the first billion years of Earth history.  Both geological or impact mechanisms are viable candidates for the destruction of the earliest crust.</p></li>
 <li><p><strong>Metamorphism and/or deformation damages the information content of rocks</strong>:  Biological signatures are fragile, usually surviving only mild metamorphism and moderate deformation.  On a tectonically active planet, the cumulative probability of deep burial or intense folding steadily increases over time.  Radioactive heating was greater on the Archean Earth (2.5-4 Gyr ago), and tectonic activity may have been more intense, with post-depositional modification of rocks correspondingly more likely.  The effects of shock metamorphism during meteorite impacts could have also been severe, judging by the cratering on the Moon and Mars.  Temperatures above <span class="math notranslate nohighlight">\(300\ {\rm ^\circ C}\)</span> are significantly destructive to most chemical biosignatures.  Therefore rare, ancient rocks are even more rare to contain contain astrobiologically important information.</p>
 <div class="admonition note">
@@ -1145,32 +1236,32 @@ allowfullscreen></iframe>
 <p>Because of all these shortcomings, every claimed Archean fossil must be subjected to strict scrutiny, if only because of the extreme improbability of their survival.  Despite these caveats, accessible outcrops of well-preserved Archean rocks for paleobiological and paleo-environmental study still do exist.</p>
 <div class="figure align-default" id="archean-rocks-fig">
 <a class="reference internal image-reference" href="https://ars.els-cdn.com/content/image/1-s2.0-S0301926821004150-gr1.jpg"><img alt="Archean rocks" src="https://ars.els-cdn.com/content/image/1-s2.0-S0301926821004150-gr1.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.7 </span><span class="caption-text">World map showing the distribution of Archean cratons and modern subduction zones. Image Credit: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0301926821004150#f0005">Sotiriou et al. (2022)</a>.</span><a class="headerlink" href="#archean-rocks-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.7 </span><span class="caption-text">World map showing the distribution of Archean cratons and modern subduction zones. Image Credit: <a class="reference external" href="https://www.sciencedirect.com/science/article/pii/S0301926821004150#f0005">Sotiriou et al. (2022)</a>.</span><a class="headerlink" href="#archean-rocks-fig" title="Permalink to this image">#</a></p>
 </div>
 </div>
 <div class="section" id="types-of-evidence">
-<h3><span class="section-number">5.2.2. </span>Types of Evidence<a class="headerlink" href="#types-of-evidence" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.2. </span>Types of Evidence<a class="headerlink" href="#types-of-evidence" title="Permalink to this headline">#</a></h3>
 <div class="section" id="microfossils">
-<h4><span class="section-number">5.2.2.1. </span>Microfossils<a class="headerlink" href="#microfossils" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.2.1. </span>Microfossils<a class="headerlink" href="#microfossils" title="Permalink to this headline">#</a></h4>
 <p>Microfossils are the preserved remains of microbial organisms, which are exclusively organic-walled <a class="reference external" href="https://en.wikipedia.org/wiki/Prokaryote">prokaryotes</a> on the early Earth. These micron-sized lifeforms are only evident in the second half of Earth’s geological record.  The oldest fossil visible to the unaided eye (<a class="reference external" href="https://en.wikipedia.org/wiki/Grypania"><em>Grypania</em></a>), which is found in a carbonaceous compression that shows a spiral shaped seaweed about <span class="math notranslate nohighlight">\(1\ {\rm cm}\)</span> across and appeared <span class="math notranslate nohighlight">\({\sim}1.85\ {\rm Ga}\)</span>.  The oldest suspected microfossils were found in the <a class="reference external" href="https://en.wikipedia.org/wiki/Nuvvuagittuq_Greenstone_Belt">Nuvvuagittuq Supracrustal Belt</a> in Québec and appear in rocks dated to 4.28-3.75 Ga (<a class="reference external" href="https://www.science.org/doi/full/10.1126/sciadv.abm2296">Papineau et al. (2022)</a>).  Discoveries made in ancient rocks typically carry a great deal of controversy, where the sample for Canada is no exception.</p>
-<div class="sphinx-bs container pb-4 docutils">
-<div class="row docutils">
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row sd-g-3 sd-g-xs-3 sd-g-sm-3 sd-g-md-3 sd-g-lg-3 docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
 <div class="figure align-default" id="grypania-fig">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Grypania_spiralis.JPG/1280px-Grypania_spiralis.JPG"><img alt="Grypania" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Grypania_spiralis.JPG/1280px-Grypania_spiralis.JPG" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.8 </span><span class="caption-text">The microfossil <em>Grypania</em> from the <span class="math notranslate nohighlight">\({\sim}2.2\)</span> Ga Negaunee Formation in Michigan, USA. Image Credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Grypania">Grypania</a>.</span><a class="headerlink" href="#grypania-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.8 </span><span class="caption-text">The microfossil <em>Grypania</em> from the <span class="math notranslate nohighlight">\({\sim}2.2\)</span> Ga Negaunee Formation in Michigan, USA. Image Credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Grypania">Grypania</a>.</span><a class="headerlink" href="#grypania-fig" title="Permalink to this image">#</a></p>
 </div>
 </div>
 </div>
 </div>
-<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
-<div class="card w-100 shadow docutils">
-<div class="card-body docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
 <div class="figure align-default" id="eoentophysalis-fig">
 <a class="reference internal image-reference" href="../_images/Eoentophysalis.png"><img alt="Eoentophysalis" src="../_images/Eoentophysalis.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.9 </span><span class="caption-text">The cyanobacterium <em>Eoentophysalis</em> from the <span class="math notranslate nohighlight">\({\sim}1.9\)</span> Ga Belcher Group, Canada. Scale bar = <span class="math notranslate nohighlight">\(20\ {\rm \mu m}\)</span>. Image Credit: <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6880289/">Demoulin et al. (2019)</a>.</span><a class="headerlink" href="#eoentophysalis-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.9 </span><span class="caption-text">The cyanobacterium <em>Eoentophysalis</em> from the <span class="math notranslate nohighlight">\({\sim}1.9\)</span> Ga Belcher Group, Canada. Scale bar = <span class="math notranslate nohighlight">\(20\ {\rm \mu m}\)</span>. Image Credit: <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6880289/">Demoulin et al. (2019)</a>.</span><a class="headerlink" href="#eoentophysalis-fig" title="Permalink to this image">#</a></p>
 </div>
 </div>
 </div>
@@ -1196,16 +1287,16 @@ allowfullscreen></iframe>
 <p>The microfossil record leaves us with no certain members of modern microbial lineages before <span class="math notranslate nohighlight">\({\sim}2.1\ {\rm Ga}\)</span> and no certain preserved cells before <span class="math notranslate nohighlight">\({\sim}2.55\ {\rm Ga}\)</span>, but plenty of possible and probable microbial remain some older rocks dating back as far as <span class="math notranslate nohighlight">\({\sim}3.45\ {\rm Ga}\)</span>.  The record also shows how easy it is to mistake abiogenic artifacts and younger contaminants for genuine Archean microfossils and illustrates that careful geology and converging lines of evidence are needed in order to confident of biogenicity an syngenicity.  In particular, signs of biological behavior and indications of metamorphic grade have proved to be the most powerful tools for distinguishing reliable results from the misleading.</p>
 </div>
 <div class="section" id="stromatolites">
-<h4><span class="section-number">5.2.2.2. </span>Stromatolites<a class="headerlink" href="#stromatolites" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.2.2. </span>Stromatolites<a class="headerlink" href="#stromatolites" title="Permalink to this headline">#</a></h4>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Stromatolite">Stromatolites</a> are laminated sedimentary structures accreted as a result of microbial growth, movement, or metabolism.  They are trace fossils of microbial activity and are thus less direct evidence of life than microfossils.  Their shapes vary, but they often show a predominance of convex-upward <a class="reference external" href="https://en.wiktionary.org/wiki/flexure">flexures</a> forming domes or columns, although some conical forms show the converse.</p>
 <p>Several scales of flexuring and layering give them a complex internal structure, and a pronounced irregularity of flexuring and layering makes them look wrinkly.  If accreted by photosynthetic or otherwise Sun-loving microbes, the layers show thickening flexure crests because the constructing microbes grow more successfully on topographic highs where there is more light.  The constructing microbes accrete sediment by three distinct processes.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p><em>Trapping</em> occurs when erect microbial filaments baffle passing water currents, causing <a class="reference external" href="https://en.wiktionary.org/wiki/entrain">entrained</a> sediment to be deposited, just as a carpet traps dirt.</p></li>
 <li><p><em>Binding</em> happens when passively deposited sediment is caught up in and overgrown by a microbial mat, either by lodging in irregularities in the mat or getting stuck in the extracellular mucilage secreted by the microbes.</p></li>
 <li><p><em>Precipitation</em> results from microbial photosynthesis removing <span class="math notranslate nohighlight">\(\rm CO_2\)</span> from the surrounding water, causing calcium carbonate to be deposited as the equilibrium of the following reaction is forced towards the right side because of product depletion:</p></li>
 </ol>
 <div class="math notranslate nohighlight" id="equation-calcium-rxn">
-<span class="eqno">(5.1)<a class="headerlink" href="#equation-calcium-rxn" title="Permalink to this equation">¶</a></span>\[{\rm Ca^{2+}} + 2{\rm HCO_3^-} \leftrightarrow {\rm CaCO_3} + {\rm CO_2\ (gas)} + {\rm H_2O}.\]</div>
+<span class="eqno">(5.1)<a class="headerlink" href="#equation-calcium-rxn" title="Permalink to this equation">#</a></span>\[{\rm Ca^{2+}} + 2{\rm HCO_3^-} \leftrightarrow {\rm CaCO_3} + {\rm CO_2\ (gas)} + {\rm H_2O}.\]</div>
 <p>There are several classification schemes for stromatolites, with the principal ones being a binomial, quasi-biological taxonomic system like that used for animal trace fossils and a morphological system like that used for sedimentary structures.  Proponents for the</p>
 <ul class="simple">
 <li><p>binomial system emphasize its usefulness for biostratigraphy, with characteristic stromatolites classified for various Proterozoic time intervals on several continents.</p></li>
@@ -1215,7 +1306,7 @@ allowfullscreen></iframe>
 <p>Many assemblages of stromatolites are now known from rocks older than <span class="math notranslate nohighlight">\({\sim}2.5\ {\rm Ga}\)</span>.  Those of late Archean age (<span class="math notranslate nohighlight">\(&lt;3\ {\rm Ga}\)</span>) are widely regarded as showing strong evidence of biological activity during their formation (see Fig. <a class="reference internal" href="#stromatolite-fig"><span class="std std-numref">5.10</span></a>).  As well as the large-scale structural features typical of biogenic accretion, stromatolites can have precipitate-filled gas bubbles produced by metabolic activity, tufted layers formed by gliding filaments congregating on topographic high points, and carpet-like textures of vertically oriented filaments thickening on substrate highs.  As a result, there can be little doubt that these structures were accreted by a community of microbes that responded in some way to sunlight.</p>
 <div class="figure align-default" id="stromatolite-fig">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Stromatolithe_Pal%C3%A9oarch%C3%A9en_-_MNHT.PAL.2009.10.1.jpg/1280px-Stromatolithe_Pal%C3%A9oarch%C3%A9en_-_MNHT.PAL.2009.10.1.jpg"><img alt="Stromatolite" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Stromatolithe_Pal%C3%A9oarch%C3%A9en_-_MNHT.PAL.2009.10.1.jpg/1280px-Stromatolithe_Pal%C3%A9oarch%C3%A9en_-_MNHT.PAL.2009.10.1.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.10 </span><span class="caption-text">Stromatolites are formed over the years by mats (1-10 mm in thickness) of microorganisms (cyanobacteria among others) found in shallow, mainly marine waters. The microorganisms precipitate mineral particles, which makes the mat to thicken, but only the upper part survives. Most stromatolites display characteristically layered structures. Only the layers are visible to the naked eye. Locality: Strelley Pool Chert (SPC) (Pilbara Craton) - Western Australia. Image Credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Stromatolite">stromatolite</a>.</span><a class="headerlink" href="#stromatolite-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.10 </span><span class="caption-text">Stromatolites are formed over the years by mats (1-10 mm in thickness) of microorganisms (cyanobacteria among others) found in shallow, mainly marine waters. The microorganisms precipitate mineral particles, which makes the mat to thicken, but only the upper part survives. Most stromatolites display characteristically layered structures. Only the layers are visible to the naked eye. Locality: Strelley Pool Chert (SPC) (Pilbara Craton) - Western Australia. Image Credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Stromatolite">stromatolite</a>.</span><a class="headerlink" href="#stromatolite-fig" title="Permalink to this image">#</a></p>
 </div>
 <div align="center">
 <iframe width="560" height="315"
@@ -1232,12 +1323,12 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </div></div>
 <div class="section" id="carbon-isotopes">
-<h4><span class="section-number">5.2.2.3. </span>Carbon Isotopes<a class="headerlink" href="#carbon-isotopes" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.2.3. </span>Carbon Isotopes<a class="headerlink" href="#carbon-isotopes" title="Permalink to this headline">#</a></h4>
 <p>Both the microfossil and stromatolite records of the Archean are very patchy.  A more continuous record of Archean biology is preserved in a less direct way: in <em>isotopic chemofossils</em>, particularly the carbon isotope ratios of sedimentary rocks.  Autotrophic metabolisms that use <span class="math notranslate nohighlight">\(\rm CO_2\)</span> for manufacturing cellular carbon compounds preferentially incorporate the light stable isotope of carbon <span class="math notranslate nohighlight">\(\rm ^{12}C\)</span> over the heavy <span class="math notranslate nohighlight">\(\rm ^{13}C\)</span> into their synthesized organic matter.  Any sedimentary kerogen (iron oxides) derived from such organisms will inherit this isotopic fractionation.</p>
 <p>Reflecting the biological concentration of <span class="math notranslate nohighlight">\(\rm ^{12}C\)</span>, sedimentary carbonate that is deposited from water bodies inhabited by autotrophs will consequently be depleted in <span class="math notranslate nohighlight">\(\rm ^{12}C\)</span>, or relatively enriched in <span class="math notranslate nohighlight">\(\rm ^{13}C\)</span>.  On Modern Earth, organic carbon has a carbon isotopic value (called <span class="math notranslate nohighlight">\(\delta \rm ^{13}C_{org}\)</span>) that averages around -22‰ (i.e., depleted in <span class="math notranslate nohighlight">\(\rm ^{13}C\)</span> by 22 parts per thousand relative to an arbitrary standard), where carbonate has a <span class="math notranslate nohighlight">\(\delta \rm ^{13}C_{carb}\)</span> of about 0‰ and the entire Earth is near -6‰.</p>
 <p>Unfortunately, there are some complications to this simple picture.  Fluctuations in the fractionation record might be expected to appear at times when the burial ratio of sedimentary kerogen to carbonate varies or when the mean autotrophic fractionation between organic and inorganic carbon <span class="math notranslate nohighlight">\(\Delta_{\rm C}\)</span> varies.  It appears that now is a somewhat unusual time in EArth history with very low <span class="math notranslate nohighlight">\(\Delta_{\rm C}\)</span>.  This may have resulted from declining atmospheric <span class="math notranslate nohighlight">\(\rm pCO_2\)</span> associated with the onset and growth of glaciers.  Overall it seems reasonable to assume that a global carbon cycle regulates the available carbon based on autotrophy of both independent microbes and endosymbiotic microbes (e.g., chloroplasts in plants and algae).</p>
 <p>When extrapolating back to more ancient rocks, one must consider a few complicating factors.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>Older rocks tend to be metamorphosed, which contain a low <span class="math notranslate nohighlight">\(\Delta_{\rm C}\)</span> that is indistinguishable from non-biologic fractionation.</p></li>
 <li><p><span class="math notranslate nohighlight">\(\rm ^{13}C_{org}\)</span> can shift to heavier values at lower metamorphic grades becaus of loss of light hydrocarbons.</p></li>
 <li><p>Isotopically light hydrocarbons can migrate into ancient sedimentary rock and become solidified (i.e., contamination).</p></li>
@@ -1253,49 +1344,49 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </div></div>
 <div class="section" id="sulfur-isotopes">
-<h4><span class="section-number">5.2.2.4. </span>Sulfur Isotopes<a class="headerlink" href="#sulfur-isotopes" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.2.4. </span>Sulfur Isotopes<a class="headerlink" href="#sulfur-isotopes" title="Permalink to this headline">#</a></h4>
 <p>Some microbial metabolic processes also fractionate the stable isotopes of sulfur, <span class="math notranslate nohighlight">\(\rm ^{32}S\)</span> and <span class="math notranslate nohighlight">\(\rm ^{34}S\)</span>.  In particular, sulfate reduction for metabolic purposes rather than for biosynthesis can impart a large (<span class="math notranslate nohighlight">\(-10\)</span>‰ to <span class="math notranslate nohighlight">\(-45\)</span>‰) fractionation in favor of the light isotope.  This reaction, which can use either organic carbon:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ab796332-d86f-43d0-b659-b568a13655d3">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-ab796332-d86f-43d0-b659-b568a13655d3" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-43365ecf-9949-4696-a105-4a22af493e2a">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-43365ecf-9949-4696-a105-4a22af493e2a" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\rm SO_4^{2-}} + 2{\rm H^+} + 2{\rm CH_2O} \rightarrow {\rm H_2S} + 2{\rm CO_2} + 2{\rm H_2O},
 \end{align}\]</div>
 <p>or molecular hydrogen:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e884d975-0e7d-4746-85ef-15a306755f8e">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-e884d975-0e7d-4746-85ef-15a306755f8e" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-989e4e5c-5812-4e60-ac36-ccf7b09163ae">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-989e4e5c-5812-4e60-ac36-ccf7b09163ae" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\rm SO_4^{2-}} + 2{\rm H^+} + 4{\rm H_2} \rightarrow {\rm H_2S} + 4{\rm H_2O},
 \end{align}\]</div>
 <p>as an electron donor during the reduction of sulfate and only takes place in anaerobic (oxygen-poor) settings.  The fractionation is preserved in the geologic record when the metabolic product hydrogen sulfide reacts with dissolved ferrous ion during early <a class="reference external" href="https://en.wikipedia.org/wiki/Diagenesis">diagenesis</a> to form sedimentary pyrite.  Though not particularly abundant or widely distributed in sedimentary rocks, such pyrite is till useful as a tracer of ancient biological activity because it is relatively immune to metamorphic resetting of isotopes.  However, evidence ot the isotopic composition of seawater sulfate is only rarely preserved in rocks, principally in evaporitic sulfate minerals (e.g., gypsum and anhydrite), or in trace quantities of carbonate minerals.  Thus it is usually impossible to determine directly the <span class="math notranslate nohighlight">\(\Delta_{\rm S}\)</span> (analogous to <span class="math notranslate nohighlight">\(\Delta_{\rm C}\)</span>) of ancient sediments, weakening the biological inferences that can be drawn from this isotopic system.</p>
 </div>
 <div class="section" id="nitrogen-isotopes">
-<h4><span class="section-number">5.2.2.5. </span>Nitrogen Isotopes<a class="headerlink" href="#nitrogen-isotopes" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.2.5. </span>Nitrogen Isotopes<a class="headerlink" href="#nitrogen-isotopes" title="Permalink to this headline">#</a></h4>
 <p>Nitrogen is an essential nutrient for all living things, as it is a key constituent of the amino acids of proteins and the bases of nucleic acids.  It has two stable isotopes: <span class="math notranslate nohighlight">\(\rm ^{14}N\)</span> and <span class="math notranslate nohighlight">\(\rm ^{15}N\)</span>, and predominantly resides in a single reservoir, the atmosphere, as <span class="math notranslate nohighlight">\({\rm N_2}\)</span> gas.  However, its <a class="reference external" href="https://saturnaxis.github.io/Astrobio/Chapter_04/Life_Requirements.html#biogeochemical-cycles">biogeochemical cycle</a> is more complex than either carbon or sulfur and is consequently more difficult to decode from sedimentary isotopic ratios.  Isotopic compositions in the two main crustal repositories of nitrogen, organic matter and ammonium ions in clays and micas, probably closely reflect their biological parents, particularly at lower metamorphic grades.</p>
 <p>There are four principal steps in the biogeochemical cycle (see Fig. <a class="reference internal" href="../Chapter_04/Life_Requirements.html#nitrogen-cycle-fig"><span class="std std-numref">4.7</span></a>), but only two of them influence nitrogen isotopic ratios.  Atmospheric <span class="math notranslate nohighlight">\(\rm N_2\)</span> gas is relatively nonreactive and can only be incorporated into organic matter after fixation into ammonia <span class="math notranslate nohighlight">\(\rm NH_3\)</span>.  This reaction,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6fe03cbd-6e2e-412b-933d-4e7121080a35">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-6fe03cbd-6e2e-412b-933d-4e7121080a35" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a0abb381-746f-4f78-87fc-194ad5becc1d">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-a0abb381-746f-4f78-87fc-194ad5becc1d" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\rm N_2} + 3{\rm H_2} \rightarrow 2 {\rm NH_3},
 \end{align}\]</div>
 <p>can occur only in a reducing environment (i.e., in the presence of <span class="math notranslate nohighlight">\(\rm H_2\)</span> gas).  On the early, abiotic Earth, it could have occurred around hydrothermal vents using dissolved <span class="math notranslate nohighlight">\(\rm N_2\)</span>.  It is now performed by a wide range of microorganisms including many cyanobacteria, methanogenic Archaea, the aerobic <a class="reference external" href="https://en.wikipedia.org/wiki/Azotobacter"><em>Azobacter</em></a> group, some members of the <a class="reference external" href="https://en.wikipedia.org/wiki/Clostridium#:~:text=Clostridium%20is%20a%20genus%20of,the%20Clostridioides%20genus%20in%202016."><em>Clostridium</em></a> group, and the symbiotic <a class="reference external" href="https://en.wikipedia.org/wiki/Rhizobium"><em>Rhizobium</em></a> in plant roots.  This reaction in its simplest form is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e08036c7-bfd6-4589-8e38-54b66793af42">
-<span class="eqno">(5.5)<a class="headerlink" href="#equation-e08036c7-bfd6-4589-8e38-54b66793af42" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6c5f651c-c4ab-4b78-a7bb-0d5bca42894a">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-6c5f651c-c4ab-4b78-a7bb-0d5bca42894a" title="Permalink to this equation">#</a></span>\[\begin{align}
 2{\rm N_2} + 6{\rm H_2O} \rightarrow 4{\rm NH_3} + 3{\rm O_2},
 \end{align}\]</div>
 <p>which causes little isotopic fractionation and all ammonia produced within a cell (or cells) is rapidly incorporated into organic matter.</p>
 <p>Organic nitrogen is broken down by <a class="reference external" href="https://en.wikipedia.org/wiki/Nitrogen_cycle#Ammonification">ammonification</a>, which produces either ammonium ion or ammonia depending on whether the environment is aqueous or not.  In aerobic settings, ammonium is oxidized to nitrate by nitrifying microbes.  This is done in two steps, from ammonium to nitrite (<span class="math notranslate nohighlight">\(\rm NO_2^-\)</span>), and then to nitrate (<span class="math notranslate nohighlight">\(\rm NO_3^-\)</span>):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8ce6dcac-979c-4341-85e6-a91ac49dc46d">
-<span class="eqno">(5.6)<a class="headerlink" href="#equation-8ce6dcac-979c-4341-85e6-a91ac49dc46d" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2c4fc15a-4b7f-4fec-9cdb-34431efe98c1">
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-2c4fc15a-4b7f-4fec-9cdb-34431efe98c1" title="Permalink to this equation">#</a></span>\[\begin{align}
 2{\rm NH_4^+} + 3{\rm O_2} &amp;\rightarrow 2{\rm NO_2^-} + 2{\rm H_2O} + 4{\rm H^+}, \\
 2{\rm NO_2^-} + {\rm O_2} &amp;\rightarrow 2{\rm NO_3^-}.
 \end{align}\]</div>
 <p>Different bacteria undertake the two reactions, with <a class="reference external" href="https://en.wikipedia.org/wiki/Nitrosomonas"><em>Nitrosomonas</em></a> principally responsible for the first and <a class="reference external" href="https://en.wikipedia.org/wiki/Nitrobacter"><em>Nitrobacter</em></a> dominant for the second.</p>
 <p>The breakdown of dissolved nitrate to <span class="math notranslate nohighlight">\(\rm N_2\)</span> gas (denitrification) removes nitrogen from the biosphere and returns it to the atmosphere, thus completing the biogeochemical nitrogen cycle.  The resulting <span class="math notranslate nohighlight">\(\rm N_2\)</span> is enriched by the light isotope <span class="math notranslate nohighlight">\(^{14}N\)</span> by up to 30‰, depending on the degree of denitrification.  This light <span class="math notranslate nohighlight">\({\rm N_2}\)</span> diffuses out of aqueous settings, leaving the residual dissolved nitrate isotopically heavy.  Living and sedimentary organic matter strongly reflects the effects of this isotopic fractionation during denitrification.  The process is an anaerobic respiration that can be expressed as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4024af6a-dbef-4ab5-888a-21ec6e74aaa4">
-<span class="eqno">(5.7)<a class="headerlink" href="#equation-4024af6a-dbef-4ab5-888a-21ec6e74aaa4" title="Permalink to this equation">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6c7b444e-4ffd-4eef-8f8a-45b41795de27">
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-6c7b444e-4ffd-4eef-8f8a-45b41795de27" title="Permalink to this equation">#</a></span>\[\begin{align}
 5{\rm CH_2O} + 4{\rm NO_3^-} + 4{\rm H^+} \rightarrow 5{\rm CO_2} + 2{\rm N_2} + 7{\rm H_2O}.
 \end{align}\]</div>
 <p>The various reactions in the pathway are preformed by a range of bacteria, most notably by some members of the genera <a class="reference external" href="https://en.wikipedia.org/wiki/Pseudomonas"><em>Pseudomonas</em></a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Thiobacillus"><em>Thiobacillus</em></a>.</p>
 <div class="figure align-default" id="nitrogen-isotopes-fig">
 <a class="reference internal image-reference" href="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-018-04995-y/MediaObjects/41467_2018_4995_Fig1_HTML.jpg?as=webp"><img alt="Nitrogen isotopes" src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fs41467-018-04995-y/MediaObjects/41467_2018_4995_Fig1_HTML.jpg?as=webp" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Secular variation of the sedimentary <span class="math notranslate nohighlight">\(\delta \rm ^{15}N\)</span> record through geological time. Image Credit: <a class="reference external" href="https://www.nature.com/articles/s41467-018-04995-y">Thomazo, Couradeau, &amp; Garcia-Pichel (2018)</a>.</span><a class="headerlink" href="#nitrogen-isotopes-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.11 </span><span class="caption-text">Secular variation of the sedimentary <span class="math notranslate nohighlight">\(\delta \rm ^{15}N\)</span> record through geological time. Image Credit: <a class="reference external" href="https://www.nature.com/articles/s41467-018-04995-y">Thomazo, Couradeau, &amp; Garcia-Pichel (2018)</a>.</span><a class="headerlink" href="#nitrogen-isotopes-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>The secular record of sedimentary <span class="math notranslate nohighlight">\(\delta \rm ^{15}N\)</span> values shows little change from modern ranges back to the end of the Archean.  This implies that an active biological nitrogen cycle  with all of its modern complexity was operating as early as 2.5 Ga.  Moreover, differing Archean environments show varying nitrogen isotope values, indicating that this complex biogeochemical cycle functioned in a similarly diverse geographic pattern.</p>
 <div align="center">
@@ -1306,10 +1397,10 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </div></div>
 <div class="section" id="molecular-biomarkers">
-<h4><span class="section-number">5.2.2.6. </span>Molecular Biomarkers<a class="headerlink" href="#molecular-biomarkers" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.2.6. </span>Molecular Biomarkers<a class="headerlink" href="#molecular-biomarkers" title="Permalink to this headline">#</a></h4>
 <p>Certain hydrocarbons are recognizable derivatives of biological molecules.  In mature sedimentary rocks, the functional groups are removed and multiple bonds are broken, but their carbon skeleton is intact and clearly indicates their parent biomolecule.  When these molecules have a specific biological source (e.g., <a class="reference external" href="https://en.wikipedia.org/wiki/Three-domain_system#Domain_Bacteria">Domain Bacteria</a> or the <a class="reference external" href="https://en.wikipedia.org/wiki/Sponge">Phylum Porifera</a>), they are called biomarkers.  There are many such biomarker molecules, but most that survive in mature rocks are derived from cellular lipids (i.e., cell membrane and pigments).  At high temperatures, the abundance and range of hydrocarbon molecules decreases markedly because long chains break down into methane.  But it is now clear that hydrocarbon biomarkers can also be used to inform us about life’s early diversity.</p>
 <p>Organic geochemical analysis of ancient rocks is fraught with difficulties.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>in thermally altered rocks, the concentrations of the relevant compounds diminishes to extremely low levels, making it very difficult to distinguish indigenous molecules from laboratory contamination.  Usually only differences in isomer ratios and chain lengths serve to differentiate very old from very young molecules.</p></li>
 <li><p>Old samples can be contaminated during the recent geological past by groundwater, subsurface microbes, surface lichens, or endolithic (living within rocks) bacteria.  Contaminants can be distinguished because they often show preferences for handedness and detectable levels of radioactive <span class="math notranslate nohighlight">\(\rm ^{14}C\)</span>.</p></li>
 <li><p>There have generally been many opportunities for post-Archean introduction of organic molecules from younger geological fluids.  These can be difficult to recognize due to a similar thermal history.  However, subtle differences in carbon isotope ratios, aromatic contents, or in evolutionary inappropriate biomarker distributions (e.g., plant biomarkers in Archean rocks).</p></li>
@@ -1317,25 +1408,25 @@ allowfullscreen></iframe>
 <p>Due to these problems, many studies before 1990 are now regarded as dubious, especially those of porous rocks allowing ingress of soluble contaminants.  Several discoveries have reinvigorated the field.  From the oil-bearing rocks in the <span class="math notranslate nohighlight">\({\sim}1.7\ {\rm Ga}\)</span> McArthur Group from northern Australia, it is reasonable to suppose that where oil survives, so will biomarkers.  The demonstration that oil exists in fluid inclusions in many Archean sandstones shows that it was generated before peak metamorphism of the host rocks, and that this maximum thermal episode occurred in Archean or early Proterozoic time.</p>
 <div class="figure align-default" id="molecular-biomarkers-fig">
 <a class="reference internal image-reference" href="https://summons.mit.edu/wp-content/uploads/2013/08/biomarker_timeline.jpg"><img alt="Molecular biomarkers" src="https://summons.mit.edu/wp-content/uploads/2013/08/biomarker_timeline.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Age distribution of sediments from well-preserved organic matter. Image Credit: MIT:<a class="reference external" href="https://summons.mit.edu/biomarkers/what-is-a-biomarker/">The Summons Lab</a>.</span><a class="headerlink" href="#molecular-biomarkers-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.12 </span><span class="caption-text">Age distribution of sediments from well-preserved organic matter. Image Credit: MIT:<a class="reference external" href="https://summons.mit.edu/biomarkers/what-is-a-biomarker/">The Summons Lab</a>.</span><a class="headerlink" href="#molecular-biomarkers-fig" title="Permalink to this image">#</a></p>
 </div>
 </div>
 </div>
 <div class="section" id="the-oldest-evidence-of-life">
-<h3><span class="section-number">5.2.3. </span>The Oldest Evidence of Life<a class="headerlink" href="#the-oldest-evidence-of-life" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.3. </span>The Oldest Evidence of Life<a class="headerlink" href="#the-oldest-evidence-of-life" title="Permalink to this headline">#</a></h3>
 <p>The most ancient rocks that could possibly contain evidence of life (i.e., the oldest deposited on the Earth’s surface) are within the <span class="math notranslate nohighlight">\(&gt;3.7\ {\rm Ga}\)</span> <a class="reference external" href="https://en.wikipedia.org/wiki/Supracrustal_rock">supracrustal successions</a> at Isua and Akilia in western Greenland.  These controversial outcrops have been both highly metamorphosed and severely deformed to such an extent that their exact age is now difficult to determine because most geochronologically useful isotopic systems have been reset.</p>
 <p>Microfossils have been reported from Isua, but these have now been dismissed as either fluid inclusions or weathered carbonate crystals.  Biomarker molecules have also been reported from these rocks, but the preservation of such complex chemicals under these severe conditions is even less likely than microfossils and experiments have shown that it is unlikely that they are indigenous.  It seems that only isotopic geochemical data are robust enough to provide satisfactory evidence of life and even then, there interpretation can be fraught with problems.  In particularly ancient terrains (e.g., early Archean of Greenland) several abiogenic sources could have contributed isotopically light carbon to the metamorphosed sedimentary rocks.</p>
 <p>The Akilia rocks have undergone <a class="reference external" href="https://en.wikipedia.org/wiki/Granulite#Granulite_facies">granulite facies</a> metamorphism, which means they have been brought to high temperatures and been intensely deformed.  The very high metamorphic grade suggests that if the organic carbon were originally biogenic, then the light hydrocarbon loss anc carbonate re-equilibration should have made is initial <span class="math notranslate nohighlight">\(\delta {\rm ^{13}C}\)</span> value lighter by as much as 25‰.  Such extremely light values are only biologically produced by methane-fueled metabolisms that require free oxygen or high sulfate, for which there is no evidence so early in Earth’s history.  Inorganic scenarios scenarios seem more likely now that it has been shown that the host rock is not a metamorphosed banded iron formation, but is apparently a highly deformed and metasomatized ultramafic igneous rock.  Field relations indicate that that the rocks may not be as old as previously believed, where apatite grains return <span class="math notranslate nohighlight">\(\rm U-Pb\)</span> dates of just <span class="math notranslate nohighlight">\({\sim}1.5\ {\rm Ga}\)</span>.  It is perhaps premature to regard the Akilia gniesses as the hosts of the oldest evidence of life on Earth.</p>
 <p>If neither of the early Archean Greenland successions provides compelling isotopic evidence for the existence of life, what then?  The next oldest rocks that might yield biological information are the <span class="math notranslate nohighlight">\({\sim}3.52\ {\rm Ga}\)</span> Coonterunah Group in the <a class="reference external" href="https://dspace.mit.edu/bitstream/handle/1721.1/86310/12-007-spring-2009/contents/lecture-notes/MIT12_007s09_lec10.pdf">Pilbara Craton</a> of northwestern Australia and the similarly ancient Theespurit Formation in the Swaziland Supergroup of South Africa.  These rocks have experienced metamorphic temperatures at about the level at which substantial resetting of carbon isotope values begins.  They also contain organic carbon in quantities sufficiently large to analyze by conventional whole-rock methods.</p>
 <p>The Coonterunah Group contains sedimentary carbonate with <span class="math notranslate nohighlight">\(\delta {\rm ^{13}C_{carb}}\)</span> averaging about -2‰, and <span class="math notranslate nohighlight">\(\delta {\rm ^{13}C_{org}}\)</span> averaging about -24‰.  The resulting <span class="math notranslate nohighlight">\(\rm \Delta^{13}C\)</span> of 22‰ can be compared with Proterozoic banded iron formations, which evidently formed in a similar sedimentary environment.  The Coonterunah isotopic data are fully consistent with photoautotrophic fractionation and thus perhaps provide the oldest compelling evidence for life on earth.</p>
 <div class="section" id="physical-characteristics">
-<h4><span class="section-number">5.2.3.1. </span>Physical Characteristics<a class="headerlink" href="#physical-characteristics" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.3.1. </span>Physical Characteristics<a class="headerlink" href="#physical-characteristics" title="Permalink to this headline">#</a></h4>
 <p>Though there is little preserved evidence, it all suggests that the earliest organisms were morphologically simple.  All genuine Archean microfossils are of spheroidal or ellipsoidal single cells that reproduced by binary fission, or of cylindrical sheaths that surrounded filamentous chains of linked cells.  Usually the cells are aggregated into clusters with many representatives of each morphological type present.  Though only a limited range of morphological and size diversity is evident in the Archean microfossil record, this does not necessarily mean taxonomic diversity was similarly restricted.  Microbes are in general architecturally conservative, so beneath the disguise of a simple spheroid or filament may have lurked a wide range of metabolic styles and phylogenetic diversity.</p>
 <p>Community organization was also apparently simple.  Assemblages of microfossils are locally homogenous, as are stromatolite microstructures.  <a class="reference external" href="https://en.wikipedia.org/wiki/Benthic_zone">Benthic</a> filaments (that lived on the floors of bodies of water) formed interwoven mats, and spheroids grew in dense clusters that provided protection for individuals against radiation, erosion, and desiccation.  Some microbial communities were clearly very robust (e.g., many stromatolites in northwestern Australia), which were able to accommodate frequent deluges of coarse volcanic ash into their structures.</p>
 <p>The largest late Archean filamentous microfossils are no more than a few hundred microns in length.  Individual cells must have been much smaller with the greatest possible diameter allowed by the filaments being <span class="math notranslate nohighlight">\({\sim}20\ {\rm \mu m}\)</span>.  The layering of stromatolites also provides a proxy gauge for the size of the constructing organisms.  Evidently the Archean biota was entirely microbial.</p>
 </div>
 <div class="section" id="environmental-preferences">
-<h4><span class="section-number">5.2.3.2. </span>Environmental Preferences<a class="headerlink" href="#environmental-preferences" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.3.2. </span>Environmental Preferences<a class="headerlink" href="#environmental-preferences" title="Permalink to this headline">#</a></h4>
 <p>It used to be dogma in geology textbooks that the Archean environment was exclusively hot, volcanic and deep-water, but this is not so.  A wide range of environmental settings are represented in the Archean geological record and life was present in many of them by the end of the eon.</p>
 <ul class="simple">
 <li><p>Benthic organisms (living on the sea floor) clearly flourished in the photic zone, where sunlight is present (e.g., stromatolites).  Sediment-accreting microbial mats formed wherever light was available and other conditions were suitable (e.g., temperature, pH, etc.)  Periodic exposure and strong currents were not much of a restriction.</p></li>
@@ -1346,9 +1437,9 @@ allowfullscreen></iframe>
 <p>Another widespread belief about early organisms is that they were thermophilic, based on the heat-loving tendencies of many modern microbes that appear to be ancient based on their basal branching on ribosomal RNA phylogenetic trees.  It is difficult to determine from the geological and paleontological records whether the Archean biota in fact reflected this tendency.  A constraint on temperature is provided by the sequence of sulfate minerals precipitated from evaporating seawater.  As relics of halite (<span class="math notranslate nohighlight">\(\rm NaCl\)</span>) are preserved in old marine sediments elsewhere, the evaporite brine was probably rich in chloride.  This implies that the water in which the stromatolites formed was cool and thus that the earliest microbial community was not dominated by thermophiles.</p>
 </div>
 <div class="section" id="phylogenetic-relationships">
-<h4><span class="section-number">5.2.3.3. </span>Phylogenetic Relationships<a class="headerlink" href="#phylogenetic-relationships" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.2.3.3. </span>Phylogenetic Relationships<a class="headerlink" href="#phylogenetic-relationships" title="Permalink to this headline">#</a></h4>
 <p>To understand how Archean organism were related to their more modern descendants, we have to use the <em>“Tree of Life,”</em> which is the family tree of all species living today and derived from the comparative sequences of their ribosomal RNA molecules.  This phylogeny works on the assumption that slowly evolving and universally shared molecules will reveal evolutionary relationships through the history of life.  Though it is a powerful device for exploring early evolution, it has significant drawbacks.</p>
-<ol class="simple">
+<ol class="arabic simple">
 <li><p>It is necessarily constructed from data derived from modern organisms; nothing extinct appears anywhere on the tree (i.e., survivor bias).  In reality, the tree should be a lot bushier than it is.</p></li>
 <li><p>It assumes a linear descent of characters, but is now known that significant lateral gene transfer has occurred, particularly in prokaryotic organisms.  this means that eh simple branching tree structure is somewhat unrealistic.</p></li>
 <li><p>It has no temporal scale, only an ordering; the length of branches is related only to evolutionary distance, not geological time.</p></li>
@@ -1356,7 +1447,7 @@ allowfullscreen></iframe>
 <p>Despite these shortcomings, the RNA Tree is still the best guide we have to the patter of early evolution.</p>
 <div class="figure align-default" id="rna-tree-fig">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Phylogenetic_tree.svg/1280px-Phylogenetic_tree.svg.png"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Phylogenetic_tree.svg/1280px-Phylogenetic_tree.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Phylogenetic_tree.svg/1280px-Phylogenetic_tree.svg.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.13 </span><span class="caption-text">A phylogenetic tree of living things, based on RNA data and proposed by Carl Woese, showing the separation of bacteria, archaea, and eukaryotes. Image Credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Phylogenetic_tree">phylogenetic tree</a>.</span><a class="headerlink" href="#rna-tree-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.13 </span><span class="caption-text">A phylogenetic tree of living things, based on RNA data and proposed by Carl Woese, showing the separation of bacteria, archaea, and eukaryotes. Image Credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Phylogenetic_tree">phylogenetic tree</a>.</span><a class="headerlink" href="#rna-tree-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>The most obvious feature fo the RNA Tree of Life is its three main divisions, termed <em>Domains</em>.</p>
 <ul class="simple">
@@ -1370,14 +1461,14 @@ allowfullscreen></iframe>
 </div>
 </div>
 <div class="section" id="astrobiological-implications">
-<h3><span class="section-number">5.2.4. </span>Astrobiological Implications<a class="headerlink" href="#astrobiological-implications" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.2.4. </span>Astrobiological Implications<a class="headerlink" href="#astrobiological-implications" title="Permalink to this headline">#</a></h3>
 <p>It is clear that this planet was inhabited within a billion years of its formation.  Not only that, but the organisms present <span class="math notranslate nohighlight">\(3.5\ {\rm Ga}\)</span> were as complex and competent in their cellular and biochemical functioning as the bulk of the modern biota.  Given that similar conditions may have been present on Mars at this time, It may have potentially evolved biotas of some complexity over a short habitable window.</p>
 <p>All three main lineages of life were present by the end of the Archean at <span class="math notranslate nohighlight">\(2.5\ {\rm Ga}\)</span>.  Just what controls how fast intelligent life evolves on a planet is unknown, but is now seems unlikely that it is acquisition of a complex cell structure.  Eukaryotes have ben around for at least 60% of Earth’s history, but intelligent technological eukaryotes evolved only in the last 0.1% of that time.  Accordingly, it seems that attempts to detect extraterrestrial life directed towards dumb germs and worms are more likely to be successful in the near-Earth region of space.</p>
 <p>Any such investigations of planetary bodies in the Solar System will require many of the techniques and strategies used in the search for Archean life here on Earth.  Exploring for signs of extinct life on Mars should be quite analogous to searching for biosignatures in old Earth rocks.  As suitable Archean rocks for paleobiology tend to occur in remote places and in inhospitable environments, perhaps it would make sense to include an expert in Archean paleobiology in the first Martian exploration party.</p>
 </div>
 </div>
 <div class="section" id="the-origin-and-diversification-of-eukaryotes">
-<h2><span class="section-number">5.3. </span>The Origin and Diversification of Eukaryotes<a class="headerlink" href="#the-origin-and-diversification-of-eukaryotes" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.3. </span>The Origin and Diversification of Eukaryotes<a class="headerlink" href="#the-origin-and-diversification-of-eukaryotes" title="Permalink to this headline">#</a></h2>
 <p>Prokaryotes are microorganisms whose cells have no nucleus, organelles, or tubulin-based cytoskeleton.  These microorganisms were the only form of life for at least 80% of our evolutionary history.  Multicellular organisms (e.g., plants, animals, and fungi) evolved a mere <span class="math notranslate nohighlight">\(0.5-1.0\ {\rm Ga}\)</span> from single-celled eukaryotic ancestors.  Eukaryotes are single-cell microorganisms with flexible cytoskeletal structures, organelles, and chromosomes bound within a nuclear membrane.  Cyanobacterium-like fossils suggest that life emerged at least <span class="math notranslate nohighlight">\(3.45\ {\rm Ga}\)</span>, but the biogenic origins of these structures are contested.  The chemical record documents prokaryotic metabolisms that may have existed <span class="math notranslate nohighlight">\(3.47-3.85\ {\rm Ga}\)</span> and eukaryotic biosignatures that may be as old as 2.7 Gyr.</p>
 <p>Single-cell organisms appear simple, yet they transformed the atmosphere, the waters, and the subsurface of the Earth.  Even today, single-cell eukaryotes (i.e., members of the group <a class="reference external" href="https://en.wikipedia.org/wiki/Protist"><em>Protista</em></a>), and prokaryotes continue to dominate our biosphere in terms of genetic diversity, total biomass, and metabolic activity.  Microbes are usually members of complex communities and are directly or indirectly responsible for all of Earth’s biogeochemical cycles.  The multicellular world is completely dependent upon diverse microbial species for continued survival.  If life exists on a world beyond Earth, it would be microbial, either now or in its earliest days.  Understanding Earth’s evolutionary history or the kinds of life most likely to be encountered beyond Earth requires that we study the history, habitats, ecology, and full diversity of microorganisms that shape our biosphere.</p>
 <div align="center">
@@ -1388,12 +1479,12 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </div>
 <div class="section" id="microbial-diversity">
-<h3><span class="section-number">5.3.1. </span>Microbial Diversity<a class="headerlink" href="#microbial-diversity" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.1. </span>Microbial Diversity<a class="headerlink" href="#microbial-diversity" title="Permalink to this headline">#</a></h3>
 <p>Biodiversity experts claim that the number of different plant, animal, and fungal species ranges from <span class="math notranslate nohighlight">\(1-10\)</span> million.  Contrast this with our current census, based on conventional methods (using morphology) of only <span class="math notranslate nohighlight">\({\sim}\text{5,000}\)</span> species of prokaryotes and <span class="math notranslate nohighlight">\({\sim}\text{200,000}\)</span> species of protists.  But this census is argued to understate the number of microbial species by orders of magnitude.  It is very difficult to identify <em>phenotypic</em> traits that can inform us about how to distinguish microbial species and study their interrelationships.</p>
 <p>There are no widely accepted standards for interpreting the phylogenetic (i.e., evolutionary) significance of similarities in microbial cell morphology and other traits over large evolutionary distances and the geological record is silent for most microbial groups.  If if there were a consensus about an effective set of phylogenetic markers, changes in the genomes of species are not necessarily closely linked to phenotypic variation.  “Natural systems” based upon resemblance are useful for the taxonomist but this method alone is not sufficient to reconstruct the evolutionary history of distantly related organisms.</p>
 </div>
 <div class="section" id="molecular-phylogeny">
-<h3><span class="section-number">5.3.2. </span>Molecular Phylogeny<a class="headerlink" href="#molecular-phylogeny" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.2. </span>Molecular Phylogeny<a class="headerlink" href="#molecular-phylogeny" title="Permalink to this headline">#</a></h3>
 <p>Deciphering phylogenetic relationships among <em>microorganisms</em> requires an objective measure of relatedness.  Physical appearance is insufficient, but most of these creatures have small genomes that are more amenable to DNA sequence analyses (as compared to the larger genomes of planets and animals).  Today molecular data provide a practical metric for assessing biodiversity in the context of evolutionary history.  The comparison of DNA sequences that share a common ancestry makes possible the measurement of genetic differences that are common to members of populations, species, or kingdoms.</p>
 <p>The ideal strategy for reconstructing evolutionary history would be to sequence the entire genomes of all species that might inform us about microbial phylogeny.  Protists can present technological challenges because their chromosomes can be large and a single genome can contain millions (or even billions) of <a class="reference external" href="https://en.wikipedia.org/wiki/Base_pair">base pairs</a>.  If we sequenced <em>entire</em> genomes, adequate sampling in the grouping of organisms (i.e., Taxon) for molecular evolution studies would require impractically large resources.  However, gene sequencing technology has made leaps over the past decade with many medical applications <a class="reference external" href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3969849/">(Koboldt et al. 2013)</a>.</p>
 <p>To construct evolutionary trees, specific genes are isolated from the genome.  Because different genes, domains with a gene, or specific nucleotide positions can display dissimilar rates of evolutionary change, the selection of a particular gene (or suite of genes) for phylogenetic analysis depends upon the evolutionary distances separating the organisms.  For example, for closely related species slowly evolving genes may show an insufficient number of differences to resolve evolutionary patterns.  At the opposite end of the spectrum, sequences for rapidly evolving genes are of little value for inferring phylogenies that span the major domains of life.</p>
@@ -1413,21 +1504,21 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </div></div>
 <div class="section" id="molecular-ecology">
-<h3><span class="section-number">5.3.3. </span>Molecular Ecology<a class="headerlink" href="#molecular-ecology" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.3. </span>Molecular Ecology<a class="headerlink" href="#molecular-ecology" title="Permalink to this headline">#</a></h3>
 <p>Cyanobacteria in the ocean produces more oxygen (via photosynthesis) than do all higher plants.  Microorganisms also maintain the global carbon cycle primarily by producing and consuming <span class="math notranslate nohighlight">\(\rm CO_2\)</span>.  Single-celled organisms control global utilization of the nitrogen through nitrogen fixation, nitrification, and nitrate reduction.  Microbes impact all ecosystem on Earth, yet we still know very little about microbially mediated mechanisms that control key biogeochemical cycles.</p>
 <p>Molecular evolution studies have provided new frameworks and tools for deciphering the complexity of microbial ecology.  It is now possible to identify all microorganisms within a sample without cultivating them species by species by species in the laboratory.  surveys targeting natural populations of prokaryotes have revealed largely unexplored microbial diversity in geothermal environments, cold oceans, temperate aquatic and marine environments, soils, and animal digestive tracts.  A plethora of novel prokaryotic microorganisms has been revealed by molecular inventories of places, such as hydrothermal anoxic sediments, the general ocean, and various acidic/alkaline drainages.</p>
 </div>
 <div class="section" id="molecular-studies-of-protists">
-<h3><span class="section-number">5.3.4. </span>Molecular Studies of Protists<a class="headerlink" href="#molecular-studies-of-protists" title="Permalink to this headline">¶</a></h3>
+<h3><span class="section-number">5.3.4. </span>Molecular Studies of Protists<a class="headerlink" href="#molecular-studies-of-protists" title="Permalink to this headline">#</a></h3>
 <p>Protists are an eclectic assemblage of predominantly unicellular eukaryotes.  Free-living protists thrive in diverse environments, while some species parasitize other protists, fungi, plants, or animals.  Success in molecular phylogeny requires that the DNA sequences selected for analysis reflect the historical evolution of the relevant organisms.  In 1987, <a class="reference external" href="https://en.wikipedia.org/wiki/Carl_Woese">Carl Woese</a> recognized the extraordinary potential of ribosomal RNA for inferring phylogenies that include all cellular life forms.</p>
 <p>Ribosomal RNA is ideal because it evolves very slowly as compared to most protein-coding genes, and it is also the functional core of the information translation machinery found in a cell’s ribosomes (or protein synthesis organelles).  Yet rRNA sequences can display rapidly evolving regions interrupted by highly conserved (slowly evolving) elements.  The rapidly changing sequences are useful for measuring evolutionary distance between closely related species in the same genus, while the highly conserved sequences are used to infer relationships that span large evolutionary distances.</p>
 <p>Early rRNA phylogenies for protists claimed that protists without mitochondria were ancestral to all other eukaryotes. These organisms lack many of the organelles found in other eukaryotes.  The molecular trees based upon rRNAs also described new complex evolutionary assemblages.  Measured in terms of lifestyle and phenotypic variation, some major protist <a class="reference external" href="https://en.wikipedia.org/wiki/Clade">clades</a> appear to be as complex as planets, animals, or fungi.  But the several radiations in the eukaryotic rRNA trees make it difficult to define the major protist clades.</p>
 <div class="figure align-default" id="unrooted-rna-tree-fig">
 <a class="reference internal image-reference" href="https://openstax.org/apps/archive/20220509.174553/resources/350bb484123f4c221d382f5e5e5b6ef1c670e5b2"><img alt="https://openstax.org/apps/archive/20220509.174553/resources/350bb484123f4c221d382f5e5e5b6ef1c670e5b2" src="https://openstax.org/apps/archive/20220509.174553/resources/350bb484123f4c221d382f5e5e5b6ef1c670e5b2" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.14 </span><span class="caption-text">Both of these phylogenetic trees show the relationship of the three domains of life—Bacteria, Archaea, and Eukarya—but the (a) rooted tree attempts to identify when various species diverged from a common ancestor while the (b) unrooted tree does not. Image Credit: OpenStax:<a class="reference external" href="https://openstax.org/books/biology-2e/pages/20-1-organizing-life-on-earth">Biology</a>.</span><a class="headerlink" href="#unrooted-rna-tree-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.14 </span><span class="caption-text">Both of these phylogenetic trees show the relationship of the three domains of life—Bacteria, Archaea, and Eukarya—but the (a) rooted tree attempts to identify when various species diverged from a common ancestor while the (b) unrooted tree does not. Image Credit: OpenStax:<a class="reference external" href="https://openstax.org/books/biology-2e/pages/20-1-organizing-life-on-earth">Biology</a>.</span><a class="headerlink" href="#unrooted-rna-tree-fig" title="Permalink to this image">#</a></p>
 </div>
 <div class="section" id="multi-gene-studies-and-the-archezoan-hypothesis">
-<h4><span class="section-number">5.3.4.1. </span>Multi-gene Studies and the Archezoan Hypothesis<a class="headerlink" href="#multi-gene-studies-and-the-archezoan-hypothesis" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.3.4.1. </span>Multi-gene Studies and the Archezoan Hypothesis<a class="headerlink" href="#multi-gene-studies-and-the-archezoan-hypothesis" title="Permalink to this headline">#</a></h4>
 <p>One of the striking features of the early molecular “trees” was the basal location of amitochondriates (protists without mitochondria), such as microsporidia and <em>Giardia</em>.  The transition more than <span class="math notranslate nohighlight">\(2.4\ {\rm Ga}\)</span> from a reducing atmosphere to one that contained oxygen would not have been a prerequisite for the formation of eukaryotic cells.  <a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_Cavalier-Smith">Thomas Cavalier-Smith</a> introduced the term <em>Archezoa</em> to refer to the apparently most primitive eukaryotes.  In one model of how the major eukaryotic organelles were assembled, those lineages appearing before the acquisition of mitochondria occurred prior to the largely unresolved radiation of many eukaryotic lineages.</p>
 <p>To address questions about the identity of the earliest eukaryotes and to test the rRNA scheme, several groups of researchers shifted their attention to gene families other than rRNA.  In some cases, these multi-gene phylogenies confirmed what we have learned from rRNA comparisons, while in others, consistent disagreements suggest alternative scenarios for the evolution of protists.  It is now evident that the simple division of the eukaryotes into two broad territories is incorrect.</p>
 <ul class="simple">
@@ -1438,7 +1529,7 @@ allowfullscreen></iframe>
 <p>This interpretation has its problems, where the paleontological record offers evidence of <span class="math notranslate nohighlight">\(1.8-2.1\ {\rm Ga}\)</span> eukaryotic microfossils and <span class="math notranslate nohighlight">\(2.7\ {\rm Ga}\)</span> archaean molecular signatures in the form of steranes associated with eukaryotes.  The biological Big Bang Hypothesis does not account for consistent hierarchical relationships evident in combined, multi-gene studies.</p>
 </div>
 <div class="section" id="sampling-bias-and-other-problems">
-<h4><span class="section-number">5.3.4.2. </span>Sampling Bias and Other Problems<a class="headerlink" href="#sampling-bias-and-other-problems" title="Permalink to this headline">¶</a></h4>
+<h4><span class="section-number">5.3.4.2. </span>Sampling Bias and Other Problems<a class="headerlink" href="#sampling-bias-and-other-problems" title="Permalink to this headline">#</a></h4>
 <p>Our models for understanding how complexity evolved in the eukaryotic cell are in flux.  For example interpretations of early molecular trees argued that the most basal protist lineages lacked mitochondria and the non-coding segment of a gene (i.e., intron).  The absence of introns in early diverging eukaryotes and most prokaryotes suggested their relatively late introduction ito microbial genomes.  If mitochondria were not present or required for eukaryotic life, protists could have appeared prior to the advent of significant oxygen within Earth’s atmosphere.  However, the discovery of bacterial-like molecular chaperones in putatively deep-branching amitochondriate protists suggests that symbionts ancestral to mitochondria could have been present in the early stages of eukaryote evolution.  The absence of mitochondria may be a secondary adaptation to anaerobic environments.</p>
 <p>Our molecular perspective of early eukaryote evolution is strongly biased by the limited selection of taxa and gene families available for molecular studies.  Broad scale genomic sampling from taxa that might represent basal lineages in the eukaryotic line of descent is very limited.  Alternative mechanisms of genome evolution might explain discrepancies between molecular trees inferred from different protist gene families.  Conflicting phylogenies could be due to:</p>
 <ul class="simple">
@@ -1458,7 +1549,7 @@ allowfullscreen></iframe>
 </div>
 </div>
 <div class="section" id="the-phylogentic-tree-and-luca">
-<h2><span class="section-number">5.4. </span>The Phylogentic Tree and LUCA<a class="headerlink" href="#the-phylogentic-tree-and-luca" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.4. </span>The Phylogentic Tree and LUCA<a class="headerlink" href="#the-phylogentic-tree-and-luca" title="Permalink to this headline">#</a></h2>
 <p>All life on Earth shares a common chemical basis and fundamental genetic attributes, which implies a common ancestry.  Even the simplest forms of like known are chemically complex, where we descend from a very sophisticated <a class="reference external" href="https://en.wikipedia.org/wiki/Last_universal_common_ancestor">last universal common ancestor</a> (<strong>LUCA</strong>).  LUCA may have been an individual organism <em>or</em> an ecosystem of organisms that shared genes with one another.  LUCA is likely to have been quite different from any organism alive today.</p>
 <p>Many varieties of animals have descended from the <a class="reference external" href="https://en.wikipedia.org/wiki/Cambrian_explosion">Cambrian explosion</a>, where the ancestral animals evolved into many <a class="reference external" href="https://en.wikipedia.org/wiki/Phyla">phyla</a> (the largest category within the animal kingdom, which categorizes basic body structure).  A more recent example is that chimpanzees and humans share a common ancestor several million years ago, but this ancestor was neither like a chimp nor a person.  Evolution is not a forced march to increasing complexity, and most paths wind up being evolutionary dead ends.</p>
 <p>The known organisms located near the root of the phylogenetic tree are the Archea and Bacteria that exhibit fewer genetic characteristics exclusive to their domains.  These prokaryotes are probably the most similar modern life forms to LUCA.  They are thermophiles (i.e., they thrive at high temperatures; <span class="math notranslate nohighlight">\({\sim}330\ {\rm K}\)</span>).  This observation suggest that life may have also formed as such high temperatures, where environmental stresses on early Earth may have destroyed nonthermophilic organisms.  See this <a class="reference external" href="https://bio1220.biosci.gatech.edu/life-birth-or-formation-of-biological-systems/how-do-we-know-about-the-history-life-on-earth/">material</a> from Georgia Tech on how to read evolutionary trees.</p>
@@ -1470,20 +1561,20 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </div></div>
 <div class="section" id="young-earth-and-early-life">
-<h2><span class="section-number">5.5. </span>Young Earth and Early Life<a class="headerlink" href="#young-earth-and-early-life" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.5. </span>Young Earth and Early Life<a class="headerlink" href="#young-earth-and-early-life" title="Permalink to this headline">#</a></h2>
 <p>Planet formation is a violent process, and large environmental variations on a young planet can be very hostile to life.  Impact rates were extremely high during the Earth’s early history (see Fig. <a class="reference internal" href="#bombardment-fig"><span class="std std-numref">5.15</span></a>), and the substantial heating of the atmosphere, hydrosphere, and upper curst my massive objects may have caused an <a class="reference external" href="https://www.nature.com/articles/331612a0">impact frustration of life</a> (see Fig. <a class="reference internal" href="#impact-frustration-fig"><span class="std std-numref">5.16</span></a>).</p>
 <div class="figure align-default" id="bombardment-fig">
 <a class="reference internal image-reference" href="https://onlinelibrary.wiley.com/cms/asset/70b59b24-c824-4843-8054-2472adb22c0d/maps13595-fig-0001-m.jpg"><img alt="https://onlinelibrary.wiley.com/cms/asset/70b59b24-c824-4843-8054-2472adb22c0d/maps13595-fig-0001-m.jpg" src="https://onlinelibrary.wiley.com/cms/asset/70b59b24-c824-4843-8054-2472adb22c0d/maps13595-fig-0001-m.jpg" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.15 </span><span class="caption-text">Curve showing cratering rate as a function of time (relative to today’s cratering rate) derived from the Morbidelli et al. (2018) accretion tail model. Image Credit: <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1111/maps.13595">Hartmann &amp; Morbidelli (2020)</a>.</span><a class="headerlink" href="#bombardment-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.15 </span><span class="caption-text">Curve showing cratering rate as a function of time (relative to today’s cratering rate) derived from the Morbidelli et al. (2018) accretion tail model. Image Credit: <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1111/maps.13595">Hartmann &amp; Morbidelli (2020)</a>.</span><a class="headerlink" href="#bombardment-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>A late large impact may well have heated the upper portions of our planet sufficiently to have killed off all nonthermophilic organisms.  Thus, the thermophile root of the phylogenetic tree might be the result of an impact-induced heating event that killed off all life not tolerant of high temperatures.  In this case, life could have originated in either a cool or a hot environment.  Life an the planet(s) that it occupies can affect each other in many ways, and it is not possible to have a complete understanding of one without knowledge of the other.</p>
 <div class="figure align-default" id="impact-frustration-fig">
 <a class="reference internal image-reference" href="../_images/Impact_frustration.png"><img alt="../_images/Impact_frustration.png" src="../_images/Impact_frustration.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 5.16 </span><span class="caption-text">The effects of impactors by size (radius) on the Earth and when such impacts have occurred within Earth’s history. Image Credit: <a class="reference external" href="https://www.google.com/books/edition/Fundamental_Planetary_Science/caltAAAAQBAJ?hl=en">Lissauer &amp; de Pater (2013)</a>.</span><a class="headerlink" href="#impact-frustration-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 5.16 </span><span class="caption-text">The effects of impactors by size (radius) on the Earth and when such impacts have occurred within Earth’s history. Image Credit: <a class="reference external" href="https://www.google.com/books/edition/Fundamental_Planetary_Science/caltAAAAQBAJ?hl=en">Lissauer &amp; de Pater (2013)</a>.</span><a class="headerlink" href="#impact-frustration-fig" title="Permalink to this image">#</a></p>
 </div>
 </div>
 <div class="section" id="homework">
-<h2><span class="section-number">5.6. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this headline">¶</a></h2>
+<h2><span class="section-number">5.6. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h2>
 </div>
 </div>
 
@@ -1509,9 +1600,11 @@ allowfullscreen></iframe>
 
               </div>
               
-            
-                <!-- Previous / next buttons -->
-<div class='prev-next-area'> 
+            </main>
+            <footer class="footer-article noprint">
+                
+    <!-- Previous / next buttons -->
+<div class='prev-next-area'>
     <a class='left-prev' id="prev-link" href="../Chapter_04/Life_Requirements.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
@@ -1527,24 +1620,28 @@ allowfullscreen></iframe>
     <i class="fas fa-angle-right"></i>
     </a>
 </div>
-            
+            </footer>
         </div>
     </div>
-    <footer class="footer">
-  <p>
+    <div class="footer-content row">
+        <footer class="col footer"><p>
+  
+    By Billy Quarles<br/>
+  
+      &copy; Copyright 2022.<br/>
+</p>
+        </footer>
+    </div>
     
-      By Billy Quarles<br/>
-    
-        &copy; Copyright 2022.<br/>
-  </p>
-</footer>
-</main>
+</div>
 
 
       </div>
     </div>
   
-  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+
 
   </body>
 </html>
