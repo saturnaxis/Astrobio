@@ -18,9 +18,9 @@ The following chapters are used from [Earth: Evolution of a Habitable World](htt
 
 - 4 Fusion, fission, sunlight and element formation
 - 11 The Hadean Earth
-- 12 The Archean eon and the origin of life: I Properties of and sites for life
-- 13 The Archean eon and the origin of life: II Mechanisms
+- 14 The first greenhouse crisis: the faint young Sun
 - 17 The oxygen revolution
+- 19 Climate Change across the Phanerozoic
 
 [Planets and Life: The Emerging Science of Astrobiology](https://www.google.com/books/edition/Planets_and_Life/6oybBQAAQBAJ?hl=en&gbpv=0) has many authors, where the following contributions are used:
 
