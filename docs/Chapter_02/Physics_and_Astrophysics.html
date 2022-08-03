@@ -236,6 +236,11 @@ const thebe_selector_output = ".output, .cell_output"
    Student Participation (Fall 2022)
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Appendix/Extra_Topics.html">
+   Extra Topics
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -1377,8 +1382,8 @@ M_\star^4, \qquad &amp;(0.43 \leq M_\star \leq 2 M_\odot) \\[5pt]
 <div class="section" id="stellar-size">
 <h3><span class="section-number">2.4.3. </span>Stellar Size<a class="headerlink" href="#stellar-size" title="Permalink to this headline">#</a></h3>
 <p>Nuclear reactions maintain the temperature in the cores of low-mass stars close to <span class="math notranslate nohighlight">\(T_{\rm nuc} \approx 3 \times 10^6\ {\rm K}\)</span> because the fusion rate is roughly proportional to <span class="math notranslate nohighlight">\(T^{10}\)</span> (near <span class="math notranslate nohighlight">\(T= T_{\rm nuc}\)</span>).  The virial theorem (Eqn. <a class="reference internal" href="#equation-virial-theorem">(2.26)</a>) can be used to show the radii of such stars must be roughly proportional to mass.  The virial theorem is applicable because most of the energy outside the core resides balancing in pressure and gravity.  In equilibrium, the thermal energy and the gravitational potential energy are in balance:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0a70719e-d59a-43b8-b92a-84eb8fa50599">
-<span class="eqno">(2.28)<a class="headerlink" href="#equation-0a70719e-d59a-43b8-b92a-84eb8fa50599" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2ea11fd7-79f0-4e47-8530-ec7482558e61">
+<span class="eqno">(2.28)<a class="headerlink" href="#equation-2ea11fd7-79f0-4e47-8530-ec7482558e61" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{GM_\star^2}{R_\star} &amp;\sim \frac{M_\star kT_{\rm nuc}}{m_u}, \\[5pt]
 M_\star &amp;\approx \frac{R_\star kT_{\rm nuc}}{Gm_u}, \\[5pt]
 M_\star &amp;\propto R_\star.
@@ -1396,14 +1401,14 @@ R &amp;\propto M^{-1/3}.\end{split}\]</div>
 <div class="section" id="sizes-and-densities-of-massive-planets">
 <h2><span class="section-number">2.5. </span>Sizes and Densities of Massive Planets<a class="headerlink" href="#sizes-and-densities-of-massive-planets" title="Permalink to this headline">#</a></h2>
 <p>For bodies of planetary mass, the pressure from the electromagnetic repulsion of electrons (i.e., <strong>Coulomb pressure</strong>) plays a larger role relative to the (quantum) degeneracy pressure.  Coulomb pressure is characterized by constant density, which implies that the radius scales as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4344f7b0-879f-4b83-9f27-dfb2a015f17e">
-<span class="eqno">(2.30)<a class="headerlink" href="#equation-4344f7b0-879f-4b83-9f27-dfb2a015f17e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-eef909da-dd11-4d68-bdec-b573d14400dc">
+<span class="eqno">(2.30)<a class="headerlink" href="#equation-eef909da-dd11-4d68-bdec-b573d14400dc" title="Permalink to this equation">#</a></span>\[\begin{align}
 R \propto M^{1/3}.
 \end{align}\]</div>
 <p>The combination of Coulomb and degeneracy pressure results in Jupiter-like radii for all cool brown dwarfs, giant planets (of solar composition), and the very lowest mass stars.  The largest size cool planet are expected to have <span class="math notranslate nohighlight">\(M_p \approx 4\ M_{\rm Jup}\)</span>.</p>
 <p>Fluid bodies can be described through an equation of state, such as a <strong>polytrope</strong> of the form:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0847b5c1-3413-41f4-aa5c-75ff0bda3204">
-<span class="eqno">(2.31)<a class="headerlink" href="#equation-0847b5c1-3413-41f4-aa5c-75ff0bda3204" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ce6366f5-4f4a-4643-9016-5e72e020e6ef">
+<span class="eqno">(2.31)<a class="headerlink" href="#equation-ce6366f5-4f4a-4643-9016-5e72e020e6ef" title="Permalink to this equation">#</a></span>\[\begin{align}
 P = K\rho^{(n+1)/n},
 \end{align}\]</div>
 <p>which depends on the <strong>polytropic constant</strong> <span class="math notranslate nohighlight">\(K\)</span> and the <strong>polytropic index</strong> <span class="math notranslate nohighlight">\(n\)</span> (see here for <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#polytropic-models-and-the-lane-emden-equation">more details</a>).</p>
@@ -1415,19 +1420,19 @@ P = K\rho^{(n+1)/n},
 R &amp;= \left(\frac{6K}{G}\right)^{1/4}.
 \end{align*}\]</div>
 <p>When more mass that is added to this body, the material gets compressed such that its radius does not change.  With <span class="math notranslate nohighlight">\(n=1\)</span>, the hydrodynamic equations can be solved analytically, where the results are in good agreement with calculations based on more detailed pressure-density relations.  Integration of the hydrostatic equilibrium (Eqn. <a class="reference internal" href="#equation-gen-hydro-eq">(2.24)</a>) leads to the following density profile:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-cc0d4fa8-51ee-440b-ae56-c48537b69e5f">
-<span class="eqno">(2.32)<a class="headerlink" href="#equation-cc0d4fa8-51ee-440b-ae56-c48537b69e5f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b29ac9e4-b9ad-4e72-b874-0c5fdec29f43">
+<span class="eqno">(2.32)<a class="headerlink" href="#equation-b29ac9e4-b9ad-4e72-b874-0c5fdec29f43" title="Permalink to this equation">#</a></span>\[\begin{align}
 \rho = \rho_c \left(\frac{\sin\ C_Kr}{C_Kr}\right),
 \end{align}\]</div>
 <p>with the density at the center fo the body <span class="math notranslate nohighlight">\(\rho_c\)</span> and</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2b844cbe-9f7d-4151-a328-69107b5323c6">
-<span class="eqno">(2.33)<a class="headerlink" href="#equation-2b844cbe-9f7d-4151-a328-69107b5323c6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-125535d1-779f-4ecd-b43d-afb5c0701a63">
+<span class="eqno">(2.33)<a class="headerlink" href="#equation-125535d1-779f-4ecd-b43d-afb5c0701a63" title="Permalink to this equation">#</a></span>\[\begin{align}
 C_K = \sqrt{\frac{2\pi G}{K}}.
 \end{align}\]</div>
 <p>The radius <span class="math notranslate nohighlight">\(R\)</span> of the body is defined by the surface (<span class="math notranslate nohighlight">\(\rho = 0\)</span>), which implies the non-trivial solution <span class="math notranslate nohighlight">\(\sin\ C_KR = 0\)</span>, or <span class="math notranslate nohighlight">\(R= \pi/C_K\)</span>.  Given a polytropic constant <span class="math notranslate nohighlight">\(K = 2.7 \times 10^5\ {\rm m^5/kg/s^2}\)</span> (obtained from a more precise equation of state), we find that the planet’s radius <span class="math notranslate nohighlight">\(R = 7.97\times 10^4\ {\rm km}\)</span>.  The radius of this hydrogen sphere is slightly larger than Jupiter’s mean radius (<span class="math notranslate nohighlight">\(R_{\rm Jup} = 6.99 \times 10^4\ {\rm km}\)</span>), and significantly larger than Saturn’s mean radius (<span class="math notranslate nohighlight">\(R_{\rm Sat} = 0.833\ R_{\rm Jup}\)</span>).  This suggest that the Solar System’s two largest planets are composed primarily (but not entirely) of hydrogen.</p>
 <p>Using experimental data at low pressure and theoretical models at very high pressure, it can be shown that the maximum radius for cold self-gravitating spheres is approximately</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d11f03c8-5baf-44b9-b9ad-590c8ddf3c4f">
-<span class="eqno">(2.34)<a class="headerlink" href="#equation-d11f03c8-5baf-44b9-b9ad-590c8ddf3c4f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a84bd31f-66ea-42e1-bb71-593e53e25001">
+<span class="eqno">(2.34)<a class="headerlink" href="#equation-a84bd31f-66ea-42e1-bb71-593e53e25001" title="Permalink to this equation">#</a></span>\[\begin{align}
 R_{\rm max} \approx \frac{Z \times 10^5}{\mu m_u \sqrt{Z^{2/3}+0.51}}\ {\rm km}, 
 \end{align}\]</div>
 <p>using the atomic number <span class="math notranslate nohighlight">\(Z\)</span> and the atomic mass <span class="math notranslate nohighlight">\(\mu m_u\)</span> based on the planet’s composition.  This equation results in <span class="math notranslate nohighlight">\(R_{\rm max} \approx 82,600\ {\rm km}\)</span> for a cool pure hydrogen planet and <span class="math notranslate nohighlight">\(R_{\rm max} \approx 35,000\ {\rm km}\)</span> for pure helium.</p>
@@ -1506,8 +1511,8 @@ R_{\rm max} \approx \frac{Z \times 10^5}{\mu m_u \sqrt{Z^{2/3}+0.51}}\ {\rm km},
 <p>Although the term <em>big bang</em> is ubiquitous today to describe the best evidence for the beginning of the Universe.  It was originally coined by <a class="reference external" href="https://www.popsci.com/big-bang-term-origin-fred-hoyle/">Fred Hoyle</a> as insult for a new theories in the 1950s that challenged the <em>steady-state</em> theory of the Universe.</p>
 </div>
 <p>The very young Universe was filled with mostly protons <span class="math notranslate nohighlight">\(p^+\)</span> (i.e., hydrogen nuclei) and neutrons <span class="math notranslate nohighlight">\(n\)</span>.  Free neutrons are unstable, where a neutron will decay via the reaction:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1e35079f-fba3-43a3-92d6-8ff7ee39e080">
-<span class="eqno">(2.35)<a class="headerlink" href="#equation-1e35079f-fba3-43a3-92d6-8ff7ee39e080" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1897b48d-ccc8-4333-89a0-76d65780f7e0">
+<span class="eqno">(2.35)<a class="headerlink" href="#equation-1897b48d-ccc8-4333-89a0-76d65780f7e0" title="Permalink to this equation">#</a></span>\[\begin{align}
 n \rightarrow p^+ + e^- + \overline{\nu}_e,
 \end{align}\]</div>
 <p>into a proton, electron <span class="math notranslate nohighlight">\(e^-\)</span> and an (electron) antinuetrino <span class="math notranslate nohighlight">\(\overline{\nu}_e\)</span>.  This process is characterized statistically by the time required for half of a sample to decay, or its <strong>half-life</strong> <span class="math notranslate nohighlight">\(\tau_{1/2}\)</span>.  The half-life <span class="math notranslate nohighlight">\(\tau_{1/2}\)</span> of a free neutron is only 10.3 minutes.</p>
@@ -1531,8 +1536,8 @@ n \rightarrow p^+ + e^- + \overline{\nu}_e,
 <div class="section" id="element-production-during-nuclear-fusion">
 <h4><span class="section-number">2.6.2.1. </span>Element Production During Nuclear Fusion<a class="headerlink" href="#element-production-during-nuclear-fusion" title="Permalink to this headline">#</a></h4>
 <p>In main sequence stars <span class="math notranslate nohighlight">\((M_\star \lesssim 1\ M_\odot)\)</span>, the primary reaction sequence is the proton-proton chain (or <strong>pp-chain</strong>).  The principal branch of the pp-chain occurs in three steps:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e45e9fc7-3b5b-42f3-b034-d51f9678c4c5">
-<span class="eqno">(2.36)<a class="headerlink" href="#equation-e45e9fc7-3b5b-42f3-b034-d51f9678c4c5" title="Permalink to this equation">#</a></span>\[\begin{align}\
+<div class="amsmath math notranslate nohighlight" id="equation-6990cce2-ed82-448c-88db-bb3e1aa00904">
+<span class="eqno">(2.36)<a class="headerlink" href="#equation-6990cce2-ed82-448c-88db-bb3e1aa00904" title="Permalink to this equation">#</a></span>\[\begin{align}\
 {^1_1{\rm H}} + {^1_1{\rm H}} &amp;\rightarrow {^2_1{\rm He}} + e^+ + \nu_e, \qquad &amp;\text{(reaction Ia)} \\[5pt]
 {^2_1{\rm H}} + {^1_1{\rm H}} &amp;\rightarrow {^3_2{\rm He}} + \gamma, \qquad &amp;\text{(reaction Ib)} \\[5pt]
 {^3_2{\rm He}} + {^3_2{\rm He}} &amp;\rightarrow {^4_2{\rm He}} + 2\ {^1_1{\rm H}} + 2\gamma, \qquad &amp;\text{(reaction Ic)} 
@@ -1547,15 +1552,15 @@ allowfullscreen></iframe>
 </div>
 <p>At temperatures close to the Sun’s core (<span class="math notranslate nohighlight">\(T \approx 15 \times 10^6\ {\rm K}\)</span>), the fusion rate is roughly proportional to <span class="math notranslate nohighlight">\(T^4\)</span>, which isn’t as sensitive to temperature changes as the <span class="math notranslate nohighlight">\(T^{10}\)</span> dependence near <span class="math notranslate nohighlight">\(T_{\rm nuc}\)</span> and the solar cor still varies steeply with temperature.  The steep temperature dependence implies that fusion acts as an effective thermostat.  It also implies that more massive main sequence stars only require a slightly higher core temperature to generate a substantially higher luminosity.</p>
 <p>In main sequence stars <span class="math notranslate nohighlight">\((M_\star &gt; M_\odot)\)</span>, the core temperature is somewhat higher, which allows for the <strong>CNO cycle</strong> to dominate.  The pp-chain is capable of producing <span class="math notranslate nohighlight">\(^4_2{\rm He}\)</span>, but the CNO cycle needs carbon to start the reaction.  No nuclide with atomic mass 5 or 8 is stable, so to produce carbon from helium requires two fusions in <em>immediate</em> succession:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f05db065-6f97-4a58-bba7-711cf15c1c25">
-<span class="eqno">(2.37)<a class="headerlink" href="#equation-f05db065-6f97-4a58-bba7-711cf15c1c25" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-90d6f763-afd5-4814-91f9-c0b320933081">
+<span class="eqno">(2.37)<a class="headerlink" href="#equation-90d6f763-afd5-4814-91f9-c0b320933081" title="Permalink to this equation">#</a></span>\[\begin{align}
 {^{4}_2{\rm He}} + {^{4}_2{\rm He}} &amp;\leftrightarrow {^{8}_4{\rm Be}},\\[5pt]
 {^{8}_4{\rm Be}} + {^{4}_2{\rm He}} &amp;\rightarrow {^{12}_6{\rm C}} + \gamma.
 \end{align}\]</div>
 <p>This is called the <strong>triple alpha process</strong> and it requires much higher densities than the pp-chain and CNO cycle.  The half-life of the beryllium-8 is only <span class="math notranslate nohighlight">\(2\times 10^{-16}\ {\rm s}\)</span>, which is why it has the double arrow for its reaction and justifies the immediate succession.  It also explains why such high densities are required.</p>
 <p>The CNO cycle has two branches, where the first branch is:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-0534cd02-8219-4e03-968c-6c621f479de6">
-<span class="eqno">(2.38)<a class="headerlink" href="#equation-0534cd02-8219-4e03-968c-6c621f479de6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e220cc1a-6973-4759-9b26-5fa064b321af">
+<span class="eqno">(2.38)<a class="headerlink" href="#equation-e220cc1a-6973-4759-9b26-5fa064b321af" title="Permalink to this equation">#</a></span>\[\begin{align}
 {^{12}_6{\rm C}} + {^{1}_1{\rm H}} &amp;\rightarrow {^{13}_7{\rm N}} + \gamma, \\[5pt]
 {^{13}_7{\rm N}} &amp;\rightarrow {^{13}_6{\rm C}} + e^+ + \nu_e, \\[5pt]
 {^{13}_6{\rm C}} +{^{1}_1{\rm H}} &amp;\rightarrow {^{14}_7{\rm N}} + \gamma, \\[5pt]
@@ -1574,15 +1579,15 @@ allowfullscreen></iframe>
 <p>Helium fusion occurs when a sufficiently massive star <span class="math notranslate nohighlight">\((M_\star \gtrsim 0.25\ M_\odot)\)</span> has exhausted the available supply of hydrogen in its core.  The thermostat that maintains hydrostatic equilibrium during the star’s main sequence phase is no longer active.  But, hydrogen fusion can occur in a shell surrounding the hydrogen-depleted core.  The total stellar energy production greatly exceeds that during the star’s main sequence phase, which causes the star’s outer layers to expand (due to increased thermal pressure) and cool.  At this stage, the star becomes a <strong>red giant</strong>.</p>
 <p>Nuclear growth beyond carbon does not require two reactions in immediate succession (i.e., the triple alpha process), and thus could occur in a lower density environment.  However, the increased Coulomb barrier implies that an even higher temperature (and larger stellar masses) are required
 .  Growth can occur by successive addition of alpha particles:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-659f6c49-5618-47ac-bfd8-d5bca3e87dd0">
-<span class="eqno">(2.39)<a class="headerlink" href="#equation-659f6c49-5618-47ac-bfd8-d5bca3e87dd0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e0e7980c-bfc2-40b9-a4e0-d0a61f451986">
+<span class="eqno">(2.39)<a class="headerlink" href="#equation-e0e7980c-bfc2-40b9-a4e0-d0a61f451986" title="Permalink to this equation">#</a></span>\[\begin{align}
 {^{12}_6{\rm C}} + {^{4}_2{\rm He}} &amp;\rightarrow {^{16}_8{\rm O}} + \gamma, \\[5pt]
 {^{16}_8{\rm O}} + {^{4}_2{\rm He}} &amp;\rightarrow {^{20}_{20}{\rm Ne}} + \gamma, \\[5pt]
 {^{20}_{10}{\rm Ne}} + {^{4}_2{\rm He}} &amp;\rightarrow {^{24}_{12}{\rm Mg}} + \gamma, 
 \end{align}\]</div>
 <p>or at somewhat higher temperatures by reactions such as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-50fd2f51-bf2a-4ef7-bf85-449a23aa6170">
-<span class="eqno">(2.40)<a class="headerlink" href="#equation-50fd2f51-bf2a-4ef7-bf85-449a23aa6170" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a0d93c48-37d1-45d1-8bfd-0f2176775a4e">
+<span class="eqno">(2.40)<a class="headerlink" href="#equation-a0d93c48-37d1-45d1-8bfd-0f2176775a4e" title="Permalink to this equation">#</a></span>\[\begin{align}
 {^{12}_6{\rm C}} + {^{12}_6{\rm C}} &amp;\rightarrow {^{24}_{12}{\rm Mg}} + \gamma.
 \end{align}\]</div>
 <p>The most stable nucleus is iron-56 <span class="math notranslate nohighlight">\((^{56}_{23}{\rm Fe})\)</span>, where fusion up to <span class="math notranslate nohighlight">\(\sim 23\)</span> protons and neutrons can release energy.  Fusion of alpha particles (helium-4 nuclei) into heavier nuclei requires higher temperatures.  Nuclei composed of <span class="math notranslate nohighlight">\(3-20\)</span> alpha particles are quite stable and easy to produce, which makes them relatively abundant.  Heavy elements with even atomic numbers tend to be more abundant than odd-numbered elements (see Fig. <a class="reference internal" href="#solar-system-abundances"><span class="std std-numref">2.9</span></a>).  The proton and neutron numbers of all stable nuclides are shown in Fig. <a class="reference internal" href="#stable-nuclides"><span class="std std-numref">2.10</span></a>.</p>
@@ -1692,8 +1697,8 @@ allowfullscreen></iframe>
 \end{align*}\]</div>
 <p>where they differ in types of charge (electron or positron) and lepton number (electron <a class="reference external" href="https://en.wikipedia.org/wiki/Neutrino">neutrino</a> or antineutrino) conservation.</p>
 <p>When a nucleus undergoes <a class="reference external" href="https://en.wikipedia.org/wiki/Alpha_decay"><span class="math notranslate nohighlight">\(\alpha\)</span> decay</a>, its atomic number decreases by two and its atomic mass decreases by four (i.e., it releases a helium-4 nucleus).  An example of <span class="math notranslate nohighlight">\(\alpha\)</span> decay is the transformation of uranium to thorium by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fe6aeafa-fe35-4cbe-a19c-fbb668af5200">
-<span class="eqno">(2.41)<a class="headerlink" href="#equation-fe6aeafa-fe35-4cbe-a19c-fbb668af5200" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-40bd25d5-99cd-4b5a-9a81-b311bc0061d9">
+<span class="eqno">(2.41)<a class="headerlink" href="#equation-40bd25d5-99cd-4b5a-9a81-b311bc0061d9" title="Permalink to this equation">#</a></span>\[\begin{align}
 {^{238}_{92}{\rm U}} \rightarrow {^{234}_{90}{\rm Th}} + {^{4}_2{\rm He}} + 2\gamma.
 \end{align}\]</div>
 <p>Some heavy nuclei decay via <strong>spontaneous fission</strong>, which produces at least two nuclei more massive than helium.  Spontaneous fission is an alternative decay mode for uranium-238 (and of plutonium-244) leading to xenon and lighter byproducts.</p>
@@ -1729,6 +1734,23 @@ as a function of distance r from the center. <em>Hint: You should get Eqn. <a cl
 <p><strong>(c)</strong> <span class="math notranslate nohighlight">\(\rm Fe\)</span> is more abundant (by mass) than any other element heavier than <span class="math notranslate nohighlight">\(\rm O\)</span>.</p>
 <p><strong>(d)</strong> Elemental abundances drop precipitously with increasing atomic number above 26 (the atomic number of iron).</p>
 <p><strong>(e)</strong> Apart from <span class="math notranslate nohighlight">\(\rm H\)</span>, elements with odd atomic number are generally less abundant than neighboring elements of even atomic numbers.</p>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<p>Summarize Kepler’s laws of planetary motion.  How are these laws important for astrobiologists?</p>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<p>Hydrostatic equilibrium is an important concept for both astrophysicists and planetary scientists.</p>
+<p><strong>(a)</strong>  What are the basic elements of hydrostatic equilibrium?</p>
+<p><strong>(b)</strong> How are the elements (in part a) used to understand stellar and planetary interiors?</p>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<p>The periodic table of elements gives an inventory for the structure of matter.</p>
+<p><strong>(a)</strong> What are the building blocks of the Universe?</p>
+<p><strong>(b)</strong> How did the elements come to be?</p>
+<p><strong>(c)</strong> How does the production of elements affect the prospects of life in the cosmos?</p>
 </div>
 </div>
 <div class="section" id="reference-tables">
