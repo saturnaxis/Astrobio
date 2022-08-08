@@ -35,6 +35,7 @@ The following chapters are used from [Earth: Evolution of a Habitable World](htt
 - 17 Mass extinctions (Ward)
 - 18 Mars (Jakosky, Westall, & Brack)
 - 19 Europa (Chyba & Phillips)
+- 20 Titan (Lunine and Rizk)
 
 
 This work is licensed under a
