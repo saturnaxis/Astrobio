@@ -300,6 +300,24 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
+        <a href="https://mybinder.org/v2/gh/saturnaxis/Astrobio/main?urlpath=tree/Chapter_02/Physics_and_Astrophysics.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
         <a href="https://colab.research.google.com/github/saturnaxis/Astrobio/blob/main/Chapter_02/Physics_and_Astrophysics.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
@@ -314,6 +332,24 @@ title="Launch on Colab"
   </span>
 <span class="headerbtn__text-container">Colab</span>
 </a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
 
       </li>
       
@@ -2251,8 +2287,8 @@ as a function of distance r from the center. <em>Hint: You should get Eqn. <a cl
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "saturnaxis/Astrobio",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
