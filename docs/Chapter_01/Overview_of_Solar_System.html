@@ -300,6 +300,24 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
+        <a href="https://mybinder.org/v2/gh/saturnaxis/Astrobio/main?urlpath=tree/Chapter_01/Overview_of_Solar_System.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
         <a href="https://colab.research.google.com/github/saturnaxis/Astrobio/blob/main/Chapter_01/Overview_of_Solar_System.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
@@ -314,6 +332,24 @@ title="Launch on Colab"
   </span>
 <span class="headerbtn__text-container">Colab</span>
 </a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
 
       </li>
       
@@ -334,10 +370,19 @@ title="Fullscreen mode"
   </span>
 
 </button>
-<a href="https://github.com/saturnaxis/Astrobio"
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/saturnaxis/Astrobio"
    class="headerbtn"
    data-toggle="tooltip"
-data-placement="bottom"
+data-placement="left"
 title="Source repository"
 >
   
@@ -345,8 +390,31 @@ title="Source repository"
 <span class="headerbtn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-
+<span class="headerbtn__text-container">repository</span>
 </a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/saturnaxis/Astrobio/issues/new?title=Issue%20on%20page%20%2FChapter_01/Overview_of_Solar_System.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
 
 <div class="menu-dropdown menu-dropdown-download-buttons">
   <button class="headerbtn menu-dropdown__trigger"
@@ -782,7 +850,7 @@ title="Print to PDF"
 <div class="section" id="exercise-content">
 <p>To build an intuition of the size and distance differences, it is useful to use an everyday object to scale the Solar System.  Assume that you can represent the Earth with a <a class="reference external" href="https://fsi.colostate.edu/oranges/">Navel orange</a> with a 3 inch diameter.</p>
 <p><strong>(a)</strong> How wide would each of the planets be using this scale?</p>
-<p><strong>(b)</strong> The distance to the Sun (i.e., 1 AU) can be represented with approximately 11,740,533 Earths.  How far from the Sun would you place the Earth using the Navel orange scale?  Is this a practical scale to use on the Earth?</p>
+<p><strong>(b)</strong> The distance to the Sun (i.e., 1 AU) can be represented with approximately 11,741 Earths.  How far from the Sun would you place the Earth using the Navel orange scale?  Is this a practical scale to use on the Earth?</p>
 <p><strong>(c)</strong> How far would the other 7 planets be placed using the scale from part (b)?</p>
 <hr class="docutils" />
 <p><strong>(a)</strong> From many observations, we know the radius of each planet relative to the Earth.  Therefore, we determine the scaled size using the diameter of a Navel orange (in inches) and the known relative size (in Earth radii).  The following table provides the relative radius and scaled width of each planet using the Navel orange scale:</p>
@@ -827,13 +895,13 @@ title="Print to PDF"
 </tr>
 </tbody>
 </table>
-<p><strong>(b)</strong> The distance to the Sun is given as 11,740,533 Earth diameters.  We only need to multiply by our scale using Navel oranges to determine the distance, via</p>
+<p><strong>(b)</strong> The distance to the Sun is given as 11,741 Earth diameters.  We only need to multiply by our scale using Navel oranges to determine the distance, via</p>
 <div class="math notranslate nohighlight">
-\[ d_{\rm oranges} = (11,740,533\ d_\oplus)(3\ \text{in}) =  35,221,599\ \text{in}. \]</div>
+\[ d_{\rm oranges} = (11,741\ d_\oplus)(3\ \text{in}) =  35,222\ \text{in}. \]</div>
 <p>This result is not very practical, where it would be more useful to convert from inches into miles <span class="math notranslate nohighlight">\((1\ \text{mi} = 63,360\ \text{in})\)</span>.  Then, we get</p>
 <div class="math notranslate nohighlight">
-\[ d_{\rm oranges} = 35,221,599\ \text{in} \times \frac{1\ \text{mi}}{63,360\ \text{in}} = 560\ \text{mi}. \]</div>
-<p>If the Sun were placed in Valdosta, then the Earth would be placed in Cincinnati, OH.  This is a reasonable scale conceptually, but not very practical traveling by car (unless you have a need for a road trip!).</p>
+\[ d_{\rm oranges} = 35,222\ \text{in} \times \frac{1\ \text{mi}}{63,360\ \text{in}} = 0.56\ \text{mi}. \]</div>
+<p>If the Sun were placed at VSU, then the Earth would be placed only a half mile from campus.  This is a reasonable scale conceptually, and can be traveled by foot.</p>
 <p><strong>(c)</strong> The distance to the other 7 planets can be determined using the same procedure given in part (b), but using their respective semimajor axis in AU.  The following table provides the semimajor axis and the distance using the Navel orange scale (and assuming circular orbits):</p>
 <table class="colwidths-auto table">
 <thead>
@@ -848,35 +916,35 @@ title="Print to PDF"
 <tbody>
 <tr class="row-even"><td><p>Mercury</p></td>
 <td class="text-center"><p>0.38</p></td>
-<td class="text-center"><p>210</p></td>
+<td class="text-center"><p>0.21</p></td>
 <td><p>Jupiter</p></td>
 <td class="text-center"><p>5.2</p></td>
-<td class="text-center"><p>2890</p></td>
+<td class="text-center"><p>2.89</p></td>
 </tr>
 <tr class="row-odd"><td><p>Venus</p></td>
 <td class="text-center"><p>0.72</p></td>
-<td class="text-center"><p>400</p></td>
+<td class="text-center"><p>0.40</p></td>
 <td><p>Saturn</p></td>
 <td class="text-center"><p>9.5</p></td>
-<td class="text-center"><p>5280</p></td>
+<td class="text-center"><p>5.28</p></td>
 </tr>
 <tr class="row-even"><td><p>Earth</p></td>
 <td class="text-center"><p>1</p></td>
-<td class="text-center"><p>560</p></td>
+<td class="text-center"><p>0.56</p></td>
 <td><p>Uranus</p></td>
 <td class="text-center"><p>19.2</p></td>
-<td class="text-center"><p>10700</p></td>
+<td class="text-center"><p>10.7</p></td>
 </tr>
 <tr class="row-odd"><td><p>Mars</p></td>
 <td class="text-center"><p>1.52</p></td>
-<td class="text-center"><p>840</p></td>
+<td class="text-center"><p>0.84</p></td>
 <td><p>Neptune</p></td>
 <td class="text-center"><p>30</p></td>
-<td class="text-center"><p>16700</p></td>
+<td class="text-center"><p>16.7</p></td>
 </tr>
 </tbody>
 </table>
-<p>Earth’s circumference is 24,902 miles. Using this scale, Neptune would be placed in China, if we started from Valdosta heading <em>due east</em>!</p>
+<p>Earth’s circumference is 24,902 miles. Using this scale, one could easily traverse the Solar System.</p>
 <p>Note: Below is a solution that determines the values with the programming language <em>Python</em>.</p>
 </div>
 </div>
@@ -889,7 +957,7 @@ title="Print to PDF"
 <span class="n">pl_names</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;Mercury&#39;</span><span class="p">,</span><span class="s1">&#39;Venus&#39;</span><span class="p">,</span><span class="s1">&#39;Earth&#39;</span><span class="p">,</span><span class="s1">&#39;Mars&#39;</span><span class="p">,</span><span class="s1">&#39;Jupiter&#39;</span><span class="p">,</span><span class="s1">&#39;Saturn&#39;</span><span class="p">,</span><span class="s1">&#39;Uranus&#39;</span><span class="p">,</span><span class="s1">&#39;Neptune&#39;</span><span class="p">]</span> 
 
 <span class="n">Navel_orange</span> <span class="o">=</span> <span class="mi">3</span> <span class="c1">#diameter of a Navel orange in inches</span>
-<span class="n">AU</span> <span class="o">=</span> <span class="mi">11740533</span> <span class="c1">#number of Earths in an AU</span>
+<span class="n">AU</span> <span class="o">=</span> <span class="mf">11740.533</span> <span class="c1">#number of Earths in an AU</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;part a&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">):</span>
@@ -906,14 +974,14 @@ title="Print to PDF"
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;part b&quot;</span><span class="p">)</span>
 <span class="n">AU_oranges</span> <span class="o">=</span> <span class="n">Navel_orange</span><span class="o">*</span><span class="n">AU</span> <span class="c1">#scaled AU in inches</span>
 <span class="n">AU_oranges</span> <span class="o">/=</span> <span class="mf">63360.</span> <span class="c1">#scaled AU in miles</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Using the Navel orange scale, 1 AU is equal to </span><span class="si">%d</span><span class="s2"> miles.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">AU_oranges</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Using the Navel orange scale, 1 AU is equal to </span><span class="si">%1.2f</span><span class="s2"> miles.&quot;</span> <span class="o">%</span> <span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">AU_oranges</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;-------&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;part c&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Using the Navel orange scale:&quot;</span><span class="p">)</span>
 <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">8</span><span class="p">):</span>
     <span class="n">d_i</span> <span class="o">=</span> <span class="n">a_pl</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">*</span><span class="n">AU_oranges</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> is </span><span class="si">%d</span><span class="s2"> miles from the Sun.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pl_names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">d_i</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">%s</span><span class="s2"> is </span><span class="si">%1.2f</span><span class="s2"> miles from the Sun.&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">pl_names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">np</span><span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="n">d_i</span><span class="p">,</span><span class="mi">2</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
@@ -929,18 +997,18 @@ Uranus would be 1 foot wide.
 Neptune would be 1 foot wide.
 -------
 part b
-Using the Navel orange scale, 1 AU is equal to 560 miles.
+Using the Navel orange scale, 1 AU is equal to 0.56 miles.
 -------
 part c
 Using the Navel orange scale:
-Mercury is 210 miles from the Sun.
-Venus is 400 miles from the Sun.
-Earth is 560 miles from the Sun.
-Mars is 840 miles from the Sun.
-Jupiter is 2890 miles from the Sun.
-Saturn is 5280 miles from the Sun.
-Uranus is 10670 miles from the Sun.
-Neptune is 16680 miles from the Sun.
+Mercury is 0.21 miles from the Sun.
+Venus is 0.40 miles from the Sun.
+Earth is 0.56 miles from the Sun.
+Mars is 0.84 miles from the Sun.
+Jupiter is 2.89 miles from the Sun.
+Saturn is 5.28 miles from the Sun.
+Uranus is 10.67 miles from the Sun.
+Neptune is 16.68 miles from the Sun.
 </pre></div>
 </div>
 </div>
@@ -1283,8 +1351,8 @@ allowfullscreen></iframe>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "saturnaxis/Astrobio",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

@@ -206,7 +206,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Chapter_07/Hadean_Climate.html">
-   7. Hadean &amp; Archean Climate
+   7. Hadean Earth &amp; Archean Climate
   </a>
  </li>
  <li class="toctree-l1">
@@ -300,6 +300,24 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
+        <a href="https://mybinder.org/v2/gh/saturnaxis/Astrobio/main?urlpath=tree/Chapter_03/Planetary_Heating_and_Atmospheres.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
         <a href="https://colab.research.google.com/github/saturnaxis/Astrobio/blob/main/Chapter_03/Planetary_Heating_and_Atmospheres.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
@@ -314,6 +332,24 @@ title="Launch on Colab"
   </span>
 <span class="headerbtn__text-container">Colab</span>
 </a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
 
       </li>
       
@@ -334,10 +370,19 @@ title="Fullscreen mode"
   </span>
 
 </button>
-<a href="https://github.com/saturnaxis/Astrobio"
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/saturnaxis/Astrobio"
    class="headerbtn"
    data-toggle="tooltip"
-data-placement="bottom"
+data-placement="left"
 title="Source repository"
 >
   
@@ -345,8 +390,31 @@ title="Source repository"
 <span class="headerbtn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-
+<span class="headerbtn__text-container">repository</span>
 </a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/saturnaxis/Astrobio/issues/new?title=Issue%20on%20page%20%2FChapter_03/Planetary_Heating_and_Atmospheres.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
 
 <div class="menu-dropdown menu-dropdown-download-buttons">
   <button class="headerbtn menu-dropdown__trigger"
@@ -980,8 +1048,8 @@ title="Print to PDF"
 <p>Rocks undergo similar transitions at substantially higher temperatures.  Liquid rock is present in the Earth’s mantle (as magma), which can be seen on the Earth’s surface during a volcanic eruption (e.g., lava flows).  Some other substances are only in vapor form on Earth’s surface.  For example, carbon dioxide <span class="math notranslate nohighlight">\((\rm CO_2)\)</span> exists in gas form, and when cooled to <span class="math notranslate nohighlight">\(194.7\ {\rm K}\)</span>, it freezes into a substance known as <em>dry ice</em>.  No liquid phase of <span class="math notranslate nohighlight">\(\rm CO_2\)</span> exists on Earth’s surface because liquid <span class="math notranslate nohighlight">\(\rm CO_2\)</span> is only stable at pressures <span class="math notranslate nohighlight">\(&gt; 5.1\ {\rm bar}\)</span>.  All three phases of methane <span class="math notranslate nohighlight">\((\rm CH_4)\)</span> exist at standard pressure, but methane condenses and freezes at lower temperatures.</p>
 <p>Most substances expand when heated, where gases increase in volume the most.  The equilibrium molecular composition of a given mixture of atoms often depends on temperature (and pressure), and the time required for a mixture to reach chemical equilibrium generally increases rapidly as the temperature drops.  Gradients in temperature and pressure are responsible for large mass flows (e.g., atmospheric winds and ocean currents) as well as convective motions that can mix fluid material within planetary atmospheres and interiors.  Earth’s solid crust is dragged along by convective currents in the mantle, which leads to continental drift.</p>
 <p>A measure of the random kinetic energy of matter (i.e., molecules, atoms, ions, etc.) is represented by a temperature <span class="math notranslate nohighlight">\(T\)</span>.  The energy of a <em>perfect</em> gas is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d933c842-face-4f26-a04f-8cd12c7ab96f">
-<span class="eqno">(3.1)<a class="headerlink" href="#equation-d933c842-face-4f26-a04f-8cd12c7ab96f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6348e4bd-eef8-44a3-99c3-8e8558ae915d">
+<span class="eqno">(3.1)<a class="headerlink" href="#equation-6348e4bd-eef8-44a3-99c3-8e8558ae915d" title="Permalink to this equation">#</a></span>\[\begin{align}
 E = \frac{3}{2}NkT,
 \end{align}\]</div>
 <p>which depends on the number of particles <span class="math notranslate nohighlight">\(N\)</span> and Boltzmann’s constant <span class="math notranslate nohighlight">\(k\)</span>.  The temperature of a body is determined by a combination of processes.  Solar radiation is the primary energy source for most planetary bodies, where radiation to space is the primary loss mechanism.  The equilibrium state of a planetary surface is determined by a balance of energy gained and lost, where the details of energy transport determine the relative amounts.</p>
@@ -994,8 +1062,8 @@ E = \frac{3}{2}NkT,
 <div class="section" id="thermal-blackbody-radiation">
 <h3><span class="section-number">3.1.1. </span>Thermal (Blackbody) Radiation<a class="headerlink" href="#thermal-blackbody-radiation" title="Permalink to this headline">#</a></h3>
 <p>Electromagnetic (EM) radiation consists of photons at many wavelengths, where a spectrum is shown in Fig. <a class="reference internal" href="#em-spectrum-fig"><span class="std std-numref">3.1</span></a>.  The frequency <span class="math notranslate nohighlight">\(\nu\)</span> of an EM wave propagating in a vacuum is related to its wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4a2d50c1-5f99-4315-b4b4-0cabdd66ebaf">
-<span class="eqno">(3.2)<a class="headerlink" href="#equation-4a2d50c1-5f99-4315-b4b4-0cabdd66ebaf" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ea0ced73-1831-49ad-b2a9-f68fe3982201">
+<span class="eqno">(3.2)<a class="headerlink" href="#equation-ea0ced73-1831-49ad-b2a9-f68fe3982201" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lambda \nu = c,
 \end{align}\]</div>
 <p>where the speed of light <span class="math notranslate nohighlight">\(c\)</span> in a vacuum is <span class="math notranslate nohighlight">\(299,792,458\ {\rm m/s}\)</span>.</p>
@@ -1127,13 +1195,13 @@ E = \frac{3}{2}NkT,
 </ol>
 <p>Equations <a class="reference internal" href="#equation-rj-law">(3.4)</a> and <a class="reference internal" href="#equation-wiens-law">(3.5)</a> are simpler than Eqn. <a class="reference internal" href="#equation-plancks-law">(3.3)</a>, and thus can be quite useful in the regimes in which they are applicable.  This also explains why Eqns. <a class="reference internal" href="#equation-rj-law">(3.4)</a> and <a class="reference internal" href="#equation-wiens-law">(3.5)</a> were developed first.</p>
 <p>The peak frequency <span class="math notranslate nohighlight">\(\nu_{\rm max}\)</span> is the frequency at which the maximum brightness <span class="math notranslate nohighlight">\(B_\nu(T)\)</span> occurs, where <span class="math notranslate nohighlight">\(\nu_{\rm max}\)</span> can be determined by setting the derivative of Eqn. <a class="reference internal" href="#equation-plancks-law">(3.3)</a> equal to zero (i.e., <span class="math notranslate nohighlight">\(\partial B_\nu/\partial \nu = 0\)</span>).  The result is known as <a class="reference external" href="https://en.wikipedia.org/wiki/Wien%27s_displacement_law">Wien’s displacement law</a>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-9d4bef53-6e0a-4096-b752-7be04a60c43e">
-<span class="eqno">(3.6)<a class="headerlink" href="#equation-9d4bef53-6e0a-4096-b752-7be04a60c43e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-d46203da-8fda-4226-8d4d-7101de1d9515">
+<span class="eqno">(3.6)<a class="headerlink" href="#equation-d46203da-8fda-4226-8d4d-7101de1d9515" title="Permalink to this equation">#</a></span>\[\begin{align}
 \nu_{\rm max} = bT,
 \end{align}\]</div>
 <p>which depends on the proportionality constant <span class="math notranslate nohighlight">\(b_\nu = 5.88 \times 10^{10}\ {\rm Hz/K}\)</span>.  The brightness <span class="math notranslate nohighlight">\(B_\lambda\)</span> as a function of wavelength <span class="math notranslate nohighlight">\(\lambda\)</span> is proportional to <span class="math notranslate nohighlight">\(B_\nu\)</span> by a factor <span class="math notranslate nohighlight">\(|d\nu/d\lambda|\)</span>, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-986ace23-31dc-43ef-8d22-445736b557c9">
-<span class="eqno">(3.7)<a class="headerlink" href="#equation-986ace23-31dc-43ef-8d22-445736b557c9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0394d0d4-475a-418e-ac79-23ab7ff4c256">
+<span class="eqno">(3.7)<a class="headerlink" href="#equation-0394d0d4-475a-418e-ac79-23ab7ff4c256" title="Permalink to this equation">#</a></span>\[\begin{align}
 B_\lambda = B_\nu\left|\frac{d\nu}{d\lambda}\right|,
 \end{align}\]</div>
 <p>where the blackbody spectral peak in wavelength <span class="math notranslate nohighlight">\(\lambda_{\rm max}\)</span> can be found by setting <span class="math notranslate nohighlight">\(\partial B_\lambda/\partial \lambda = 0\)</span> to get</p>
@@ -1145,13 +1213,13 @@ B_\lambda = B_\nu\left|\frac{d\nu}{d\lambda}\right|,
 <p>The blackbody spectral peak in wavelength is blueward of the brightness peak measured in terms of frequency, <span class="math notranslate nohighlight">\(\lambda_{\rm max} = 0.57\ c/\nu_{\rm max}\)</span>.</p>
 </div>
 <p>The <strong>flux density</strong> <span class="math notranslate nohighlight">\(\mathcal{F}_\nu\)</span> (in units of <span class="math notranslate nohighlight">\(\rm W/m^2/Hz\)</span>) of radiation from an object is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d368a1e9-8663-4d12-b22f-1d51d3e526ac">
-<span class="eqno">(3.9)<a class="headerlink" href="#equation-d368a1e9-8663-4d12-b22f-1d51d3e526ac" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b925ca45-8d6d-4c9e-88fe-f0d554457764">
+<span class="eqno">(3.9)<a class="headerlink" href="#equation-b925ca45-8d6d-4c9e-88fe-f0d554457764" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{F}_\nu = \Omega_s B_\nu(T),
 \end{align}\]</div>
 <p>which requires the solid angle (in <span class="math notranslate nohighlight">\(\rm sr\)</span>) subtended by the object.  Just above the complete ‘surface’ of a planet of brightness <span class="math notranslate nohighlight">\(B_\nu\)</span>, the flux density is equal to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-a4bb1dd1-1d73-4768-be8e-c9b4ea1b4fc0">
-<span class="eqno">(3.10)<a class="headerlink" href="#equation-a4bb1dd1-1d73-4768-be8e-c9b4ea1b4fc0" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-4ff5b43b-d6a1-4b83-a674-80041f60fa12">
+<span class="eqno">(3.10)<a class="headerlink" href="#equation-4ff5b43b-d6a1-4b83-a674-80041f60fa12" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{F}_\nu = \pi B_\nu(T).
 \end{align}\]</div>
 <p>The <strong>flux</strong> <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> has units of <span class="math notranslate nohighlight">\(\rm W/m^2\)</span>, which is the flux density integrated over <em>all</em> frequencies:</p>
@@ -1161,8 +1229,8 @@ B_\lambda = B_\nu\left|\frac{d\nu}{d\lambda}\right|,
 <div class="math notranslate nohighlight" id="equation-flux-surf">
 <span class="eqno">(3.12)<a class="headerlink" href="#equation-flux-surf" title="Permalink to this equation">#</a></span>\[\mathcal{F} = \frac{\mathcal{L}}{4\pi r^2}.\]</div>
 <p>If the surface is a stellar radius <span class="math notranslate nohighlight">\(R\)</span>, then the Stefan-Boltzmann law can be written as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2f6999da-fe98-4060-87f1-98acefd8c683">
-<span class="eqno">(3.13)<a class="headerlink" href="#equation-2f6999da-fe98-4060-87f1-98acefd8c683" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1dc87164-e3e8-44b1-ba25-549119e48d20">
+<span class="eqno">(3.13)<a class="headerlink" href="#equation-1dc87164-e3e8-44b1-ba25-549119e48d20" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{L} = 4\pi \sigma R^2T^4.
 \end{align}\]</div>
 </div>
@@ -1217,13 +1285,13 @@ sight, and <span class="math notranslate nohighlight">\(\hat{s}\)</span> makes a
 <p>In the case of a phase angle, the light can be purely backscattered (<span class="math notranslate nohighlight">\(\phi=0^\circ\)</span>), forward scattered <span class="math notranslate nohighlight">\((\phi=180^\circ)\)</span>, or somewhere in between.  Light is often scattered in a preferred direction that is described by the <strong>scattering phase function</strong>.  For particles similar in size to (or slightly larger than) the wavelength of light (i.e., infrared waves and micron-sized dust grains), the preferred scattering angle is in the forward direction.  For particles <em>smaller</em> than the wavelength of light, the scattering is more isotropic (i.e., all directions).</p>
 <p>From Earth, all phase angles <span class="math notranslate nohighlight">\((0^\circ &lt; \phi &lt; 180^\circ)\)</span> can only be measured for planets with heliocentric distances less than 1 AU (i.e., Mercury and Venus) and the Moon.  The outer planets are observed from Earth at phase angles close to <span class="math notranslate nohighlight">\(0^\circ\)</span>.</p>
 <p>For purely backcscattered radiation <span class="math notranslate nohighlight">\((\phi = 0^\circ)\)</span>, the <a class="reference external" href="https://en.wikipedia.org/wiki/Geometric_albedo">geometric albedo</a> <span class="math notranslate nohighlight">\(A_g\)</span> (see notes from <a class="reference external" href="http://faculty.washington.edu/dcatling/555_PlanetaryAtmos/EnergySourcesOrbits_Student.pdf">David Catling</a>) is defined by:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f403568d-1be1-4624-ba38-b2de5b793274">
-<span class="eqno">(3.14)<a class="headerlink" href="#equation-f403568d-1be1-4624-ba38-b2de5b793274" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c53d7111-899d-4267-afa1-eb48b4cbea45">
+<span class="eqno">(3.14)<a class="headerlink" href="#equation-c53d7111-899d-4267-afa1-eb48b4cbea45" title="Permalink to this equation">#</a></span>\[\begin{align}
 A_g = \frac{\mathcal{F}(\phi = 0^\circ)}{\mathcal{F}_\odot},
 \end{align}\]</div>
 <p>which depends on the flux <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> reflected from the body at phase angle <span class="math notranslate nohighlight">\(\phi = 0^\circ\)</span> (i.e., <span class="math notranslate nohighlight">\(\mathcal{F}(\phi = 0^\circ)\)</span>), and the solar constant <span class="math notranslate nohighlight">\(\mathcal{F}_\odot\)</span> that is defined as the solar flux received at <span class="math notranslate nohighlight">\(r_\oplus = 1\ {\rm AU}\)</span>.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Solar_constant">solar constant</a> is defined in SI units (<a class="reference external" href="https://iopscience.iop.org/article/10.3847/0004-6256/152/2/41">Prša et al. 2016</a>) as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6af3aa1a-fcfd-492a-a618-d280b25ddb6c">
-<span class="eqno">(3.15)<a class="headerlink" href="#equation-6af3aa1a-fcfd-492a-a618-d280b25ddb6c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3fedaf8b-1439-4c4d-a006-028068786526">
+<span class="eqno">(3.15)<a class="headerlink" href="#equation-3fedaf8b-1439-4c4d-a006-028068786526" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{F}_\odot \equiv \frac{\mathcal{L}_\odot}{4\pi r_\oplus^2} = 1361\ {\rm W/m^2}.
 \end{align}\]</div>
 <div class="admonition note">
@@ -1235,8 +1303,8 @@ A_g = \frac{\mathcal{F}(\phi = 0^\circ)}{\mathcal{F}_\odot},
 <h3><span class="section-number">3.1.3. </span>Brightness and Effective Temperatures<a class="headerlink" href="#brightness-and-effective-temperatures" title="Permalink to this headline">#</a></h3>
 <p>The temperature of blackbody can be determined using Planck’s radiation law by measuring a small part of the object’s radiation curve.  This is usually impractical because most bodies are not <em>perfect</em> blackbodies, but exhibit spectral features that complicate temperature measurements.  Instead, it is more common to relate the observed flux density <span class="math notranslate nohighlight">\(\mathcal{F}_\nu\)</span> to the <strong>brightness temperature</strong> <span class="math notranslate nohighlight">\(T_b\)</span>.  The brightness temperature matches the brightness of the body to the same brightness of an ideal black body at a particular frequency (i.e., <span class="math notranslate nohighlight">\(T\rightarrow T_b\)</span> in Eqn. <a class="reference internal" href="#equation-plancks-law">(3.3)</a>).</p>
 <p>If the total flux integrated over all frequencies can be determined, then the temperature corresponding to a blackbody emitting the same amount of energy or flux <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is referred to as the <strong>effective temperature</strong> <span class="math notranslate nohighlight">\(T_{\rm eff}\)</span>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c9d6925a-c5fc-4476-8a99-380263bddcd6">
-<span class="eqno">(3.16)<a class="headerlink" href="#equation-c9d6925a-c5fc-4476-8a99-380263bddcd6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c95bce65-10b0-4624-a7a3-5906669d707f">
+<span class="eqno">(3.16)<a class="headerlink" href="#equation-c95bce65-10b0-4624-a7a3-5906669d707f" title="Permalink to this equation">#</a></span>\[\begin{align}
 T_{\rm eff} \equiv \left(\frac{\mathcal{F}}{\sigma}\right)^{1/4},
 \end{align}\]</div>
 <p>using the Stefan-Boltzmann law (Eqn. <a class="reference internal" href="#equation-sb-law">(3.11)</a>).  The wavelength range that is representative for most of an object’s radiation can be estimated via Wien’s displacement law (Eqn. <a class="reference internal" href="#equation-wien-law-constant">(3.8)</a>).  For object with temperatures of <span class="math notranslate nohighlight">\(150-300\ {\rm K}\)</span> (in the inner Solar System) the wavelengths occur in the mid-infrared <span class="math notranslate nohighlight">\((10-20\ {\rm \mu m})\)</span>, while the cooler temperatures of <span class="math notranslate nohighlight">\(\sim 40-50\ {\rm K}\)</span> (in the outer Solar System) occur at far-infrared wavelengths <span class="math notranslate nohighlight">\((\sim 60-70\ {\rm \mu m})\)</span>.</p>
@@ -1276,8 +1344,8 @@ T_{\rm eff} \equiv \left(\frac{\mathcal{F}}{\sigma}\right)^{1/4},
 E &amp;= pc,\end{split}\]</div>
 <p>which depend on Planck’s constant <span class="math notranslate nohighlight">\(h\)</span>, the speed of light <span class="math notranslate nohighlight">\(c\)</span>, and the frequency of light <span class="math notranslate nohighlight">\(\nu\)</span>.  The momentum is actually a vector quantity that travels along a unit vector <span class="math notranslate nohighlight">\(\hat{s}\)</span> along the direction of propagation (Fig. <a class="reference internal" href="#surface-element-fig"><span class="std std-numref">3.3</span></a>).</p>
 <p>Emission and absorption of photons by atoms or molecules occur by a change in the <em>energy state</em>.  Each atom consists of a nucleus surrounded by a ‘cloud’ of electrons, but Bohr’s semiclassical theory simplifies this picture.  In Bohr’s model of hydrogen, the electron orbits the nucleus, such that the centrifugal force is balanced by the Coulomb force:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bd19ec2f-e5f3-4e75-a545-55ddaaf007ec">
-<span class="eqno">(3.21)<a class="headerlink" href="#equation-bd19ec2f-e5f3-4e75-a545-55ddaaf007ec" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e81bd427-06b5-4081-9955-d130688398ab">
+<span class="eqno">(3.21)<a class="headerlink" href="#equation-e81bd427-06b5-4081-9955-d130688398ab" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{m_e v^2}{r} = \frac{Zq^2}{4\pi \epsilon_o r^2}.
 \end{align}\]</div>
 <p>These forces depend on the mass <span class="math notranslate nohighlight">\(m_e\)</span>, velocity <span class="math notranslate nohighlight">\(v\)</span>, and charge <span class="math notranslate nohighlight">\(q\)</span> of the electron, as well as the radius <span class="math notranslate nohighlight">\(r\)</span> of the electron’s orbit (assumed to be circular) and a fundamental constant <span class="math notranslate nohighlight">\(\epsilon_o\)</span> that mediates the electrostatic force.  The atomic number <span class="math notranslate nohighlight">\(Z\)</span> is included so that the relation can be generalized later, where <span class="math notranslate nohighlight">\(Z=1\)</span> for hydrogen.  Electrons are in orbits, where the angular momentum is quantized, or</p>
@@ -1287,20 +1355,20 @@ E &amp;= pc,\end{split}\]</div>
 <div class="math notranslate nohighlight" id="equation-bohr-rn">
 <span class="eqno">(3.23)<a class="headerlink" href="#equation-bohr-rn" title="Permalink to this equation">#</a></span>\[r_n = \frac{n^2 4\pi \epsilon_o \hbar^2}{m_e Zq^2}.\]</div>
 <p>The radius of the lowest energy state (<span class="math notranslate nohighlight">\(n=1\)</span>) for the hydrogen atom is called the <strong>Bohr radius</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8f5a9493-aece-4e37-af8b-788b4e353437">
-<span class="eqno">(3.24)<a class="headerlink" href="#equation-8f5a9493-aece-4e37-af8b-788b4e353437" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-2e36d25b-4b6e-4c4e-a575-aba9200f3185">
+<span class="eqno">(3.24)<a class="headerlink" href="#equation-2e36d25b-4b6e-4c4e-a575-aba9200f3185" title="Permalink to this equation">#</a></span>\[\begin{align}
 r_1 = \frac{\hbar^2}{m_e q^2} \approx 5.3 \times 10^{-11}\ {\rm m}.
 \end{align}\]</div>
 <p>The energy <span class="math notranslate nohighlight">\(E_n\)</span> is quantized, which can be determined through the kinetic and potential (Coulomb) energy as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-42c0d9a9-e0ec-4757-9998-59d9ea6b15d3">
-<span class="eqno">(3.25)<a class="headerlink" href="#equation-42c0d9a9-e0ec-4757-9998-59d9ea6b15d3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6e448bb9-db7a-4ffc-a72c-ba9613e5cf18">
+<span class="eqno">(3.25)<a class="headerlink" href="#equation-6e448bb9-db7a-4ffc-a72c-ba9613e5cf18" title="Permalink to this equation">#</a></span>\[\begin{align}
 E_n &amp;= \frac{1}{2}m_e v^2 - \frac{Zq^2}{4\pi \epsilon_o r}, \\[5pt]
     &amp;= \frac{Zq^2}{4\pi \epsilon_o r} - \frac{Zq^2}{4\pi \epsilon_o r}, \\[5pt]
     &amp;= - \frac{Zq^2}{8\pi \epsilon_o r}.
 \end{align}\]</div>
 <p>The quantized radius (Eqn. <a class="reference internal" href="#equation-bohr-rn">(3.23)</a>) for hydrogen can be substituted to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-6f112c1b-4c3e-4c93-821d-ba8a8ca9d0bb">
-<span class="eqno">(3.26)<a class="headerlink" href="#equation-6f112c1b-4c3e-4c93-821d-ba8a8ca9d0bb" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3b11a79d-7413-4acd-91e6-7ede593d12cf">
+<span class="eqno">(3.26)<a class="headerlink" href="#equation-3b11a79d-7413-4acd-91e6-7ede593d12cf" title="Permalink to this equation">#</a></span>\[\begin{align}
 E_n = - \frac{E_o}{n^2},
 \end{align}\]</div>
 <p>in terms of the ground-state energy <span class="math notranslate nohighlight">\(E_o\)</span>, which is <span class="math notranslate nohighlight">\(13.6\ {\rm eV}\)</span> for hydrogen (see <a class="reference external" href="https://saturnaxis.github.io/ModernPhysics/Chapter_4/structure-of-the-atom.html#the-bohr-model-of-the-hydrogen-atom">here</a> for a more detailed derivation).  Figure <a class="reference internal" href="#hydrogen-transitions-fig"><span class="std std-numref">3.5</span></a> illustrates the transitions between energy levels for the hydrogen atom.</p>
@@ -1319,8 +1387,8 @@ E_n = - \frac{E_o}{n^2},
 <h3><span class="section-number">3.2.2. </span>Spectroscopy<a class="headerlink" href="#spectroscopy" title="Permalink to this headline">#</a></h3>
 <p>Spectroscopy uses the dispersion of light as a function of wavelength to identify the composition of various materials.  We distinguish among three types of spectra, which represent <a class="reference external" href="https://en.wikipedia.org/wiki/Gustav_Kirchhoff#Kirchhoff%27s_three_laws_of_spectroscopy">Kirchoff’s laws of radiation</a>:</p>
 <ol class="arabic simple">
-<li><p>A solid, liquid, or dense gas excited to emit light will radiate at all wavelengths and thus produce a <strong>continuous</strong> spectrum (Fig. <a class="reference internal" href="#kirchhoff-laws-fig"><span class="std std-numref">3.6</span></a> middle).</p></li>
-<li><p>If light composing a continuous spectrum passes through a cool, low-density gas, the result will be an <strong>absorption</strong> spectrum (Fig. <a class="reference internal" href="#kirchhoff-laws-fig"><span class="std std-numref">3.6</span></a> left).  The gas lies between the observer and the light source.</p></li>
+<li><p>A solid, liquid, or dense gas excited to emit light will radiate at all wavelengths and thus produce a <strong>continuous</strong> spectrum (Fig. <a class="reference internal" href="#kirchhoff-laws-fig"><span class="std std-numref">3.6</span></a> left).</p></li>
+<li><p>If light composing a continuous spectrum passes through a cool, low-density gas, the result will be an <strong>absorption</strong> spectrum (Fig. <a class="reference internal" href="#kirchhoff-laws-fig"><span class="std std-numref">3.6</span></a> middle).  The gas lies between the observer and the light source.</p></li>
 <li><p>A low-density gas excited to emit light will do so at specific wavelengths and this produces an <strong>emission</strong> spectrum (Fig. <a class="reference internal" href="#kirchhoff-laws-fig"><span class="std std-numref">3.6</span></a> right).  The observer is not typically along the line-of-sight of the gas and the light source.</p></li>
 </ol>
 <div class="figure align-default" id="kirchhoff-laws-fig">
@@ -1368,8 +1436,8 @@ E_n = - \frac{E_o}{n^2},
 <h4><span class="section-number">3.2.2.2. </span>Doppler Shift and Line Broadening<a class="headerlink" href="#doppler-shift-and-line-broadening" title="Permalink to this headline">#</a></h4>
 <p>Photons are emitted or absorbed in response to the excitation or de-excitation of electrons between energy levels, where the difference between energy levels <span class="math notranslate nohighlight">\(\Delta E\)</span> determines to the specific frequency of the photons.  According to the <strong>Heisenberg uncertainty principle</strong>, a photon can be absorbed/emitted with an energy slightly different from <span class="math notranslate nohighlight">\(\Delta E\)</span>, which results in a finite width for the observed spectral line profile <span class="math notranslate nohighlight">\(\Phi_\nu\)</span>.  This quantum mechanical effect is one type of line broadening called <strong>natural broadening</strong>.</p>
 <p>The frequency of the object’s emission and absorption lines is Doppler shifted <span class="math notranslate nohighlight">\(\Delta \nu\)</span> depending on the velocity <span class="math notranslate nohighlight">\(v_r\)</span> of the object along the line of sight by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-37866d5f-c3e0-4f15-b9b4-ac5f9b51e52b">
-<span class="eqno">(3.29)<a class="headerlink" href="#equation-37866d5f-c3e0-4f15-b9b4-ac5f9b51e52b" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-f4ece7ab-5573-4e81-83e3-eb1da945f730">
+<span class="eqno">(3.29)<a class="headerlink" href="#equation-f4ece7ab-5573-4e81-83e3-eb1da945f730" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Delta \nu = \frac{v_r}{c} \nu.
 \end{align}\]</div>
 <p>A positive <strong>Doppler shift</strong> occurs if the object moves towards the observer (<em>blue shifted</em>) and negative if the object moves away from the observer (<em>red shifted</em>).  This phenomenon has bee used to determine the rotation rate of Mercury using radar techniques.  upon transmitting a radar pulse at a specific frequency, the signal is blue shifted by the approaching limb and red shifted by the receding limb.  These Doppler shifts broaden the radar signal upon reflection by an amount proportional to the planet’s rotation rate.</p>
@@ -1388,26 +1456,26 @@ E_n = - \frac{E_o}{n^2},
 <p>Some other texts will use <span class="math notranslate nohighlight">\(\kappa_\nu\)</span> to denote the mass extinction coefficient, assuming that it largely dominates over the contribution due to scattering (i.e., <span class="math notranslate nohighlight">\(\kappa_\nu \gg \sigma_\nu\)</span> and <span class="math notranslate nohighlight">\(\alpha_\nu \approx \kappa_\nu\)</span>)</p>
 </div>
 <p>The specific intensity is the energy radiated by a blackbody at a frequency <span class="math notranslate nohighlight">\(\nu\)</span> or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f6105106-b677-41bf-9db7-440ba4318179">
-<span class="eqno">(3.31)<a class="headerlink" href="#equation-f6105106-b677-41bf-9db7-440ba4318179" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-50897eb6-0e4c-45a5-86b5-64620dfcd0f3">
+<span class="eqno">(3.31)<a class="headerlink" href="#equation-50897eb6-0e4c-45a5-86b5-64620dfcd0f3" title="Permalink to this equation">#</a></span>\[\begin{align}
 I_\nu = B_\nu (T).
 \end{align}\]</div>
 <p>This intensity is emitted into a solid angle <span class="math notranslate nohighlight">\(d\Omega_s\)</span> (see Fig. <a class="reference internal" href="#surface-element-fig"><span class="std std-numref">3.3</span></a>).  The solid angle (in <span class="math notranslate nohighlight">\(\rm sr\)</span>) is defined by the integration over a sphere of unit radius as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5e9871c1-aefc-4e4a-8d7b-d4f9a930ba41">
-<span class="eqno">(3.32)<a class="headerlink" href="#equation-5e9871c1-aefc-4e4a-8d7b-d4f9a930ba41" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b354db65-b4f4-4b68-8c99-a3590ea56e7c">
+<span class="eqno">(3.32)<a class="headerlink" href="#equation-b354db65-b4f4-4b68-8c99-a3590ea56e7c" title="Permalink to this equation">#</a></span>\[\begin{align}
 \oint d\Omega_s = \int_0^{2\pi} \int_0^\pi \sin \theta d\theta d\phi = 4\pi.
 \end{align}\]</div>
 <p>The <strong>mean intensity</strong> <span class="math notranslate nohighlight">\(J_\nu\)</span> of the radiation is equal to</p>
-<div class="amsmath math notranslate nohighlight" id="equation-4044db9d-cc8d-449c-81f5-d478588eed48">
-<span class="eqno">(3.33)<a class="headerlink" href="#equation-4044db9d-cc8d-449c-81f5-d478588eed48" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0b5f4193-bd0e-4b99-8bfc-2a563b98f874">
+<span class="eqno">(3.33)<a class="headerlink" href="#equation-0b5f4193-bd0e-4b99-8bfc-2a563b98f874" title="Permalink to this equation">#</a></span>\[\begin{align}
 J_\nu \equiv \frac{\oint I_\nu d\Omega_s}{\oint d\Omega_s} = \frac{1}{2} \int_{-1}^1 I_\nu d\cos \theta.
 \end{align}\]</div>
 <p>The angle <span class="math notranslate nohighlight">\(\theta\)</span> is shown in Fig. <a class="reference internal" href="#surface-element-fig"><span class="std std-numref">3.3</span></a>, which represents the angle between the line of sight vector <span class="math notranslate nohighlight">\(\hat{s}\)</span> and <span class="math notranslate nohighlight">\(\hat{z}\)</span>.  Then the differential <span class="math notranslate nohighlight">\(ds = dz/\cos \theta\)</span> and Eqn. <a class="reference internal" href="#equation-spec-i">(3.30)</a> can be rewritten as</p>
 <div class="math notranslate nohighlight" id="equation-spec-i-los">
 <span class="eqno">(3.34)<a class="headerlink" href="#equation-spec-i-los" title="Permalink to this equation">#</a></span>\[\frac{\cos \theta}{\rho} \frac{dI_\nu}{dz} = j_\nu - \alpha_\nu I_\nu.\]</div>
 <p>The definition of optical depth (Eqn. <a class="reference internal" href="#equation-optical-depth">(3.28)</a>) can be written as <span class="math notranslate nohighlight">\(d\tau_\nu = \alpha_\nu \rho dz\)</span>, where Eqn. <a class="reference internal" href="#equation-spec-i-los">(3.34)</a> becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c8752e32-38cd-4121-9e10-fe0b0a25f34e">
-<span class="eqno">(3.35)<a class="headerlink" href="#equation-c8752e32-38cd-4121-9e10-fe0b0a25f34e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-bb75f59f-fdc2-4ad1-9d43-08f3f4f245cd">
+<span class="eqno">(3.35)<a class="headerlink" href="#equation-bb75f59f-fdc2-4ad1-9d43-08f3f4f245cd" title="Permalink to this equation">#</a></span>\[\begin{align}
 \alpha_\nu \cos \theta \frac{dI_\nu}{d\tau_\nu } = j_\nu - \alpha_\nu I_\nu.
 \end{align}\]</div>
 <p>The <strong>source function</strong> <span class="math notranslate nohighlight">\(S_\nu\)</span> is defined as <span class="math notranslate nohighlight">\(S_\nu \equiv j_\nu/\alpha_nu\)</span>, where the general equation of radiative transport is</p>
@@ -1434,22 +1502,22 @@ J_\nu \equiv \frac{\oint I_\nu d\Omega_s}{\oint d\Omega_s} = \frac{1}{2} \int_{-
 </ul>
 </li>
 <li><p>If the material in the cloud is in <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#temperature-and-local-thermodynamic-equilibrium">local thermodynamic equilibrium</a> (LTE), the radiation field obeys: <br><br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-a7d385f0-c6be-45d5-b22e-fe06a95d4794">
-<span class="eqno">(3.39)<a class="headerlink" href="#equation-a7d385f0-c6be-45d5-b22e-fe06a95d4794" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1b7bf4ee-d4ba-4690-955d-1a8d28ab5e33">
+<span class="eqno">(3.39)<a class="headerlink" href="#equation-1b7bf4ee-d4ba-4690-955d-1a8d28ab5e33" title="Permalink to this equation">#</a></span>\[\begin{align}
     I_\nu = J_\nu = B_\nu(T).
     \end{align}\]</div>
 <p>If there is no scattering (i.e., <span class="math notranslate nohighlight">\(\sigma_\nu = 0\)</span>), then <span class="math notranslate nohighlight">\(\kappa_\nu = \alpha_nu\)</span>.  The material is in equilibrium with the radiation field, the amount of energy emitted must be equal to the amount of energy absorbed.  The source function is given by <span class="math notranslate nohighlight">\(S_\nu = B_\nu(T)\)</span>.</p>
 </li>
 <li><p>Assume that <span class="math notranslate nohighlight">\(j_\nu\)</span> is due to scattering only (i.e., <span class="math notranslate nohighlight">\(j_\nu = \sigma_\nu I_\nu\)</span>), where we receive sunlight that is reflected towards us.  In general, scattering removes radiation from a particular direction and redirects (or introduces) it into another direction.  If photons undergo only one encounter with a particle, the process is called <strong>single scattering</strong> and multiple encounters produces multiple scattering.  The <strong>single scattering albedo</strong> <span class="math notranslate nohighlight">\(\varpi_\nu\)</span> represents the fraction of radiation lost due to scattering by <br><br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-b0f1e826-9d39-4172-9134-c3a41cab8baf">
-<span class="eqno">(3.40)<a class="headerlink" href="#equation-b0f1e826-9d39-4172-9134-c3a41cab8baf" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ac5bd744-047c-4ef9-b904-c9205c018036">
+<span class="eqno">(3.40)<a class="headerlink" href="#equation-ac5bd744-047c-4ef9-b904-c9205c018036" title="Permalink to this equation">#</a></span>\[\begin{align}
     \varpi_\nu \equiv \frac{\sigma_\nu}{\alpha_\nu}.
     \end{align}\]</div>
 <p>The single scattering albedo is equal to unity if the mass absorption coefficient <span class="math notranslate nohighlight">\(\kappa_\nu\)</span> is equal to zero and <span class="math notranslate nohighlight">\(S_\nu = \varpi I_\nu = I_\nu.\)</span></p>
 </li>
 <li><p>For LTE <span class="math notranslate nohighlight">\((I_\nu = J_\nu)\)</span> and isotropic scattering, the fraction of radiation that is absorbed by the medium is given by <span class="math notranslate nohighlight">\(\kappa_\nu/\alpha_\nu = 1 - \varpi_\nu.\)</span>  Using Kirchoff’s law (Eqn. <a class="reference internal" href="#equation-kirchhoff-law">(3.27)</a>), we can write the source function as <br><br></p>
-<div class="amsmath math notranslate nohighlight" id="equation-1f0f90a5-0b7b-455b-b5b5-c83861e7cde6">
-<span class="eqno">(3.41)<a class="headerlink" href="#equation-1f0f90a5-0b7b-455b-b5b5-c83861e7cde6" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-76bb9ea4-27e5-472a-a33e-3a8358fbeea2">
+<span class="eqno">(3.41)<a class="headerlink" href="#equation-76bb9ea4-27e5-472a-a33e-3a8358fbeea2" title="Permalink to this equation">#</a></span>\[\begin{align}
     S_\nu = \varpi_\nu J_\nu + (1-\varpi_\nu)B_\nu(T).
     \end{align}\]</div>
 </li>
@@ -1458,8 +1526,8 @@ J_\nu \equiv \frac{\oint I_\nu d\Omega_s}{\oint d\Omega_s} = \frac{1}{2} \int_{-
 <div class="section" id="radiative-equilibrium">
 <h3><span class="section-number">3.2.4. </span>Radiative Equilibrium<a class="headerlink" href="#radiative-equilibrium" title="Permalink to this headline">#</a></h3>
 <p>Energy transport in a planet’s stratosphere is usually dominated by radiation.  If the total flux <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> is independent of height <span class="math notranslate nohighlight">\(z\)</span>, the atmosphere is in <strong>radiative equilibrium</strong>, or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bfe89e2a-7b15-4260-b9e8-8e167bcb2de5">
-<span class="eqno">(3.42)<a class="headerlink" href="#equation-bfe89e2a-7b15-4260-b9e8-8e167bcb2de5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1bcd5405-586c-4952-9c1d-db283b3c94b3">
+<span class="eqno">(3.42)<a class="headerlink" href="#equation-1bcd5405-586c-4952-9c1d-db283b3c94b3" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{d\mathcal{F}}{dz} = 0.
 \end{align}\]</div>
 <p>If an atmosphere is in hydrostatic (and radiative) equilibrium and its equation of station is given by the ideal gas law, then its temperature-pressure relation can be written as</p>
@@ -1556,18 +1624,18 @@ J_\nu \equiv \frac{\oint I_\nu d\Omega_s}{\oint d\Omega_s} = \frac{1}{2} \int_{-
 </div>
 </div>
 <p>The air temperature just above the ground <span class="math notranslate nohighlight">\(T_g\)</span> has an optical depth <span class="math notranslate nohighlight">\(\tau_g\)</span>, where this temperature can be computed by adding a radiative downward contribution from the top of the atmosphere (with a temperature <span class="math notranslate nohighlight">\(T_o\)</span>) and the radiative upward contribution from the surface (with a temperature <span class="math notranslate nohighlight">\(T(\tau_g)\)</span>) to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bbd068e8-c4c6-44a6-a142-014d6c677081">
-<span class="eqno">(3.46)<a class="headerlink" href="#equation-bbd068e8-c4c6-44a6-a142-014d6c677081" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e774c5ec-c084-4719-97c9-0881a5e65ef9">
+<span class="eqno">(3.46)<a class="headerlink" href="#equation-e774c5ec-c084-4719-97c9-0881a5e65ef9" title="Permalink to this equation">#</a></span>\[\begin{align}
 T_g = (T^4(\tau_g) + T_o^4)^{1/4},
 \end{align}\]</div>
 <p>where Eqns. <a class="reference internal" href="#equation-atmos-temp">(3.44)</a> and <a class="reference internal" href="#equation-eff-temp">(3.45)</a> can be substituted to get</p>
 <div class="math notranslate nohighlight" id="equation-surface-greenhouse">
-<span class="eqno">(3.47)<a class="headerlink" href="#equation-surface-greenhouse" title="Permalink to this equation">#</a></span>\[\begin{split}T_g &amp;= \left(T_o^4 \left[1 + \frac{3}{2}\tau_g \right) + T_o^4\right]^{1/4}, \\
+<span class="eqno">(3.47)<a class="headerlink" href="#equation-surface-greenhouse" title="Permalink to this equation">#</a></span>\[\begin{split}T_g &amp;= \left[T_o^4 \left(1 + \frac{3}{2}\tau_g \right) + T_o^4\right]^{1/4}, \\
 &amp;= \left[T_o^4 \left(2 + \frac{3}{2}\tau_g \right) \right]^{1/4}, \\
 &amp;= T_{\rm e} \left(1 + \frac{3}{4}\tau_g \right)^{1/4}.\end{split}\]</div>
 <p>The surface temperature in a radiative atmosphere can be very high if the IR opacity is also high (see more details <a class="reference external" href="https://www.lpl.arizona.edu/~griffith/ATMOS15/Lec9-runawayGH.pdf">here</a>).</p>
 <p>The greenhouse effect is particularly strong on Venus, where the surface temperature reaches <span class="math notranslate nohighlight">\(733\ {\rm K}\)</span>.  This is almost <span class="math notranslate nohighlight">\(500\ {\rm K}\)</span> above the equilibrium temperature of <span class="math notranslate nohighlight">\({\sim}240\ {\rm K}\)</span>.  The greenhouse effect is also noticeable on Titan and Earth (an increase of <span class="math notranslate nohighlight">\(21\ {\rm K}\)</span> and <span class="math notranslate nohighlight">\(33\ {\rm K}\)</span>, respectively), while the temperature is raised by only <span class="math notranslate nohighlight">\({\sim}6\ {\rm K}\)</span> on Mars.</p>
-<p>The greenhouse arming on Titan is partially compensated by cooling produced by small haze particles in the stratosphere that block short-wavelength sunlight, but are transparent to long-wavelength thermal radiation from Titan (i.e., the <strong>anti-greenhouse effect</strong>).  Similar effects are observed on Earth after giant volcanic eruptions (e.g., 1991 explosion of Mt Pinatubo in the Philippines), which inject huge amounts of ash into the stratosphere.</p>
+<p>The greenhouse warming on Titan is partially compensated by cooling produced by small haze particles in the stratosphere that block short-wavelength sunlight, but are transparent to long-wavelength thermal radiation from Titan (i.e., the <strong>anti-greenhouse effect</strong>).  Similar effects are observed on Earth after giant volcanic eruptions (e.g., 1991 explosion of Mt Pinatubo in the Philippines), which inject huge amounts of ash into the stratosphere.</p>
 <p>Icy material allows sunlight to penetrate several centimeters (or more) below the surface but is mostly opaque to re-radiated thermal IR emission.  The subsurface region can become significantly warmer than the equilibrium temperature would indicate.  This process is called the <strong>solid-state greenhouse effect</strong> and is analogous with the atmospheric trapping of thermal IR emission.</p>
 <p>The subsurface Lake Untersee in Antarctica is maintained by a special case of the solid-state greenhouse effect known as the ice-covered greenhouse effect.  The ice-covered greenhouse effect may induce habitable liquid water environments just below the surface of a body that is too cold (and/or does not have sufficient atmospheric pressure) to have liquid water on its surface.</p>
 </div>
@@ -1593,18 +1661,18 @@ T_g = (T^4(\tau_g) + T_o^4)^{1/4},
 <span class="eqno">(3.50)<a class="headerlink" href="#equation-bright-tau" title="Permalink to this equation">#</a></span>\[\begin{split}0 &amp;= \frac{dB_\nu}{d\tau_\nu} - \frac{dJ_\nu}{d\tau_\nu}, \\
 \frac{dB_\nu}{d\tau_\nu} &amp;= - \frac{3}{4\pi}\mathcal{F}_\nu.\end{split}\]</div>
 <p>Integrating over frequency yields the total radiative flux, or the <strong>radiative diffusion equation</strong>:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3b0ed147-c382-4b6d-8cbf-19cbd7ccde48">
-<span class="eqno">(3.51)<a class="headerlink" href="#equation-3b0ed147-c382-4b6d-8cbf-19cbd7ccde48" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-fec39ddc-7abd-4737-8485-73988aee58da">
+<span class="eqno">(3.51)<a class="headerlink" href="#equation-fec39ddc-7abd-4737-8485-73988aee58da" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{F}(z) = -\frac{4\pi}{3\rho}\frac{\partial T}{\partial z}\int_0^\infty \frac{1}{\alpha_\nu} \frac{\partial B_\nu(T)}{\partial T}d\nu,
 \end{align}\]</div>
 <p>where the integral can be simplified using a frequency-averaged absorption coefficient, such as the <strong>Rosseland mean absorption coefficient</strong> <span class="math notranslate nohighlight">\(\alpha_R\)</span> or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-559f0dbd-02d9-4595-bf88-55ed460c1499">
-<span class="eqno">(3.52)<a class="headerlink" href="#equation-559f0dbd-02d9-4595-bf88-55ed460c1499" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1178e27b-b1d7-4c02-9b8b-a39c77d82cac">
+<span class="eqno">(3.52)<a class="headerlink" href="#equation-1178e27b-b1d7-4c02-9b8b-a39c77d82cac" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{1}{\alpha_R} \equiv \frac{\int_0^\infty \frac{1}{\alpha_\nu} \frac{\partial B_\nu(T)}{\partial T}d\nu }{\int_0^\infty \frac{\partial B_\nu(T)}{\partial T}d\nu}
 \end{align}\]</div>
 <p>which is also used for <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_9/stellar-atmospheres.html#the-rosseland-mean-opacity">stellar atmospheres</a>.  With this simplification, the radiative diffusion equation becomes</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d3f4f87a-b0b1-411a-83cb-f6f6c2929049">
-<span class="eqno">(3.53)<a class="headerlink" href="#equation-d3f4f87a-b0b1-411a-83cb-f6f6c2929049" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c1e1501b-23e9-4c6a-aded-a8f43642f32a">
+<span class="eqno">(3.53)<a class="headerlink" href="#equation-c1e1501b-23e9-4c6a-aded-a8f43642f32a" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{F}(z) &amp;= -\frac{4\pi}{3\rho \alpha_R}\frac{\partial T}{\partial z} \int_0^\infty \frac{\partial B_\nu(T)}{\partial T}d\nu, \\[5pt]
 &amp;= -\frac{4\pi}{3\rho \alpha_R}\frac{\partial T}{\partial z} \frac{\partial}{\partial T}\left( \frac{\sigma T^4}{\pi}\right), \\[5pt]
 &amp;= -\frac{16\pi \sigma T^3}{3\rho \alpha_R}\frac{\partial T}{\partial z}.
@@ -1614,8 +1682,8 @@ T_g = (T^4(\tau_g) + T_o^4)^{1/4},
 <p>Flux travels upward in an atmosphere if the temperature gradient <span class="math notranslate nohighlight">\(dT/dz\)</span> is negative (i.e., the temperature decreases with altitude)</p>
 </div>
 <p>Substituting the Stefan-Boltzmann law (Eqn. <a class="reference internal" href="#equation-sb-law">(3.11)</a>) and converting to the effective temperature produces</p>
-<div class="amsmath math notranslate nohighlight" id="equation-40dbd9a9-75bb-4a25-88a8-20bad16c0e80">
-<span class="eqno">(3.54)<a class="headerlink" href="#equation-40dbd9a9-75bb-4a25-88a8-20bad16c0e80" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-1c9944b7-112b-481d-8ed9-3d744128d720">
+<span class="eqno">(3.54)<a class="headerlink" href="#equation-1c9944b7-112b-481d-8ed9-3d744128d720" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{dT}{dz} = - \frac{3\alpha_R \rho T_e^4}{16T^3},
 \end{align}\]</div>
 <p>which is the atmospheric temperature profile (or the <a class="reference external" href="https://saturnaxis.github.io/ModernAstro/Chapter_11/interiors-of-stars.html#the-radiative-temperature-gradient">radiative temperature gradient</a>).   If an atmosphere is in hydrostatic (Eqn. <a class="reference internal" href="../Chapter_02/Physics_and_Astrophysics.html#equation-hydro-eq">(2.17)</a>), then its temperature-pressure relation is given by Eqn. <a class="reference internal" href="#equation-temp-press-relation">(3.43)</a>.</p>
@@ -1635,8 +1703,8 @@ T_g = (T^4(\tau_g) + T_o^4)^{1/4},
 <li><p>is gray.</p></li>
 </ol>
 <p>Then it is convenient to use the <strong>two-stream approximation</strong> (Fig. <a class="reference internal" href="#two-stream-fig"><span class="std std-numref">3.10</span></a>) in monochromatic equilibrium, where the mean intensity <span class="math notranslate nohighlight">\(J\)</span> and net flux density <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> are given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f0fb5b2a-f4a4-406c-851c-00a8856daf6f">
-<span class="eqno">(3.55)<a class="headerlink" href="#equation-f0fb5b2a-f4a4-406c-851c-00a8856daf6f" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-6dce8bcb-79a4-4c31-8767-2b13edc64348">
+<span class="eqno">(3.55)<a class="headerlink" href="#equation-6dce8bcb-79a4-4c31-8767-2b13edc64348" title="Permalink to this equation">#</a></span>\[\begin{align}
 J = \frac{1}{2}\left(I^+ + I^- \right), \\[5pt]
 \mathcal{F} = \pi \left( I^+ - I^- \right).
 \end{align}\]</div>
@@ -1645,60 +1713,60 @@ J = \frac{1}{2}\left(I^+ + I^- \right), \\[5pt]
 <p>The two stream approximation for the greenhouse effect is similar to the Eddington approximation from stellar atmospheres, which describes two levels within a hot gas in LTE.  However, the greenhouse effect will have a discontinuity at the ground because there are two sources of emission rather a single flow across a slab.</p>
 </div>
 <p>The upward/downward radiation can be written in terms of the flux density</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3719cffb-4231-4327-a04b-04d330ee1acb">
-<span class="eqno">(3.56)<a class="headerlink" href="#equation-3719cffb-4231-4327-a04b-04d330ee1acb" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c5bcd8a6-0c51-4685-a081-e5a049bfbc18">
+<span class="eqno">(3.56)<a class="headerlink" href="#equation-c5bcd8a6-0c51-4685-a081-e5a049bfbc18" title="Permalink to this equation">#</a></span>\[\begin{align}
 I^+ = I^- + \frac{\mathcal{F}}{\pi}, \\
 I^- = I^+ - \frac{\mathcal{F}}{\pi},
 \end{align}\]</div>
 <p>to get the mean density in terms of the flux density by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-d967082f-71b1-4562-9728-c0e632867129">
-<span class="eqno">(3.57)<a class="headerlink" href="#equation-d967082f-71b1-4562-9728-c0e632867129" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-205ddd23-9797-4f23-875a-3b2ae7b6e528">
+<span class="eqno">(3.57)<a class="headerlink" href="#equation-205ddd23-9797-4f23-875a-3b2ae7b6e528" title="Permalink to this equation">#</a></span>\[\begin{align}
 J &amp;= \frac{1}{2}\left(I^+ + I^- \right), \\
 &amp;= \frac{1}{2}\left( 2I^- + \frac{\mathcal{F}}{\pi} \right), \\
 &amp;= I^- + \frac{\mathcal{F}}{2\pi}, \\
 &amp;= I^+ - \frac{\mathcal{F}}{2\pi}.
 \end{align}\]</div>
 <p>Using the radiative transfer equation (Eqn. <a class="reference internal" href="#equation-therm-trans">(3.48)</a>), we can substitute <span class="math notranslate nohighlight">\(J\)</span> (and assume radiative equilibrium) to get</p>
-<div class="amsmath math notranslate nohighlight" id="equation-178f6362-83ae-42a7-b4ba-353438f41ea5">
-<span class="eqno">(3.58)<a class="headerlink" href="#equation-178f6362-83ae-42a7-b4ba-353438f41ea5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3ec2fc25-f7c4-4e38-ac9d-ff2b67978b26">
+<span class="eqno">(3.58)<a class="headerlink" href="#equation-3ec2fc25-f7c4-4e38-ac9d-ff2b67978b26" title="Permalink to this equation">#</a></span>\[\begin{align}
 \frac{d\mathcal{F}}{d\tau} &amp;= 4\pi \left(B - I^+ + \frac{\mathcal{F}}{2\pi} \right), \\
 &amp;= 4\pi \left(B - I^+ \right) + 2\mathcal{F} = 0, \\
 &amp;= 4\pi \left(B - I^- \right) - 2\mathcal{F} = 0.
 \end{align}\]</div>
 <p>Through radiative equilibrium, we can write each intensity in terms of the intensity of a blackbody <span class="math notranslate nohighlight">\(B(T)\)</span> at a temperature <span class="math notranslate nohighlight">\(T\)</span> and the flux density <span class="math notranslate nohighlight">\(\mathcal{F}\)</span> as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-74aa7304-ebad-4df8-80fc-afe1bf47c8c9">
-<span class="eqno">(3.59)<a class="headerlink" href="#equation-74aa7304-ebad-4df8-80fc-afe1bf47c8c9" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-87be30fe-fbe7-4bbc-8ca3-445a8836dbd3">
+<span class="eqno">(3.59)<a class="headerlink" href="#equation-87be30fe-fbe7-4bbc-8ca3-445a8836dbd3" title="Permalink to this equation">#</a></span>\[\begin{align}
 I^+ = B  + \frac{\mathcal{F}}{2\pi}, \\
 I^- = B  - \frac{\mathcal{F}}{2\pi}.
 \end{align}\]</div>
 <p>The boundary condition of the downward intensity at the top of the atmosphere is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5d7d11dd-d908-4222-81ef-2d051d0a51e2">
-<span class="eqno">(3.60)<a class="headerlink" href="#equation-5d7d11dd-d908-4222-81ef-2d051d0a51e2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-90b0e874-29e2-458d-a6d5-dfe07919dfec">
+<span class="eqno">(3.60)<a class="headerlink" href="#equation-90b0e874-29e2-458d-a6d5-dfe07919dfec" title="Permalink to this equation">#</a></span>\[\begin{align}
 I_o^- &amp;= B(T_o)  - \frac{\mathcal{F}}{2\pi} = 0, \\[5pt]
 B(T_o) &amp;= \frac{\mathcal{F}}{2\pi},
 \end{align}\]</div>
 <p>because there no downward intensity into the top of the atmosphere. The temperature <span class="math notranslate nohighlight">\(T_o\)</span> is usually referred  to as the <strong>skin temperature</strong>.  There is an upward intensity, which can be solved using the above result from the boundary condition by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-13211b8d-410e-4cc6-bdb3-de11ceb707cc">
-<span class="eqno">(3.61)<a class="headerlink" href="#equation-13211b8d-410e-4cc6-bdb3-de11ceb707cc" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-faf9fae8-05e1-41ac-961b-58e976d2fee5">
+<span class="eqno">(3.61)<a class="headerlink" href="#equation-faf9fae8-05e1-41ac-961b-58e976d2fee5" title="Permalink to this equation">#</a></span>\[\begin{align}
 I_o^+ &amp;= B(T_o)  + \frac{\mathcal{F}}{2\pi}, \\
 &amp;= 2B(T_o).
 \end{align}\]</div>
 <p>Let’s consider the boundary condition for a point just above the surface at temperature <span class="math notranslate nohighlight">\(T_1\)</span>.  It has an upward intensity of</p>
-<div class="amsmath math notranslate nohighlight" id="equation-828b9141-a49d-41b7-98d3-bc6314a05626">
-<span class="eqno">(3.62)<a class="headerlink" href="#equation-828b9141-a49d-41b7-98d3-bc6314a05626" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-a6aa0905-1c80-4cba-a5ce-4917b6f5280d">
+<span class="eqno">(3.62)<a class="headerlink" href="#equation-a6aa0905-1c80-4cba-a5ce-4917b6f5280d" title="Permalink to this equation">#</a></span>\[\begin{align}
 I_g^+ = B(T_1)  + \frac{\mathcal{F}}{2\pi}.
 \end{align}\]</div>
 <p>Integrating Eqn. <a class="reference internal" href="#equation-bright-tau">(3.50)</a> produces</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bcae890e-245d-480f-b97b-d8a4ddde2063">
-<span class="eqno">(3.63)<a class="headerlink" href="#equation-bcae890e-245d-480f-b97b-d8a4ddde2063" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ca6322f3-ba6f-478c-bc5d-62f2188e59f5">
+<span class="eqno">(3.63)<a class="headerlink" href="#equation-ca6322f3-ba6f-478c-bc5d-62f2188e59f5" title="Permalink to this equation">#</a></span>\[\begin{align}
 B(T_o) - B(\tau) &amp;= -\frac{3\mathcal{F}}{4\pi}\tau, \\
 B(\tau) &amp;= B(T_o) + \frac{3\mathcal{F}}{4\pi}\tau, \\
 &amp;= \frac{\mathcal{F}}{2\pi}  +\frac{3\mathcal{F}}{4\pi}\tau, \\
 &amp;= \frac{\mathcal{F}}{2\pi}\left( 1 + \frac{3}{2}\tau \right).
 \end{align}\]</div>
 <p>Integration over frequency and conversion to temperature via the Stefan-Boltzmann law (Eqn. <a class="reference internal" href="#equation-sb-law">(3.11)</a>) yields</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b80f104f-877b-4870-8e44-b1fdcd175927">
-<span class="eqno">(3.64)<a class="headerlink" href="#equation-b80f104f-877b-4870-8e44-b1fdcd175927" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7eb17897-fcf9-4644-95b5-ef982192456c">
+<span class="eqno">(3.64)<a class="headerlink" href="#equation-7eb17897-fcf9-4644-95b5-ef982192456c" title="Permalink to this equation">#</a></span>\[\begin{align}
 T(\tau) = T_o \left(1+ \frac{3}{2}\tau \right)^{1/4}.
 \end{align}\]</div>
 </div>
@@ -2022,8 +2090,8 @@ allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
 allowfullscreen></iframe>
 </div>
 <p>The Coriolis effect follows from the conservation of <em>angular</em> momentum about the rotation axis.  A parcel of air at a latitude <span class="math notranslate nohighlight">\(\theta\)</span> has an angular momentum per unit mass given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c48b33fd-1210-4468-bc5e-b47166443491">
-<span class="eqno">(3.66)<a class="headerlink" href="#equation-c48b33fd-1210-4468-bc5e-b47166443491" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-47197012-9bd3-478c-9c00-8c3327e43411">
+<span class="eqno">(3.66)<a class="headerlink" href="#equation-47197012-9bd3-478c-9c00-8c3327e43411" title="Permalink to this equation">#</a></span>\[\begin{align}
 L = \left(\omega_{\rm rot}R\cos\theta + u \right)R\cos\theta,
 \end{align}\]</div>
 <p>which depends on the planet’s radius <span class="math notranslate nohighlight">\(R\)</span> and the <span class="math notranslate nohighlight">\(x\)</span>-component of the wind velocity <span class="math notranslate nohighlight">\(u\)</span>.</p>
@@ -2084,32 +2152,32 @@ L = \left(\omega_{\rm rot}R\cos\theta + u \right)R\cos\theta,
 <h2><span class="section-number">3.8. </span>Atmospheric Escape<a class="headerlink" href="#atmospheric-escape" title="Permalink to this headline">#</a></h2>
 <p>A particle can escape a body’s atmosphere if its kinetic energy exceeds the gravitational binding energy <em>and</em> it moves along an upward trajectory without colliding or being scattered by another atom or molecule.  Particle escape is possible in the <strong>exosphere</strong>, where the lower boundary is called the <strong>exobase</strong>.</p>
 <p>The mean free path for collisions between molecules <span class="math notranslate nohighlight">\(\ell\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3c22aa40-b66e-427c-918c-7a600f6290c2">
-<span class="eqno">(3.67)<a class="headerlink" href="#equation-3c22aa40-b66e-427c-918c-7a600f6290c2" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b20053a8-e52e-44b5-9b1e-31041bcbead4">
+<span class="eqno">(3.67)<a class="headerlink" href="#equation-b20053a8-e52e-44b5-9b1e-31041bcbead4" title="Permalink to this equation">#</a></span>\[\begin{align}
 \ell = \frac{1}{\sigma N},
 \end{align}\]</div>
 <p>which depends on the molecular cross-section <span class="math notranslate nohighlight">\(\sigma\)</span> and the local (particle) number density.  The exobase is defined at an altitude <span class="math notranslate nohighlight">\(z_{\rm ex}\)</span> in terms of a scale height <span class="math notranslate nohighlight">\(H\)</span>, where</p>
-<div class="amsmath math notranslate nohighlight" id="equation-76af121f-3f5f-4ca9-b24d-743c3bd8295c">
-<span class="eqno">(3.68)<a class="headerlink" href="#equation-76af121f-3f5f-4ca9-b24d-743c3bd8295c" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-e54baafc-d754-45fc-b574-6cfa1766e696">
+<span class="eqno">(3.68)<a class="headerlink" href="#equation-e54baafc-d754-45fc-b574-6cfa1766e696" title="Permalink to this equation">#</a></span>\[\begin{align}
 \int_{z_{\rm ex}}^\infty \sigma N(z)dz \approx \sigma N(z_{\rm ex})H = 1.
 \end{align}\]</div>
 <p>If the scale height <span class="math notranslate nohighlight">\(H\)</span> is constant in the exosphere, then the exobase is given by <span class="math notranslate nohighlight">\(\ell(z_{\rm ex}) = H\)</span>.  Within the exosphere, the mean free path for a molecule (or atom) is comparable to (or larger than) the atmospheric scale height so that an atom has a reasonable chance of escaping.  Various nonthermal processes can also lead to escape in addition to thermal (or Jeans) escape.</p>
 <div class="section" id="thermal-jeans-escape">
 <h3><span class="section-number">3.8.1. </span>Thermal (Jeans) Escape<a class="headerlink" href="#thermal-jeans-escape" title="Permalink to this headline">#</a></h3>
 <p>For a gas in thermal equilibrium, the velocities follow a <a class="reference external" href="https://en.wikipedia.org/wiki/Maxwell%E2%80%93Boltzmann_distribution">Maxwellian distribution function</a>, which depends on its kinetic properties (i.e., mass <span class="math notranslate nohighlight">\(m\)</span>, temperature <span class="math notranslate nohighlight">\(T\)</span>, and Boltzmann constant <span class="math notranslate nohighlight">\(k\)</span>) and is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-ce972254-5bea-4bca-94f6-a675f8116a6d">
-<span class="eqno">(3.69)<a class="headerlink" href="#equation-ce972254-5bea-4bca-94f6-a675f8116a6d" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-36deb46c-153b-45fe-b603-5111b3f6350e">
+<span class="eqno">(3.69)<a class="headerlink" href="#equation-36deb46c-153b-45fe-b603-5111b3f6350e" title="Permalink to this equation">#</a></span>\[\begin{align}
 f(v)dv = \sqrt{\frac{2}{\pi}}\left(\frac{m}{kT}\right)^{3/2} Nv^2 e^{-mv^2/(2kT)}dv.
 \end{align}\]</div>
 <p>Collisions between particles drive the general velocity distribution into a Maxwellian distribution.  Above the exobase, collisions are negligible and particles in the tail of the Maxwellian velocity distribution with a velocity <span class="math notranslate nohighlight">\(v&gt;v_{esc}\)</span> may escape into space.  A Maxwellian distribution is characterized by a thermal or most probable velocity <span class="math notranslate nohighlight">\(v_{\rm mp} = \sqrt{2kT/m}\)</span> that is larger than the mean velocity.</p>
 <p>The ratio of the potential to kinetic energy is called the <strong>escape parameter</strong> <span class="math notranslate nohighlight">\(\lambda_{\rm esc}\)</span> and is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-3b7d3486-25d7-4608-9287-ae924ce73e0a">
-<span class="eqno">(3.70)<a class="headerlink" href="#equation-3b7d3486-25d7-4608-9287-ae924ce73e0a" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-3c41089a-faaa-4d5c-85dc-36392389bb49">
+<span class="eqno">(3.70)<a class="headerlink" href="#equation-3c41089a-faaa-4d5c-85dc-36392389bb49" title="Permalink to this equation">#</a></span>\[\begin{align}
 \lambda_{\rm esc} = \frac{GMm}{kT(R+z)} = \frac{R+z}{H(z)} = \left(\frac{v_{\rm esc}}{v_{\rm mp}}\right)^2.
 \end{align}\]</div>
 <p>Integrating the upward flux in a Maxwellian velocity distributing <em>above the exobase</em> results in the <strong>Jeans formula</strong> for the gas escape rate <span class="math notranslate nohighlight">\((\rm atoms/m^2/s)\)</span> by thermal evaporation or</p>
-<div class="amsmath math notranslate nohighlight" id="equation-2354de3a-22b0-4691-9715-fb937ec6a3f3">
-<span class="eqno">(3.71)<a class="headerlink" href="#equation-2354de3a-22b0-4691-9715-fb937ec6a3f3" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-911c9707-d808-4133-846e-bf1177cd2288">
+<span class="eqno">(3.71)<a class="headerlink" href="#equation-911c9707-d808-4133-846e-bf1177cd2288" title="Permalink to this equation">#</a></span>\[\begin{align}
 \Phi_{\rm J} = \frac{N v_{\rm mp}}{2\sqrt{\pi}} \left(1+\lambda_{\rm esc} \right) e^{-\lambda_{\rm esc}}.
 \end{align}\]</div>
 <p>Typical parameters for Earth are: <span class="math notranslate nohighlight">\(N = 10^{11}\ {\rm m^{-3}}\)</span> and <span class="math notranslate nohighlight">\(T = 900\ {\rm K}\)</span>.  For atomic hydrogen <span class="math notranslate nohighlight">\(\lambda_{\rm esc} \approx 8\)</span> and <span class="math notranslate nohighlight">\(\Phi \approx 6 \times 10^{11}\ {\rm atoms/m^2/s}\)</span>, which is <span class="math notranslate nohighlight">\({\sim}3-4\times\)</span> smaller than the limiting flux <span class="math notranslate nohighlight">\(\Phi_\ell \approx N_iD_i/H\)</span>.  The limiting flux depends on the number density <span class="math notranslate nohighlight">\(N\)</span> and diffusion coefficient <span class="math notranslate nohighlight">\(D\)</span> of a constituent <span class="math notranslate nohighlight">\(i\)</span>.  Lighter elements and isotopes are lost at a much faster rate than heavier ones.  <a class="reference external" href="https://en.wikipedia.org/wiki/Atmospheric_escape#Jeans_escape">Jeans escape</a> can produce a substantial <a class="reference external" href="https://en.wikipedia.org/wiki/Isotope_fractionation">isotopic fractionation</a>.  Calculations of Jeans escape can be used to predict whether or not an object has an atmosphere (to first approximation).</p>
@@ -2129,18 +2197,18 @@ f(v)dv = \sqrt{\frac{2}{\pi}}\left(\frac{m}{kT}\right)^{3/2} Nv^2 e^{-mv^2/(2kT)
 <li><p>If the impactor is larger than the scale height, a large fraction of the shock-heated gas can be blown off because the impact velocity exceeds the escape velocity.</p></li>
 </ul>
 <p>The mass of the atmosphere blown into space <span class="math notranslate nohighlight">\(M_{\rm e}\)</span> is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f79e65ad-5b56-4d61-9752-feb65c2faafe">
-<span class="eqno">(3.72)<a class="headerlink" href="#equation-f79e65ad-5b56-4d61-9752-feb65c2faafe" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-30d16637-e9bf-4a37-8952-d4eb8ab3eab6">
+<span class="eqno">(3.72)<a class="headerlink" href="#equation-30d16637-e9bf-4a37-8952-d4eb8ab3eab6" title="Permalink to this equation">#</a></span>\[\begin{align}
 M_{\rm e} = \mathcal{E}_{\rm e}\pi R^2 \frac{P_o}{g},
 \end{align}\]</div>
 <p>which depends of the mass of the atmosphere per unit area <span class="math notranslate nohighlight">\(P_o/g\)</span> and an enhancement factor <span class="math notranslate nohighlight">\(\mathcal{E}_{\rm e}\)</span>.  The enhancement factor determines the atmospheric mass that can escape, which is the mass intercepted by the impactor.  This is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5ee4baa0-f97d-4149-9c69-74258087c11e">
-<span class="eqno">(3.73)<a class="headerlink" href="#equation-5ee4baa0-f97d-4149-9c69-74258087c11e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-460a2689-9aeb-43b5-bf92-5f3777a7a864">
+<span class="eqno">(3.73)<a class="headerlink" href="#equation-460a2689-9aeb-43b5-bf92-5f3777a7a864" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{E}_{\rm e} = \frac{v_i^2}{v_{\rm esc}^2\left(1+\mathcal{E}_{\rm v} \right)},
 \end{align}\]</div>
 <p>and depends on the impact <span class="math notranslate nohighlight">\(v_i\)</span> and escape <span class="math notranslate nohighlight">\(v_{\rm esc}\)</span> velocities, along with the <strong>evaporative loading parameter</strong> <span class="math notranslate nohighlight">\(\mathcal{E}_{\rm v}\)</span>.  This parameter accounts for the burden imposed on escape because the plume also carries the vapor of both impactor and target material.  It is proportional to the energy imparted on the gas and the latent heat of evaporation <span class="math notranslate nohighlight">\(L_{\rm v}\)</span> through the heat transfer coefficient <span class="math notranslate nohighlight">\(C_{\rm H}\)</span> by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-60b306be-fd0f-4f35-b4f5-5a04235be5a5">
-<span class="eqno">(3.74)<a class="headerlink" href="#equation-60b306be-fd0f-4f35-b4f5-5a04235be5a5" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-38b86634-3b8e-4b86-b5f4-6ba7be6fbd66">
+<span class="eqno">(3.74)<a class="headerlink" href="#equation-38b86634-3b8e-4b86-b5f4-6ba7be6fbd66" title="Permalink to this equation">#</a></span>\[\begin{align}
 \mathcal{E}_{\rm v} = C_{\rm H}\frac{v_i^2}{2L_{\rm v}},
 \end{align}\]</div>
 <p>which is <span class="math notranslate nohighlight">\({\sim}0.1-0.2\)</span> near Earth’s surface.  A typical value of <span class="math notranslate nohighlight">\(L_{\rm v}\)</span> for meteorites is <span class="math notranslate nohighlight">\({\sim}8\times 10^6\ {\rm J/kg}\)</span>.</p>
@@ -2212,8 +2280,8 @@ allowfullscreen></iframe>
 <p class="caption"><span class="caption-number">Fig. 3.24 </span><span class="caption-text">This schematic shows the relationship between the different physical and chemical processes that make up the carbonate-silicate cycle. In the upper panel, the specific processes are identified, and in the lower panel, the feedbacks associated are shown; green arrows indicate positive coupling, while yellow arrows indicate negative coupling. Image Credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Carbonate%E2%80%93silicate_cycle">Carbon-silicate cycle</a>.</span><a class="headerlink" href="#urey-weathering-fig" title="Permalink to this image">#</a></p>
 </div>
 <p>This cycling of <span class="math notranslate nohighlight">\(\rm CO_2\)</span> between the atmosphere and other reservoirs is shown in Figure Fig. <a class="reference internal" href="#urey-weathering-fig"><span class="std std-numref">3.24</span></a>.  The reaction releases calcium <span class="math notranslate nohighlight">\(\rm Ca\)</span> and magnesium <span class="math notranslate nohighlight">\(\rm Mg\)</span> ions, which converts <span class="math notranslate nohighlight">\(\rm CO_2\)</span> into bicarbonate <span class="math notranslate nohighlight">\((\rm HCO_3^-)\)</span>.  The bicarbonate reacts with ions to form other carbonate minerals.  An example of this reaction for calcium is given by</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5e1b47cd-3380-4a44-9ed7-f49de0f3351e">
-<span class="eqno">(3.75)<a class="headerlink" href="#equation-5e1b47cd-3380-4a44-9ed7-f49de0f3351e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-c10fd47a-70d6-4c30-925b-7934624a3f16">
+<span class="eqno">(3.75)<a class="headerlink" href="#equation-c10fd47a-70d6-4c30-925b-7934624a3f16" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\rm CaSiO_3} + 2{\rm CO_2} + {\rm H_2O} &amp;\rightarrow {\rm Ca^{++}} + {\rm SiO_2} + 2{\rm HCO_3^-}, \\
 {\rm Ca^{++}} + 2{\rm HCO_3^-} &amp;\rightarrow {\rm CaCO_3} + {\rm CO_2} + {\rm H_2O}.
 \end{align}\]</div>
@@ -2251,8 +2319,8 @@ allowfullscreen></iframe>
 <p>It seems probable that there was an appreciable fraction of a terrestrial ocean on early Venus.  The <span class="math notranslate nohighlight">\(\rm D/H\)</span> ratio on Venus is about <span class="math notranslate nohighlight">\(100\times\)</span> larger than on Earth, which is persuasive evidence that Venus was once much wetter than it is now.  But where did all the water go?  Water can be dissociated into hydrogen and oxygen, either by photodissociation or chemical reactions, and the hydrogen then escapes into space.</p>
 <p>The classical explanation for Venus’ water loss is through a runaway greenhouse effect.  A simple climate model, which assumes that Venus outgassed a pure-water vapor atmosphere shows that the surface temperature increases due to an enhanced greenhouse effect.  There is a positive feedback between the increasing temperature and increasing opacity.  On Venus, the temperature stayed well above the saturation pressure curve (i.e., the water did not condense to become a liquid again), which led to a runaway greenhouse effect, and all of Venus’ water accumulated in the atmosphere as steam.  Assuming an effective mixing process, the water is distributed throughout the atmosphere and is photodissociated at high altitudes, which allows for the subsequent escape of hydrogen atoms to space.</p>
 <p>A simple model (in Figure <a class="reference internal" href="#classical-runaway"><span class="std std-numref">3.27</span></a>) illustrates this process using the Clausius-Clapeyron equation of state (Eqn. <a class="reference internal" href="#equation-cceos">(3.65)</a>), the greenhouse effect (Eqn. <a class="reference internal" href="#equation-surface-greenhouse">(3.47)</a>), and a relation between the vapor pressure <span class="math notranslate nohighlight">\(p^*(T)\)</span> and optical depth (<a class="reference external" href="https://journals.ametsoc.org/view/journals/atsc/49/23/1520-0469_1992_049_2256_asotge_2_0_co_2.xml">Nakajima, Hayashi, &amp; Abe (1992)</a>) given as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-e25712bc-7a6f-4758-b73c-f70182735ebb">
-<span class="eqno">(3.77)<a class="headerlink" href="#equation-e25712bc-7a6f-4758-b73c-f70182735ebb" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-33a3a64a-0796-4110-b4b4-b14099c896ef">
+<span class="eqno">(3.77)<a class="headerlink" href="#equation-33a3a64a-0796-4110-b4b4-b14099c896ef" title="Permalink to this equation">#</a></span>\[\begin{align}
 \tau = \frac{\kappa}{g}p^*(T),
 \end{align}\]</div>
 <p>which depends on an absorption coefficient of water <span class="math notranslate nohighlight">\(\kappa \approx 0.003\ {\rm kg/m^2}\)</span> and the surface gravity <span class="math notranslate nohighlight">\(g\)</span>.  This model is adapted from <a class="reference external" href="https://ui.adsabs.harvard.edu/abs/1972atmo.book.....G/abstract">Goody &amp; Walker (1972)</a>, where Venus (along with Mars and Earth) formed airless at the current distance from the Sun and volcanoes belched out atmospheres of pure water vapor.  If enough water vapor was present to create a greenhouse effect, then the surface temperature would rise accordingly.  Each planet in the model is assumed to have an albedo equivalent to present-day Mars, which is important for determining the equilibrium temperature (Eqn. <a class="reference internal" href="#equation-t-eq">(3.19)</a>).</p>
@@ -2377,18 +2445,18 @@ allowfullscreen></iframe>
 <p><strong>(b)</strong> How does the quantum description of the atom explain the stellar spectral lines?</p>
 <p><strong>(c)</strong> Summarize how an astrobiologist might use spectra to search for life on other planets.</p>
 </div>
-<div class="admonition-problem-4 admonition">
-<p class="admonition-title">Problem 4</p>
-<p>Make a diagram that illustrates the greenhouse effect for an Earth-like planet.  Label the structures that can contribute to the transport of radiation.</p>
-</div>
 <div class="admonition-problem-5 admonition">
 <p class="admonition-title">Problem 5</p>
-<p>Using your diagram from Problem 4,</p>
-<p><strong>(a)</strong>  Identify how those structures could be observed for an extrasolar planet?</p>
-<p><strong>(b)</strong>  What could an astrobiologist infer about potential life from the atmospheric composition of extrasolar planets?</p>
+<p>Make a diagram that illustrates the greenhouse effect for an Earth-like planet.  Label the structures that can contribute to the transport of radiation.</p>
 </div>
 <div class="admonition-problem-6 admonition">
 <p class="admonition-title">Problem 6</p>
+<p>Using your diagram from Problem 5,</p>
+<p><strong>(a)</strong>  Identify how those structures could be observed for an extrasolar planet?</p>
+<p><strong>(b)</strong>  What could an astrobiologist infer about potential life from the atmospheric composition of extrasolar planets?</p>
+</div>
+<div class="admonition-problem-7 admonition">
+<p class="admonition-title">Problem 7</p>
 <p>Summarize the formation of clouds within an atmosphere.  How does this affect the overall climate?</p>
 </div>
 </div>
@@ -2398,8 +2466,8 @@ allowfullscreen></iframe>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "saturnaxis/Astrobio",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

@@ -298,6 +298,24 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
+        <a href="https://mybinder.org/v2/gh/saturnaxis/Astrobio/main?urlpath=tree/Chapter_09/Life_on_Mars.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
         <a href="https://colab.research.google.com/github/saturnaxis/Astrobio/blob/main/Chapter_09/Life_on_Mars.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
@@ -312,6 +330,24 @@ title="Launch on Colab"
   </span>
 <span class="headerbtn__text-container">Colab</span>
 </a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
 
       </li>
       
@@ -332,10 +368,19 @@ title="Fullscreen mode"
   </span>
 
 </button>
-<a href="https://github.com/saturnaxis/Astrobio"
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/saturnaxis/Astrobio"
    class="headerbtn"
    data-toggle="tooltip"
-data-placement="bottom"
+data-placement="left"
 title="Source repository"
 >
   
@@ -343,8 +388,31 @@ title="Source repository"
 <span class="headerbtn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-
+<span class="headerbtn__text-container">repository</span>
 </a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/saturnaxis/Astrobio/issues/new?title=Issue%20on%20page%20%2FChapter_09/Life_on_Mars.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
 
 <div class="menu-dropdown menu-dropdown-download-buttons">
   <button class="headerbtn menu-dropdown__trigger"
@@ -601,8 +669,8 @@ title="Print to PDF"
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "saturnaxis/Astrobio",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",

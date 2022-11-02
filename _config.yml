@@ -46,9 +46,9 @@ latex:
 launch_buttons:
   notebook_interface: classic  # The interface interactive links will activate ["classic", "jupyterlab"]
   colab_url: "https://colab.research.google.com" # The URL of Google Colab (https://colab.research.google.com)
-  binderhub_url: "" #https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
+  binderhub_url: "https://mybinder.org" #https://mybinder.org  # The URL of the BinderHub (e.g., https://mybinder.org)
   #jupyterhub_url: "https://lore.atmos.albany.edu:8000"  # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
-  #thebe: false  # Add a thebe button to pages (requires the repository to run on Binder)
+  thebe: true  # Add a thebe button to pages (requires the repository to run on Binder)
 
 repository:
   url: https://github.com/saturnaxis/Astrobio # The URL to your book's repository
@@ -61,7 +61,7 @@ html:
   favicon                   : ""  # A path to a favicon image
   use_edit_page_button      : false  # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
   use_repository_button     : true  # Whether to add a link to your repository button
-  use_issues_button         : false  # Whether to add an "open an issue" button
+  use_issues_button         : true  # Whether to add an "open an issue" button
   extra_navbar              : Powered by <a href="https://jupyterbook.org">Jupyter Book</a>  # Will be displayed underneath the left navbar.
   #extra_footer              : "This page was created by <a href="http://www.atmos.albany.edu/facstaff/brose">Brian E. J. Rose</a> using <a href="https://jupyterbook.org">Jupyter Book</a>."  # Will be displayed underneath the footer.
   google_analytics_id       : "G-R2DLNF0W0H"  # A GA id that can be used to track book views.

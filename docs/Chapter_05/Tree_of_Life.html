@@ -206,7 +206,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../Chapter_07/Hadean_Climate.html">
-   7. Hadean &amp; Archean Climate
+   7. Hadean Earth &amp; Archean Climate
   </a>
  </li>
  <li class="toctree-l1">
@@ -234,6 +234,11 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="../Appendix/Student_Summaries.html">
    Student Participation (Fall 2022)
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../Appendix/Extra_Topics.html">
+   Extra Topics
   </a>
  </li>
 </ul>
@@ -295,6 +300,24 @@ title="Toggle navigation"
   <div class="menu-dropdown__content">
     <ul>
       <li>
+        <a href="https://mybinder.org/v2/gh/saturnaxis/Astrobio/main?urlpath=tree/Chapter_05/Tree_of_Life.ipynb"
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Launch on Binder"
+>
+  
+
+<span class="headerbtn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="headerbtn__text-container">Binder</span>
+</a>
+
+      </li>
+      
+      <li>
         <a href="https://colab.research.google.com/github/saturnaxis/Astrobio/blob/main/Chapter_05/Tree_of_Life.ipynb"
    class="headerbtn"
    data-toggle="tooltip"
@@ -309,6 +332,24 @@ title="Launch on Colab"
   </span>
 <span class="headerbtn__text-container">Colab</span>
 </a>
+
+      </li>
+      
+      <li>
+        
+<button onclick="initThebeSBT()"
+  class="headerbtn headerbtn-launch-thebe"
+  data-toggle="tooltip"
+data-placement="left"
+title="Launch Thebe"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-play"></i>
+  </span>
+<span class="headerbtn__text-container">Live Code</span>
+</button>
 
       </li>
       
@@ -329,10 +370,19 @@ title="Fullscreen mode"
   </span>
 
 </button>
-<a href="https://github.com/saturnaxis/Astrobio"
+
+<div class="menu-dropdown menu-dropdown-repository-buttons">
+  <button class="headerbtn menu-dropdown__trigger"
+      aria-label="Source repositories">
+      <i class="fab fa-github"></i>
+  </button>
+  <div class="menu-dropdown__content">
+    <ul>
+      <li>
+        <a href="https://github.com/saturnaxis/Astrobio"
    class="headerbtn"
    data-toggle="tooltip"
-data-placement="bottom"
+data-placement="left"
 title="Source repository"
 >
   
@@ -340,8 +390,31 @@ title="Source repository"
 <span class="headerbtn__icon-container">
   <i class="fab fa-github"></i>
   </span>
-
+<span class="headerbtn__text-container">repository</span>
 </a>
+
+      </li>
+      
+      <li>
+        <a href="https://github.com/saturnaxis/Astrobio/issues/new?title=Issue%20on%20page%20%2FChapter_05/Tree_of_Life.html&body=Your%20issue%20content%20here."
+   class="headerbtn"
+   data-toggle="tooltip"
+data-placement="left"
+title="Open an issue"
+>
+  
+
+<span class="headerbtn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="headerbtn__text-container">open issue</span>
+</a>
+
+      </li>
+      
+    </ul>
+  </div>
+</div>
 
 <div class="menu-dropdown menu-dropdown-download-buttons">
   <button class="headerbtn menu-dropdown__trigger"
@@ -1038,7 +1111,7 @@ allowfullscreen></iframe>
 </div>
 <div class="section" id="even-the-simplest-forms-of-life-are-complex">
 <h4><span class="section-number">5.1.2.3. </span>Even the Simplest Forms of Life are Complex<a class="headerlink" href="#even-the-simplest-forms-of-life-are-complex" title="Permalink to this headline">#</a></h4>
-<p>In the mid-19th century, a common scientific idea was that hte building material of life was a pulpy, gel-like, structureless material called <a class="reference external" href="https://en.wikipedia.org/wiki/Protoplasm">protoplasm</a>.  In 1857, <a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_Henry_Huxley">Thomas Huxley</a> dredged a “transparent, gelatinous matter” from the sea bottom and concluded it was protoplasm.  If the construction of life was relatively simple, then it would be not surprising if life could be prepared from simple broths of nutrients.  After 150 years of careful study, a very different picture emerged.  A bacterium is far more complex than the most intricate machine constructed by humans.</p>
+<p>In the mid-19th century, a common scientific idea was that the building material of life was a pulpy, gel-like, structureless material called <a class="reference external" href="https://en.wikipedia.org/wiki/Protoplasm">protoplasm</a>.  In 1857, <a class="reference external" href="https://en.wikipedia.org/wiki/Thomas_Henry_Huxley">Thomas Huxley</a> dredged a “transparent, gelatinous matter” from the sea bottom and concluded it was protoplasm.  If the construction of life was relatively simple, then it would be not surprising if life could be prepared from simple broths of nutrients.  After 150 years of careful study, a very different picture emerged.  A bacterium is far more complex than the most intricate machine constructed by humans.</p>
 </div>
 </div>
 <div class="section" id="the-architecture-of-life">
@@ -1127,7 +1200,7 @@ allowfullscreen></iframe>
 <div class="section" id="thermodynamics-and-probability">
 <h4><span class="section-number">5.1.4.1. </span>Thermodynamics and Probability<a class="headerlink" href="#thermodynamics-and-probability" title="Permalink to this headline">#</a></h4>
 <p>The <a class="reference external" href="https://saturnaxis.github.io/Astrobio/Chapter_02/Physics_and_Astrophysics.html#laws-of-thermodynamics">second law of thermodynamics</a> specifies that spontaneous processes in a closed system are characterized by the conversion of order to disorder.  The entropy of the system (measure of disorder) must increase, but entropy is also associated with probability (i.e., a probability of possible states).  The formation of an organized system from disorder is not forbidden, but highly improbable.  Living systems “pay” for their existence by creating more disorder elsewhere in the system.  For example, they may convert nutrients to simpler chemicals, but the process causes a release of heat to the general environment and increases the disorder of that environment.  <a class="reference external" href="https://en.wikipedia.org/wiki/There_ain%27t_no_such_thing_as_a_free_lunch"><em>There’s no such thing as a free lunch.</em></a></p>
-<p>The spontaneous generation of a living bacterium from small molecules would be near-miraculous due to its interior complexity.  The odds that component atoms within a hot gas could self-assemble into a bacterium are more than astronomical (<span class="math notranslate nohighlight">\(1\ \text{in } 10^{10^{11}}\)</span>; <a class="reference external" href="https://www.google.com/books/edition/_/6xE3AAAAIAAJ?hl=en&amp;sa=X&amp;ved=2ahUKEwiZ7Nvwvez4AhVMEGIAHcFZBFcQ7_IDegQIDxAE">Morowitz 1968</a>).  Matters might improve by thousands of orders of magnitude if we started with an appropriate mixture of small molecular species, but the overall prospect would still be hopeless.  To reduce the improbability, scientists have suggested that life began with only a very limited subset of the components of a bacterial cell.  The hart of the origin-of-life problem lies in finding the way in which the initial functioning system was formed from disorganized chemical mixtures produced by the normal processes of abiotic chemistry.</p>
+<p>The spontaneous generation of a living bacterium from small molecules would be near-miraculous due to its interior complexity.  The odds that component atoms within a hot gas could self-assemble into a bacterium are more than astronomical (<span class="math notranslate nohighlight">\(1\ \text{in } 10^{10^{11}}\)</span>; <a class="reference external" href="https://www.google.com/books/edition/_/6xE3AAAAIAAJ?hl=en&amp;sa=X&amp;ved=2ahUKEwiZ7Nvwvez4AhVMEGIAHcFZBFcQ7_IDegQIDxAE">Morowitz 1968</a>).  Matters might improve by thousands of orders of magnitude if we started with an appropriate mixture of small molecular species, but the overall prospect would still be hopeless.  To reduce the improbability, scientists have suggested that life began with only a very limited subset of the components of a bacterial cell.  The heart of the origin-of-life problem lies in finding the way in which the initial functioning system was formed from disorganized chemical mixtures produced by the normal processes of abiotic chemistry.</p>
 <div align="center">
 <iframe width="560" height="315"
 src="https://www.youtube.com/embed/iLbbpRYRW5Y" 
@@ -1138,9 +1211,9 @@ allowfullscreen></iframe>
 </div>
 <div class="section" id="separate-problems-origin-of-life-vs-origin-of-organics">
 <h4><span class="section-number">5.1.4.2. </span>Separate Problems: Origin of Life vs. Origin of Organics<a class="headerlink" href="#separate-problems-origin-of-life-vs-origin-of-organics" title="Permalink to this headline">#</a></h4>
-<p>In the early 19th century, many chemist felt that the distinction life and non-life lay in the very chemicals used to construct them.  Living system contained carbon and the chemicals in them were called “organic,” while substances considered to be inorganic (with some exceptions) had no carbon.  This distinction was erased in 1828, when <a class="reference external" href="https://en.wikipedia.org/wiki/Friedrich_W%C3%B6hler">Friedrich Wöhler</a> prepared urea from another substance that was classified as organic.</p>
-<p>We now recognize that mixtures of simple organic chemicals are produced in many location off this planet (e.g., carbonaceous chondrites, interstellar dust clouds, cometary tails, and the atmosphere of Titan). The most informative studies have been performed on meteorites, where they represent the products of authentic abiotic processes, and are amenable to detailed analyses in Earth-based laboratories.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Murchison_meteorite">Murchison meteorite</a> has been subjected to extensive analysis.</p>
-<p>The contents of the meteorite are quite complex, where the bulk of the carbon present is in the form of insoluble macromolecules and soluble organic compounds comprise 10-20%.  The most predominant chemical class is organic sulfonic acids, followed by polar aromatic hydrocarbons, and carboxylic acids.  Amino acids occur at levels between <span class="math notranslate nohighlight">\(10-100\)</span> ppm (1-2 orders of magnitudes lower than the aforementioned compounds), and the base components of nucleic acis at about 1 ppm.  Sugars and phosphate esters of all kinds are absent.  More than 70 amino acids have been detected in the Murchison meteorite, but only eight of the twenty needed for Earth-life were among them.</p>
+<p>In the early 19th century, many chemists felt that the distinction life and non-life lay in the very chemicals used to construct them.  Living systems contained carbon and the chemicals in them were called “organic,” while substances considered to be inorganic (with some exceptions) had no carbon.  This distinction was erased in 1828, when <a class="reference external" href="https://en.wikipedia.org/wiki/Friedrich_W%C3%B6hler">Friedrich Wöhler</a> prepared urea from another substance that was classified as organic.</p>
+<p>We now recognize that mixtures of simple organic chemicals are produced in many locations off this planet (e.g., carbonaceous chondrites, interstellar dust clouds, cometary tails, and the atmosphere of Titan). The most informative studies have been performed on meteorites, where they represent the products of authentic abiotic processes, and are amenable to detailed analyses in Earth-based laboratories.  The <a class="reference external" href="https://en.wikipedia.org/wiki/Murchison_meteorite">Murchison meteorite</a> has been subjected to extensive analysis.</p>
+<p>The contents of the meteorite are quite complex, where the bulk of the carbon present is in the form of insoluble macromolecules and soluble organic compounds comprise 10-20%.  The most predominant chemical class is organic sulfonic acids, followed by polar aromatic hydrocarbons, and carboxylic acids.  Amino acids occur at levels between <span class="math notranslate nohighlight">\(10-100\)</span> ppm (1-2 orders of magnitudes lower than the aforementioned compounds), and the base components of nucleic acids at about 1 ppm.  Sugars and phosphate esters of all kinds are absent.  More than 70 amino acids have been detected in the Murchison meteorite, but only eight of the twenty needed for Earth-life were among them.</p>
 <p>If we presume that life on Earth began amidst a chaotic chemical mixture, we must look for a pathway by which the smaller components could organize themselves.  Another question arises: <em>How did the components of that mixture come to be present on the early Earth?</em></p>
 </div>
 <div class="section" id="possibilities-for-reduced-organics">
@@ -1346,13 +1419,13 @@ allowfullscreen></iframe>
 <div class="section" id="sulfur-isotopes">
 <h4><span class="section-number">5.2.2.4. </span>Sulfur Isotopes<a class="headerlink" href="#sulfur-isotopes" title="Permalink to this headline">#</a></h4>
 <p>Some microbial metabolic processes also fractionate the stable isotopes of sulfur, <span class="math notranslate nohighlight">\(\rm ^{32}S\)</span> and <span class="math notranslate nohighlight">\(\rm ^{34}S\)</span>.  In particular, sulfate reduction for metabolic purposes rather than for biosynthesis can impart a large (<span class="math notranslate nohighlight">\(-10\)</span>‰ to <span class="math notranslate nohighlight">\(-45\)</span>‰) fractionation in favor of the light isotope.  This reaction, which can use either organic carbon:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b3bf208f-748c-4fc5-9bdf-ae861ba91400">
-<span class="eqno">(5.2)<a class="headerlink" href="#equation-b3bf208f-748c-4fc5-9bdf-ae861ba91400" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-0d897f19-caf9-4f89-bbe4-6de5e6349bb6">
+<span class="eqno">(5.2)<a class="headerlink" href="#equation-0d897f19-caf9-4f89-bbe4-6de5e6349bb6" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\rm SO_4^{2-}} + 2{\rm H^+} + 2{\rm CH_2O} \rightarrow {\rm H_2S} + 2{\rm CO_2} + 2{\rm H_2O},
 \end{align}\]</div>
 <p>or molecular hydrogen:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bd309c50-a975-4074-80f2-1c88c16b22bd">
-<span class="eqno">(5.3)<a class="headerlink" href="#equation-bd309c50-a975-4074-80f2-1c88c16b22bd" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-ffaa42be-1420-445f-8c0e-2a0c8e3f5d0f">
+<span class="eqno">(5.3)<a class="headerlink" href="#equation-ffaa42be-1420-445f-8c0e-2a0c8e3f5d0f" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\rm SO_4^{2-}} + 2{\rm H^+} + 4{\rm H_2} \rightarrow {\rm H_2S} + 4{\rm H_2O},
 \end{align}\]</div>
 <p>as an electron donor during the reduction of sulfate and only takes place in anaerobic (oxygen-poor) settings.  The fractionation is preserved in the geologic record when the metabolic product hydrogen sulfide reacts with dissolved ferrous ion during early <a class="reference external" href="https://en.wikipedia.org/wiki/Diagenesis">diagenesis</a> to form sedimentary pyrite.  Though not particularly abundant or widely distributed in sedimentary rocks, such pyrite is till useful as a tracer of ancient biological activity because it is relatively immune to metamorphic resetting of isotopes.  However, evidence ot the isotopic composition of seawater sulfate is only rarely preserved in rocks, principally in evaporitic sulfate minerals (e.g., gypsum and anhydrite), or in trace quantities of carbonate minerals.  Thus it is usually impossible to determine directly the <span class="math notranslate nohighlight">\(\Delta_{\rm S}\)</span> (analogous to <span class="math notranslate nohighlight">\(\Delta_{\rm C}\)</span>) of ancient sediments, weakening the biological inferences that can be drawn from this isotopic system.</p>
@@ -1361,26 +1434,26 @@ allowfullscreen></iframe>
 <h4><span class="section-number">5.2.2.5. </span>Nitrogen Isotopes<a class="headerlink" href="#nitrogen-isotopes" title="Permalink to this headline">#</a></h4>
 <p>Nitrogen is an essential nutrient for all living things, as it is a key constituent of the amino acids of proteins and the bases of nucleic acids.  It has two stable isotopes: <span class="math notranslate nohighlight">\(\rm ^{14}N\)</span> and <span class="math notranslate nohighlight">\(\rm ^{15}N\)</span>, and predominantly resides in a single reservoir, the atmosphere, as <span class="math notranslate nohighlight">\({\rm N_2}\)</span> gas.  However, its <a class="reference external" href="https://saturnaxis.github.io/Astrobio/Chapter_04/Life_Requirements.html#biogeochemical-cycles">biogeochemical cycle</a> is more complex than either carbon or sulfur and is consequently more difficult to decode from sedimentary isotopic ratios.  Isotopic compositions in the two main crustal repositories of nitrogen, organic matter and ammonium ions in clays and micas, probably closely reflect their biological parents, particularly at lower metamorphic grades.</p>
 <p>There are four principal steps in the biogeochemical cycle (see Fig. <a class="reference internal" href="../Chapter_04/Life_Requirements.html#nitrogen-cycle-fig"><span class="std std-numref">4.7</span></a>), but only two of them influence nitrogen isotopic ratios.  Atmospheric <span class="math notranslate nohighlight">\(\rm N_2\)</span> gas is relatively nonreactive and can only be incorporated into organic matter after fixation into ammonia <span class="math notranslate nohighlight">\(\rm NH_3\)</span>.  This reaction,</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fa25fe22-a709-45e8-b0a9-28383005f62e">
-<span class="eqno">(5.4)<a class="headerlink" href="#equation-fa25fe22-a709-45e8-b0a9-28383005f62e" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-b0017755-63db-4867-93a4-89e31bf1c705">
+<span class="eqno">(5.4)<a class="headerlink" href="#equation-b0017755-63db-4867-93a4-89e31bf1c705" title="Permalink to this equation">#</a></span>\[\begin{align}
 {\rm N_2} + 3{\rm H_2} \rightarrow 2 {\rm NH_3},
 \end{align}\]</div>
 <p>can occur only in a reducing environment (i.e., in the presence of <span class="math notranslate nohighlight">\(\rm H_2\)</span> gas).  On the early, abiotic Earth, it could have occurred around hydrothermal vents using dissolved <span class="math notranslate nohighlight">\(\rm N_2\)</span>.  It is now performed by a wide range of microorganisms including many cyanobacteria, methanogenic Archaea, the aerobic <a class="reference external" href="https://en.wikipedia.org/wiki/Azotobacter"><em>Azobacter</em></a> group, some members of the <a class="reference external" href="https://en.wikipedia.org/wiki/Clostridium#:~:text=Clostridium%20is%20a%20genus%20of,the%20Clostridioides%20genus%20in%202016."><em>Clostridium</em></a> group, and the symbiotic <a class="reference external" href="https://en.wikipedia.org/wiki/Rhizobium"><em>Rhizobium</em></a> in plant roots.  This reaction in its simplest form is</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5eb7de2f-68d4-492b-b509-e61ab6050331">
-<span class="eqno">(5.5)<a class="headerlink" href="#equation-5eb7de2f-68d4-492b-b509-e61ab6050331" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-18d59d12-5b1b-4ad9-9c17-1b5a77ca36bc">
+<span class="eqno">(5.5)<a class="headerlink" href="#equation-18d59d12-5b1b-4ad9-9c17-1b5a77ca36bc" title="Permalink to this equation">#</a></span>\[\begin{align}
 2{\rm N_2} + 6{\rm H_2O} \rightarrow 4{\rm NH_3} + 3{\rm O_2},
 \end{align}\]</div>
 <p>which causes little isotopic fractionation and all ammonia produced within a cell (or cells) is rapidly incorporated into organic matter.</p>
 <p>Organic nitrogen is broken down by <a class="reference external" href="https://en.wikipedia.org/wiki/Nitrogen_cycle#Ammonification">ammonification</a>, which produces either ammonium ion or ammonia depending on whether the environment is aqueous or not.  In aerobic settings, ammonium is oxidized to nitrate by nitrifying microbes.  This is done in two steps, from ammonium to nitrite (<span class="math notranslate nohighlight">\(\rm NO_2^-\)</span>), and then to nitrate (<span class="math notranslate nohighlight">\(\rm NO_3^-\)</span>):</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b1f51954-4801-439c-a207-159ca7695f23">
-<span class="eqno">(5.6)<a class="headerlink" href="#equation-b1f51954-4801-439c-a207-159ca7695f23" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-301abb2b-231d-4b17-84e1-ba7fc5a13337">
+<span class="eqno">(5.6)<a class="headerlink" href="#equation-301abb2b-231d-4b17-84e1-ba7fc5a13337" title="Permalink to this equation">#</a></span>\[\begin{align}
 2{\rm NH_4^+} + 3{\rm O_2} &amp;\rightarrow 2{\rm NO_2^-} + 2{\rm H_2O} + 4{\rm H^+}, \\
 2{\rm NO_2^-} + {\rm O_2} &amp;\rightarrow 2{\rm NO_3^-}.
 \end{align}\]</div>
 <p>Different bacteria undertake the two reactions, with <a class="reference external" href="https://en.wikipedia.org/wiki/Nitrosomonas"><em>Nitrosomonas</em></a> principally responsible for the first and <a class="reference external" href="https://en.wikipedia.org/wiki/Nitrobacter"><em>Nitrobacter</em></a> dominant for the second.</p>
 <p>The breakdown of dissolved nitrate to <span class="math notranslate nohighlight">\(\rm N_2\)</span> gas (denitrification) removes nitrogen from the biosphere and returns it to the atmosphere, thus completing the biogeochemical nitrogen cycle.  The resulting <span class="math notranslate nohighlight">\(\rm N_2\)</span> is enriched by the light isotope <span class="math notranslate nohighlight">\(^{14}N\)</span> by up to 30‰, depending on the degree of denitrification.  This light <span class="math notranslate nohighlight">\({\rm N_2}\)</span> diffuses out of aqueous settings, leaving the residual dissolved nitrate isotopically heavy.  Living and sedimentary organic matter strongly reflects the effects of this isotopic fractionation during denitrification.  The process is an anaerobic respiration that can be expressed as:</p>
-<div class="amsmath math notranslate nohighlight" id="equation-031abad1-e661-4fd7-b177-036432e4ede4">
-<span class="eqno">(5.7)<a class="headerlink" href="#equation-031abad1-e661-4fd7-b177-036432e4ede4" title="Permalink to this equation">#</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-7044bdcc-2718-4c3e-a38e-4b380c10870c">
+<span class="eqno">(5.7)<a class="headerlink" href="#equation-7044bdcc-2718-4c3e-a38e-4b380c10870c" title="Permalink to this equation">#</a></span>\[\begin{align}
 5{\rm CH_2O} + 4{\rm NO_3^-} + 4{\rm H^+} \rightarrow 5{\rm CO_2} + 2{\rm N_2} + 7{\rm H_2O}.
 \end{align}\]</div>
 <p>The various reactions in the pathway are preformed by a range of bacteria, most notably by some members of the genera <a class="reference external" href="https://en.wikipedia.org/wiki/Pseudomonas"><em>Pseudomonas</em></a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Thiobacillus"><em>Thiobacillus</em></a>.</p>
@@ -1441,10 +1514,10 @@ allowfullscreen></iframe>
 <p>To understand how Archean organism were related to their more modern descendants, we have to use the <em>“Tree of Life,”</em> which is the family tree of all species living today and derived from the comparative sequences of their ribosomal RNA molecules.  This phylogeny works on the assumption that slowly evolving and universally shared molecules will reveal evolutionary relationships through the history of life.  Though it is a powerful device for exploring early evolution, it has significant drawbacks.</p>
 <ol class="arabic simple">
 <li><p>It is necessarily constructed from data derived from modern organisms; nothing extinct appears anywhere on the tree (i.e., survivor bias).  In reality, the tree should be a lot bushier than it is.</p></li>
-<li><p>It assumes a linear descent of characters, but is now known that significant lateral gene transfer has occurred, particularly in prokaryotic organisms.  this means that eh simple branching tree structure is somewhat unrealistic.</p></li>
+<li><p>It assumes a linear descent of characters, but is now known that significant lateral gene transfer has occurred, particularly in prokaryotic organisms.  This means that the simple branching tree structure is somewhat unrealistic.</p></li>
 <li><p>It has no temporal scale, only an ordering; the length of branches is related only to evolutionary distance, not geological time.</p></li>
 </ol>
-<p>Despite these shortcomings, the RNA Tree is still the best guide we have to the patter of early evolution.</p>
+<p>Despite these shortcomings, the RNA Tree is still the best guide we have to the pattern of early evolution.</p>
 <div class="figure align-default" id="rna-tree-fig">
 <a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Phylogenetic_tree.svg/1280px-Phylogenetic_tree.svg.png"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Phylogenetic_tree.svg/1280px-Phylogenetic_tree.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/70/Phylogenetic_tree.svg/1280px-Phylogenetic_tree.svg.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 5.13 </span><span class="caption-text">A phylogenetic tree of living things, based on RNA data and proposed by Carl Woese, showing the separation of bacteria, archaea, and eukaryotes. Image Credit: Wikipedia:<a class="reference external" href="https://en.wikipedia.org/wiki/Phylogenetic_tree">phylogenetic tree</a>.</span><a class="headerlink" href="#rna-tree-fig" title="Permalink to this image">#</a></p>
@@ -1562,12 +1635,12 @@ allowfullscreen></iframe>
 </div></div>
 <div class="section" id="young-earth-and-early-life">
 <h2><span class="section-number">5.5. </span>Young Earth and Early Life<a class="headerlink" href="#young-earth-and-early-life" title="Permalink to this headline">#</a></h2>
-<p>Planet formation is a violent process, and large environmental variations on a young planet can be very hostile to life.  Impact rates were extremely high during the Earth’s early history (see Fig. <a class="reference internal" href="#bombardment-fig"><span class="std std-numref">5.15</span></a>), and the substantial heating of the atmosphere, hydrosphere, and upper curst my massive objects may have caused an <a class="reference external" href="https://www.nature.com/articles/331612a0">impact frustration of life</a> (see Fig. <a class="reference internal" href="#impact-frustration-fig"><span class="std std-numref">5.16</span></a>).</p>
+<p>Planet formation is a violent process, and large environmental variations on a young planet can be very hostile to life.  Impact rates were extremely high during the Earth’s early history (see Fig. <a class="reference internal" href="#bombardment-fig"><span class="std std-numref">5.15</span></a>), and the substantial heating of the atmosphere, hydrosphere, and upper crust by massive objects may have caused an <a class="reference external" href="https://www.nature.com/articles/331612a0">impact frustration of life</a> (see Fig. <a class="reference internal" href="#impact-frustration-fig"><span class="std std-numref">5.16</span></a>).</p>
 <div class="figure align-default" id="bombardment-fig">
 <a class="reference internal image-reference" href="https://onlinelibrary.wiley.com/cms/asset/70b59b24-c824-4843-8054-2472adb22c0d/maps13595-fig-0001-m.jpg"><img alt="https://onlinelibrary.wiley.com/cms/asset/70b59b24-c824-4843-8054-2472adb22c0d/maps13595-fig-0001-m.jpg" src="https://onlinelibrary.wiley.com/cms/asset/70b59b24-c824-4843-8054-2472adb22c0d/maps13595-fig-0001-m.jpg" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 5.15 </span><span class="caption-text">Curve showing cratering rate as a function of time (relative to today’s cratering rate) derived from the Morbidelli et al. (2018) accretion tail model. Image Credit: <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1111/maps.13595">Hartmann &amp; Morbidelli (2020)</a>.</span><a class="headerlink" href="#bombardment-fig" title="Permalink to this image">#</a></p>
 </div>
-<p>A late large impact may well have heated the upper portions of our planet sufficiently to have killed off all nonthermophilic organisms.  Thus, the thermophile root of the phylogenetic tree might be the result of an impact-induced heating event that killed off all life not tolerant of high temperatures.  In this case, life could have originated in either a cool or a hot environment.  Life an the planet(s) that it occupies can affect each other in many ways, and it is not possible to have a complete understanding of one without knowledge of the other.</p>
+<p>A late large impact may well have heated the upper portions of our planet sufficiently to have killed off all nonthermophilic organisms.  Thus, the thermophile root of the phylogenetic tree might be the result of an impact-induced heating event that killed off all life not tolerant of high temperatures.  In this case, life could have originated in either a cool or a hot environment.  Life and the planet(s) that it occupies can affect each other in many ways, and it is not possible to have a complete understanding of one without knowledge of the other.</p>
 <div class="figure align-default" id="impact-frustration-fig">
 <a class="reference internal image-reference" href="../_images/Impact_frustration.png"><img alt="../_images/Impact_frustration.png" src="../_images/Impact_frustration.png" style="width: 600px;" /></a>
 <p class="caption"><span class="caption-number">Fig. 5.16 </span><span class="caption-text">The effects of impactors by size (radius) on the Earth and when such impacts have occurred within Earth’s history. Image Credit: <a class="reference external" href="https://www.google.com/books/edition/Fundamental_Planetary_Science/caltAAAAQBAJ?hl=en">Lissauer &amp; de Pater (2013)</a>.</span><a class="headerlink" href="#impact-frustration-fig" title="Permalink to this image">#</a></p>
@@ -1575,6 +1648,50 @@ allowfullscreen></iframe>
 </div>
 <div class="section" id="homework">
 <h2><span class="section-number">5.6. </span><strong>Homework</strong><a class="headerlink" href="#homework" title="Permalink to this headline">#</a></h2>
+<div class="admonition-problem-1 admonition">
+<p class="admonition-title">Problem 1</p>
+<p>Summarize the three points of view for the origins of life on Earth.  Evaluate the falsifiability of each point of view in your summary.</p>
+</div>
+<div class="admonition-problem-2 admonition">
+<p class="admonition-title">Problem 2</p>
+<p>Describe the Oparin-Haldane hypothesis in your own words and summarize a famous experiment that sought to test parts of the hypothesis.</p>
+</div>
+<div class="admonition-problem-3 admonition">
+<p class="admonition-title">Problem 3</p>
+<p>What are the two main architectures for cells? Summarize how these cell architectures are organized.</p>
+</div>
+<div class="admonition-problem-4 admonition">
+<p class="admonition-title">Problem 4</p>
+<p>Explain the roles that proteins, nucleic acids, and lipids play for the function of a cell.</p>
+</div>
+<div class="admonition-problem-5 admonition">
+<p class="admonition-title">Problem 5</p>
+<p>Describe the problems concerning the origins of life itself versus the the origins of only organics.  What do chemists mean by the term <em>organic</em>?</p>
+</div>
+<div class="admonition-problem-6 admonition">
+<p class="admonition-title">Problem 6</p>
+<p>DNA forms the for our understanding of modern life.  Summarize the theories for a world before DNA when replicator RNA dominated.</p>
+</div>
+<div class="admonition-problem-7 admonition">
+<p class="admonition-title">Problem 7</p>
+<p>Explain how metabolism first theories could carry out basic life processes.</p>
+</div>
+<div class="admonition-problem-8 admonition">
+<p class="admonition-title">Problem 8</p>
+<p>What are the problems with the earliest life found in the geologic record?  What type of evidence do we have of the earliest lifeforms?</p>
+</div>
+<div class="admonition-problem-9 admonition">
+<p class="admonition-title">Problem 9</p>
+<p>How are phylogenetic relationships deduced from the RNA Tree of Life?  What are the three main division, or Domains, of the tree?</p>
+</div>
+<div class="admonition-problem-10 admonition">
+<p class="admonition-title">Problem 10</p>
+<p>What is meant by a last common universal ancestor (LUCA)?</p>
+</div>
+<div class="admonition-problem-11 admonition">
+<p class="admonition-title">Problem 11</p>
+<p>How could impactors on the early Earth have affected the origins of life?</p>
+</div>
 </div>
 </div>
 
@@ -1582,8 +1699,8 @@ allowfullscreen></iframe>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "saturnaxis/Astrobio",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
