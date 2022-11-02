@@ -54,6 +54,8 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="9. Life on Mars" href="../Chapter_09/Life_on_Mars.html" />
@@ -492,8 +494,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#atmospheric-stability">
-     8.1.2. Atmospheric Stability
+    <a class="reference internal nav-link" href="#atmospheric-stability-kirchner-2002">
+     8.1.2. Atmospheric Stability (Kirchner (2002))
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -619,8 +621,8 @@ title="Print to PDF"
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#atmospheric-stability">
-     8.1.2. Atmospheric Stability
+    <a class="reference internal nav-link" href="#atmospheric-stability-kirchner-2002">
+     8.1.2. Atmospheric Stability (Kirchner (2002))
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
@@ -730,11 +732,55 @@ title="Print to PDF"
 <h1><span class="section-number">8. </span>Gaia &amp; Oxygen<a class="headerlink" href="#gaia-oxygen" title="Permalink to this headline">#</a></h1>
 <div class="section" id="gaia-an-integrated-system">
 <h2><span class="section-number">8.1. </span>Gaia: An Integrated System<a class="headerlink" href="#gaia-an-integrated-system" title="Permalink to this headline">#</a></h2>
+<p>In 1973, <a class="reference external" href="https://en.wikipedia.org/wiki/James_Lovelock">James Lovelock</a> and <a class="reference external" href="https://en.wikipedia.org/wiki/Lynn_Margulis">Lynn Margulis</a> introduced a hypothesis about the conditions for which life might need to continue on a habitable world.  It is insufficient to focus on the origins of life, but there are other processes that could be necessary for the propagation of life over billions of years.  The known biogeochemical cycles (for carbon and nitrogen) introduce feedbacks between the organic biosphere and the inorganic geochemical environment.  Early studies in atmospheric science showed that the principal gases <span class="math notranslate nohighlight">\(\rm N_2\)</span> and <span class="math notranslate nohighlight">\(\rm O_2\)</span> are cycled by the biosphere with a geometric mean residence time on the order of a few thousands of years.  The paper by <a class="reference external" href="https://www.tandfonline.com/doi/abs/10.3402/tellusa.v26i1-2.9731">Lovelock &amp; Margulis (1973)</a> presents a view of the atmosphere as an extension of the biosphere rather just a product of geologic outgassing.  Due to the feedbacks that regulate the internal geology, biology, and atmosphere of the Earth, the biosphere itself acts as an <em>active</em> adaptive control system to maintain the Earth in homeostasis called the <a class="reference external" href="https://en.wikipedia.org/wiki/Gaia_hypothesis"><strong>Gaia hypothesis</strong></a>.</p>
 <div class="section" id="theoretical-basis">
 <h3><span class="section-number">8.1.1. </span>Theoretical Basis<a class="headerlink" href="#theoretical-basis" title="Permalink to this headline">#</a></h3>
+<p>The discovery of a new organism and its habitat is sometimes instinctively framed as a purposeful structure that is crafted to suit the needs of the organism.  For example, a bees nest provides a purpose that is distinctive from other non-social insects in that the ecosystem developed between the bees facilitates the construction of a monument to the hive.  The organization of the tropical rainforest was not recognized a larger, complex system until the evidence of the cycling of essential elements was discovered.  The emergence of a larger ecosystem (i.e., Gaia) may exist as a phenomenon that is necessary for living systems to thrive, and the lack of such an ecosystem might signify the differences in the observed biosphere in the Solar System.</p>
+<p>One definition of life can be cast thermodynamically as the ability for a system to decrease the local entropy at the expense of the free energy taken from the environment <a class="reference external" href="https://scirp.org/reference/referencespapers.aspx?referenceid=2939648">(Bernal 1951)</a>.  This may be expressed in the form of the continuity equation for entropy as</p>
+<div class="amsmath math notranslate nohighlight" id="equation-09fb9209-cfe7-4c4b-a552-d9563e1669e8">
+<span class="eqno">(8.1)<a class="headerlink" href="#equation-09fb9209-cfe7-4c4b-a552-d9563e1669e8" title="Permalink to this equation">#</a></span>\[\begin{align}
+\rho \frac{dS}{dt} + \nabla S = \theta,
+\end{align}\]</div>
+<p>which depends on the internal creation rate of entropy <span class="math notranslate nohighlight">\(\theta\)</span>, the density <span class="math notranslate nohighlight">\(\rho\)</span>, and the entropy <span class="math notranslate nohighlight">\(S\)</span>.  The <span class="math notranslate nohighlight">\(\nabla S\)</span> signifies the outflow of entropy and the <span class="math notranslate nohighlight">\(\rho(dS/dt)\)</span> is the entropy’s rate of change within the enclosed region.  From the Second Law of Thermodynamics, the creation rate of entropy <span class="math notranslate nohighlight">\(\theta\)</span> must be greater than or equal to zero, which prohibits both of the left-hand side terms from turning negative simultaneously.  Note that this classification includes both vortices and flames, which may be too broad.</p>
+<p>The thermodynamic definition of life serves to help the Gaia hypothesis by defining local changes of entropy as the product of a living entity that modifies the background environment through either physical or chemical disequilibrium.  A human and a tree modify their respective environments in different ways in which is bears pointing out the pertinent thermodynamic processes.</p>
+<ul class="simple">
+<li><p>A human takes in free energy in the form of the chemical potential contained in food and oxygen, while sustaining a low internal entropy through the excretion of waste chemicals and heat.  The environment that receives the excess entropy includes the atmosphere and the transfer boundary includes the skin.</p></li>
+<li><p>A tree takes in free energy directly from the Sun to sustain a high chemical potential gradient within the atmosphere on a planetary scale.  The atmosphere receives the excess oxygen and the transfer boundary includes the tree’s leaves.</p></li>
+</ul>
+<p>The boundaries between each of these organisms is arbitrary, where a more general boundary is between the atmosphere and interplanetary space.  In this instance, the whole assembly of life contributes to the outgoing entropy flux from the Earth in the form of the long-wave IR radiation.  The greenhouse effect is largely described abiotically and contributes to the expected entropy flux of a planet devoid of life.  Therefore, the difference in entropy flux between a living and non-living planet could be a measure for identifying ‘Gaia’ (<em>if</em> such a thing exists).</p>
+<div align="center">
+<iframe width="560" height="315"
+src="https://www.youtube.com/embed/GIFRg2skuDI"
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 </div>
-<div class="section" id="atmospheric-stability">
-<h3><span class="section-number">8.1.2. </span>Atmospheric Stability<a class="headerlink" href="#atmospheric-stability" title="Permalink to this headline">#</a></h3>
+</div>
+<div class="section" id="atmospheric-stability-kirchner-2002">
+<h3><span class="section-number">8.1.2. </span>Atmospheric Stability (<a class="reference external" href="https://link.springer.com/article/10.1023/A:1014237331082">Kirchner (2002)</a>)<a class="headerlink" href="#atmospheric-stability-kirchner-2002" title="Permalink to this headline">#</a></h3>
+<p>A key component of the Gaia hypothesis is feedbacks from biological systems that help regulate the environment which in turn facilitate their own survival.  As a result, the biota co-evolves along with Earth’s environment throughout geologic time (<a class="reference external" href="https://www.google.com/books/edition/The_Coevolution_of_Climate_and_Life/qStRAAAAMAAJ?hl=en">Schneider &amp; Londer (1984)</a>).  The consequences of feedbacks that emerge from the co-evolution can potentially be beneficial or detrimental to any given group of organisms.  In the Gaia literature, a larger emphasis is placed on negative feedbacks that are beneficial to the organisms involved or the biota as a whole (<a class="reference external" href="https://www.nature.com/articles/28792">Lenton (1998)</a>; <a class="reference external" href="https://www.nature.com/articles/28792">Gillon (2000)</a>).</p>
+<p>Detecting life elsewhere in the galaxy depends on our observations of planetary atmospheres, which could uncover a host of evidence concerning potentially biological feedbacks.  Although it may not be a sufficient condition, atmospheric stability does appear to be an enticing.  Some of the relevant biological feedbacks include:</p>
+<p><strong>Negative feedbacks</strong></p>
+<ul class="simple">
+<li><p>Increased atmospheric <span class="math notranslate nohighlight">\(\rm CO_2\)</span> concentrations that stimulate increased photosynthesis and leads to carbon sequestration in biomass.</p></li>
+<li><p>Warming that leads to drying (and thus sparser vegetation) and increased desertification in mid-latitudes, which can increase the planetary albedo and atmospheric dust concentrations.</p></li>
+</ul>
+<p><strong>Positive feedbacks</strong></p>
+<ul class="simple">
+<li><p>Warmer temperatures that increase soil respiration rates and release organic carbon stored in soils.</p></li>
+<li><p>Warmer temperatures increase the frequency of wildfires, which leads to a net replacement of the older, larger trees with younger, smaller ones and results in a net release of carbon from forest biomass.</p></li>
+<li><p>Higher atmospheric <span class="math notranslate nohighlight">\(\rm CO_2\)</span> concentrations may increase drought tolerance in plants and potentially lead to expansion of shrublands into deserts.  This would reduce the planetary albedo and dust concentrations.</p></li>
+<li><p>Warming that leads to the replacement of tundra by boreal (coniferous dominant) forest, which decreases the planetary albedo.</p></li>
+<li><p>Warming of soils accelerates methane production over consumption, which leads to net methane release.</p></li>
+<li><p>Warmer temperatures lead to the release of <span class="math notranslate nohighlight">\(\rm CO_2\)</span> and methane from high-latitude peatlands.</p></li>
+</ul>
+<p>The above list of feedbacks in not exhaustive nor comprehensive, but it does show ways in which the biota can react to a changing atmosphere.  The Gaia hypothesis proposes that some of these (maybe all) feedbacks lead to an emergent regulatory effect when taking multiple feedbacks into account.  However, this remains to be seen and appears to contradict many scientists who believe that the positive feedbacks broadly outweigh the negative ones.</p>
+<p>Our planet’s surface area is largely comprised (<span class="math notranslate nohighlight">\({\sim}71\%\)</span>) by water, where oceans hold <span class="math notranslate nohighlight">\(96.5\%\)</span> of all Earth’s water.  Therefore, the interface between the oceanic biota and the atmosphere could be more important than the land-based effects.  One outgrowth of the Gaia hypothesis suggests that oceanic phytoplankton might serve as a planetary thermostat by producing dimethyl sulfide, or <span class="math notranslate nohighlight">\(\rm (CH_3)_2 S\)</span>, which is a precursor for cloud condensation nuclei and a response to a warming atmosphere (<a class="reference external" href="https://www.nature.com/articles/326655a0">Charlson et al. (1987)</a>).</p>
+<p>However, paleoclimate data (<a class="reference external" href="https://www.sciencedirect.com/science/article/pii/0004698188900376">Legrand et al. (1988)</a>; <a class="reference external" href="https://www.nature.com/articles/345470a0">Kirchner (1990)</a>; <a class="reference external" href="https://www.nature.com/articles/350144a0">Legrand et al. (1991)</a>) indicate such a marine biological thermostat is hooked up backwards, where it exacerbates the cooling or warming trends (i.e., makes the planet colder when it is cold and warmer when it is warm).  Moreover, dimethyl sulfide production in the Southern Ocean may be controlled by atmospheric dust, which supplies iron as a limiting nutrient.  The Antarctic ice core record is consistent with this view, where a greater deposition of atmospheric dust occurs during glacial periods, along with high levels of dimethyl sulfide proxy compounds, lower concentrations of <span class="math notranslate nohighlight">\(\rm CO_2\)</span> and <span class="math notranslate nohighlight">\(\rm CH_4\)</span>, and lower temperatures.</p>
+<div class="figure align-default" id="vostok-ice-fig">
+<a class="reference internal image-reference" href="../_images/Kirchner_Fig1.png"><img alt="../_images/Kirchner_Fig1.png" src="../_images/Kirchner_Fig1.png" style="width: 450px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 8.1 </span><span class="caption-text">The Vostok ice core record of atmospheric temperature, carbon dioxide <span class="math notranslate nohighlight">\(\rm CO_2\)</span>, methane <span class="math notranslate nohighlight">\(\rm CH_4\)</span>, and dust loading (data of <a class="reference external" href="https://www.nature.com/articles/20859">Petit et al. (1999)</a>).  Glacial maxima (blue bands) and interglacials (red bands) exhibit relatively narrow ranges of concentrations and temperatures.  The temperature, <span class="math notranslate nohighlight">\(\rm CO_2\)</span>, and methane appear correlated, while the dust concentration (inverted scale) is anti-correlated (i.e., low dust allows for warmer temperatures).  Figure credit: <a class="reference external" href="https://link.springer.com/article/10.1023/A:1014237331082">Kirchner (2002)</a>.</span><a class="headerlink" href="#vostok-ice-fig" title="Permalink to this image">#</a></p>
+</div>
 </div>
 <div class="section" id="biologic-stability-daisyworld">
 <h3><span class="section-number">8.1.3. </span>Biologic Stability: DaisyWorld<a class="headerlink" href="#biologic-stability-daisyworld" title="Permalink to this headline">#</a></h3>
