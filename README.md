@@ -28,6 +28,7 @@ The following chapters are used from [Earth: Evolution of a Habitable World](htt
 
 [Planets and Life: The Emerging Science of Astrobiology](https://www.google.com/books/edition/Planets_and_Life/6oybBQAAQBAJ?hl=en&gbpv=0) has many authors, where the following contributions are used:
 
+- 4 Planetary atmospheres and life (Catling and Kasting)
 - 5 Does 'life' have a definition? (Cleland & Chyba)
 - 6 Origin of life: the crucial issues (Shapiro)
 - 10 Evolution: a defining feature of life (Baross)
